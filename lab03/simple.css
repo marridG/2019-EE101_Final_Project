@@ -1,0 +1,59 @@
+
+body
+{
+	text-align: center;
+	background-color: #C7EDCC; 
+}
+
+.homepage_body
+{
+	background-image: url("/lab03/pics/homepage_background.jpg");
+	background-size: 100%,100%;
+	background-position: center;
+	/*background-color: #EDC7D0;*/
+	text-align: center;
+	color: #96E703;
+}
+
+.result_table
+{
+	margin: 0 auto;
+	width: 88%;
+	border: 0;
+	text-align: center;
+	border-color: #ccc;	
+}
+
+.result_table tr	/*new line*/
+{
+	line-height: 30px;
+	border-color: #ccc;
+}
+
+.result_table th
+{
+	text-align: center;
+	color: #928484;
+}
+
+.result_table td	/*new line and element*/
+{
+	text-align: center;
+	border-color: #ccc;
+}
+
+.result_table tr:nth-child(odd)
+{
+	background: #ccc;
+}
+
+.search_return_to_homepage
+{
+	margin-bottom: 1%;
+	margin-left: -76%;
+}
+.search_return_to_homepage_image
+{
+	margin-bottom: 1%;
+	margin-left: -90%;
+}

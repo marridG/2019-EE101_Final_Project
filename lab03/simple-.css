@@ -1,0 +1,86 @@
+/*Every-two-row background color:
+	https://jingyan.baidu.com/article/4dc408484533f9c8d946f1a5.html
+Border of the whoel table:
+	https://www.jb51.net/web/651409.html
+*/
+
+body
+{
+	text-align: center;
+	background-color: #C7EDCC;
+}
+
+.homepage_body
+{
+	/*background-image: url("/lab03/pics/homepage_background.jpg");*/
+	background-image: url("/lab03/pics/IMG_5349.jpg");
+	background-size: 100%,100%;
+	background-position: center;
+	/*background-color: #EDC7D0;*/
+	text-align: center;
+	color: #96E703;
+}
+
+.result_table
+{
+	margin: 0 auto;
+	width: 88%;
+	border: 0;
+	border: 1px solid #000000;
+	text-align: center;
+}
+
+.result_table tr	/*new line*/
+{
+	line-height: 30px;
+	border-color: #ccc;
+}
+
+.result_table th	/*table header*/
+{
+	text-align: center;
+	color: #928484;
+/*	background: #E4DCDC;*/
+}
+
+.result_table td	/*new row of a line*/
+{
+	text-align: center;
+	border-color: #ccc;
+}
+
+.result_table tr:nth-child(odd)
+{
+	background: #ccc;
+}
+
+.result_table td:nth-child(1)	/*Title*/
+{
+	font-family: Arial;
+	font-style: italic;
+
+}
+
+.result_table td:nth-child(2)	/*Author Name*/
+{
+	font-family: New Times Roman;
+	font-style: normal;
+}
+
+.result_table td:nth-child(3)	/*Conference Name*/
+{
+	font-family: Chaparral Pro Light;
+	font-style: italic;
+}
+
+.search_return_to_homepage
+{
+	margin-bottom: 1%;
+	margin-left: -76%;
+}
+.search_return_to_homepage_image
+{
+	margin-top: 1%;
+	margin-bottom: 1%;
+	margin-left: -90%;
+}
