@@ -2,3 +2,5 @@
 	--- GuoZL
 JAF 圣贤太强啦！！！seems bian ma cuo wu
 JAF SX TQL!!!!
+
+请注意，含中文的一律需要以 UTF-8 的编码方式保存！否则会出现乱码！
