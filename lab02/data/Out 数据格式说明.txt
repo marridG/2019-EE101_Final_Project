@@ -1,0 +1,5 @@
+OUT 数据格式说明
+每行是一条 <dict> 数据，代表一篇论文
+<dict> 中的 keys 依次为："PaperID", "Title", "Authors'ID", "Authors'Name", "ConferenceID", "ConferenceName", "Year"
+如：
+{'PaperID': 'c', 'Title': 'tit_c', "Authors'ID": ['author_id_0'], "Authors'Name": ['author_0'], 'ConferenceID': 'confid_0', 'ConferenceName': 'conf_0', 'Year': 'year_0'}

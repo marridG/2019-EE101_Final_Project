@@ -1,0 +1,6 @@
+[('c','tit_c','author_id_0',"author_0","confid_0","conf_0",0),
+ ('a','tit_a','author_id_1',"author_1","confid_1","conf_1",1),
+ ('a','tit_a','author_id_2',"author_2","confid_1","conf_1",1),
+ ('a','tit_a','author_id_3',"author_3","confid_1","conf_1",1),
+ ('b','tit_b','author_id_4',"author_4","confid_2","conf_2",2)
+]

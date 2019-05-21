@@ -1,0 +1,22 @@
+﻿0041F649	mahanakorn university of technology
+004658F4	xiangtan university
+00784876	university of glasgow
+0086CB8F	university of leon
+0088BF3F	national autonomous university of mexico
+01038E08	telecom lille 1
+013CF852	washington university school of medicine
+01682BF6	institute of robotics and intelligent systems
+01739E09	university of buenos aires
+01AB8D36	national institute for higher education
+01C4E3DD	morgridge institute for research
+01CA26E6	manchester business school
+0261D2D8	kettering university
+027B5DD3	association of research libraries
+028E8644	nicta
+03496C27	university of turin
+0349EE07	university of california
+03512020	instituto superior de engenharia de lisboa
+03F01FBB	genome institute of singapore
+03F22377	naresuan university
+04505D6E	osaka institute of technology
+0478D4F8	university of tennessee

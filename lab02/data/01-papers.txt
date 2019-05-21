@@ -1,0 +1,78 @@
+﻿58EA85EE	branching storylines in virtual reality environments for leadership development	2004	46A05BB0
+5A74E06C	masdispo a multiagent decision support system for steel production and control	2007	46A05BB0
+8608FA62	diagnosing delivery problems in the white house information distribution system	1996	46A05BB0
+5F7EA418	a sequential covering evolutionary algorithm for expressive music performance	2006	46A05BB0
+814818B3	personalisation of telecommunications services as combinatorial optimisation	2008	46A05BB0
+096295BC	near optimal objects packing through dimensional unfolding	1996	46A05BB0
+70C52B44	stochastic optimization for collision selection in high energy physics	2007	46A05BB0
+5918F959	application of artificial intelligence to operational real time clear air turbulence prediction	2008	46A05BB0
+682795F1	awdrat a cognitive middleware system for information survivability	2006	46A05BB0
+0613A667	real time identification of operating room state from video	2007	46A05BB0
+05DA3D56	activity recognition from accelerometer data	2005	46A05BB0
+5DBAF5D6	on line recognition of surgical activity for monitoring in the operating room	2008	46A05BB0
+06A68A18	the vita financial services sales support environment	2007	46A05BB0
+0C4FEBDC	markov decision processes for control of a sensor network based health monitoring system	2005	46A05BB0
+85F8B227	developing and deploying knowledge on a global scale	1996	46A05BB0
+80FF277D	cpm context aware power management in wlans	2006	46A05BB0
+7E903570	nesta nasa engineering shuttle telemetry agent	2005	46A05BB0
+07C13803	sscfi autonomous fault isolation in communications circuits	1996	46A05BB0
+0AA49690	real time alert correlation using stream data mining techniques	2008	46A05BB0
+5D9A47EC	a hybrid approach to convoy movement planning in an urban city	2008	46A05BB0
+0301E2CC	coach cumulative online algorithm for classification of handwriting deficiencies	2008	46A05BB0
+0990A24C	cm extractor an application for automating medical quality measures abstraction in a hospital setting	2006	46A05BB0
+6F4EE7E2	a knowledge based approach to network security applying cyc in the domain of network risk assessment	2005	46A05BB0
+5C301625	enabling the interoperability of large scale legacy systems	2008	46A05BB0
+68CD05EB	evaluation and deployment of a people to people recommender in online dating	2014	46A05BB0
+7CFA680A	machine translation for manufacturing a case study at ford motor company	2006	46A05BB0
+7E70E49F	constraint based random stimuli generation for hardware verification	2006	46A05BB0
+6470C312	the defacto system training tool for incident commanders	2005	46A05BB0
+03F4AAA6	using ai for olympic equestrian event preparation	2008	46A05BB0
+5C58242C	coordinating hundreds of cooperative autonomous vehicles in warehouses	2007	46A05BB0
+0604A6CE	development of a hybrid knowledge based system for multiobjective optimization of power distribution system operations	2005	46A05BB0
+05A86FBE	case based reasoning for general electric appliance customer support	2006	46A05BB0
+0D164879	settlement analysis expert sax modeling complex business logic in the development of enterprise solutions	1996	46A05BB0
+7EDB48DC	medethex a prototype medical ethics advisor	2006	46A05BB0
+7FC004F4	local negotiation in cellular networks from theory to practice	2006	46A05BB0
+6C998ABE	diagnosing faults in electrical power systems of spacecraft and aircraft	2008	46A05BB0
+58E8ED55	semantic web development for traditional chinese medicine	2008	46A05BB0
+0904B7F2	a vehicle routing system to solve a periodic vehicle routing problem for a food chain in hong kong	2008	46A05BB0
+5D6F5FD6	journal ranking com an online interactive journal ranking system	2007	46A05BB0
+64454DCF	textal automated crystallographic protein structure determination	2005	46A05BB0
+03E3939B	local search for optimal global map generation using mid decadal landsat images	2008	46A05BB0
+5C99BEDD	tactical language and culture training systems using artificial intelligence to teach foreign languages and cultures	2008	46A05BB0
+0B862DC9	automatically acquiring domain knowledge for adaptive game ai using evolutionary learning	2005	46A05BB0
+0C0E8467	multiagent coalition formation for computer supported cooperative learning	2006	46A05BB0
+6CF9FB9D	a multi agent simulator for teaching police allocation	2005	46A05BB0
+093E3530	tpboscourier a transportation procurement system for the procurement of courier services	2006	46A05BB0
+5DD5ECC1	loads n limits and release n sequence the brains behind weps	2005	46A05BB0
+8063F285	supporting feedback and assessment of digital ink answers to in class exercises	2007	46A05BB0
+07626BBE	the law of choice and the decision not to decide	2008	46A05BB0
+09114F08	hand grip pattern recognition for mobile user interfaces	2006	46A05BB0
+052244D3	the nasa personnel security processing expert system	1996	46A05BB0
+7EA40768	wings for pegasus creating large scale scientific applications using semantic representations of computational workflows	2007	46A05BB0
+5B456371	adaptive traitor tracing with bayesian networks	2007	46A05BB0
+0929971C	a case study of ai application on language instruction csiec	2008	46A05BB0
+07F880BE	the virtual solar terrestrial observatory a deployed semantic web application case study for scientific research	2007	46A05BB0
+05CB07DC	an intelligent system for asset and liability assessment	1996	46A05BB0
+7F633C9F	predicting electricity distribution feeder failures using machine learning susceptibility analysis	2006	46A05BB0
+02BD9F59	learning sparse kernels from 3d surfaces for heart wall motion abnormality detection	2008	46A05BB0
+07EAFB5C	localization of troubles in telephone cable networks	1996	46A05BB0
+7E75FDE6	the deep space network scheduling problem	2005	46A05BB0
+62B93DA1	optimizing anthrax outbreak detection using reinforcement learning	2007	46A05BB0
+58541DB6	retaliate learning winning policies in first person shooter games	2007	46A05BB0
+804750BC	monitoring frog communities an application of machine learning	1996	46A05BB0
+7D88662C	an integrated development environment and architecture for soar based agents	2007	46A05BB0
+0A453F7F	a learning architecture for automating the intelligent environment	2005	46A05BB0
+5CB64D4F	reinforcement learning for vulnerability assessment in peer to peer networks	2008	46A05BB0
+01947C4F	crops selection for optimal soil planning using multiobjective evolutionary algorithms	2008	46A05BB0
+06312D2F	monitoring food safety by detecting patterns in consumer complaints	2006	46A05BB0
+7EDA9257	automating the underwriting of insurance applications	2005	46A05BB0
+7DF75B34	building explainable artificial intelligence systems	2006	46A05BB0
+5C4738D0	boosting sex identification performance	2005	46A05BB0
+7F9A4BC5	machine learning for automatic mapping of planetary surfaces	2007	46A05BB0
+85B1610E	a structure based configuration tool drive solution designer dsd	2002	46A05BB0
+80BB217F	the signal expert system	1996	46A05BB0
+6F9B0847	corms ai decision support system for monitoring us maritime environment	2005	46A05BB0
+756D3567	teaching a complex industrial process	1987	46A05BB0
+81AF533A	integrating simultaneous input from speech gaze and hand gestures	1998	46A05BB0
+690DFC01	model based automated generation of user interfaces	1998	46A05BB0

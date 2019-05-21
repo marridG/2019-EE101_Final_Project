@@ -1,0 +1,3 @@
+﻿{'PaperID': 'c', 'Title': 'tit_c', "Authors'ID": ['author_id_0'], "Authors'Name": ['author_0'], 'ConferenceID': 'confid_0', 'ConferenceName': 'conf_0', 'Year': 0}
+{'PaperID': 'a', 'Title': 'tit_a', "Authors'ID": ['author_id_1', 'author_id_2', 'author_id_3'], "Authors'Name": ['author_1', 'author_2', 'author_3'], 'ConferenceID': 'confid_1', 'ConferenceName': 'conf_1', 'Year': 1}
+{'PaperID': 'b', 'Title': 'tit_b', "Authors'ID": ['author_id_4'], "Authors'Name": ['author_4'], 'ConferenceID': 'confid_2', 'ConferenceName': 'conf_2', 'Year': 2}

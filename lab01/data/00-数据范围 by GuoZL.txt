@@ -1,0 +1,22 @@
+PaperID: 9
+Title: 120
+PaperPublishYear 4
+ConferenceID 9
+------------
+AuthorID: 9
+AuthorName: 34
+------------
+ConferenceID: 8
+ConferenceName: 6
+------------
+AffiliationID: 9
+AffiliationName: 45
+------------
+PaperID: 8
+AuthorID: 8
+AffiliationID 8
+AuthorSequence 2
+------------
+PaperID: 8
+ReferenceID: 9
+------------
