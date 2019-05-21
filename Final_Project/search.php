@@ -14,9 +14,9 @@ Turn to an appointed location of a new page:
 
 <head>
 	<title>Search</title>
-	<link rel ="stylesheet" type="text/css" href="/lab03/simple-.css">
-	<script src="/lab03/add-ons/01_Scroll_Page_to_Original.js"></script>
-	<script src="/lab03/add-ons/02_Clear_Form.js"></script>
+	<link rel ="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
+	<script src="/EE101-Final_Project/Final_Project/add-ons/01_Scroll_Page_to_Original.js"></script>
+	<script src="/EE101-Final_Project/Final_Project/add-ons/02_Clear_Form.js"></script>
 </head>
 
 <body>
@@ -24,7 +24,7 @@ Turn to an appointed location of a new page:
 	<h1>Search Result</h1>
 
 	<?php
-		// echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"/lab03/table.css\"/>";
+		// echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"/EE101-Final_Project/Final_Project/table.css\"/>";
 	// from index.php:
 		// get paper_title, author_name, conference_name 
 		$paper_title = $_GET["paper_title"];
@@ -54,10 +54,10 @@ Turn to an appointed location of a new page:
 		$conference_name_temp = urlencode($conference_name);
 
 	// Search Widget
-		echo "<a href=\"/lab03/index.php\" class=\"search_return_to_homepage_image\"><img src =\"/lab03/pics/Homepage_icon-without_background.jpg\" width=\"30\"></a>";
-		// echo "<form class=\"search_return_to_homepage\"action='/lab03/index.php'><input type='submit' value='Return to Homepage'></form>";
+		echo "<a href=\"/EE101-Final_Project/Final_Project/index.php\" class=\"search_return_to_homepage_image\"><img src =\"/EE101-Final_Project/Final_Project/pics/Homepage_icon-without_background.jpg\" width=\"30\"></a>";
+		// echo "<form class=\"search_return_to_homepage\"action='/EE101-Final_Project/Final_Project/index.php'><input type='submit' value='Return to Homepage'></form>";
 		
-		echo "<form id=\"search_form\" action=\"/lab03/search.php\">";
+		echo "<form id=\"search_form\" action=\"/EE101-Final_Project/Final_Project/search.php\">";
 		echo "Paper Title: ";
 		echo "<input type=\"text\" id=\"1_PT\" name=\"paper_title\" size=\"20%\" placeholder=\"Not Required\" value=\"$paper_title\">";
 		echo "&nbsp;&nbsp;&nbsp;Author Name: ";
@@ -109,7 +109,7 @@ Turn to an appointed location of a new page:
 						foreach ($paper['Authors_Name'] as $idx => $author)
 						{
 							$author_id = $paper['Authors_ID'][$idx];
-						echo "<a href=\"/lab03/author.php?author_id=$author_id\">$author</a>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id\">$author</a>";
 						echo "; ";
 						}
 					echo "</td>";
@@ -131,7 +131,7 @@ Turn to an appointed location of a new page:
 				if ($prev>=0)
 				{
 					echo "<td>";
-					echo "<a href=\"/lab03/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$prev&page_author_name=$page_author_name&page_conference=$page_conference#skip_title\">Previous Page</a>";
+					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$prev&page_author_name=$page_author_name&page_conference=$page_conference#skip_title\">Previous Page</a>";
 					echo "</td>";
 				}
 				echo "<td></td><td></td><td></td><td></td>";
@@ -140,7 +140,7 @@ Turn to an appointed location of a new page:
 					if ($next<$num_max)
 				{
 					echo "<td>";
-					echo "<a href=\"/lab03/search.php?paper_title=$paper_title_temp&
+					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&
 							author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$next&page_author_name=$page_author_name&page_conference=$page_conference#skip_title\">Next Page</a>";
 					echo "</td>";
 				}
@@ -188,7 +188,7 @@ Turn to an appointed location of a new page:
 						foreach ($paper['Authors_Name'] as $idx => $author)
 						{
 							$author_id = $paper['Authors_ID'][$idx];
-							echo "<a href=\"/lab03/author.php?author_id=$author_id\">$author</a>";
+							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id\">$author</a>";
 							echo "; ";
 						}
 						echo "</td>";
@@ -210,7 +210,7 @@ Turn to an appointed location of a new page:
 				if ($prev>=0)
 				{
 					echo "<td>";
-					echo "<a href=\"/lab03/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author_name=$prev&page_conference=$page_conference#skip_author_name\">Previous Page</a>";
+					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author_name=$prev&page_conference=$page_conference#skip_author_name\">Previous Page</a>";
 					echo "</td>";
 				}
 				echo "<td></td><td></td><td></td><td></td>";
@@ -219,7 +219,7 @@ Turn to an appointed location of a new page:
 				if ($next<$num_max)
 				{
 					echo "<td>";
-					echo "<a href=\"/lab03/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author_name=$next&page_conference=$page_conference#skip_author_name\">Next Page</a>";
+					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author_name=$next&page_conference=$page_conference#skip_author_name\">Next Page</a>";
 					echo "</td>";
 				}
 
@@ -264,7 +264,7 @@ Turn to an appointed location of a new page:
 						foreach ($paper['Authors_Name'] as $idx => $author)
 						{
 							$author_id = $paper['Authors_ID'][$idx];
-							echo "<a href=\"/lab03/author.php?author_id=$author_id\">$author</a>";
+							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id\">$author</a>";
 							echo "; ";
 						}
 						echo "</td>";
@@ -286,7 +286,7 @@ Turn to an appointed location of a new page:
 				if ($prev>=0)
 				{
 					echo "<td>";
-					echo "<a href=\"/lab03/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author_name=$page_author_name&page_conference=$prev#skip_conferences_name\">Previous Page</a>";
+					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author_name=$page_author_name&page_conference=$prev#skip_conferences_name\">Previous Page</a>";
 						echo "</td>";
 				}
 				echo "<td></td><td></td><td></td><td></td>";
@@ -295,7 +295,7 @@ Turn to an appointed location of a new page:
 				if ($next<$num_max)
 				{
 					echo "<td>";
-					echo "<a href=\"/lab03/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author_name=$page_author_name&page_conference=$next#skip_conferences_name\">Next Page</a>";
+					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author_name=$page_author_name&page_conference=$next#skip_conferences_name\">Next Page</a>";
 						echo "</td>";
 				}
 

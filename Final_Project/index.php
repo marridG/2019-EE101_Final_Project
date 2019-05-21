@@ -3,8 +3,8 @@
 
 <head>
 	<title>Home Page</title>
-	<link rel="stylesheet" type="text/css" href="/lab03/simple-.css">
-	<script src="/lab03/add-ons/02_Clear_Form.js"></script>
+	<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
+	<script src="/EE101-Final_Project/Final_Project/add-ons/02_Clear_Form.js"></script>
 <!-- 
 	php 值传递
 	http://www.cnblogs.com/yangwenxin/p/5825511.html -->
@@ -14,7 +14,7 @@
 <body class="homepage_body">
 	<h1>Homepage</h1>
 
-	<form action="/lab03/search.php">	
+	<form action="/EE101-Final_Project/Final_Project/search.php">	
 		Paper Title:<br>
 			<input type="text" id="1_PT" name="paper_title" placeholder="Not Required">
 		<br><br>

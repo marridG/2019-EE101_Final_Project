@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html>
 <meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="/lab03/simple-.css">
+<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
 <head>
 	<title>Author</title>
 	<!-- set search charset to utf-8: from ZQY
@@ -22,7 +22,7 @@
 		$result = mysqli_query($link, "SELECT AuthorName from authors where AuthorID='$author_id'");
 		
 	// return_to_homepage widget
-		echo "<a href=\"/lab03/index.php\" class=\"search_return_to_homepage_image\"><img src =\"/lab03/pics/Homepage_icon-without_background.jpg\" width=\"30\"></a><br>";
+		echo "<a href=\"/EE101-Final_Project/Final_Project/index.php\" class=\"search_return_to_homepage_image\"><img src =\"/EE101-Final_Project/Final_Project/pics/Homepage_icon-without_background.jpg\" width=\"30\"></a><br>";
 
 	// judge whether find the author
 		if ($author_name_res = mysqli_fetch_array($result))
@@ -90,7 +90,7 @@
 							// echo "<br>";
 							$author_name=$author["AuthorName"];
 							$author_id = $author["AuthorID"];
-							echo "<a href=\"/lab03/author.php?author_id=$author_id\">$author_name</a>";
+							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id\">$author_name</a>";
 							echo "; ";
 						}
 					echo "</td>";
