@@ -73,14 +73,20 @@ body
 	font-style: italic;
 }
 
-.search_return_to_homepage
+/*.search_return_to_homepage
 {
 	margin-bottom: 1%;
 	margin-left: -76%;
-}
+}*/
 .search_return_to_homepage_image
 {
 	margin-top: 1%;
 	margin-bottom: 1%;
 	margin-left: -90%;
+}
+
+.inline_form
+{
+	margin:0px;
+	display: inline;
 }
