@@ -1,18 +1,6 @@
 <!DOCTYPE html> 
 <html>
 <meta charset="utf-8">
-<!--
-Turn Page:
-	http://www.php.cn/php-weizijiaocheng-401273.html
-Form Value cannot contain spaces:
-	https://blog.csdn.net/qq_35938548/article/details/77979900
-Turn to the Original Location after Refreshing:
-	https://www.jb51.net/article/99749.htm
-Turn to an appointed location of a new page:
-	https://zhidao.baidu.com/question/391858559861520045.html
-Hidden Form:
-	https://blog.csdn.net/gavin_sw/article/details/1491298?utm_source=blogxgwz4
---> 
 
 <head>
 	<title>Search</title>

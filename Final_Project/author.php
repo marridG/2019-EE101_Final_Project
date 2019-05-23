@@ -4,8 +4,6 @@
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
 <head>
 	<title>Author</title>
-	<!-- set search charset to utf-8: from ZQY
-		mysqli_query($link, 'SET NAMES utf8'); -->
 </head>
 
 <body>
