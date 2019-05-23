@@ -86,7 +86,7 @@ Hidden Form:
 
 			if($result['response']['docs'])
 			{
-				echo "<table class=\"result_table\"><tr><th>Title</th><th>Authors</th><th>Conference</th></tr>";
+				echo "<table class=\"table__result\"><tr><th>Title</th><th>Authors</th><th>Conference</th></tr>";
 			// print the result table
 				foreach ($result['response']['docs'] as $paper)
 				{
@@ -117,7 +117,12 @@ Hidden Form:
 	
 			// Turn Pages
 				$num_max=$result["response"]["numFound"];
-				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+				// Jump to Page
+				echo "<form id=\"form__jump_to__inline\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_title\">";
+				echo "<input type=\"hidden\" name=\"paper_title\" value=\"$paper_title\"><input type=\"hidden\" name=\"author_name\" value=\"$author_name\"><input type=\"hidden\" name=\"conference_name\" value=$conference_name><input type=\"hidden\" name=\"page_author\" value=$page_author><input type=\"hidden\" name=\"page_conference\" value=$page_conference>";
+				echo "Jump to: <input type=\"input\" name=\"page_title\" size=\"1\">&nbsp;&nbsp;";
+				echo "<input type=\"submit\" value=\"Go!\"></form><br>";
 				// Turn to the First Page
 				echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=1&page_author=$page_author&page_conference=$page_conference#skip_title\">|<</a>";
 				echo "&nbsp;&nbsp;&nbsp;&nbsp;";
@@ -126,7 +131,23 @@ Hidden Form:
 				if ($prev>=1)
 				{
 					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$prev&page_author=$page_author&page_conference=$page_conference#skip_title\">PREV</a>";
-					echo "&nbsp;&nbsp;&nbsp;&nbsp;";
+					echo "&nbsp;&nbsp;";
+				}
+				// Show Page Numbers
+				for($prev=$page_title-5; $prev < $page_title; $prev++)
+				{ 
+					if($prev<1)
+						continue;
+					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$prev&page_author=$page_author&page_conference=$page_conference#skip_title\">$prev</a>";
+					echo "&nbsp;&nbsp;";
+				}
+				echo "$page_title&nbsp;&nbsp;";
+				for ($prev=$page_title+1; $prev <= $page_title+5; $prev++)
+				{ 
+					if(($prev-1)*$page_limit>=$num_max)
+						continue;
+					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$prev&page_author=$page_author&page_conference=$page_conference#skip_title\">$prev</a>";
+					echo "&nbsp;&nbsp;";
 				}
 				// Turn to the Next Page 
 				$next=$page_title+1;
@@ -145,11 +166,7 @@ Hidden Form:
 				// var_dump($next);
 				echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$next&page_author=$page_author&page_conference=$page_conference#skip_title\">>|</a>";
 				echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-				// Jump to Page
-				echo "<form class=\"inline_form\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_title\">";
-				echo "<input type=\"hidden\" name=\"paper_title\" value=\"$paper_title\"><input type=\"hidden\" name=\"author_name\" value=\"$author_name\"><input type=\"hidden\" name=\"conference_name\" value=$conference_name><input type=\"hidden\" name=\"page_author\" value=$page_author><input type=\"hidden\" name=\"page_conference\" value=$page_conference>";
-				echo "Jump to: <input type=\"input\" name=\"page_title\" size=\"1\">&nbsp;&nbsp;";
-				echo "<input type=\"submit\" value=\"Go!\"></form>";
+				
 				// var_dump($page_title);
 
 				echo "<br><br><br>";
@@ -180,7 +197,7 @@ Hidden Form:
 			if ($result['response']['docs'])
 			{
 				echo "<a name=\"skip_author_name\"></a>";
-				echo "<table class=\"result_table\"><tr><th>Title</th><th>Authors</th><th>Conference</th></tr>";
+				echo "<table class=\"table__result\"><tr><th>Title</th><th>Authors</th><th>Conference</th></tr>";
 			// print the result table
 				foreach ($result['response']['docs'] as $paper)
 				{
@@ -211,16 +228,32 @@ Hidden Form:
 
 			// Turn Page
 				$num_max=$result["response"]["numFound"];
-				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.<br>";
 				// Turn to the First Page
-				echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=1&page_conference=$page_conference#skip_author_name\">|<</a>";
+				echo "<a href=\"/EEs101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=1&page_conference=$page_conference#skip_author_name\">|<</a>";
 				echo "&nbsp;&nbsp;&nbsp;&nbsp;";
 				// Turn to the Previous Page
 				$prev=$page_author-1;
 				if ($prev>=1)
 				{
 					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$prev&page_conference=$page_conference#skip_author_name\">PREV</a>";
-					echo "&nbsp;&nbsp;&nbsp;&nbsp;";
+					echo "&nbsp;&nbsp;";
+				}
+				// Show Page Numbers
+				for($prev=$page_author-5; $prev < $page_author; $prev++)
+				{ 
+					if($prev<1)
+						continue;
+					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$prev&page_conference=$page_conference#skip_author_name\">$prev</a>";
+					echo "&nbsp;&nbsp;";
+				}
+				echo "$page_author&nbsp;&nbsp;";
+				for ($prev=$page_author+1; $prev <= $page_author+5; $prev++)
+				{ 
+					if(($prev-1)*$page_limit>=$num_max)
+						continue;
+					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$prev&page_conference=$page_conference#skip_author_name\">$prev</a>";
+					echo "&nbsp;&nbsp;";
 				}
 				// Turn to the Next Page 
 				$next=$page_author+1;
@@ -239,7 +272,7 @@ Hidden Form:
 				echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$next&page_conference=$page_conference#skip_author_name\">>|</a>";
 				echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 				// Jump to Page
-				echo "<form class=\"inline_form\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_author_name\">";
+				echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_author_name\">";
 				echo "<input type=\"hidden\" name=\"paper_title\" value=\"$paper_title\"><input type=\"hidden\" name=\"author_name\" value=\"$author_name\"><input type=\"hidden\" name=\"conference_name\" value=$conference_name><input type=\"hidden\" name=\"page_title\" value=$page_title><input type=\"hidden\" name=\"page_conference\" value=$page_conference>";
 				echo "Jump to: <input type=\"input\" name=\"page_author\" size=\"1\">&nbsp;&nbsp;";
 				echo "<input type=\"submit\" value=\"Go!\"></form>";
@@ -271,7 +304,7 @@ Hidden Form:
 
 			if($result['response']['docs'])
 			{
-				echo "<table class=\"result_table\"><tr><th>Title</th><th>Authors</th><th>Conference</th></tr>";
+				echo "<table class=\"table__result\"><tr><th>Title</th><th>Authors</th><th>Conference</th></tr>";
 			// print the result table
 				foreach ($result['response']['docs'] as $paper)
 				{
@@ -302,7 +335,7 @@ Hidden Form:
 
 			// Turn Page
 				$num_max=$result["response"]["numFound"];
-				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.<br>";
 				// Turn to the First Page
 				echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$page_author&page_conference=1#skip_conference_name\">|<</a>";
 				echo "&nbsp;&nbsp;&nbsp;&nbsp;";
@@ -312,6 +345,22 @@ Hidden Form:
 				{
 					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$page_author&page_conference=$prev#skip_conference_name\">PREV</a>";
 					echo "&nbsp;&nbsp;&nbsp;&nbsp;";
+				}
+				// Show Page Numbers
+				for($prev=$page_conference-5; $prev < $page_conference; $prev++)
+				{ 
+					if($prev<1)
+						continue;
+					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$page_author&page_conference=$prev#skip_conference_name\">$prev</a>";
+					echo "&nbsp;&nbsp;";
+				}
+				echo "$page_conference&nbsp;&nbsp;";
+				for ($prev=$page_conference+1; $prev <= $page_conference+5; $prev++)
+				{ 
+					if(($prev-1)*$page_limit>=$num_max)
+						continue;
+					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$page_author&page_conference=$prev#skip_conference_name\">$prev</a>";
+					echo "&nbsp;&nbsp;";
 				}
 				// Turn to the Next Page
 				$next=$page_conference+1;
@@ -330,9 +379,9 @@ Hidden Form:
 				echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$page_author&page_conference=$next#skip_conference_name\">>|</a>";
 				echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 				// Jump to Page
-				echo "<form class=\"inline_form\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_conference_name\">";
+				echo "<form id=\"form__jump_to__inline\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_conference_name\">";
 				echo "<input type=\"hidden\" name=\"paper_title\" value=\"$paper_title\"><input type=\"hidden\" name=\"author_name\" value=\"$author_name\"><input type=\"hidden\" name=\"conference_name\" value=$conference_name><input type=\"hidden\" name=\"page_title\" value=$page_title><input type=\"hidden\" name=\"page_author\" value=$page_author>";
-				echo "Jump to: <input type=\"input\" name=\"page_conference\" size=\"1\">&nbsp;&nbsp;";
+				echo "Jump to: <input type=\"number\" name=\"page_conference\" size=\"1\" max=$next>&nbsp;&nbsp;";
 				echo "<input type=\"submit\" value=\"Go!\"></form>";
 				// var_dump($page_conference);
 

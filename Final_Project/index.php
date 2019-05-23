@@ -6,12 +6,14 @@
 	<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
 	<script src="/EE101-Final_Project/Final_Project/add-ons/02_Clear_Form.js"></script>
 <!-- 
-	php 值传递
+html 表单域详细说明：
+	https://blog.csdn.net/nanjinzhu/article/details/82251110
+php 值传递：
 	http://www.cnblogs.com/yangwenxin/p/5825511.html -->
 
 </head>
 
-<body class="homepage_body">
+<body class="body__homepage">
 	<h1>Homepage</h1>
 
 	<form action="/EE101-Final_Project/Final_Project/search.php" target="_blank">	
