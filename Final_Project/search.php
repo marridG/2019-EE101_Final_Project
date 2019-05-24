@@ -35,7 +35,6 @@
 
 	// Search Widget
 		echo "<a href=\"/EE101-Final_Project/Final_Project/index.php\" class=\"search_return_to_homepage_image\"><img src =\"/EE101-Final_Project/Final_Project/pics/Homepage_icon-without_background.jpg\" width=\"30\"></a>";
-		// echo "<form class=\"search_return_to_homepage\"action='/EE101-Final_Project/Final_Project/index.php'><input type='submit' value='Return to Homepage'></form>";
 		
 		echo "<form id=\"search_form\" action=\"/EE101-Final_Project/Final_Project/search.php\">";
 		echo "<input type=\"hidden\" name=\"page_title\" value=\"1\"><input type=\"hidden\" name=\"page_author\" value=\"1\"><input type=\"hidden\" name=\"page_conference\" value=\"1\">";
@@ -90,7 +89,7 @@
 						foreach ($paper['Authors_Name'] as $idx => $author)
 						{
 							$author_id = $paper['Authors_ID'][$idx];
-						echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id\" target=\"_balnk\">$author</a>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1\" target=\"_balnk\">$author</a>";
 						echo "; ";
 						}
 					echo "</td>";
@@ -201,7 +200,7 @@
 						foreach ($paper['Authors_Name'] as $idx => $author)
 						{
 							$author_id = $paper['Authors_ID'][$idx];
-							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id\" target=\"_balnk\">$author</a>";
+							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1\" target=\"_balnk\">$author</a>";
 							echo "; ";
 						}
 						echo "</td>";
@@ -308,7 +307,7 @@
 						foreach ($paper['Authors_Name'] as $idx => $author)
 						{
 							$author_id = $paper['Authors_ID'][$idx];
-							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id\" target=\"_balnk\">$author</a>";
+							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1\" target=\"_balnk\">$author</a>";
 							echo "; ";
 						}
 						echo "</td>";

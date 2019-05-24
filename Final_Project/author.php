@@ -14,19 +14,19 @@
 		$author_id = $_GET["author_id"];
 
 		$link = mysqli_connect("127.0.0.1", "root", "", "lab01");
-
-	// search and print the AuthorName corresponding to the given AuthorID
 		mysqli_query($link, 'SET NAMES utf8');
-		$result = mysqli_query($link, "SELECT AuthorName from authors where AuthorID='$author_id'");
 		
 	// return_to_homepage widget
 		echo "<a href=\"/EE101-Final_Project/Final_Project/index.php\" class=\"search_return_to_homepage_image\"><img src =\"/EE101-Final_Project/Final_Project/pics/Homepage_icon-without_background.jpg\" width=\"30\"></a><br>";
 
-	// judge whether find the author
+	// search and print the AuthorName of the given AuthorID
+		$result = mysqli_query($link, "SELECT AuthorName from authors where AuthorID='$author_id'");
+		// judge whether find the author
 		if ($author_name_res = mysqli_fetch_array($result))
 		{
 			// var_dump($author_name_res);
 			$author_name=$author_name_res['AuthorName'];
+			echo "<a name=\"skip_here\"></a>";
 			echo "Name: $author_name<br>";
 
 		// search and print the most related AffiliationName to the given AuthorID
@@ -53,10 +53,33 @@
 				echo "Affiliation not found!";
 			}
 
-			echo "<table class=\"result_table\" align=center><tr><th>Title</th><th>Authors</th><th>Conference</th></tr>";
+			echo "<table class=\"table__result\" align=center><tr><th>Title</th><th>Authors</th><th>Conference</th></tr>";
 
 		// search and print the papers of the AuthorID (in an ascending order of AuthorSequence)
-			$paper_id_result = mysqli_query($link, "SELECT PaperID from paper_author_affiliation where AuthorID='$author_id'");
+		// Turn Page Variables
+		// Turn Page
+			$page_limit=10;
+			$page=$_GET["page"];
+			$paper_id_count = mysqli_fetch_array(mysqli_query($link, "SELECT count(*) from paper_author_affiliation where AuthorID='$author_id'"))[0];
+			$num_max = (int)$paper_id_count;
+			$page_start_index=($page-1)*$page_limit;
+		
+		// Search the results of a certain range
+			if($page_start_index+$page_limit-1>$num_max)
+			{
+				$temp=($num_max-$page_start_index);
+				$paper_id_result = mysqli_query($link, "SELECT PaperID from paper_author_affiliation where AuthorID='$author_id' limit $page_start_index,$temp");
+				// var_dump($page_start_index);
+				// var_dump($temp);
+				// var_dump($paper_id_result);
+			}
+			else
+			{
+				$paper_id_result = mysqli_query($link, "SELECT PaperID from paper_author_affiliation where AuthorID='$author_id' limit $page_start_index,$page_limit");
+				// var_dump($page_start_index);
+				// var_dump($paper_id_result);
+			}
+
 			if ($paper_id_result)
 			{	
 				while ($row = mysqli_fetch_array($paper_id_result))
@@ -104,12 +127,63 @@
 					# 请补充根据$conf_id查询conference name并显示的部分
 					echo "</tr>";
 				}
-				echo "</table>";
+				echo "</table><br>";
+
+			// Turn Page
+				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.<br>";
+				// Turn to the First Page
+				echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1#skip_here\">|<</a>";
+					echo "&nbsp;&nbsp;&nbsp;&nbsp;";
+				// Turn to the Previous Page
+				$prev=$page-1;
+				if ($prev>=1)
+				{
+					echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$prev#skip_here\">PREV</a>";
+						echo "&nbsp;&nbsp;";
+				}
+				// Show Page Numbers
+				for($prev=$page-5; $prev < $page; $prev++)
+				{ 
+					if($prev<1)
+						continue;
+					echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$prev#skip_here\">$prev</a>";
+					echo "&nbsp;&nbsp;";
+				}
+				echo "$page&nbsp;&nbsp;";
+				for ($prev=$page+1; $prev <= $page+5; $prev++)
+				{ 
+					if(($prev-1)*$page_limit>=$num_max)
+						continue;
+					echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$prev#skip_here\">$prev</a>";
+					echo "&nbsp;&nbsp;";
+				}
+				// Turn to the Next Page 
+				$next=$page+1;
+				if (($next-1)*$page_limit<$num_max)
+				{
+					echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$next#skip_here\">NEXT</a>";
+						echo "&nbsp;&nbsp;&nbsp;&nbsp;";
+				}
+				// Turn to the Last Page
+				if($num_max%$page_limit==0)
+					$next=$num_max/$page_limit;
+				else
+					$next=floor($num_max/$page_limit)+1;
+				// var_dump($num_max);
+				// var_dump($next);
+				echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$next#skip_here\">>|</a>";
+				echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+				// Jump to Page
+				echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/author.php#skip_here\">";
+				echo "<input type=\"hidden\" name=\"author_id\" value=$author_id>";
+				echo "Jump to: <input type=\"input\" name=\"page\" size=\"1\">&nbsp;&nbsp;";
+				echo "<input type=\"submit\" value=\"Go!\"></form>";
+				// var_dump($page_author);
 			}
 		}
 		else
 		{
-			echo "Name not found!";
+			echo "Author not found!";
 		}
 
 	?>
