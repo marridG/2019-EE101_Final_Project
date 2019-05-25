@@ -4,12 +4,12 @@
 <head>
 	<img src="/EE101-Final_Project/Final_Project/pics/acemap.jpg" class="head_pic">
 	<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
-	<!-- <style type="text/css">
+	<style type="text/css">
 		body
 		{
 			background-image: url("/EE101-Final_Project/Final_Project/pics/IMG_5349.JPG");
 		}
-	</style> -->
+	</style>
 	<script src="/EE101-Final_Project/Final_Project/add-ons/02_Clear_Form.js"></script>
 
 </head>
