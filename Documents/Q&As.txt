@@ -1,0 +1,54 @@
+﻿
+---- ** 请记录遇到的问题和解决方案，最好附上查到的教程等资源的链接 ** ----
+
+
+
+在完成翻页功能时，控制页数的变量在各页面间传递较复杂（如 index-search 不能有相应表格）
+php 值传递：
+	http://www.cnblogs.com/yangwenxin/p/5825511.html
+
+
+翻页功能
+参考代码源:
+	http://www.php.cn/php-weizijiaocheng-401273.html
+
+
+表单域的 value 属性中，值不能包含空格，否则只会取最前一段（如 "aa bb" 只会显示 "aa"）
+解决方案：
+	https://blog.csdn.net/qq_35938548/article/details/77979900
+
+
+刷新后返回原来的浏览位置
+参考代码源：
+	https://www.jb51.net/article/99749.htm
+
+
+在含多个结果表格的 search 页面中，对某一表格进行翻页后，新 search 页面跳转到翻页表格的表头
+解决方案：锚点：
+	https://zhidao.baidu.com/question/391858559861520045.html
+
+
+结果表格中，隔行背景颜色变化
+参考代码：
+	https://jingyan.baidu.com/article/4dc408484533f9c8d946f1a5.html
+
+
+结果表格中，隔行背景颜色变化，但当条数为奇数时，由于无背景，导致表格区域边界不清
+解决方案：
+	https://www.jb51.net/web/651409.html
+
+
+MySQL 搜索结果乱码问题（比如 author 搜含西班牙文的作者名）
+解决方案（From 赵启元）：添加代码，将搜索的字符集设置为 utf8
+	mysqli_query($link, 'SET NAMES utf8');
+
+
+更好的值传递方式——表单域 "hidden" type
+参考：
+	https://blog.csdn.net/gavin_sw/article/details/1491298?utm_source=blogxgwz4
+
+
+看到的比较好的表单域说明：
+链接：
+	https://blog.csdn.net/nanjinzhu/article/details/82251110
+

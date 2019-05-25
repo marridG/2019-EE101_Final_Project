@@ -1,8 +1,3 @@
-/*Every-two-row background color:
-	http://jingyan.baidu.com/article/4dc408484533f9c8d946f1a5.html
-Border of the whoel table:
-	https://www.jb51.net/web/651409.html
-*/
 
 body
 {
@@ -10,7 +5,7 @@ body
 	background-color: #1827A3;
 }
 
-.homepage_body
+.body__homepage
 {
 	/*background-image: url("/lab03/pics/homepage_background.jpg");*/
 	background-image: url("/EE101-Final_Project/Final_Project/pics/雅典学院.jpg");
@@ -21,7 +16,7 @@ body
 	color: #96E703;
 }
 
-.result_table
+.table__result
 {
 	margin: 0 auto;
 	width: 88%;
@@ -30,54 +25,49 @@ body
 	text-align: center;
 }
 
-.result_table tr	/*new line*/
+.table__result tr	/*new line*/
 {
 	line-height: 30px;
 	border-color: #ccc;
 }
 
-.result_table th	/*table header*/
+.table__result th	/*table header*/
 {
 	text-align: center;
 	color: #928484;
 /*	background: #E4DCDC;*/
 }
 
-.result_table td	/*new row of a line*/
+.table__result td	/*new row of a line*/
 {
 	text-align: center;
 	border-color: #ccc;
 }
 
-.result_table tr:nth-child(odd)
+.table__result tr:nth-child(odd)
 {
 	background: #ccc;
 }
 
-.result_table td:nth-child(1)	/*Title*/
+.table__result td:nth-child(1)	/*Title*/
 {
 	font-family: Arial;
 	font-style: italic;
 
 }
 
-.result_table td:nth-child(2)	/*Author Name*/
+.table__result td:nth-child(2)	/*Author Name*/
 {
 	font-family: New Times Roman;
 	font-style: normal;
 }
 
-.result_table td:nth-child(3)	/*Conference Name*/
+.table__result td:nth-child(3)	/*Conference Name*/
 {
 	font-family: Chaparral Pro Light;
 	font-style: italic;
 }
 
-/*.search_return_to_homepage
-{
-	margin-bottom: 1%;
-	margin-left: -76%;
-}*/
 .search_return_to_homepage_image
 {
 	margin-top: 1%;
@@ -85,7 +75,7 @@ body
 	margin-left: -90%;
 }
 
-.inline_form
+#form__jump_to__inline
 {
 	margin:0px;
 	display: inline;
@@ -94,4 +84,42 @@ body
 .head_pic
 {
 	
+}
+#form__jump_to__right_hand
+{
+	align-self: right;
+	text-align: right;
+	margin-right: 20%;
+}
+
+#search__Turn_Page_prev_page
+{
+	/*size: 20%;*/
+	width: 30px;
+}
+
+#search__Turn_Page_selected
+{
+	width: 30px;
+}
+
+#search__Turn_Page_not_selected
+{
+	width: 30px;
+}
+
+#search__Turn_Page_next_page
+{
+	width: 30px;
+}
+
+#search__Turn_Page_empty
+{
+	width: 30px;
+}
+
+.table__Turn_Page
+{
+	margin: 0 auto;
+	text-align: center;
 }
