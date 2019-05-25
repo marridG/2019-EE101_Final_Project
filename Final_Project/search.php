@@ -14,6 +14,31 @@
 	<h1>Search Result</h1>
 
 	<?php
+	function Turn_Page_min_max_page($num_max,$page_limit,&$min_page,&$max_page,$page)
+	{
+		if($num_max<=90)
+		{
+			$min_page=1;
+			if($num_max%$page_limit==0)
+				$max_page=$num_max/$page_limit;
+			else
+				$max_page=floor($num_max/$page_limit)+1;
+		}
+		else
+		{
+			$min_page=$page-5;
+			while($min_page<1)
+				$min_page++;
+			$max_page=$min_page+9;
+			while(($max_page-1)*$page_limit>=$num_max)
+				$max_page--;
+			if($max_page-$min_page+1<10)
+				$min_page=$max_page-9;
+		}
+		// var_dump($min_page);
+		// var_dump($max_page);
+	}
+
 	// from index.php:
 		// get paper_title, author_name, conference_name 
 		$paper_title = $_GET["paper_title"];
@@ -102,58 +127,99 @@
 				}
 				echo "</table><br>";
 	
-			// Turn Pages
+			// Turn Page
 				$num_max=$result["response"]["numFound"];
-				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+				Turn_Page_min_max_page($num_max,$page_limit,$min_page,$max_page,$page_title);
+				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.<br>";
+				echo "<table class=\"table__Turn_Page\">";
+				echo "<tr>";
+				// Row One
+					// Previous Page
+					echo "<td>";
+					$i=$page_title-1;
+					if($i>=1)
+					{
+						echo "<a href=\"search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$i&page_author=$page_author&page_conference=$page_conference#skip_title\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+						echo "</td><td>";
+						echo "<a href=\"search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$i&page_author=$page_author&page_conference=$page_conference#skip_title\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.jpg\" id=\"search__Turn_Page_prev_page\"></a>";
+
+					}
+					else
+					{
+						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\">";
+						echo "</td><td>";
+						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.jpg\" id=\"search__Turn_Page_prev_page\">";
+					}
+					echo "</td>";
+					// Pages in the middle
+					for($i=$min_page;$i<=$max_page;$i++)
+					{
+						if($i==$page_title)
+							echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_selected.jpg\" id=\"search__Turn_Page_selected\"></a></td>";
+						else
+							echo "<td><a href=\"search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$i&page_author=$page_author&page_conference=$page_conference#skip_title\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_not_selected.jpg\"  id=\"search__Turn_Page_not_selected\"></a></td>";
+					}
+					// Next Page
+					echo "<td>";
+					$i=$page_title+1;
+					if (($i-1)*$page_limit<$num_max)
+					{
+						echo "<a href=\"search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$i&page_author=$page_author&page_conference=$page_conference#skip_title\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.jpg\" id=\"search__Turn_Page_next_page\"></a>";
+						echo "</td><td>";
+						echo "<a href=\"search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$i&page_author=$page_author&page_conference=$page_conference#skip_title\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+					}
+					else
+					{
+						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.jpg\" id=\"search__Turn_Page_next_page\">";
+						echo "</td><td>";
+						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\">";
+					}
+					echo "</td>";
+				echo "</tr>";
+				echo "<tr>";
+				// Row Two
+					// Turn to the Previous Page
+					$i=$page_title-1;
+					echo "<td>";
+					if ($i>=1)
+					{
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$i&page_author=$page_author&page_conference=$page_conference#skip_title\"><<</a>";
+						echo "</td><td>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$i&page_author=$page_author&page_conference=$page_conference#skip_title\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+					}
+					else
+						echo "<td></td>";
+					echo "</td>";
+					// Show Page Numbers
+					for($i=$min_page; $i <= $max_page; $i++)
+					{ 
+						echo "<td>";
+						if($i==$page_title)
+							echo "$page_title";
+						else
+							echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$i&page_author=$page_author&page_conference=$page_conference#skip_title\">$i</a>";
+						echo "</td>";
+					}
+					// Turn to the Next Page
+					echo "<td>";
+					$i=$page_title+1;
+					if (($i-1)*$page_limit<$num_max)
+					{
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$i&page_author=$page_author&page_conference=$page_conference#skip_title\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+						echo "</td><td>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$i&page_author=$page_author&page_conference=$page_conference#skip_title\">>></a>";
+					}
+					else
+						echo "<td></td>";
+					echo "</td>";
+				echo "</tr>";
+				echo "</table>";
+				
 				// Jump to Page
-				echo "<form id=\"form__jump_to__inline\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_title\">";
+				echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_title\">";
 				echo "<input type=\"hidden\" name=\"paper_title\" value=\"$paper_title\"><input type=\"hidden\" name=\"author_name\" value=\"$author_name\"><input type=\"hidden\" name=\"conference_name\" value=$conference_name><input type=\"hidden\" name=\"page_author\" value=$page_author><input type=\"hidden\" name=\"page_conference\" value=$page_conference>";
 				echo "Jump to: <input type=\"input\" name=\"page_title\" size=\"1\">&nbsp;&nbsp;";
-				echo "<input type=\"submit\" value=\"Go!\"></form><br>";
-				// Turn to the First Page
-				echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=1&page_author=$page_author&page_conference=$page_conference#skip_title\">|<</a>";
-				echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-				// Turn to the Previous Page
-				$prev=$page_title-1;
-				if ($prev>=1)
-				{
-					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$prev&page_author=$page_author&page_conference=$page_conference#skip_title\">PREV</a>";
-					echo "&nbsp;&nbsp;";
-				}
-				// Show Page Numbers
-				for($prev=$page_title-5; $prev < $page_title; $prev++)
-				{ 
-					if($prev<1)
-						continue;
-					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$prev&page_author=$page_author&page_conference=$page_conference#skip_title\">$prev</a>";
-					echo "&nbsp;&nbsp;";
-				}
-				echo "$page_title&nbsp;&nbsp;";
-				for ($prev=$page_title+1; $prev <= $page_title+5; $prev++)
-				{ 
-					if(($prev-1)*$page_limit>=$num_max)
-						continue;
-					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$prev&page_author=$page_author&page_conference=$page_conference#skip_title\">$prev</a>";
-					echo "&nbsp;&nbsp;";
-				}
-				// Turn to the Next Page 
-				$next=$page_title+1;
-				if (($next-1)*$page_limit<$num_max)
-				{
-					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&
-							author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$next&page_author=$page_author&page_conference=$page_conference#skip_title\">NEXT</a>";
-					echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-				}
-				// Turn to the Last Page
-				if($num_max%$page_limit==0)
-					$next=$num_max/$page_limit;
-				else
-					$next=floor($num_max/$page_limit)+1;
-				// var_dump($num_max);
-				// var_dump($next);
-				echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$next&page_author=$page_author&page_conference=$page_conference#skip_title\">>|</a>";
-				echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-				
+				echo "<input type=\"submit\" value=\"Go!\"></form>";
 				// var_dump($page_title);
 
 				echo "<br><br><br>";
@@ -165,7 +231,7 @@
 	// Search Authors_Name is given
 		if ($author_name)
 		{
-			echo "<a name=\"skip_author_name\"></a>";
+			echo "<a name=\"skip_author\"></a>";
 			echo "Search for Author's Name: ".$author_name;
 
 			$ch = curl_init();
@@ -183,7 +249,7 @@
 
 			if ($result['response']['docs'])
 			{
-				echo "<a name=\"skip_author_name\"></a>";
+				echo "<a name=\"skip_author\"></a>";
 				echo "<table class=\"table__result\"><tr><th>Title</th><th>Authors</th><th>Conference</th></tr>";
 			// print the result table
 				foreach ($result['response']['docs'] as $paper)
@@ -215,51 +281,94 @@
 
 			// Turn Page
 				$num_max=$result["response"]["numFound"];
+				Turn_Page_min_max_page($num_max,$page_limit,$min_page,$max_page,$page_author);
 				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.<br>";
-				// Turn to the First Page
-				echo "<a href=\"/EEs101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=1&page_conference=$page_conference#skip_author_name\">|<</a>";
-				echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-				// Turn to the Previous Page
-				$prev=$page_author-1;
-				if ($prev>=1)
-				{
-					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$prev&page_conference=$page_conference#skip_author_name\">PREV</a>";
-					echo "&nbsp;&nbsp;";
-				}
-				// Show Page Numbers
-				for($prev=$page_author-5; $prev < $page_author; $prev++)
-				{ 
-					if($prev<1)
-						continue;
-					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$prev&page_conference=$page_conference#skip_author_name\">$prev</a>";
-					echo "&nbsp;&nbsp;";
-				}
-				echo "$page_author&nbsp;&nbsp;";
-				for ($prev=$page_author+1; $prev <= $page_author+5; $prev++)
-				{ 
-					if(($prev-1)*$page_limit>=$num_max)
-						continue;
-					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$prev&page_conference=$page_conference#skip_author_name\">$prev</a>";
-					echo "&nbsp;&nbsp;";
-				}
-				// Turn to the Next Page 
-				$next=$page_author+1;
-				if (($next-1)*$page_limit<$num_max)
-				{
-					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$next&page_conference=$page_conference#skip_author_name\">NEXT</a>";
-					echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-				}
-				// Turn to the Last Page
-				if($num_max%$page_limit==0)
-					$next=$num_max/$page_limit;
-				else
-					$next=floor($num_max/$page_limit)+1;
-				// var_dump($num_max);
-				// var_dump($next);
-				echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$next&page_conference=$page_conference#skip_author_name\">>|</a>";
-				echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+				echo "<table class=\"table__Turn_Page\">";
+				echo "<tr>";
+				// Row One
+					// Previous Page
+					echo "<td>";
+					$i=$page_author-1;
+					if($i>=1)
+					{
+						echo "<a href=\"search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$i&page_conference=$page_conference#skip_author\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+						echo "</td><td>";
+						echo "<a href=\"search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$i&page_conference=$page_conference#skip_author\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.jpg\" id=\"search__Turn_Page_prev_page\"></a>";
+
+					}
+					else
+					{
+						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\">";
+						echo "</td><td>";
+						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.jpg\" id=\"search__Turn_Page_prev_page\">";
+					}
+					echo "</td>";
+					// Pages in the middle
+					for($i=$min_page;$i<=$max_page;$i++)
+					{
+						if($i==$page_title)
+							echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_selected.jpg\" id=\"search__Turn_Page_selected\"></a></td>";
+						else
+							echo "<td><a href=\"search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$i&page_conference=$page_conference#skip_author\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_not_selected.jpg\"  id=\"search__Turn_Page_not_selected\"></a></td>";
+					}
+					// Next Page
+					echo "<td>";
+					$i=$page_author+1;
+					if (($i-1)*$page_limit<$num_max)
+					{
+						echo "<a href=\"search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$i&page_conference=$page_conference#skip_author\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.jpg\" id=\"search__Turn_Page_next_page\"></a>";
+						echo "</td><td>";
+						echo "<a href=\"search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$i&page_conference=$page_conference#skip_author\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+					}
+					else
+					{
+						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.jpg\" id=\"search__Turn_Page_next_page\">";
+						echo "</td><td>";
+						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\">";
+					}
+					echo "</td>";
+				echo "</tr>";
+				echo "<tr>";
+				// Row Two
+					// Turn to the Previous Page
+					$i=$page_author-1;
+					echo "<td>";
+					if ($i>=1)
+					{
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$i&page_conference=$page_conference#skip_author\"><<</a>";
+						echo "</td><td>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$i&page_conference=$page_conference#skip_author\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+					}
+					else
+						echo "<td></td>";
+					echo "</td>";
+					// Show Page Numbers
+					for($i=$min_page; $i <= $max_page; $i++)
+					{ 
+						echo "<td>";
+						if($i==$page_author)
+							echo "$page_author";
+						else
+							echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$i&page_conference=$page_conference#skip_author\">$i</a>";
+						echo "</td>";
+					}
+					// Turn to the Next Page
+					echo "<td>";
+					$i=$page_author+1;
+					if (($i-1)*$page_limit<$num_max)
+					{
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$i&page_conference=$page_conference#skip_author\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+						echo "</td><td>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$i&page_conference=$page_conference#skip_author\">>></a>";
+					}
+					else
+						echo "<td></td>";
+					echo "</td>";
+				echo "</tr>";
+				echo "</table>";
+				
 				// Jump to Page
-				echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_author_name\">";
+				echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_author\">";
 				echo "<input type=\"hidden\" name=\"paper_title\" value=\"$paper_title\"><input type=\"hidden\" name=\"author_name\" value=\"$author_name\"><input type=\"hidden\" name=\"conference_name\" value=$conference_name><input type=\"hidden\" name=\"page_title\" value=$page_title><input type=\"hidden\" name=\"page_conference\" value=$page_conference>";
 				echo "Jump to: <input type=\"input\" name=\"page_author\" size=\"1\">&nbsp;&nbsp;";
 				echo "<input type=\"submit\" value=\"Go!\"></form>";
@@ -274,7 +383,7 @@
 	// Search ConferenceName if given
 		if ($conference_name)
 		{
-			echo "<a name=\"skip_conference_name\"></a>";
+			echo "<a name=\"skip_conference\"></a>";
 			echo "Search for Conference Name: ".$conference_name;
 
 			$ch = curl_init();
@@ -322,53 +431,96 @@
 
 			// Turn Page
 				$num_max=$result["response"]["numFound"];
+				Turn_Page_min_max_page($num_max,$page_limit,$min_page,$max_page,$page_conference);
 				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.<br>";
-				// Turn to the First Page
-				echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$page_author&page_conference=1#skip_conference_name\">|<</a>";
-				echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-				// Turn to the Previous Page
-				$prev=$page_conference-1;
-				if ($prev>=1)
-				{
-					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$page_author&page_conference=$prev#skip_conference_name\">PREV</a>";
-					echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-				}
-				// Show Page Numbers
-				for($prev=$page_conference-5; $prev < $page_conference; $prev++)
-				{ 
-					if($prev<1)
-						continue;
-					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$page_author&page_conference=$prev#skip_conference_name\">$prev</a>";
-					echo "&nbsp;&nbsp;";
-				}
-				echo "$page_conference&nbsp;&nbsp;";
-				for ($prev=$page_conference+1; $prev <= $page_conference+5; $prev++)
-				{ 
-					if(($prev-1)*$page_limit>=$num_max)
-						continue;
-					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$page_author&page_conference=$prev#skip_conference_name\">$prev</a>";
-					echo "&nbsp;&nbsp;";
-				}
-				// Turn to the Next Page
-				$next=$page_conference+1;
-				if (($next-1)*$page_limit<$num_max)
-				{
-					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$page_author&page_conference=$next#skip_conference_name\">NEXT</a>";
-					echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-				}
-				// Turn to the Last Page
-				if($num_max%$page_limit==0)
-					$next=$num_max/$page_limit;
-				else
-					$next=floor($num_max/$page_limit)+1;
-				// var_dump($num_max);
-				// var_dump($next);
-				echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$page_author&page_conference=$next#skip_conference_name\">>|</a>";
-				echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+				echo "<table class=\"table__Turn_Page\">";
+				echo "<tr>";
+				// Row One
+					// Previous Page
+					echo "<td>";
+					$i=$page_conference-1;
+					if($i>=1)
+					{
+						echo "<a href=\"search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$page_author&page_conference=$i#skip_conference\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+						echo "</td><td>";
+						echo "<a href=\"search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$page_author&page_conference=$i#skip_conference\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.jpg\" id=\"search__Turn_Page_prev_page\"></a>";
+
+					}
+					else
+					{
+						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\">";
+						echo "</td><td>";
+						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.jpg\" id=\"search__Turn_Page_prev_page\">";
+					}
+					echo "</td>";
+					// Pages in the middle
+					for($i=$min_page;$i<=$max_page;$i++)
+					{
+						if($i==$page_conference)
+							echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_selected.jpg\" id=\"search__Turn_Page_selected\"></a></td>";
+						else
+							echo "<td><a href=\"search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$page_author&page_conference=$i#skip_conference\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_not_selected.jpg\"  id=\"search__Turn_Page_not_selected\"></a></td>";
+					}
+					// Next Page
+					echo "<td>";
+					$i=$page_conference+1;
+					if (($i-1)*$page_limit<$num_max)
+					{
+						echo "<a href=\"search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$page_author&page_conference=$i#skip_conference\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.jpg\" id=\"search__Turn_Page_next_page\"></a>";
+						echo "</td><td>";
+						echo "<a href=\"search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$page_author&page_conference=$i#skip_conference\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+					}
+					else
+					{
+						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.jpg\" id=\"search__Turn_Page_next_page\">";
+						echo "</td><td>";
+						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\">";
+					}
+					echo "</td>";
+				echo "</tr>";
+				echo "<tr>";
+				// Row Two
+					// Turn to the Previous Page
+					$i=$page_conference-1;
+					echo "<td>";
+					if ($i>=1)
+					{
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$page_author&page_conference=$i#skip_conference\"><<</a>";
+						echo "</td><td>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$page_author&page_conference=$i#skip_conference\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+					}
+					else
+						echo "<td></td>";
+					echo "</td>";
+					// Show Page Numbers
+					for($i=$min_page; $i <= $max_page; $i++)
+					{ 
+						echo "<td>";
+						if($i==$page_conference)
+							echo "$page_conference";
+						else
+							echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$page_author&page_conference=$i#skip_conference\">$i</a>";
+						echo "</td>";
+					}
+					// Turn to the Next Page
+					echo "<td>";
+					$i=$page_conference+1;
+					if (($i-1)*$page_limit<$num_max)
+					{
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$page_author&page_conference=$i#skip_conference\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+						echo "</td><td>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$page_title&page_author=$page_author&page_conference=$i#skip_conference\">>></a>";
+					}
+					else
+						echo "<td></td>";
+					echo "</td>";
+				echo "</tr>";
+				echo "</table>";
+
 				// Jump to Page
-				echo "<form id=\"form__jump_to__inline\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_conference_name\">";
+				echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_conference\">";
 				echo "<input type=\"hidden\" name=\"paper_title\" value=\"$paper_title\"><input type=\"hidden\" name=\"author_name\" value=\"$author_name\"><input type=\"hidden\" name=\"conference_name\" value=$conference_name><input type=\"hidden\" name=\"page_title\" value=$page_title><input type=\"hidden\" name=\"page_author\" value=$page_author>";
-				echo "Jump to: <input type=\"number\" name=\"page_conference\" size=\"1\" max=$next>&nbsp;&nbsp;";
+				echo "Jump to: <input type=\"number\" name=\"page_conference\" size=\"1\" max=100000>&nbsp;&nbsp;";
 				echo "<input type=\"submit\" value=\"Go!\"></form>";
 				// var_dump($page_conference);
 
@@ -384,7 +536,6 @@
 			echo "<br><br>ERROR:<br><br>Target not given!";
 			echo "<br><br><br>";
 		}
-	
 	?>
 </div>
 </body>

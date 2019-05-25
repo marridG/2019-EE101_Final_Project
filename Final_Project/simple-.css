@@ -87,3 +87,35 @@ body
 	text-align: right;
 	margin-right: 20%;
 }
+
+#search__Turn_Page_prev_page
+{
+	/*size: 20%;*/
+	width: 30px;
+}
+
+#search__Turn_Page_selected
+{
+	width: 30px;
+}
+
+#search__Turn_Page_not_selected
+{
+	width: 30px;
+}
+
+#search__Turn_Page_next_page
+{
+	width: 30px;
+}
+
+#search__Turn_Page_empty
+{
+	width: 30px;
+}
+
+.table__Turn_Page
+{
+	margin: 0 auto;
+	text-align: center;
+}
