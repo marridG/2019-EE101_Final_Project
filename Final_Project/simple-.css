@@ -1,5 +1,5 @@
 /*Every-two-row background color:
-	https://jingyan.baidu.com/article/4dc408484533f9c8d946f1a5.html
+	http://jingyan.baidu.com/article/4dc408484533f9c8d946f1a5.html
 Border of the whoel table:
 	https://www.jb51.net/web/651409.html
 */
@@ -7,17 +7,17 @@ Border of the whoel table:
 body
 {
 	text-align: center;
-	background-color: #C7EDCC;
+	background-color: #1827A3;
 }
 
 .homepage_body
 {
 	/*background-image: url("/lab03/pics/homepage_background.jpg");*/
-	background-image: url("/EE101-Final_Project/Final_Project/pics/IMG_5349.jpg");
+	background-image: url("/EE101-Final_Project/Final_Project/pics/雅典学院.jpg");
 	background-size: 100%,100%;
 	background-position: center;
 	/*background-color: #EDC7D0;*/
-	text-align: center;
+	text-align:right;
 	color: #96E703;
 }
 
@@ -89,4 +89,9 @@ body
 {
 	margin:0px;
 	display: inline;
+}
+
+.head_pic
+{
+	
 }
