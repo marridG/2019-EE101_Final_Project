@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 
 <head>
-	<title>Home Page</title>
+	<img src="/EE101-Final_Project/Final_Project/pics/acemap.jpg" class="head_pic">
 	<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
 	<script src="/EE101-Final_Project/Final_Project/add-ons/02_Clear_Form.js"></script>
 <!-- 
