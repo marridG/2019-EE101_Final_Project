@@ -7,7 +7,8 @@
 	<style type="text/css">
 		body
 		{
-			background-image: url("/EE101-Final_Project/Final_Project/pics/IMG_5349.JPG");
+			background-image: url("/EE101-Final_Project/Final_Project/pics/IMG_5349.JPG"),url("/EE101-Final_Project/Final_Project/pics/acemap.jpg");
+			background-size: cover;		
 		}
 	</style>
 	<script src="/EE101-Final_Project/Final_Project/add-ons/02_Clear_Form.js"></script>

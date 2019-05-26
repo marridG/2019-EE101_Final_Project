@@ -7,6 +7,7 @@
 </head>
 
 <body>
+	<img src="">
 	<h1>Author Information</h1>
 	
 	<?php

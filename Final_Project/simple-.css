@@ -1,8 +1,13 @@
 
 body
 {
-	text-align: center;
-	background-color: #1827A3;
+	text-align: center
+}
+
+.img
+{
+		mix-blend-mode: multiply;
+
 }
 
 .body__homepage
@@ -81,11 +86,6 @@ body
 	display: inline;
 }
 
-.head_pic
-{
-
-	
-}
 #form__jump_to__right_hand
 {
 	align-self: right;
