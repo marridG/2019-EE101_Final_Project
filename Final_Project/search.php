@@ -106,7 +106,9 @@
 					echo "<tr>";
 					// print the Title
 						echo "<td>";
-							echo $paper['Title'];
+						$title_new=$paper['Title'];
+						echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_new&page=1\" target=\"_balnk\">$title_new</a>";
+						echo ";";
 						echo "</td>";
 
 					// print all the Authors_Name
@@ -117,11 +119,13 @@
 						echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1\" target=\"_balnk\">$author</a>";
 						echo "; ";
 						}
-					echo "</td>";
+						echo "</td>";
 
 					// print the ConferenceName
 						echo "<td>";
-							echo $paper['ConferenceName'];
+						$conference_Name=$paper['ConferenceName'];
+						echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_Name&page=1\" target=\"_balnk\">$conference_Name</a>";
+						echo ";";
 						echo "</td>";
 					echo "</tr>";
 				}
@@ -258,7 +262,9 @@
 					echo "<tr>";
 					// print the Title
 						echo "<td>";
-							echo $paper['Title'];
+						$title_new=$paper['Title'];
+						echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_new&page=1\" target=\"_balnk\">$title_new</a>";
+						echo ";";
 						echo "</td>";
 
 					// print all the Authors_Name
@@ -271,10 +277,17 @@
 						}
 						echo "</td>";
 
-					// print the ConferenceName
+						// echo "<td>";
+						// echo $paper['ConferenceName'];
+						// echo "</td>";
+
 						echo "<td>";
-							echo $paper['ConferenceName'];
+						$conference_Name=$paper['ConferenceName'];
+						echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_Name&page=1\" target=\"_balnk\">$conference_Name</a>";
+						echo ";";
 						echo "</td>";
+
+
 					echo "</tr>";
 				}
 				echo "</table><br>";
@@ -408,7 +421,9 @@
 					echo "<tr>";
 					// print the Title
 						echo "<td>";
-							echo $paper['Title'];
+						$title_new=$paper['Title'];
+						echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_new&page=1\" target=\"_balnk\">$title_new</a>";
+						echo ";";
 						echo "</td>";
 
 					// print all the Authors_Name
@@ -423,7 +438,9 @@
 
 					// print ConferenceName
 						echo "<td>";
-							echo $paper['ConferenceName'];
+						$conference_name=$paper['ConferenceName'];
+						echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name&page=1\" target=\"_balnk\">$conference_name</a>";
+						echo ";";
 						echo "</td>";
 					echo "</tr>";
 				}
