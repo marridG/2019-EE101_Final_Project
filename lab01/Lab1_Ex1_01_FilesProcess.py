@@ -7,19 +7,19 @@ mode = 0
 print("|||||| Mode: TEST ||||||" if mode else "|||||| Mode: ALL ||||||")
 
 if mode:
-    FP_1_papers = "D:\\Workspace\\Pycharm\\In-Class Exercises\\2018 S2\\Week 03\\data\\01-papers.txt"
-    FP_2_authors = "D:\\Workspace\\Pycharm\\In-Class Exercises\\2018 S2\\Week 03\\data\\02-authors.txt"
-    FP_3_conferences = "D:\\Workspace\\Pycharm\\In-Class Exercises\\2018 S2\\Week 03\\data\\03-conferences.txt"
-    FP_4_affiliations = "D:\\Workspace\\Pycharm\\In-Class Exercises\\2018 S2\\Week 03\\data\\04-affiliations.txt"
-    FP_5_paper_author_affiliation = "D:\\Workspace\\Pycharm\\In-Class Exercises\\2018 S2\\Week 03\\data\\05-paper_author_affiliation.txt"
-    FP_6_paper_reference = "D:\\Workspace\\Pycharm\\In-Class Exercises\\2018 S2\\Week 03\\data\\06-paper_reference.txt"
+    FP_1_papers = "C:\\xampp\\htdocs\\EE101-Final_Project\\lab01\\data\\01-papers.txt"
+    FP_2_authors = "C:\\xampp\\htdocs\\EE101-Final_Project\\lab01\\data\\02-authors.txt"
+    FP_3_conferences = "C:\\xampp\\htdocs\\EE101-Final_Project\\lab01\\data\\03-conferences.txt"
+    FP_4_affiliations = "C:\\xampp\\htdocs\\EE101-Final_Project\\lab01\\data\\04-affiliations.txt"
+    FP_5_paper_author_affiliation = "C:\\xampp\\htdocs\\EE101-Final_Project\\lab01\\data\\05-paper_author_affiliation.txt"
+    FP_6_paper_reference = "C:\\xampp\\htdocs\\EE101-Final_Project\\lab01\\data\\06-paper_reference.txt"
 else:
-    FP_1_papers = "D:\\Workspace\\Pycharm\\In-Class Exercises\\2018 S2\\Week 03\\data\\papers.txt"
-    FP_2_authors = "D:\\Workspace\\Pycharm\\In-Class Exercises\\2018 S2\\Week 03\\data\\authors.txt"
-    FP_3_conferences = "D:\\Workspace\\Pycharm\\In-Class Exercises\\2018 S2\\Week 03\\data\\conferences.txt"
-    FP_4_affiliations = "D:\\Workspace\\Pycharm\\In-Class Exercises\\2018 S2\\Week 03\\data\\affiliations.txt"
-    FP_5_paper_author_affiliation = "D:\\Workspace\\Pycharm\\In-Class Exercises\\2018 S2\\Week 03\\data\\paper_author_affiliation.txt"
-    FP_6_paper_reference = "D:\\Workspace\\Pycharm\\In-Class Exercises\\2018 S2\\Week 03\\data\\paper_reference.txt"
+    FP_1_papers = "C:\\xampp\\htdocs\\EE101-Final_Project\\lab01\\data\\papers.txt"
+    FP_2_authors = "C:\\xampp\\htdocs\\EE101-Final_Project\\lab01\\data\\authors.txt"
+    FP_3_conferences = "C:\\xampp\\htdocs\\EE101-Final_Project\\lab01\\data\\conferences.txt"
+    FP_4_affiliations = "C:\\xampp\\htdocs\\EE101-Final_Project\\lab01\\data\\affiliations.txt"
+    FP_5_paper_author_affiliation = "C:\\xampp\\htdocs\\EE101-Final_Project\\lab01\\data\\paper_author_affiliation.txt"
+    FP_6_paper_reference = "C:\\xampp\\htdocs\\EE101-Final_Project\\lab01\\data\\paper_reference.txt"
 
 """
 using utf-8:

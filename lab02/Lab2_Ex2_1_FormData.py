@@ -6,11 +6,11 @@ mode = int(input("Mode: 1 = test, 0 = all: "))
 
 if mode:
     database = "lab01_test"
-    FP_out = "D:\\Workspace\\Pycharm\\In-Class Exercises\\2018 S2\\Week 07\\data\\out_test.txt"
+    FP_out = "C:\\xampp\\htdocs\\EE101-Final_Project\\lab01\\data\\out_test.txt"
     print("|||||| Mode: TEST ||||||")
 else:
     database = "lab01"
-    FP_out = "D:\\Workspace\\Pycharm\\In-Class Exercises\\2018 S2\\Week 07\\data\\out.txt"
+    FP_out = "C:\\xampp\\htdocs\\EE101-Final_Project\\lab01\\data\\out.txt"
     print("|||||| Mode: ALL ||||||")
 
 conn = pymysql.connect(host="127.0.0.1",
