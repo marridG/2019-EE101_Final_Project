@@ -73,7 +73,7 @@
 					// print the Title
 						echo "<td>";
 						$title_new=$paper['Title'];
-						echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_new&page=1\" target=\"_balnk\">$title_new</a>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_new&page=1\" target=\"_blank\">$title_new</a>";
 						echo ";";
 						echo "</td>";
 
@@ -82,7 +82,7 @@
 						foreach ($paper['Authors_Name'] as $idx => $author)
 						{
 							$author_id = $paper['Authors_ID'][$idx];
-							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1\" target=\"_balnk\">$author</a>";
+							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1\" target=\"_blank\">$author</a>";
 							echo "; ";
 						}
 						echo "</td>";
@@ -90,7 +90,7 @@
 					// print ConferenceName
 						echo "<td>";
 						$conference_name=$paper['ConferenceName'];
-						echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name&page=1\" target=\"_balnk\">$conference_name</a>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name&page=1\" target=\"_blank\">$conference_name</a>";
 						echo ";";
 						echo "</td>";
 					echo "</tr>";
