@@ -195,20 +195,8 @@
 				// Jump to Page
 				echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/conference.php\">";
 				echo "<input type=\"hidden\" name=\"conference_name\" value=$conference_name>";
-				echo "Jump to: <input type=\"number\" name=\"page\" size=\"1\" max=100000>&nbsp;&nbsp;";
+				echo "Jump to: <input type=\"number\" name=\"page\" size=\"1\" required max=100000>&nbsp;&nbsp;";
 				echo "<input type=\"submit\" value=\"Go!\"></form>";
-				var_dump($page);
+				// var_dump($page);
 
 			}
-
-
-
-
-
-
-
-
-
-
-
-

@@ -41,7 +41,10 @@
 	// Variables for Turning Pages
 		$page_limit=10;
 		$page = $_GET["page"];
-		$author_id_temp = urlencode($author_id);
+		
+	// Variables for Faster Page Loading
+		$affiliation_name=$_GET["author_affi"];
+		$affiliation_name_temp="";
 
 // link to mysql to get the author's name and affiliation
 
@@ -62,30 +65,43 @@
 			echo "Name: $author_name<br>";
 
 		// search and print the most related AffiliationName to the given AuthorID
-			$affi_id_name_result = mysqli_query($link, "SELECT affiliations.AffiliationID, affiliations.AffiliationName from (select AffiliationID, count(*) as cnt from paper_author_affiliation where AuthorID='$author_id' and AffiliationID is not null group by AffiliationID order by cnt desc) as tmp inner join affiliations on tmp.AffiliationID = affiliations.AffiliationID");
-
-			// while($row=mysqli_fetch_array($affi_id_name_result))
-			// {
-			// 	echo "<br>row<br>";
-			// 	var_dump($row);
-			// 	echo "<br>";
-			// }
-
-			// var_dump($affi_id_name_result);
-			// echo "<br>";
-			if($array_result=mysqli_fetch_array($affi_id_name_result))
+			if(!$affiliation_name)
 			{
-				// var_dump($array_result);
+				$affi_id_name_result = mysqli_query($link, "SELECT affiliations.AffiliationID, affiliations.AffiliationName from (select AffiliationID, count(*) as cnt from paper_author_affiliation where AuthorID='$author_id' and AffiliationID is not null group by AffiliationID order by cnt desc) as tmp inner join affiliations on tmp.AffiliationID = affiliations.AffiliationID");
+
+				// while($row=mysqli_fetch_array($affi_id_name_result))
+				// {
+				// 	echo "<br>row<br>";
+				// 	var_dump($row);
+				// 	echo "<br>";
+				// }
+
+				// var_dump($affi_id_name_result);
 				// echo "<br>";
-				$affiliation_name = $array_result['AffiliationName'];
-				echo "Affiliation: $affiliation_name<br>";
+				if($array_result=mysqli_fetch_array($affi_id_name_result))
+				{
+					// var_dump($array_result);
+					// echo "<br>";
+					$affiliation_name = $array_result['AffiliationName'];
+					echo "Affiliation: $affiliation_name<br>";
+				}
+				else
+				{
+					$affiliation_name="-1";
+					echo "Affiliation not found!";
+				}
 			}
 			else
 			{
-				echo "Affiliation not found!";
+				if($affiliation_name=="-1")
+					echo "Affiliation not found!<br>";
+				else
+					echo "Affiliation: $affiliation_name<br>";
 			}
+			$affiliation_name_temp=urlencode($affiliation_name);
 		}
-
+		// echo "$affiliation_name";
+		// var_dump($affiliation_name_temp);
 
 //link to solr to complete the chart
 
@@ -128,7 +144,7 @@
 						foreach ($paper['Authors_Name'] as $idx => $author)
 						{
 							$author_id_result = $paper['Authors_ID'][$idx];
-							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id_result&page=1\" target=\"_balnk\">$author</a>";
+							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id_result&page=1&author_affi=\" target=\"_balnk\">$author</a>";
 							echo "; ";
 						}
 						echo "</td>";
@@ -155,9 +171,9 @@
 					$i=$page-1;
 					if($i>=1)
 					{
-						echo "<a href=\"author.php?author_id=$author_id_temp&page=$i\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+						echo "<a href=\"author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
 						echo "</td><td>";
-						echo "<a href=\"author.php?author_id=$author_id_temp&page=$i\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.jpg\" id=\"search__Turn_Page_prev_page\"></a>";
+						echo "<a href=\"author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.jpg\" id=\"search__Turn_Page_prev_page\"></a>";
 
 					}
 					else
@@ -173,16 +189,16 @@
 						if($i==$page)
 							echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_selected.jpg\" id=\"search__Turn_Page_selected\"></a></td>";
 						else
-							echo "<td><a href=\"author.php?author_id=$author_id_temp&page=$i\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_not_selected.jpg\"  id=\"search__Turn_Page_not_selected\"></a></td>";
+							echo "<td><a href=\"author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_not_selected.jpg\"  id=\"search__Turn_Page_not_selected\"></a></td>";
 					}
 					// Next Page
 					echo "<td>";
 					$i=$page+1;
 					if (($i-1)*$page_limit<$num_max)
 					{
-						echo "<a href=\"author.php?author_id=$author_id_temp&page=$i\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.jpg\" id=\"search__Turn_Page_next_page\"></a>";
+						echo "<a href=\"author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.jpg\" id=\"search__Turn_Page_next_page\"></a>";
 						echo "</td><td>";
-						echo "<a href=\"author.php?author_id=$author_id_temp&page=$i\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+						echo "<a href=\"author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
 					}
 					else
 					{
@@ -199,9 +215,9 @@
 					echo "<td>";
 					if ($i>=1)
 					{
-						echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id_temp&page=$i\"><<</a>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\"><<</a>";
 						echo "</td><td>";
-						echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id_temp&page=$i\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
 					}
 					else
 						echo "<td></td>";
@@ -213,7 +229,7 @@
 						if($i==$page)
 							echo "$page";
 						else
-							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id_temp&page=$i\">$i</a>";
+							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\">$i</a>";
 						echo "</td>";
 					}
 					// Turn to the Next Page
@@ -221,9 +237,9 @@
 					$i=$page+1;
 					if (($i-1)*$page_limit<$num_max)
 					{
-						echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id_temp&page=$i\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
 						echo "</td><td>";
-						echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id_temp&page=$i\">>></a>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\">>></a>";
 					}
 					else
 						echo "<td></td>";
@@ -234,12 +250,13 @@
 				// echo "$author_id";
 				// Jump to Page
 				echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/author.php\">";
-				echo "<input type=\"hidden\" name=\"author_id\" value=\"$author_id\">";
-				echo "Jump to: <input type=\"input\" name=\"page\" size=\"1\">&nbsp;&nbsp;";
+				echo "<input type=\"hidden\" name=\"author_id\" value=\"$author_id\"><input type=\"hidden\" name=\"author_affi\" value=\"$affiliation_name\">";
+				echo "Jump to: <input type=\"input\" name=\"page\" size=\"1\" required>&nbsp;&nbsp;";
 				echo "<input type=\"submit\" value=\"Go!\"></form>";
 				// var_dump($page_title);
 
-				echo "<br><br><br>";
+				// echo "<br><br><br>";
+
 			}
 			else
 			{
