@@ -23,6 +23,9 @@ In the simple-.css I changed the text-align of .body__homepage from center to le
 
 solution:control + shift + r 
 
+input框:
+https://www.cnblogs.com/cnsevennight/p/4143792.html
+
 
 
 
