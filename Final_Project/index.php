@@ -14,7 +14,7 @@
 </head>
 
 <body class="body__homepage">
-	<h3 class="h1">Best Academia Searching For You!</h3>
+	<h6 class="h1">Best Academia Searching For You!</h6>
 
 	<form action="/EE101-Final_Project/Final_Project/search.php" target="_blank">	
 	 	<input type="hidden" name="page_title" value="1">
