@@ -42,7 +42,7 @@
 
 	// Variables for Turing Pages
 		$page_limit=10;
-		$page=$_GET["page"];
+		$page=floor($_GET["page"]);
 		$conference_name_temp = urlencode($conference_name);
 
 			// echo "<a name=\"skip_conference\"></a>";

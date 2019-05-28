@@ -47,9 +47,9 @@
 
 	// Variables for Turning Pages
 		$page_limit=10;
-		$page_title = $_GET["page_title"];
-		$page_author = $_GET["page_author"];
-		$page_conference = $_GET["page_conference"];
+		$page_title = floor($_GET["page_title"]);
+		$page_author = floor($_GET["page_author"]);
+		$page_conference = floor($_GET["page_conference"]);
 		// }
 		// var_dump($page_title);
 		// var_dump($page_author);
