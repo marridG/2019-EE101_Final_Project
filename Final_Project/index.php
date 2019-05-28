@@ -4,6 +4,7 @@
 <head>
 	<img src="/EE101-Final_Project/Final_Project/pics/acemap.png" class="head_pic">
 	<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
+	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/45817/5cecef5bf629d80af8efaac6.css' rel='stylesheet' type='text/css' />
 
 	<script src="/EE101-Final_Project/Final_Project/add-ons/02_Clear_Form.js"></script>
 
