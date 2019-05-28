@@ -16,6 +16,15 @@ cyf：问题：我在simple-.css中加入背景图片，代码为
 	background-image: url("/EE101-Final_Project/Final_Project/pics/IMG_5349.JPG");
 在gzl，gjl的电脑上都可以跑出来，但是在我的电脑就是显示不出背景图片，现在打算直接内联在index.php中了
 
+cyf:
+problem dsecription
+
+In the simple-.css I changed the text-align of .body__homepage from center to left.However,after I refreshed the index.php,I found that the text-align did not change.After tring to solve the problem for a while,I gave up.However, the next day I found that text-align was changed,but when I changed it to another type (e.g right), it did not work.
+
+solution:control + shift + r 
+
+
+
 
 
 
