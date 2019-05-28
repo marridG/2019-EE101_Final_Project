@@ -107,7 +107,13 @@
 			// Turn Page
 				$num_max=$result["response"]["numFound"];
 				Turn_Page_min_max_page($num_max,$page_limit,$min_page,$max_page,$page);
-				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.<br>";
+				// Calculate the maximum of pages
+				if($num_max%$page_limit==0)
+					$page_MAX=$num_max/$page_limit;
+				else
+					$page_MAX=floor($num_max/$page_limit)+1;
+				// print information
+				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.&nbsp;&nbsp;&nbsp;&nbsp;Altogether: $page_MAX pages.<br>";
 				echo "<table class=\"table__Turn_Page\">";
 				echo "<tr>";
 				// Row One
@@ -195,7 +201,7 @@
 				// Jump to Page
 				echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/conference.php\">";
 				echo "<input type=\"hidden\" name=\"conference_name\" value=$conference_name>";
-				echo "Jump to: <input type=\"number\" name=\"page\" size=\"1\" required max=100000>&nbsp;&nbsp;";
+				echo "Jump to: <input type=\"number\" name=\"page\" class=\"all__Turn_Page_jump_to_number\" max=$page_MAX min=\"1\"  required>&nbsp;&nbsp;";
 				echo "<input type=\"submit\" value=\"Go!\"></form>";
 				// var_dump($page);
 

@@ -7,6 +7,7 @@
 	<link rel ="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
 	<script src="/EE101-Final_Project/Final_Project/add-ons/01_Scroll_Page_to_Original.js"></script>
 	<script src="/EE101-Final_Project/Final_Project/add-ons/02_Clear_Form.js"></script>
+	<script src="/EE101-Final_Project/Final_Project/add-ons/03_Custom_Overflow_Extremum.js"></script>
 </head>
 
 <body>
@@ -59,20 +60,20 @@
 		$conference_name_temp = urlencode($conference_name);
 
 	// Search Widget
-		echo "<a href=\"/EE101-Final_Project/Final_Project/index.php\" class=\"search_return_to_homepage_image\"><img src =\"/EE101-Final_Project/Final_Project/pics/Homepage_icon-without_background.jpg\" width=\"30\"></a>";
+		echo "<a href=\"/EE101-Final_Project/Final_Project/index.php\" class=\"search_return_to_homepage_image\"><img src =\"/EE101-Final_Project/Final_Project/pics/Homepage_icon-without_background.jpg\" id=\"all__return_to_homepage_image\"></a>";
 		
 		echo "<form id=\"search_form\" action=\"/EE101-Final_Project/Final_Project/search.php\">";
 		echo "<input type=\"hidden\" name=\"page_title\" value=\"1\"><input type=\"hidden\" name=\"page_author\" value=\"1\"><input type=\"hidden\" name=\"page_conference\" value=\"1\">";
 		echo "Paper Title: ";
-		echo "<input type=\"text\" id=\"1_PT\" name=\"paper_title\" size=\"20%\" placeholder=\"Not Required\" value=\"$paper_title\">";
+		echo "<input type=\"text\" id=\"1_PT\" name=\"paper_title\" class=\"search__Widget_title\" placeholder=\"Not Required\" value=\"$paper_title\">";
 		echo "&nbsp;&nbsp;&nbsp;Author Name: ";
-		echo "<input type=\"text\" id=\"2_AN\" name=\"author_name\" size=\"20%\" placeholder=\"Not Required\" value=\"$author_name\">";
+		echo "<input type=\"text\" id=\"2_AN\" name=\"author_name\" class=\"search__Widget_author_name\"  placeholder=\"Not Required\" value=\"$author_name\">";
 		echo "&nbsp;&nbsp;&nbsp;Conference Name: ";
-		echo "<input type=\"text\" id=\"3_CN\" name=\"conference_name\" size=\"10%\" placeholder=\"Not Required\" value=\"$conference_name\">";
-		echo "&nbsp;&nbsp;&nbsp;";
+		echo "<input type=\"text\" id=\"3_CN\" name=\"conference_name\" class=\"search__Widget_conference_name\" placeholder=\"Not Required\" value=\"$conference_name\">";
+		echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 		echo "<input type=\"submit\" value=\"Search!\">";
-		echo "&nbsp;&nbsp;&nbsp;";
-		echo "<input type=\"reset\" value=\"RECOVER\">";
+		// echo "&nbsp;&nbsp;&nbsp;";
+		// echo "<input type=\"reset\" value=\"RECOVER\">";
 		// echo "<input type=\"reset\" onclick=\"clear()\" value=\"CLEAR\">";
 		echo "</form>";
 		
@@ -138,7 +139,13 @@
 			// Turn Page
 				$num_max=$result["response"]["numFound"];
 				Turn_Page_min_max_page($num_max,$page_limit,$min_page,$max_page,$page_title);
-				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.<br>";
+				// Calculate the maximum of pages
+				if($num_max%$page_limit==0)
+					$page_MAX=$num_max/$page_limit;
+				else
+					$page_MAX=floor($num_max/$page_limit)+1;
+				// print information
+				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.&nbsp;&nbsp;&nbsp;&nbsp;Altogether: $page_MAX pages.<br>";
 				echo "<table class=\"table__Turn_Page\">";
 				echo "<tr>";
 				// Row One
@@ -226,7 +233,7 @@
 				// Jump to Page
 				echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_title\">";
 				echo "<input type=\"hidden\" name=\"paper_title\" value=\"$paper_title\"><input type=\"hidden\" name=\"author_name\" value=\"$author_name\"><input type=\"hidden\" name=\"conference_name\" value=$conference_name><input type=\"hidden\" name=\"page_author\" value=$page_author><input type=\"hidden\" name=\"page_conference\" value=$page_conference>";
-				echo "Jump to: <input type=\"input\" name=\"page_title\" size=\"1\" required>&nbsp;&nbsp;";
+				echo "Jump to: <input type=\"number\" name=\"page_title\" class=\"all__Turn_Page_jump_to_number\" max=$page_MAX min=\"1\" required>&nbsp;&nbsp;";
 				echo "<input type=\"submit\" value=\"Go!\"></form>";
 				// var_dump($page_title);
 
@@ -303,7 +310,13 @@
 			// Turn Page
 				$num_max=$result["response"]["numFound"];
 				Turn_Page_min_max_page($num_max,$page_limit,$min_page,$max_page,$page_author);
-				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.<br>";
+				// Calculate the maximum of pages
+				if($num_max%$page_limit==0)
+					$page_MAX=$num_max/$page_limit;
+				else
+					$page_MAX=floor($num_max/$page_limit)+1;
+				// print information
+				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.&nbsp;&nbsp;&nbsp;&nbsp;Altogether: $page_MAX pages.<br>";
 				echo "<table class=\"table__Turn_Page\">";
 				echo "<tr>";
 				// Row One
@@ -391,7 +404,7 @@
 				// Jump to Page
 				echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_author\">";
 				echo "<input type=\"hidden\" name=\"paper_title\" value=\"$paper_title\"><input type=\"hidden\" name=\"author_name\" value=\"$author_name\"><input type=\"hidden\" name=\"conference_name\" value=$conference_name><input type=\"hidden\" name=\"page_title\" value=$page_title><input type=\"hidden\" name=\"page_conference\" value=$page_conference>";
-				echo "Jump to: <input type=\"input\" name=\"page_author\" size=\"1\" required>&nbsp;&nbsp;";
+				echo "Jump to: <input type=\"number\" name=\"page_author\" class=\"all__Turn_Page_jump_to_number\" max=$page_MAX min=\"1\" required>&nbsp;&nbsp;";
 				echo "<input type=\"submit\" value=\"Go!\"></form>";
 				// var_dump($page_author);
 
@@ -458,7 +471,13 @@
 			// Turn Page
 				$num_max=$result["response"]["numFound"];
 				Turn_Page_min_max_page($num_max,$page_limit,$min_page,$max_page,$page_conference);
-				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.<br>";
+				// Calculate the maximum of pages
+				if($num_max%$page_limit==0)
+					$page_MAX=$num_max/$page_limit;
+				else
+					$page_MAX=floor($num_max/$page_limit)+1;
+				// print information
+				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.&nbsp;&nbsp;&nbsp;&nbsp;Altogether: $page_MAX pages.<br>";
 				echo "<table class=\"table__Turn_Page\">";
 				echo "<tr>";
 				// Row One
@@ -544,9 +563,9 @@
 				echo "</table>";
 
 				// Jump to Page
-				echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_conference\">";
+				echo "<form id=\"form__jump_to__right_hand\" name=\"jump_to\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_conference\">";
 				echo "<input type=\"hidden\" name=\"paper_title\" value=\"$paper_title\"><input type=\"hidden\" name=\"author_name\" value=\"$author_name\"><input type=\"hidden\" name=\"conference_name\" value=$conference_name><input type=\"hidden\" name=\"page_title\" value=$page_title><input type=\"hidden\" name=\"page_author\" value=$page_author>";
-				echo "Jump to: <input type=\"number\" name=\"page_conference\" size=\"1\" required max=100000>&nbsp;&nbsp;";
+				echo "Jump to: <input type=\"number\" id=\"jump_to\" name=\"page_conference\" class=\"all__Turn_Page_jump_to_number\" max=$page_MAX min=\"1\" required>&nbsp;&nbsp;";
 				echo "<input type=\"submit\" value=\"Go!\"></form>";
 				// var_dump($page_conference);
 
