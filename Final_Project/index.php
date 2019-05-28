@@ -34,10 +34,13 @@
 		<br><br> -->
 		
 		<br>
-		<input type="submit" value="SEARCH">
+		<input class="input_button"  type="submit" value="SEARCH" > 	
+		&ensp;
+		&ensp;
+		&ensp;
+		<input  class="input_button" type="reset" value="RESET">
+     
 		<!-- <input type="reset" onclick="clear()" value="CLEAR"> -->
-		<br><br>
-		<input type="reset" value="RESET">
 	</form>
 
 	<!-- <?php
