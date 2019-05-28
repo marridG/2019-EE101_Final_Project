@@ -8,10 +8,44 @@
 
 <body>
 	<h1>Author Information</h1>
-	
+
 	<?php
-	// from search.php: get author_id
-		$author_id = $_GET["author_id"];
+	function Turn_Page_min_max_page($num_max,$page_limit,&$min_page,&$max_page,$page)
+	{
+		if($num_max<=90)
+		{
+			$min_page=1;
+			if($num_max%$page_limit==0)
+				$max_page=$num_max/$page_limit;
+			else
+				$max_page=floor($num_max/$page_limit)+1;
+		}
+		else
+		{
+			$min_page=$page-5;
+			while($min_page<1)
+				$min_page++;
+			$max_page=$min_page+9;
+			while(($max_page-1)*$page_limit>=$num_max)
+				$max_page--;
+			if($max_page-$min_page+1<10)
+				$min_page=$max_page-9;
+		}
+		// var_dump($min_page);
+		// var_dump($max_page);
+	}
+
+	$author_id = $_GET["author_id"];
+
+	// Variables for Turning Pages
+		$page_limit=10;
+		$page = $_GET["page"];
+		
+	// Variables for Faster Page Loading
+		$affiliation_name=$_GET["author_affi"];
+		$affiliation_name_temp="";
+
+// link to mysql to get the author's name and affiliation
 
 		$link = mysqli_connect("127.0.0.1", "root", "", "lab01");
 		mysqli_query($link, 'SET NAMES utf8');
@@ -30,163 +64,201 @@
 			echo "Name: $author_name<br>";
 
 		// search and print the most related AffiliationName to the given AuthorID
-			$affi_id_name_result = mysqli_query($link, "SELECT affiliations.AffiliationID, affiliations.AffiliationName from (select AffiliationID, count(*) as cnt from paper_author_affiliation where AuthorID='$author_id' and AffiliationID is not null group by AffiliationID order by cnt desc) as tmp inner join affiliations on tmp.AffiliationID = affiliations.AffiliationID");
-
-			// while($row=mysqli_fetch_array($affi_id_name_result))
-			// {
-			// 	echo "<br>row<br>";
-			// 	var_dump($row);
-			// 	echo "<br>";
-			// }
-
-			// var_dump($affi_id_name_result);
-			// echo "<br>";
-			if($array_result=mysqli_fetch_array($affi_id_name_result))
+			if(!$affiliation_name)
 			{
-				// var_dump($array_result);
+				$affi_id_name_result = mysqli_query($link, "SELECT affiliations.AffiliationID, affiliations.AffiliationName from (select AffiliationID, count(*) as cnt from paper_author_affiliation where AuthorID='$author_id' and AffiliationID is not null group by AffiliationID order by cnt desc) as tmp inner join affiliations on tmp.AffiliationID = affiliations.AffiliationID");
+
+				// while($row=mysqli_fetch_array($affi_id_name_result))
+				// {
+				// 	echo "<br>row<br>";
+				// 	var_dump($row);
+				// 	echo "<br>";
+				// }
+
+				// var_dump($affi_id_name_result);
 				// echo "<br>";
-				$affiliation_name = $array_result['AffiliationName'];
-				echo "Affiliation: $affiliation_name<br>";
-			}
-			else
-			{
-				echo "Affiliation not found!";
-			}
-
-			echo "<table class=\"table__result\" align=center><tr><th>Title</th><th>Authors</th><th>Conference</th></tr>";
-
-		// search and print the papers of the AuthorID (in an ascending order of AuthorSequence)
-		// Turn Page Variables
-		// Turn Page
-			$page_limit=10;
-			$page=$_GET["page"];
-			$paper_id_count = mysqli_fetch_array(mysqli_query($link, "SELECT count(*) from paper_author_affiliation where AuthorID='$author_id'"))[0];
-			$num_max = (int)$paper_id_count;
-			$page_start_index=($page-1)*$page_limit;
-		
-		// Search the results of a certain range
-			if($page_start_index+$page_limit-1>$num_max)
-			{
-				$temp=($num_max-$page_start_index);
-				$paper_id_result = mysqli_query($link, "SELECT PaperID from paper_author_affiliation where AuthorID='$author_id' limit $page_start_index,$temp");
-				// var_dump($page_start_index);
-				// var_dump($temp);
-				// var_dump($paper_id_result);
-			}
-			else
-			{
-				$paper_id_result = mysqli_query($link, "SELECT PaperID from paper_author_affiliation where AuthorID='$author_id' limit $page_start_index,$page_limit");
-				// var_dump($page_start_index);
-				// var_dump($paper_id_result);
-			}
-
-			if ($paper_id_result)
-			{	
-				while ($row = mysqli_fetch_array($paper_id_result))
+				if($array_result=mysqli_fetch_array($affi_id_name_result))
 				{
-					$paper_id = $row['PaperID'];
+					// var_dump($array_result);
+					// echo "<br>";
+					$affiliation_name = $array_result['AffiliationName'];
+					echo "Affiliation: $affiliation_name<br>";
+				}
+				else
+				{
+					$affiliation_name="-1";
+					echo "Affiliation not found!";
+				}
+			}
+			else
+			{
+				if($affiliation_name=="-1")
+					echo "Affiliation not found!<br>";
+				else
+					echo "Affiliation: $affiliation_name<br>";
+			}
+			$affiliation_name_temp=urlencode($affiliation_name);
+		}
+		// echo "$affiliation_name";
+		// var_dump($affiliation_name_temp);
 
-					# 请增加对mysqli_query查询结果是否为空的判断
-					$paper_info = mysqli_fetch_array(mysqli_query($link, "SELECT Title, ConferenceID from papers where PaperID='$paper_id'"));
+//link to solr to complete the chart
 
-				// print the PaperTitle
-					if($paper_info)
-					{
-						$paper_title = $paper_info['Title'];
-						$conference_id = $paper_info['ConferenceID'];
 
-						echo "<tr>";
-						echo "<td>$paper_title</td>";
-					}
-					else
-						continue;
+			$ch = curl_init();
+			$timeout = 5;
+			$query = urlencode($author_id);
+			// $query = urlencode(str_replace(' ', '+', $author_name));
+			$url = "http://localhost:8983/solr/lab02/select?indent=on&q=Authors_ID:".$query."&start=".($page_limit*($page-1))."&wt=json";
 
-				// print all the AuthorName
-					$author_name_result = mysqli_query($link, "SELECT B.AuthorName, B.AuthorID from paper_author_affiliation A Inner Join authors B where A.PaperID='$paper_id' and A.AuthorID=B.AuthorID Order by A.AuthorSequence");
-					echo "<td>";
-						foreach ($author_name_result as $author)
+			curl_setopt ($ch, CURLOPT_URL, $url);
+			curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+			$result = json_decode(curl_exec($ch), true);
+			curl_close($ch);
+
+			// echo "Name: ".$result['response']['docs'][0]['Authors_Name'][0];
+		
+			// print the result table
+				
+			
+			if ($result['response']['docs'])
+			{
+				echo "<table class=\"table__result\"><tr><th>Title</th><th>Authors</th><th>Conference</th></tr>";
+
+				foreach ($result['response']['docs'] as $paper)
+				{
+					// new line
+					echo "<tr>";
+
+					// print the Title
+						echo "<td>";
+						$title_new=$paper['Title'];
+						echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_new&page=1\" target=\"_blank\">$title_new</a>";
+						echo ";";
+						echo "</td>";
+
+					// print all the Authors_Name
+						echo "<td>";
+						foreach ($paper['Authors_Name'] as $idx => $author)
 						{
-							// echo "author:";
-							// var_dump($author_result);
-							// echo "<br>";
-							$author_name=$author["AuthorName"];
-							$author_id = $author["AuthorID"];
-							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id\">$author_name</a>";
+							$author_id_result = $paper['Authors_ID'][$idx];
+							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id_result&page=1&author_affi=\" target=\"_blank\">$author</a>";
 							echo "; ";
 						}
-					echo "</td>";
+						echo "</td>";
 
-				// print the ConferenceName
-					$conference_name_result = mysqli_fetch_array(mysqli_query($link, "SELECT ConferenceName from conferences where ConferenceID='$conference_id'"));
-					echo "<td>";
-						echo $conference_name_result['ConferenceName'];
-					echo "</td>";
-
-					# 请增加根据paper id在PaperAuthorAffiliations与Authors两个表中进行联合查询，找到根据AuthorSequenceNumber排序的作者列表，并且显示出来的部分
-
-					# 请补充根据$conf_id查询conference name并显示的部分
+					// print ConferenceName
+						echo "<td>";
+						$conference_Name=$paper['ConferenceName'];
+						echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_Name&page=1\" target=\"_blank\">$conference_Name</a>";
+						echo ";";
+						echo "</td>";
 					echo "</tr>";
 				}
 				echo "</table><br>";
 
 			// Turn Page
+				$num_max=$result["response"]["numFound"];
+				Turn_Page_min_max_page($num_max,$page_limit,$min_page,$max_page,$page);
 				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.<br>";
-				// Turn to the First Page
-				echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1#skip_here\">|<</a>";
-					echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-				// Turn to the Previous Page
-				$prev=$page-1;
-				if ($prev>=1)
-				{
-					echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$prev#skip_here\">PREV</a>";
-						echo "&nbsp;&nbsp;";
-				}
-				// Show Page Numbers
-				for($prev=$page-5; $prev < $page; $prev++)
-				{ 
-					if($prev<1)
-						continue;
-					echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$prev#skip_here\">$prev</a>";
-					echo "&nbsp;&nbsp;";
-				}
-				echo "$page&nbsp;&nbsp;";
-				for ($prev=$page+1; $prev <= $page+5; $prev++)
-				{ 
-					if(($prev-1)*$page_limit>=$num_max)
-						continue;
-					echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$prev#skip_here\">$prev</a>";
-					echo "&nbsp;&nbsp;";
-				}
-				// Turn to the Next Page 
-				$next=$page+1;
-				if (($next-1)*$page_limit<$num_max)
-				{
-					echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$next#skip_here\">NEXT</a>";
-						echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-				}
-				// Turn to the Last Page
-				if($num_max%$page_limit==0)
-					$next=$num_max/$page_limit;
-				else
-					$next=floor($num_max/$page_limit)+1;
-				// var_dump($num_max);
-				// var_dump($next);
-				echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$next#skip_here\">>|</a>";
-				echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+				echo "<table class=\"table__Turn_Page\">";
+				echo "<tr>";
+				// Row One
+					// Previous Page
+					echo "<td>";
+					$i=$page-1;
+					if($i>=1)
+					{
+						echo "<a href=\"author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+						echo "</td><td>";
+						echo "<a href=\"author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.jpg\" id=\"search__Turn_Page_prev_page\"></a>";
+
+					}
+					else
+					{
+						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\">";
+						echo "</td><td>";
+						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.jpg\" id=\"search__Turn_Page_prev_page\">";
+					}
+					echo "</td>";
+					// Pages in the middle
+					for($i=$min_page;$i<=$max_page;$i++)
+					{
+						if($i==$page)
+							echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_selected.jpg\" id=\"search__Turn_Page_selected\"></a></td>";
+						else
+							echo "<td><a href=\"author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_not_selected.jpg\"  id=\"search__Turn_Page_not_selected\"></a></td>";
+					}
+					// Next Page
+					echo "<td>";
+					$i=$page+1;
+					if (($i-1)*$page_limit<$num_max)
+					{
+						echo "<a href=\"author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.jpg\" id=\"search__Turn_Page_next_page\"></a>";
+						echo "</td><td>";
+						echo "<a href=\"author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+					}
+					else
+					{
+						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.jpg\" id=\"search__Turn_Page_next_page\">";
+						echo "</td><td>";
+						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\">";
+					}
+					echo "</td>";
+				echo "</tr>";
+				echo "<tr>";
+				// Row Two
+					// Turn to the Previous Page
+					$i=$page-1;
+					echo "<td>";
+					if ($i>=1)
+					{
+						echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\"><<</a>";
+						echo "</td><td>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+					}
+					else
+						echo "<td></td>";
+					echo "</td>";
+					// Show Page Numbers
+					for($i=$min_page; $i <= $max_page; $i++)
+					{ 
+						echo "<td>";
+						if($i==$page)
+							echo "$page";
+						else
+							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\">$i</a>";
+						echo "</td>";
+					}
+					// Turn to the Next Page
+					echo "<td>";
+					$i=$page+1;
+					if (($i-1)*$page_limit<$num_max)
+					{
+						echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+						echo "</td><td>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\">>></a>";
+					}
+					else
+						echo "<td></td>";
+					echo "</td>";
+				echo "</tr>";
+				echo "</table>";
+				
+				// echo "$author_id";
 				// Jump to Page
-				echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/author.php#skip_here\">";
-				echo "<input type=\"hidden\" name=\"author_id\" value=$author_id>";
-				echo "Jump to: <input type=\"input\" name=\"page\" size=\"1\">&nbsp;&nbsp;";
+				echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/author.php\">";
+				echo "<input type=\"hidden\" name=\"author_id\" value=\"$author_id\"><input type=\"hidden\" name=\"author_affi\" value=\"$affiliation_name\">";
+				echo "Jump to: <input type=\"input\" name=\"page\" size=\"1\" required>&nbsp;&nbsp;";
 				echo "<input type=\"submit\" value=\"Go!\"></form>";
-				// var_dump($page_author);
+				// var_dump($page_title);
+
+				// echo "<br><br><br>";
+
 			}
-		}
-		else
-		{
-			echo "Author not found!";
-		}
-
-	?>
-</body>
-
-</html>
+			else
+			{
+				echo"<br></br>";
+				echo "No record!";
+			}

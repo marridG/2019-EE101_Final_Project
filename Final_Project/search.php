@@ -106,7 +106,9 @@
 					echo "<tr>";
 					// print the Title
 						echo "<td>";
-							echo $paper['Title'];
+						$title_new=$paper['Title'];
+						echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_new&page=1\" target=\"_blank\">$title_new</a>";
+						echo ";";
 						echo "</td>";
 
 					// print all the Authors_Name
@@ -114,14 +116,16 @@
 						foreach ($paper['Authors_Name'] as $idx => $author)
 						{
 							$author_id = $paper['Authors_ID'][$idx];
-						echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1\" target=\"_balnk\">$author</a>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1&author_affi=\" target=\"_blank\">$author</a>";
 						echo "; ";
 						}
-					echo "</td>";
+						echo "</td>";
 
 					// print the ConferenceName
 						echo "<td>";
-							echo $paper['ConferenceName'];
+						$conference_Name=$paper['ConferenceName'];
+						echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_Name&page=1\" target=\"_blank\">$conference_Name</a>";
+						echo ";";
 						echo "</td>";
 					echo "</tr>";
 				}
@@ -218,7 +222,7 @@
 				// Jump to Page
 				echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_title\">";
 				echo "<input type=\"hidden\" name=\"paper_title\" value=\"$paper_title\"><input type=\"hidden\" name=\"author_name\" value=\"$author_name\"><input type=\"hidden\" name=\"conference_name\" value=$conference_name><input type=\"hidden\" name=\"page_author\" value=$page_author><input type=\"hidden\" name=\"page_conference\" value=$page_conference>";
-				echo "Jump to: <input type=\"input\" name=\"page_title\" size=\"1\">&nbsp;&nbsp;";
+				echo "Jump to: <input type=\"input\" name=\"page_title\" size=\"1\" required>&nbsp;&nbsp;";
 				echo "<input type=\"submit\" value=\"Go!\"></form>";
 				// var_dump($page_title);
 
@@ -258,7 +262,9 @@
 					echo "<tr>";
 					// print the Title
 						echo "<td>";
-							echo $paper['Title'];
+						$title_new=$paper['Title'];
+						echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_new&page=1\" target=\"_blank\">$title_new</a>";
+						echo ";";
 						echo "</td>";
 
 					// print all the Authors_Name
@@ -266,15 +272,22 @@
 						foreach ($paper['Authors_Name'] as $idx => $author)
 						{
 							$author_id = $paper['Authors_ID'][$idx];
-							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1\" target=\"_balnk\">$author</a>";
+							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1&author_affi=\" target=\"_blank\">$author</a>";
 							echo "; ";
 						}
 						echo "</td>";
 
-					// print the ConferenceName
+						// echo "<td>";
+						// echo $paper['ConferenceName'];
+						// echo "</td>";
+
 						echo "<td>";
-							echo $paper['ConferenceName'];
+						$conference_Name=$paper['ConferenceName'];
+						echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_Name&page=1\" target=\"_blank\">$conference_Name</a>";
+						echo ";";
 						echo "</td>";
+
+
 					echo "</tr>";
 				}
 				echo "</table><br>";
@@ -370,7 +383,7 @@
 				// Jump to Page
 				echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_author\">";
 				echo "<input type=\"hidden\" name=\"paper_title\" value=\"$paper_title\"><input type=\"hidden\" name=\"author_name\" value=\"$author_name\"><input type=\"hidden\" name=\"conference_name\" value=$conference_name><input type=\"hidden\" name=\"page_title\" value=$page_title><input type=\"hidden\" name=\"page_conference\" value=$page_conference>";
-				echo "Jump to: <input type=\"input\" name=\"page_author\" size=\"1\">&nbsp;&nbsp;";
+				echo "Jump to: <input type=\"input\" name=\"page_author\" size=\"1\" required>&nbsp;&nbsp;";
 				echo "<input type=\"submit\" value=\"Go!\"></form>";
 				// var_dump($page_author);
 
@@ -408,7 +421,9 @@
 					echo "<tr>";
 					// print the Title
 						echo "<td>";
-							echo $paper['Title'];
+						$title_new=$paper['Title'];
+						echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_new&page=1\" target=\"_blank\">$title_new</a>";
+						echo ";";
 						echo "</td>";
 
 					// print all the Authors_Name
@@ -416,14 +431,16 @@
 						foreach ($paper['Authors_Name'] as $idx => $author)
 						{
 							$author_id = $paper['Authors_ID'][$idx];
-							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1\" target=\"_balnk\">$author</a>";
+							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1&author_affi=\" target=\"_blank\">$author</a>";
 							echo "; ";
 						}
 						echo "</td>";
 
 					// print ConferenceName
 						echo "<td>";
-							echo $paper['ConferenceName'];
+						$conference_name=$paper['ConferenceName'];
+						echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name&page=1\" target=\"_blank\">$conference_name</a>";
+						echo ";";
 						echo "</td>";
 					echo "</tr>";
 				}
@@ -520,7 +537,7 @@
 				// Jump to Page
 				echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_conference\">";
 				echo "<input type=\"hidden\" name=\"paper_title\" value=\"$paper_title\"><input type=\"hidden\" name=\"author_name\" value=\"$author_name\"><input type=\"hidden\" name=\"conference_name\" value=$conference_name><input type=\"hidden\" name=\"page_title\" value=$page_title><input type=\"hidden\" name=\"page_author\" value=$page_author>";
-				echo "Jump to: <input type=\"number\" name=\"page_conference\" size=\"1\" max=100000>&nbsp;&nbsp;";
+				echo "Jump to: <input type=\"number\" name=\"page_conference\" size=\"1\" required max=100000>&nbsp;&nbsp;";
 				echo "<input type=\"submit\" value=\"Go!\"></form>";
 				// var_dump($page_conference);
 
