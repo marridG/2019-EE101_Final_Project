@@ -87,7 +87,10 @@
 			$ch = curl_init();
 			$timeout = 5;
 			$query = urlencode(str_replace(' ', '+', $paper_title));
-			$url = "http://localhost:8983/solr/lab02/select?indent=on&q=Title:".$query."&start=".($page_limit*($page_title-1))."&wt=json";
+			// Color Highlight #D9EE0A
+			$url = "http://localhost:8983/solr/lab02/select?indent=on&q=Title:".$query."&start=".($page_limit*($page_title-1))."&wt=json&hl=on&hl.fl=Title&hl.simple.post=<%2Fb><%2Ffont>&hl.simple.pre=<font%20color%3D%23D9EE0A><b>";
+			// No Color Highlight
+			// $url = "http://localhost:8983/solr/lab02/select?indent=on&q=Title:".$query."&start=".($page_limit*($page_title-1))."&wt=json&hl=on&hl.fl=Title&hl.simple.post=<%2Fb>&hl.simple.pre=<b>";
 
 			curl_setopt ($ch, CURLOPT_URL, $url);
 			curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -107,7 +110,8 @@
 					// print the Title
 						echo "<td>";
 						$title_new=$paper['Title'];
-						echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_new&page=1\" target=\"_blank\">$title_new</a>";
+						$title_new_hl=$result['highlighting'][$paper['id']]['Title'][0];
+						echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_new&page=1\" target=\"_blank\">$title_new_hl</a>";
 						echo ";";
 						echo "</td>";
 
@@ -242,7 +246,7 @@
 			$timeout = 5;
 			$query = urlencode($author_name);
 			// $query = urlencode(str_replace(' ', '+', $author_name));
-			$url = "http://localhost:8983/solr/lab02/select?indent=on&q=Authors_Name:".$query."&start=".($page_limit*($page_author-1))."&wt=json";
+			$url = "http://localhost:8983/solr/lab02/select?indent=on&q=Authors_Name:".$query."&start=".($page_limit*($page_author-1))."&wt=json&hl=on&hl.fl=Authors_Name&hl.simple.post=<%2Fb>&hl.simple.pre=<b>";
 
 			curl_setopt ($ch, CURLOPT_URL, $url);
 			curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -272,7 +276,11 @@
 						foreach ($paper['Authors_Name'] as $idx => $author)
 						{
 							$author_id = $paper['Authors_ID'][$idx];
-							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1&author_affi=\" target=\"_blank\">$author</a>";
+							$author_hl=$result['highlighting'][$paper['id']]['Authors_Name'][0];
+							if($author!=$author_name)
+								echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1&author_affi=\" target=\"_blank\">$author</a>";
+							else
+								echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1&author_affi=\" target=\"_blank\">$author_hl</a>";
 							echo "; ";
 						}
 						echo "</td>";
@@ -403,7 +411,7 @@
 			$timeout = 5;
 			$query = urlencode($conference_name);
 			// $query = urlencode(str_replace(' ', '+', $author_name));
-			$url = "http://localhost:8983/solr/lab02/select?indent=on&q=ConferenceName:".$query."&start=".($page_limit*($page_conference-1))."&wt=json";
+			$url = "http://localhost:8983/solr/lab02/select?indent=on&q=ConferenceName:".$query."&start=".($page_limit*($page_conference-1))."&wt=json&hl=on&hl.fl=ConferenceName&hl.simple.post=<%2Fb>&hl.simple.pre=<b>";
 
 			curl_setopt ($ch, CURLOPT_URL, $url);
 			curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -438,8 +446,9 @@
 
 					// print ConferenceName
 						echo "<td>";
-						$conference_name=$paper['ConferenceName'];
-						echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name&page=1\" target=\"_blank\">$conference_name</a>";
+						$conference_Name=$paper['ConferenceName'];
+						$conference_Name_hl=$result['highlighting'][$paper['id']]['ConferenceName'][0];
+						echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name&page=1\" target=\"_blank\">$conference_Name_hl</a>";
 						echo ";";
 						echo "</td>";
 					echo "</tr>";
