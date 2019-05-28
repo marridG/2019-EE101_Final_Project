@@ -3,6 +3,11 @@
 
 <head>
 	<img src="/EE101-Final_Project/Final_Project/pics/acemap.png" class="head_pic">
+	<style type="text/css">
+		background-image: url("/EE101-Final_Project/Final_Project/pics/cover1.jpg");
+		
+
+	</style>
 	<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
 	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/45817/5cecef5bf629d80af8efaac6.css' rel='stylesheet' type='text/css' />
 <!-- 	ChannelSlanted2的link -->
