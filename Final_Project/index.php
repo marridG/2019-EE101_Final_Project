@@ -16,7 +16,7 @@
 	 	<input type="hidden" name="page_title" value="1">
 		<input type="hidden" name="page_author" value="1">
 		<input type="hidden" name="page_conference" value="1">
-		 Paper Title:<br><br>
+		Paper Title:<br><br>
 			<input class="input_button" type="text" id="1_PT" name="paper_title" placeholder="Not Required">
 		<br><br>
 		Author Name:<br><br>
