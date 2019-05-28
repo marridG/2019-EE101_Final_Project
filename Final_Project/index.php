@@ -12,19 +12,19 @@
 </head>
 
 <body class="body__homepage">
-	<h1 class="h1">Best Academia Searching For You!</h1>
+	<h2 class="h1">Best Academia Searching For You!</h1>
 
 	<form action="/EE101-Final_Project/Final_Project/search.php" target="_blank">	
 	 	<input type="hidden" name="page_title" value="1">
 		<input type="hidden" name="page_author" value="1">
 		<input type="hidden" name="page_conference" value="1">
-		Paper Title:<br><br>
+		Paper Title:<br>
 			<input class="input_button" type="text" id="1_PT" name="paper_title" placeholder="Not Required">
-		<br><br>
-		Author Name:<br><br>
+		<br>
+		Author Name:<br>
 			<input class="input_button" type="text" id="2_AN" name="author_name" placeholder="Not Required">
-		<br><br>
-		Conference Name:<br><br>
+		<br>
+		Conference Name:<br>
 			<input class="input_button" type="text" id="3_CN" name="conference_name" placeholder="Not Required">
 		<br>
 		
