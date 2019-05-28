@@ -77,3 +77,9 @@ MySQL 搜索结果乱码问题（比如 author 搜含西班牙文的作者名）
 链接：
 	https://blog.csdn.net/nanjinzhu/article/details/82251110
 
+
+Solr 高亮显示
+尤其注意 multivalued 的字段
+	http://www.aboutyun.com/thread-9433-1-1.html
+	GZL: 搜索 multivalue 字段的时候，似乎无法对其他字段高亮（如搜 Authors_ID 高亮 ConferenceName，highlighting 为空）
+
