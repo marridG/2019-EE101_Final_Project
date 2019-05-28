@@ -39,7 +39,7 @@
 
 	// Variables for Turning Pages
 		$page_limit=10;
-		$page = $_GET["page"];
+		$page = floor($_GET["page"]);
 		
 	// Variables for Faster Page Loading
 		$affiliation_name=$_GET["author_affi"];
