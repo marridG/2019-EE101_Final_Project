@@ -107,7 +107,13 @@
 			// Turn Page
 				$num_max=$result["response"]["numFound"];
 				Turn_Page_min_max_page($num_max,$page_limit,$min_page,$max_page,$page);
-				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.<br>";
+				// Calculate the maximum of pages
+				if($num_max%$page_limit==0)
+					$page_MAX=$num_max/$page_limit;
+				else
+					$page_MAX=floor($num_max/$page_limit)+1;
+				// print information
+				echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.&nbsp;&nbsp;&nbsp;&nbsp;Altogether: $page_MAX pages.<br>";
 				echo "<table class=\"table__Turn_Page\">";
 				echo "<tr>";
 				// Row One
@@ -116,9 +122,9 @@
 					$i=$page-1;
 					if($i>=1)
 					{
-						echo "<a href=\"conference.php?conference_name=$conference_name_temp&page=$i\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
 						echo "</td><td>";
-						echo "<a href=\"conference.php?conference_name=$conference_name_temp&page=$i\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.jpg\" id=\"search__Turn_Page_prev_page\"></a>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.jpg\" id=\"search__Turn_Page_prev_page\"></a>";
 
 					}
 					else
@@ -134,16 +140,16 @@
 						if($i==$page)
 							echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_selected.jpg\" id=\"search__Turn_Page_selected\"></a></td>";
 						else
-							echo "<td><a href=\"conference.php?conference_name=$conference_name_temp&page=$i\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_not_selected.jpg\"  id=\"search__Turn_Page_not_selected\"></a></td>";
+							echo "<td><a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_not_selected.jpg\"  id=\"search__Turn_Page_not_selected\"></a></td>";
 					}
 					// Next Page
 					echo "<td>";
 					$i=$page+1;
 					if (($i-1)*$page_limit<$num_max)
 					{
-						echo "<a href=\"conference.php?conference_name=$conference_name_temp&page=$i\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.jpg\" id=\"search__Turn_Page_next_page\"></a>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.jpg\" id=\"search__Turn_Page_next_page\"></a>";
 						echo "</td><td>";
-						echo "<a href=\"conference.php?conference_name=$conference_name_temp&page=$i\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
 					}
 					else
 					{
@@ -195,7 +201,7 @@
 				// Jump to Page
 				echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/conference.php\">";
 				echo "<input type=\"hidden\" name=\"conference_name\" value=$conference_name>";
-				echo "Jump to: <input type=\"number\" name=\"page\" size=\"1\" required max=100000>&nbsp;&nbsp;";
+				echo "Jump to: <input type=\"number\" name=\"page\" class=\"all__Turn_Page_jump_to_number\" max=$page_MAX min=\"1\"  required>&nbsp;&nbsp;";
 				echo "<input type=\"submit\" value=\"Go!\"></form>";
 				// var_dump($page);
 

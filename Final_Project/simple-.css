@@ -94,11 +94,26 @@ body
 	font-style: italic;
 }
 
-.search_return_to_homepage_image
+#all__return_to_homepage_image
 {
-	margin-top: 1%;
-	margin-bottom: 1%;
+	width: 30px;
+	margin-top: -10%;
 	margin-left: -90%;
+}
+
+.search__Widget_title
+{
+	width: 150px;
+}
+
+.search__Widget_author_name
+{
+	width: 100px;
+}
+
+.search__Widget_conference_name
+{
+	width: 50px;
 }
 
 #form__jump_to__inline
@@ -144,4 +159,23 @@ body
 {
 	margin: 0 auto;
 	text-align: center;
+}
+
+.all__Turn_Page_jump_to_number
+{
+	width: 5%;
+}
+
+/*Disable Up and Down Arrows*/
+/*Chrome*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+{
+    -webkit-appearance: none !important;
+    margin: 0; 
+}
+/*Firefox*/
+input[type="number"]
+{
+	-moz-appearance:textfield;
 }
