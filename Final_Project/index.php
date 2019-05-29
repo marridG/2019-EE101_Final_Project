@@ -1,6 +1,8 @@
+<!DOCTYPE html> 
 <html>
 <meta charset="utf-8">
 
+<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
 <head>
 	<img src="/EE101-Final_Project/Final_Project/pics/acemap.png" class="head_pic">
 	<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">

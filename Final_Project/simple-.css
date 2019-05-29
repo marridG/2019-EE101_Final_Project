@@ -6,7 +6,6 @@ body
 
 .body__homepage
 {
-	/*background-image: url("/lab03/pics/homepage_background.jpg");*/
 	background-image: url("/EE101-Final_Project/Final_Project/pics/cover1.jpg");
 	background-size: 100%,100%;
 	background-position: center;
@@ -22,6 +21,11 @@ body
 	color: #FFFFFF;
 	font-family:'ChannelSlanted2';
 	font-style: italic;
+}
+
+.head_pic
+{
+	text-align: left;
 }
 
 .input_button/*cyf：网上扒的代码，改变的是input框的样式，链接https://www.cnblogs.com/cnsevennight/p/4143792.html*/

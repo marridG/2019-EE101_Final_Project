@@ -1,18 +1,15 @@
+<!DOCTYPE html> 
 <html>
 <meta charset="utf-8">
 
 <head>
 	<img src="/EE101-Final_Project/Final_Project/pics/acemap.png" class="head_pic">
-	<style type="text/css">
-		background-image: url("/EE101-Final_Project/Final_Project/pics/cover1.jpg");
-		
 
-	</style>
 	<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
 	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/45817/5cecef5bf629d80af8efaac6.css' rel='stylesheet' type='text/css' />
 <!-- 	ChannelSlanted2的link -->
 	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/28831/5cecf17cf629d80af8efaaca.css' rel='stylesheet' type='text/css' />
-	
+	<!-- Agnes-Bold的link -->
 
 	<script src="/EE101-Final_Project/Final_Project/add-ons/02_Clear_Form.js"></script>
 
