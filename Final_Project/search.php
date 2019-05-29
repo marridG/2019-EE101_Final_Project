@@ -154,9 +154,9 @@
 					$i=$page_title-1;
 					if($i>=1)
 					{
-						echo "<a href=\"search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$i&page_author=$page_author&page_conference=$page_conference#skip_title\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$i&page_author=$page_author&page_conference=$page_conference#skip_title\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
 						echo "</td><td>";
-						echo "<a href=\"search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$i&page_author=$page_author&page_conference=$page_conference#skip_title\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.jpg\" id=\"search__Turn_Page_prev_page\"></a>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$i&page_author=$page_author&page_conference=$page_conference#skip_title\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.jpg\" id=\"search__Turn_Page_prev_page\"></a>";
 
 					}
 					else
@@ -172,16 +172,16 @@
 						if($i==$page_title)
 							echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_selected.jpg\" id=\"search__Turn_Page_selected\"></a></td>";
 						else
-							echo "<td><a href=\"search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$i&page_author=$page_author&page_conference=$page_conference#skip_title\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_not_selected.jpg\"  id=\"search__Turn_Page_not_selected\"></a></td>";
+							echo "<td><a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$i&page_author=$page_author&page_conference=$page_conference#skip_title\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_not_selected.jpg\"  id=\"search__Turn_Page_not_selected\"></a></td>";
 					}
 					// Next Page
 					echo "<td>";
 					$i=$page_title+1;
 					if (($i-1)*$page_limit<$num_max)
 					{
-						echo "<a href=\"search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$i&page_author=$page_author&page_conference=$page_conference#skip_title\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.jpg\" id=\"search__Turn_Page_next_page\"></a>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$i&page_author=$page_author&page_conference=$page_conference#skip_title\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.jpg\" id=\"search__Turn_Page_next_page\"></a>";
 						echo "</td><td>";
-						echo "<a href=\"search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$i&page_author=$page_author&page_conference=$page_conference#skip_title\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?paper_title=$paper_title_temp&author_name=$author_name_temp&conference_name=$conference_name_temp&page_title=$i&page_author=$page_author&page_conference=$page_conference#skip_title\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
 					}
 					else
 					{
@@ -252,6 +252,7 @@
 			$ch = curl_init();
 			$timeout = 5;
 			$query = urlencode($author_name);
+			// echo "$query";
 			// $query = urlencode(str_replace(' ', '+', $author_name));
 			$url = "http://localhost:8983/solr/lab02/select?indent=on&q=Authors_Name:".$query."&start=".($page_limit*($page_author-1))."&wt=json&hl=on&hl.fl=Authors_Name&hl.simple.post=<%2Fb>&hl.simple.pre=<b>";
 
