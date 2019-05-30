@@ -31,8 +31,7 @@
 	<br><br>
 
 	<h5 class="h1">Best Academia Searching For You! </h5>
-	<hr class="line" />
-	<p class="p1"></p>
+	<!-- <hr class="line" /> -->
 
 	<form action="/EE101-Final_Project/Final_Project/search.php" target="_blank">
 
