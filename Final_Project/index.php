@@ -16,9 +16,11 @@
 	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/28831/5cecf17cf629d80af8efaaca.css' rel='stylesheet' type='text/css' />
 
 	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/35481/5cefe3ccf629d80cc4033e42.css' rel='stylesheet' type='text/css' />
+	<!-- impact的link -->
 	
 <!-- Clear Input Form (Under Construction) -->
 	<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/add-ons/04_Clear_Input_Form.css">
+
 	
 <!-- Test -->
 	<script src="/EE101-Final_Project/Final_Project/add-ons/02_Clear_Form.js"></script>
@@ -54,6 +56,7 @@
 	<!-- <?php
 		echo "<input type=\"reset\" onclick=clear() value=\"CLEAR\">";
 	?> -->
+	<p class="p2">copy right:cyf,gjl,gzl,jzf(ordered by leter)</p>
 
 </body>
 

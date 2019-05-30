@@ -73,6 +73,12 @@
 
 }
 
+.p2
+{
+	position: relative;
+	top: 500px;
+	font-family: "Impact"
+}
 .table__result
 {
 	margin: 0 auto;
