@@ -4,17 +4,17 @@
 [置顶]关于修改冲突等
 问题描述：对于一些代码，A 和 B 都做了一些修改，且有一些地方冲突，然后 A 先 commit+push 掉了，那么 B 这时候 pull，获取最新代码，并合并两人的修改。此时，应该是会报（什么错？@CYF）错，提示信息如（……）。
 解决方案：
-	如果 B 的修改还未 commit，那么就是：先 git stash，
-然后 git pull，
-最后 git stash pop。
+	如果 B 的修改还未 commit，那么就是：先 git stash，然后 git pull，最后 git stash pop。
 	如果 B 的修改 commit 了，那么就是 B 对对标出的冲突，进行人工合并、解决冲突，然后 B 再 push。（虽然 B 此时可以不管 A 的修改，全删掉，但是在记录中是会显示的！）
 解决冲突，参见：https://blog.csdn.net/yuhk231/article/details/54837013。
+	
+	cyf: 我出现的问题是上面问题的第二种情况。当时我想fetch，但desktop告诉我：我这里有changes没有commit，必须commit才可以fetch。于是我选择commit并成功。此时我决定push，但desktop告诉我master里面有我本地没有的文件，必须先fetch。这是再fetch就出现了出现conflict的问题。解决方法即如上一段所说。
 
-cyf: 我出现的问题是上面问题的第二种情况。当时我想fetch，但desktop告诉我：我这里有changes没有commit，必须commit才可以fetch。于是我选择commit并成功。此时我决定push，但desktop告诉我master里面有我本地没有的文件，必须先fetch。这是再fetch就出现了出现conflict的问题。解决方法即如上一段所说。
 
 cyf：问题：我在simple-.css中加入背景图片，代码为
 	background-image: url("/EE101-Final_Project/Final_Project/pics/IMG_5349.JPG");
 在gzl，gjl的电脑上都可以跑出来，但是在我的电脑就是显示不出背景图片，现在打算直接内联在index.php中了
+
 
 cyf:
 problem dsecription
@@ -23,13 +23,11 @@ In the simple-.css I changed the text-align of .body__homepage from center to le
 
 solution:control + shift + r 
 
+
 input框:
 https://www.cnblogs.com/cnsevennight/p/4143792.html
 
 cyf：字体是从这上面扒下来的https://cdn.wf.youziku.com/fonts/46908.html
-
-
-
 
 
 在完成翻页功能时，控制页数的变量在各页面间传递较复杂（如 index-search 不能有相应表格）
@@ -86,4 +84,21 @@ Solr 高亮显示
 尤其注意 multivalued 的字段
 	http://www.aboutyun.com/thread-9433-1-1.html
 	GZL: 搜索 multivalue 字段的时候，似乎无法对其他字段高亮（如搜 Authors_ID 高亮 ConferenceName，highlighting 为空）
+
+
+关于输入框中右侧常见的清除内容的小 X，GZL 本地已实现，但整合过程中有问题
+参考代码：https://blog.csdn.net/pinzhizun/article/details/54144253
+
+
+Solr 高级查询、多字段查询
+参考：https://blog.csdn.net/upxiaofeng/article/details/51460042
+参考：https://blog.csdn.net/lies_joker/article/details/51684453
+
+
+Solr 多字段高亮
+hlfl 用逗号分隔高亮字段即可（注意 MultiValued 字段仍只返回被高亮的）
+
+
+展开收起
+参考：https://blog.csdn.net/baidu_35701759/article/details/76187236
 
