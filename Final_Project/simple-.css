@@ -1,16 +1,11 @@
 
-body
-{
-	text-align: center
-}
-
 .body__homepage
 {
 	background-image: url("/EE101-Final_Project/Final_Project/pics/cover1.jpg");
 	background-size: 100%,100%;
 	background-position: center;
+	text-align: center;
 	/*background-color: #EDC7D0;*/
-	text-align:center;
 	color: #FFFFFF;
 	font-family:'Agnes-Bold';
 	font-size: 200%;
@@ -25,12 +20,28 @@ body
 
 .head_pic
 {
-	text-align: left;
+	float: left;
+	width: 40%;
 }
+
+.line
+{
+	position: relative;
+	top: 50px;
+	left: 120px;
+	height: 4px;
+	background: #FFFFFF;
+	width:1500px;
+}
+.p1
+{
+
+}
+
 
 .input_button/*cyf：网上扒的代码，改变的是input框的样式，链接https://www.cnblogs.com/cnsevennight/p/4143792.html*/
 {
-	border: 1px solid #ccc;
+	border: 3px solid #ccc;
 	padding: 7px 0px;
 	border-radius: 3px;
 	padding-left:5px;
@@ -40,6 +51,26 @@ body
 	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 	text-align: left;
+	position: relative;
+	top: 200px;
+}
+
+.submit_reset
+{
+	border: 3px solid #ccc;
+	padding: 7px 0px;
+	border-radius: 3px;
+	padding-left:5px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	text-align: left;
+	position: relative;
+	top: 200px;
+	font-family:'Impact';
+
 }
 
 .table__result
@@ -171,8 +202,8 @@ body
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button
 {
-    -webkit-appearance: none !important;
-    margin: 0; 
+	-webkit-appearance: none !important;
+	margin: 0; 
 }
 /*Firefox*/
 input[type="number"]

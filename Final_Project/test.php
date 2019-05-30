@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 
 <head>
-	<img src="/EE101-Final_Project/Final_Project/pics/acemap.png" class="head_pic">
+	<img class="head_pic" src="/EE101-Final_Project/Final_Project/pics/acemap.png" >
 
 	<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
 	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/45817/5cecef5bf629d80af8efaac6.css' rel='stylesheet' type='text/css' />
@@ -17,6 +17,7 @@
 
 <body class="body__homepage">
 	<h6 class="h1">Best Academia Searching For You!</h6>
+	
 
 	<form action="/EE101-Final_Project/Final_Project/search.php" target="_blank">	
 	 	<input type="hidden" name="page_title" value="1">

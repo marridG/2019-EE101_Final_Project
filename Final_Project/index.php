@@ -14,6 +14,8 @@
 	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/45817/5cecef5bf629d80af8efaac6.css' rel='stylesheet' type='text/css' />
 <!-- 	ChannelSlanted2的link -->
 	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/28831/5cecf17cf629d80af8efaaca.css' rel='stylesheet' type='text/css' />
+
+	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/35481/5cefe3ccf629d80cc4033e42.css' rel='stylesheet' type='text/css' />
 	
 <!-- Clear Input Form (Under Construction) -->
 	<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/add-ons/04_Clear_Input_Form.css">
@@ -24,9 +26,13 @@
 </head>
 
 <body class="body__homepage">
-	<h6 class="h1">Best Academia Searching For You!</h6>
+	<br><br>
 
-	<form action="/EE101-Final_Project/Final_Project/search.php" target="_blank">	
+	<h5 class="h1">Best Academia Searching For You! </h5>
+	<hr class="line" />
+	<p class="p1"></p>
+
+	<form action="/EE101-Final_Project/Final_Project/search.php" target="_blank">
 
 	 	<input type="hidden" name="page" value="1">
 		
@@ -35,12 +41,12 @@
 		<!-- * Please notice that at least one information above should be given.
 		<br><br> -->
 		
-		<br>
-		<input class="input_button"  type="submit" value="SEARCH" > 	
+
+		<input class="submit_reset"  type="submit" value="SEARCH" > 	
 		&ensp;
 		&ensp;
 		&ensp;
-		<input  class="input_button" type="reset" value="RESET">
+		<input  class="submit_reset" type="reset" value="RESET">
      
 		<!-- <input type="reset" onclick="clear()" value="CLEAR"> -->
 	</form>
