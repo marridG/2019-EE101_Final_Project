@@ -49,7 +49,8 @@
 		// $show_hide=$_GET["show_hide"];
 
 	// Variables for Turning Pages
-		$page_limit=10;
+		// $page_limit=10;
+		$page_limit=25;
 		$page = floor($_GET["page"]);
 		$key_word_temp = urlencode($key_word);
 
@@ -74,7 +75,7 @@
 			$timeout = 5;
 			$query = urlencode(str_replace(' ', '+', $key_word));
 			// Color Highlight #D9EE0A
-			$url = "http://localhost:8983/solr/lab02/select?indent=on&q=Title:".$query."^1+OR+Authors_Name:".$query."^0.7+OR+ConferenceName:".$query."^0.5&start=".($page_limit*($page-1))."&wt=json&hl=on&hl.fl=Title,Authors_Name,ConferenceName&hl.simple.post=<%2Fb><%2Ffont>&hl.simple.pre=<font%20color%3D%23D9EE0A><b>";
+			$url = "http://localhost:8983/solr/lab02/select?indent=on&q=Title:".$query."^1+OR+Authors_Name:".$query."^0.7+OR+ConferenceName:".$query."^0.5&start=".($page_limit*($page-1))."&rows=".$page_limit."&wt=json&hl=on&hl.fl=Title,Authors_Name,ConferenceName&hl.simple.post=<%2Fb><%2Ffont>&hl.simple.pre=<font%20color%3D%23D9EE0A><b>";
 			
 			// No Color Highlight
 			// $url = "http://localhost:8983/solr/lab02/select?indent=on&q=Title:".$query."&start=".($page_limit*($page-1))."&wt=json&hl=on&hl.fl=Title&hl.simple.post=<%2Fb>&hl.simple.pre=<b>";
