@@ -11,6 +11,10 @@
 	cyf: 我出现的问题是上面问题的第二种情况。当时我想fetch，但desktop告诉我：我这里有changes没有commit，必须commit才可以fetch。于是我选择commit并成功。此时我决定push，但desktop告诉我master里面有我本地没有的文件，必须先fetch。这是再fetch就出现了出现conflict的问题。解决方法即如上一段所说。
 
 
+[置顶]版本回退
+参考：https://blog.csdn.net/ccorg/article/details/80115408
+
+
 cyf：问题：我在simple-.css中加入背景图片，代码为
 	background-image: url("/EE101-Final_Project/Final_Project/pics/IMG_5349.JPG");
 在gzl，gjl的电脑上都可以跑出来，但是在我的电脑就是显示不出背景图片，现在打算直接内联在index.php中了
