@@ -28,9 +28,7 @@
 	<h6 class="h1">Best Academia Searching For You!</h6>
 
 	<form action="/EE101-Final_Project/Final_Project/search.php" target="_blank">	
-	 	<input type="hidden" name="page_title" value="1">
-		<input type="hidden" name="page_author" value="1">
-		<input type="hidden" name="page_conference" value="1">
+	 	<input type="hidden" name="page" value="1">
 		
 		<input class="input_button" type="text" id="key_word" name="key_word" placeholder="Not Required">
 		
