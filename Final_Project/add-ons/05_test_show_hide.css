@@ -1,0 +1,34 @@
+/**{
+    margin: 0;
+    padding: 0;
+}*/
+/*body{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #222222;
+}*/
+#box{
+    width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+#content{
+    background-color: #b3dae9;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px #ccc;
+    border:1px solid #EEEEEE;
+}
+/*h4{
+    font-size: 16px;
+}
+h4,p{
+    padding: 10px 0;
+}*/
+#btn{
+    width: 80px;
+}
+#spread{
+    text-align: left;
+    height: 0px;
+    overflow: hidden;
+}

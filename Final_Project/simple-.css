@@ -126,6 +126,12 @@
 	font-style: italic;
 }
 
+.table__recommend
+{
+	vertical-align: text-top;
+}
+
+
 #all__return_to_homepage_image
 {
 	width: 30px;
