@@ -46,7 +46,7 @@
 		<input class="submit_reset"  type="submit" value="SEARCH" > 	
 		&ensp;
 		&ensp;
-		&ensp;
+
 		<input  class="submit_reset" type="reset" value="RESET">
      
 		<!-- <input type="reset" onclick="clear()" value="CLEAR"> -->
