@@ -72,7 +72,7 @@
 	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;*/
 	text-align: center;
-	margin: 20% 0 18% 0;
+	margin: 20% 0 17% 0;
 	font-family:'HelveticaNeue';
 /*	font-family:'Impact';
 */}
@@ -87,8 +87,9 @@
 .p2
 {
 	/*margin: -5% 25% 0 25%;*/
-	font-family: "Impact";
+	font-family:'Helvetica-LT-Light';
 	vertical-align: bottom;
+	font-size: 75%;
 }
 
 .table__result

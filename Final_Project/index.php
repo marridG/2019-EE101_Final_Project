@@ -23,6 +23,8 @@
 	<!-- impact的link -->
 	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/46758/5cf0e373f629d80774a3a154.css' rel='stylesheet' type='text/css' />
 <!-- 	HelveticaNeue的link
+
+	
  --><!-- Clear Input Form (Under Construction) -->
 	<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/add-ons/04_Clear_Input_Form.css">
 
@@ -42,7 +44,7 @@
 
 	 	<input type="hidden" name="page" value="1">
 		
-		<input class="input_button" type="text" id="key_word" name="key_word" placeholder="Not Required">
+		<input class="input_button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching">
 		
 		<!-- * Please notice that at least one information above should be given.
 		<br><br> -->
