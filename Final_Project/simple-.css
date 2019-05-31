@@ -46,8 +46,8 @@
 	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;*/
 	text-align: left;
-	position: relative;
-	top: 200px;
+	margin: 10% 0 0 0;
+	
 }
 
 .submit_reset
