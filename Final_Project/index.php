@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 
 <title>
-	ACEMAP-BEST ACADEMIC SEARCHING ENGINE IN CHINA!
+	ACEMAP-Best Academia Searching For You!
 </title>
 
 <head>
