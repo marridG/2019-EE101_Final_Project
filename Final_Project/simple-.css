@@ -2,7 +2,7 @@
 .body__homepage
 {
 	background-image: url("/EE101-Final_Project/Final_Project/pics/cover1.jpg");
-	background-size: 100%,100%;
+	background-size: 130%;
 	background-position: center;
 	text-align: center;
 	/*background-color: #EDC7D0;*/
@@ -16,32 +16,27 @@
 	color: #FFFFFF;
 	font-family:'ChannelSlanted2';
 	font-style: italic;
+	margin: 0 10% 0 50%;/*上 右 下 左*/
 }
 
 .head_pic
 {
-	float: left;
-	width: 40%;
-}
-
-.line
-{
-	position: relative;
-	top: 50px;
-	left: 120px;
-	height: 4px;
-	background: #FFFFFF;
-	width:1500px;
-}
-.p1
-{
+	margin: 3% 60% 0 0;
+	width:35%;
 
 }
 
-
-.input_button/*cyf：网上扒的代码，改变的是input框的样式，链接https://www.cnblogs.com/cnsevennight/p/4143792.html*/
+.input_button/*cyf：网上扒的代码，改变的是input框的样式，注释的链接https://www.cnblogs.com/cnsevennight/p/4143792.html
+没注释的是菜鸟教程上的*/
 {
-	border: 3px solid #ccc;
+	width: 60%;
+	padding: 1% 1%;
+/*	margin: 8px 0;
+*/	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	/*border: 3px solid #ccc;
 	padding: 7px 0px;
 	border-radius: 3px;
 	padding-left:5px;
@@ -49,7 +44,7 @@
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
 	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;*/
 	text-align: left;
 	position: relative;
 	top: 200px;
@@ -67,18 +62,18 @@
 	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 	text-align: left;
-	position: relative;
-	top: 200px;
-	font-family:'Impact';
+	margin: 20% 0 20% 0;
 
+	font-family:'Impact';
 }
 
 .p2
 {
 	position: relative;
-	top: 500px;
-	font-family: "Impact"
+	margin: 30% 25% 0 25%;
+	font-family: "Impact";
 }
+
 .table__result
 {
 	margin: 0 auto;
