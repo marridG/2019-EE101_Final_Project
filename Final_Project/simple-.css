@@ -54,6 +54,9 @@
 	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;*/
 	text-align: left;
 	margin: -25% 0 -80% 0;
+
+	position:relative; <!-- GZL -->
+	z-index: 10;
 	
 }
 
@@ -239,4 +242,19 @@ input::-webkit-inner-spin-button
 input[type="number"]
 {
 	-moz-appearance:textfield;
+}
+
+.input_clear
+{
+	position:absolute;
+	right:35%;
+	top:65%;
+	cursor:pointer;
+	display:none;
+	z-index: 90;
+}
+
+.input_clear_image
+{
+	width: 40%;
 }
