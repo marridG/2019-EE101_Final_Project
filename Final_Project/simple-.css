@@ -55,7 +55,7 @@ box-sizing: border-box;
 .submit_reset
 {
 	width: 4%;
-	background-color: #191970;
+	background-color: #3385ff;
 	color: white;
 	padding: 1% 0 1% 0;
 	margin: 8px 0;
@@ -73,12 +73,15 @@ box-sizing: border-box;
 	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;*/
 	text-align: center;
 	margin: 20% 0 18% 0;
+	font-family:'HelveticaNeue';
 /*	font-family:'Impact';
 */}
 
 .submit_reset:hover
 {
 	background-color: #FFFFFF;
+	color: #3385ff;
+	font-family:'HelveticaNeue';
 }
 
 .p2
