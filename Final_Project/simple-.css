@@ -26,17 +26,8 @@
 
 }
 
-.line
-{
-	position: relative;
-	top: 50px;
-	left: 120px;
-	height: 4px;
-	background: #FFFFFF;
-	width:1000px;
-}
-
-.input_button/*cyf：网上扒的代码，改变的是input框的样式，链接https://www.cnblogs.com/cnsevennight/p/4143792.html*/
+.input_button/*cyf：网上扒的代码，改变的是input框的样式，注释的链接https://www.cnblogs.com/cnsevennight/p/4143792.html
+没注释的是菜鸟教程上的*/
 {
 	width: 60%;
 	padding: 1% 1%;
