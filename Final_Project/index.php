@@ -42,18 +42,26 @@
 	<form action="/EE101-Final_Project/Final_Project/search.php" target="_blank">
 
 	 	<input type="hidden" name="page" value="1">
-		
+	
+	<div> <!-- GZL -->
+		<div class="input_clear"><i><img src ="/EE101-Final_Project/Final_Project/pics/test.jpg" class="input_clear_image"></i> <!-- GZL -->
+		</div> <!-- GZL -->
+
 		<input class="input_button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching">
-		
+
+		<script type="text/javascript" src="/EE101-Final_Project/Final_Project/add-ons/06_input_clear.js"></script> <!-- GZL -->
+
+
 		<!-- * Please notice that at least one information above should be given.
 		<br><br> -->
 		
-
+		&ensp;&ensp;&ensp;&ensp; <!-- GZL -->
 		<input class="submit_reset"  type="submit" value="SEARCH" > 	
 		&ensp;
 		&ensp;
 		<input  class="submit_reset" type="reset" value="RESET">
-     
+     </div> <!-- GZL -->
+
 		<!-- <input type="reset" onclick="clear()" value="CLEAR"> -->
 	</form>
 
