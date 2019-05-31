@@ -10,7 +10,7 @@
 <!-- Dependent Packages -->
 	<script src="/EE101-Final_Project/Final_Project/add-ons/jquery/jquery-3.4.0.min.js"></script>
 
-	<img src="/EE101-Final_Project/Final_Project/pics/acemap.png" class="head_pic">
+	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/acemap.png" class="head_pic"></a>
 	
 <!-- Project Size CSS File -->
 	<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
@@ -31,7 +31,6 @@
 	
 <!-- Test -->
 	<script src="/EE101-Final_Project/Final_Project/add-ons/02_Clear_Form.js"></script>
-
 </head>
 
 <body class="body__homepage">
