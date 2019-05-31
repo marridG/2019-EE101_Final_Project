@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4a29eac-bd70-45e9-99ff-1107758c4b9d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Final_Project/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Final_Project/search.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final_Project/add-ons/06_input_clear.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final_Project/pics/test.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab02/data/out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final_Project/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Final_Project/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final_Project/simple-.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Final_Project/simple-.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab02/Lab2_Ex2_2_ReadFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/../lab02/Lab2_Ex2_2_ReadFile.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,7 +42,7 @@
         <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/codecs.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="7229">
-              <caret line="899" column="19" lean-forward="true" selection-start-line="899" selection-start-column="19" selection-end-line="899" selection-end-column="19" />
+              <caret line="899" column="19" selection-start-line="899" selection-start-column="19" selection-end-line="899" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -58,8 +62,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../lab02/Lab2_Ex2_2_ReadFile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+            <state relative-caret-position="300">
+              <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -337,7 +341,7 @@
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7229">
-          <caret line="899" column="19" lean-forward="true" selection-start-line="899" selection-start-column="19" selection-end-line="899" selection-end-column="19" />
+          <caret line="899" column="19" selection-start-line="899" selection-start-column="19" selection-end-line="899" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -350,8 +354,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../lab02/Lab2_Ex2_2_ReadFile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+        <state relative-caret-position="300">
+          <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
         </state>
       </provider>
     </entry>
