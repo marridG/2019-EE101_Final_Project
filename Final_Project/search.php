@@ -130,6 +130,7 @@
 					// print the ConferenceName
 						echo "<td>";
 						$conference_Name=$paper['ConferenceName'];
+						var_dump($conference_Name);
 						if(array_key_exists("ConferenceName", $result['highlighting'][$paper['id']]))
 						{
 							$conference_Name_hl=$result['highlighting'][$paper['id']]['ConferenceName'][0];
