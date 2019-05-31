@@ -104,10 +104,10 @@
 						if(array_key_exists("Title", $result['highlighting'][$paper['id']]))
 						{
 							$title_new_hl=$result['highlighting'][$paper['id']]['Title'][0];
-							echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_new&page=1\" target=\"_blank\">$title_new_hl</a>";
+							echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_new\" target=\"_blank\">$title_new_hl</a>";
 						}
 						else
-							echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_new&page=1\" target=\"_blank\">$title_new</a>";
+							echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_new\" target=\"_blank\">$title_new</a>";
 						echo ";";
 						echo "</td>";
 
