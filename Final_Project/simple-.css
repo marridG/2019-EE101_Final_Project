@@ -16,7 +16,7 @@
 	color: #FFFFFF;
 	font-family:'ChannelSlanted2';
 	font-style: italic;
-	margin: 0 30% 0 10%;
+	margin: 0 0 0 40%;/*上 右 下 左*/
 }
 
 .head_pic
