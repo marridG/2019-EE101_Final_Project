@@ -22,10 +22,10 @@
 	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/35481/5cefe3ccf629d80cc4033e42.css' rel='stylesheet' type='text/css' />
 	<!-- impact的link -->
 	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/46758/5cf0e373f629d80774a3a154.css' rel='stylesheet' type='text/css' />
-<!-- 	HelveticaNeue的link
+<!-- 	HelveticaNeue的link -->
 
-	
- --><!-- Clear Input Form (Under Construction) -->
+	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/47617/5cf0e6ecf629d80774a3a15a.css' rel='stylesheet' type='text/css' />
+<!-- Clear Input Form (Under Construction) -->
 	<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/add-ons/04_Clear_Input_Form.css">
 
 	
