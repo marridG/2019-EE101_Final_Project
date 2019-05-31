@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 
 <title>
-	ACEMAP-Best Academia Searching For You!
+	Best Academia Searching For You!
 </title>
 
 <head>
