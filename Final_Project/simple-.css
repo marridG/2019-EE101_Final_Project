@@ -22,8 +22,10 @@
 .head_pic
 {
 	margin: 3% 60% 0 0;
-	width:35%;
-
+	width:auto;
+	height: auto;
+	max-height: 30%;
+	max-width: 30%;
 }
 
 .input_button/*cyf：网上扒的代码，改变的是input框的样式，注释的链接https://www.cnblogs.com/cnsevennight/p/4143792.html
@@ -63,7 +65,6 @@
 	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 	text-align: left;
 	margin: 20% 0 20% 0;
-
 	font-family:'Impact';
 }
 
