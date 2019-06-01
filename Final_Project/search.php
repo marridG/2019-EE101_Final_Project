@@ -11,11 +11,15 @@
 	<script src="/EE101-Final_Project/Final_Project/add-ons/01_Scroll_Page_to_Original.js"></script>
 	<script src="/EE101-Final_Project/Final_Project/add-ons/02_Clear_Form.js"></script>
 	<script src="/EE101-Final_Project/Final_Project/add-ons/03_Custom_Overflow_Extremum.js"></script>
+
+	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/45817/5cecef5bf629d80af8efaac6.css' rel='stylesheet' type='text/css' />
+<!-- 	ChannelSlanted2的link -->
 </head>
 
 <body class="body">
 	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/acemap.png" id="acemap"></a>
 	<div onscroll="SetH(this)">
+
 	<h1 id="search_result">Search Result</h1>
 
 	<?php
@@ -47,6 +51,7 @@
 	// from index.php:
 		// get paper_title, author_name, conference_name 
 		$key_word = $_GET["key_word"];
+		$key_word_temp = urlencode($key_word);
 		// $show_hide=$_GET["show_hide"];
 
 	// Variables for Turning Pages
