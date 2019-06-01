@@ -2,6 +2,8 @@
 <html>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
+<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/author.css">
+
 <script type="text/javascript" src='echarts.js'></script>
 
 <head>
@@ -11,8 +13,9 @@
 
 <body>
 	<h1>Author Information</h1>
-	<div id="chart1" style="width:500px;height:500px;"></div>
-	<div id="chart2" style="width: 500px;height: 500px; align: right;"></div>
+	<div id="chart1" class="chart" ></div>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<div id="chart2" class="chart" ></div>
 <script type="text/javascript">
     // 初始化图表标签
     var chart1 = echarts.init(document.getElementById('chart1'));
@@ -255,7 +258,7 @@
 	
 	if ($result['response']['docs'])
 	{
-		echo "<table class=\"table__result\"><tr><th>Title</th><th>Authors</th><th>Conference</th></tr>";
+		echo "<table class=\"table__result\" id=\"author_table\"><tr><th>Title</th><th>Authors</th><th>Conference</th></tr>";
 
 		foreach ($result['response']['docs'] as $paper)
 		{
@@ -266,7 +269,7 @@
 			echo "<td>";
 			$title_new=$paper['Title'];
 			$title_for_show=urlencode(str_replace('', '', $title_new));
-			echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show&page=1\" target=\"_blank\">$title_new</a>";
+			echo "<a class=\"output_href\"  href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show&page=1\" target=\"_blank\">$title_new</a>";
 			echo ";";
 			echo "</td>";
 
@@ -275,7 +278,7 @@
 			foreach ($paper['Authors_Name'] as $idx => $author)
 			{
 				$author_id_result = $paper['Authors_ID'][$idx];
-				echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id_result&page=1&author_affi=\" target=\"_blank\">$author</a>";
+				echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id_result&page=1&author_affi=\" target=\"_blank\">$author</a>";
 				echo "; ";
 			}
 			echo "</td>";
@@ -283,7 +286,7 @@
 					// print ConferenceName
 			echo "<td>";
 			$conference_Name=$paper['ConferenceName'];
-			echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_Name&page=1\" target=\"_blank\">$conference_Name</a>";
+			echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_Name&page=1\" target=\"_blank\">$conference_Name</a>";
 			echo ";";
 			echo "</td>";
 			echo "</tr>";
@@ -352,9 +355,9 @@
 		echo "<td>";
 		if ($i>=1)
 		{
-			echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\"><<</a>";
+			echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\"><<</a>";
 			echo "</td><td>";
-			echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+			echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
 		}
 		else
 			echo "<td></td>";
@@ -366,7 +369,7 @@
 			if($i==$page)
 				echo "$page";
 			else
-				echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\">$i</a>";
+				echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\">$i</a>";
 			echo "</td>";
 		}
 					// Turn to the Next Page
@@ -376,7 +379,7 @@
 		{
 			echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
 			echo "</td><td>";
-			echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\">>></a>";
+			echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp\">>></a>";
 		}
 		else
 			echo "<td></td>";

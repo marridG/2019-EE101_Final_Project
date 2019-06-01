@@ -258,4 +258,8 @@ input[type="number"]
 	-moz-appearance:textfield;
 }
 
+.output_href
+{
+	text-decoration: none;
+}
 
