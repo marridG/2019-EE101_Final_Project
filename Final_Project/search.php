@@ -52,7 +52,6 @@
 		// $page_limit=10;
 		$page_limit=25;
 		$page = floor($_GET["page"]);
-		$key_word_temp = urlencode($key_word);
 
 	// Search Widget
 		echo "<a href=\"/EE101-Final_Project/Final_Project/index.php\" class=\"search_return_to_homepage_image\"><img src =\"/EE101-Final_Project/Final_Project/pics/Homepage_icon-without_background.jpg\" id=\"all__return_to_homepage_image\"></a>";
@@ -130,7 +129,6 @@
 					// print the ConferenceName
 						echo "<td>";
 						$conference_Name=$paper['ConferenceName'];
-						var_dump($conference_Name);
 						if(array_key_exists("ConferenceName", $result['highlighting'][$paper['id']]))
 						{
 							$conference_Name_hl=$result['highlighting'][$paper['id']]['ConferenceName'][0];
