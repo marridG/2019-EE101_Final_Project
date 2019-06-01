@@ -6,7 +6,7 @@ mode = int(input("Mode: 1 = test, 0 = all: "))
 
 if mode:
     database = "lab01_test"
-    FP_out = "C:\\xampp\\htdocs\\EE101-Final_Project\\lab01\\data\\out_test.txt"
+    FP_out = "C:\\xampp\\htdocs\\EE101-Final_Project\\lab02\\data\\out_test.txt"
     print("|||||| Mode: TEST ||||||")
 else:
     database = "lab01"
