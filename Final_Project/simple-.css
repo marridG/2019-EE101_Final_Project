@@ -1,4 +1,4 @@
-*
+
 {
 	text-align: center;
 }
@@ -6,7 +6,7 @@
 .body__homepage
 {
 	background-image: url("/EE101-Final_Project/Final_Project/pics/cover1.jpg");
-	<a href
+
 	background-size: 130%;
 	background-position: center;
 	text-align: center;
@@ -14,6 +14,15 @@
 	color: #FFFFFF;
 	font-family:'Agnes-Bold';
 	font-size: 200%;
+}
+
+.input_clear
+{
+	width: auto;
+	height: auto;
+	max-width: 4%;
+	max-height: 4%;
+	margin: 0 0 0 60%;
 }
 
 .h1
@@ -80,7 +89,7 @@
 	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;*/
 	text-align: center;
-	margin: 20% 0 17% 0;
+	margin: 20% 0 14% 0;
 	font-family:'HelveticaNeue';
 /*	font-family:'Impact';
 */}
