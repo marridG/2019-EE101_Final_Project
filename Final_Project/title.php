@@ -63,14 +63,20 @@
 
 	// Reference Papers
 	//	echo $this_paper_id;
-		$reference_paper_result = mysqli_query($link, "SELECT ReferenceID from paper_reference where PaperID='$this_paper_id'");
-		$tmp=mysqli_fetch_row($reference_paper_result);
-		var_dump($tmp);
-//		var_dump($reference_paper_result);
-		foreach ($tmp as $result_ReferenceID)
+		$reference_paper_result = mysqli_query($link, "SELECT * from paper_reference where PaperID='$this_paper_id'");
+		echo"Reference: ";
+		if(mysqli_fetch_row($reference_paper_result))
 		{
-			echo"$result_ReferenceID";# code...
+			while($row=mysqli_fetch_row($reference_paper_result))
+			{
+				$Reference_paper=mysqli_fetch_row(mysqli_query($link,"SELECT * from papers where PaperID='$row[1]'"));
+				$title_for_show=urlencode(str_replace('', '', $Reference_paper[1]));
+				echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show&page=1\" target=\"_blank\">$Reference_paper[1]</a>";
+				echo"<br></br>";
+			}
 		}
+		else  echo"no record!";
+
 
 	// Recommend Papers
 		// Search
