@@ -1,6 +1,7 @@
 #title
 {
 	text-align: center;
+	margin: -4% 0 0 14%;
 
 }
 
@@ -8,9 +9,10 @@
 {
 	width: auto;
 	height: auto;
-	max-width: 20%;
-	max-height: 20%;
-	float: left;
+	max-width: 25%;
+	max-height: 25%;
+	margin: 1% 70% 0 0;
+
 }
 
 #submit
