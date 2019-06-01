@@ -2,13 +2,61 @@
 <html>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
+<script type="text/javascript" src='echarts.js'></script>
+
 <head>
 	<title>Author</title>
+	    
 </head>
 
 <body>
 	<h1>Author Information</h1>
+	<div id="chart" style="width:500px;height:500px;"></div>
+<script type="text/javascript">
+    // 初始化图表标签
+    var myChart = echarts.init(document.getElementById('chart'));
+    var options={
+        //定义一个标题
+        title:{
+            text:'Publish Year'
+        },
+        legend:{
+            data:['Year']
+        },
+        //X轴设置
+        xAxis:{
+            data:['1976','1977','1978','1979','1980','1981','1982']
+        },
+        yAxis:{
+        },
+        //name=legend.data的时候才能显示图例
+        series:[{
+                name:'Year',
+                type:'bar',
+                color:'blue',
+                data:[200,312,431,241,175,275,369],
+                markPoint: {
+                    data: [
+                        {type: 'max', name: '最大值'},
+                        {type: 'min', name: '最小值'}
+                    ]
+                },
+                markLine:{
+                    data:[
+                        {type:'average',name:'平均值',itemStyle:{
+                            normal:{
+                                color:'green'
+                            }
+                        }}
+                    ]
+                }
+            }
+            ]
 
+    };
+    myChart.setOption(options);
+</script>
+</body>
 	<?php
 	function Turn_Page_min_max_page($num_max,$page_limit,&$min_page,&$max_page,$page)
 	{
