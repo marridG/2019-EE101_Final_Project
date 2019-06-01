@@ -1,11 +1,13 @@
 *
 {
 	text-align: center;
-}
 
+
+}
 .body__homepage
 {
 	background-image: url("/EE101-Final_Project/Final_Project/pics/cover1.jpg");
+
 	background-size: 130%;
 	background-position: center;
 	text-align: center;
@@ -167,8 +169,8 @@
 .table__recommend
 {
 	vertical-align: text-top;
-	text-align: left;
 }
+
 
 #all__return_to_homepage_image
 {

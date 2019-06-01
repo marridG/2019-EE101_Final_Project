@@ -14,6 +14,9 @@
 
 	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/45817/5cecef5bf629d80af8efaac6.css' rel='stylesheet' type='text/css' />
 <!-- 	ChannelSlanted2的link -->
+	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/46721/5cf220b2f629d80774a3a1b2.css' rel='stylesheet' type='text/css' />
+<!-- 	Regencie的link -->
+
 </head>
 
 <body class="body">
@@ -116,7 +119,7 @@
 					}
 					else
 						$title_for_show=urlencode(str_replace('', '', $title_new));
-					echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$title_new</a>";
+					echo "<a class=\"output_href\" id=\"paper_title\" href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$title_new</a>";
 					echo ";";
 					echo "</td>";
 
@@ -128,10 +131,10 @@
 						if($author==$key_word && array_key_exists("Authors_Name", $result['highlighting'][$paper['id']]))
 						{
 							$author_hl=$result['highlighting'][$paper['id']]['Authors_Name'][0];
-							echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1&author_affi=\" target=\"_blank\">$author_hl</a>";
+							echo "<a class=\"output_href\" id=\"author_name\" href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1&author_affi=\" target=\"_blank\">$author_hl</a>";
 						}
 						else
-							echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1&author_affi=\" target=\"_blank\">$author</a>";
+							echo "<a class=\"output_href\" id=\"author_name\" href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1&author_affi=\" target=\"_blank\">$author</a>";
 						echo "; ";
 					}
 					echo "</td>";

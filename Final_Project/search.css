@@ -1,7 +1,10 @@
+
 #title
 {
 	text-align: center;
-	margin: -4% 0 0 14%;
+	margin: -5% 0 0 40%;
+	font-family: ChannelSlanted2;
+	font-size: 120%;
 }
 
 #acemap
@@ -10,7 +13,7 @@
 	height: auto;
 	max-width: 25%;
 	max-height: 25%;
-	margin: 1% 70% 0 0;
+	margin: 1% 70% 0 5%;
 }
 
 #submit
@@ -33,9 +36,22 @@
 	font-family:'HelveticaNeue';
 }
 
+#paper_title
+{
+	color: white;
+}
+
+#author_name
+{
+	color: white;
+}
+
+
 .body
 {
-	background-color:  #C7EDCC;
+	background-color:  #000000;
+	color: white;
+	/*background-image: url("/EE101-Final_Project/Final_Project/pics/search_cover3.jpg");*/
 }
 
 .input_button
@@ -47,11 +63,12 @@
 	box-sizing: border-box;
 	text-align: left;
 	z-index: 10;
-
 }
 
 .output_href
 {
 	text-decoration: none;
+	font-family:'Regencie';
+	color: white;
 }
 
