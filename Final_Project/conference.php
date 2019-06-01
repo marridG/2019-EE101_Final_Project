@@ -2,6 +2,8 @@
 <html>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
+<script type="text/javascript" src='echarts.js'></script>
+
 <head>
 	<title>Conference</title>
 </head>
@@ -9,7 +11,63 @@
 <body>
 	<img src="">
 	<h1>Conference Information</h1>
+	<div id="chart1" style="width:500px;height:500px;"></div>
+	<script type="text/javascript">
+		var chart1 = echarts.init(document.getElementById('chart1'));
+		var xAxisData = [];
+var data1 = [];
+var data2 = [];
+for (var i = 0; i < 48; i++) {
+    xAxisData.push(1970 + i);
+    data1.push((Math.sin(i / 5) * (i / 50 -10) + i / 6) * 5+50);
+}
 
+option1 = {
+    title: {
+        text: 'Publish of Year',
+    },
+    legend: {
+        data: ['publishNumber'],
+        align: 'left'
+    },
+    toolbox: {
+         y: 'bottom',
+        feature: {
+            magicType: {
+                type: ['stack', 'tiled']
+            },
+            dataView: {},
+            saveAsImage: {
+                pixelRatio: 2
+            }
+        }
+    },
+    tooltip: {},
+    xAxis: {
+        data: xAxisData,
+        silent: false,
+        splitLine: {
+            show: false
+        }
+    },
+    yAxis: {
+    },
+    series: [{
+        name: 'publishNumber',
+        type: 'bar',
+        data: data1,
+        animationDelay: function (idx) {
+            return idx * 10;
+        }
+    }
+    ],
+    animationEasing: 'elasticOut',
+    animationDelayUpdate: function (idx) {
+        return idx * 5;
+    }
+};
+	chart1.setOption(option1);
+	</script>
 	<?php
 	// from search.php: get conference_name
 

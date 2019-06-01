@@ -11,11 +11,13 @@
 
 <body>
 	<h1>Author Information</h1>
-	<div id="chart" style="width:500px;height:500px;"></div>
+	<div id="chart1" style="width:500px;height:500px;"></div>
+	<div id="chart2" style="width: 500px;height: 500px; align: right;"></div>
 <script type="text/javascript">
     // 初始化图表标签
-    var myChart = echarts.init(document.getElementById('chart'));
-    var options={
+    var chart1 = echarts.init(document.getElementById('chart1'));
+    var chart2 = echarts.init(document.getElementById('chart2'));
+    var option1={
         //定义一个标题
         title:{
             text:'Publish Year'
@@ -54,7 +56,88 @@
             ]
 
     };
-    myChart.setOption(options);
+    var option2 = {
+    backgroundColor: '#D6FCF1',
+
+    title: {
+        text: 'Paper\'s Conferences',
+        left: 'center',
+        top: 20,
+        textStyle: {
+            color: 'pink'
+        }
+    },
+
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+
+    visualMap: {
+        show: false,
+        min: 80,
+        max: 600,
+        inRange: {
+            colorLightness: [0, 1]
+        }
+    },
+    series : [
+        {
+            name:'ConferenceName',
+            type:'pie',
+            radius : '55%',
+            center: ['50%', '50%'],
+            data:[
+                {value:335, name:'SIGKDD'},
+                {value:310, name:'IJCAI'},
+                {value:274, name:'AAAI'},
+                {value:235, name:'CVPR'},
+                {value:400, name:'ACL'},
+                {value:200, name:'NIPS'},
+                {value:200, name:'WWW'},
+                {value:335, name:'ICCV'},
+                {value:335, name:'ICML'},
+                {value:335, name:'EMNLP'},
+                {value:335, name:'SIGIR'},
+                {value:335, name:'ECCV'},
+                {value:335, name:'NAACL'},
+            ].sort(function (a, b) { return a.value - b.value; }),
+            roseType: 'radius',
+            label: {
+                normal: {
+                    textStyle: {
+                        color: 'rgba(0 , 0 , 0, 1.0)'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    lineStyle: {
+                        color: 'rgba(255, 255, 0, 2.0)'
+                    },
+                    smooth: 0.2,
+                    length: 20,
+                    length2: 2
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: '#c23531',
+                    shadowBlur: 200,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            },
+
+            animationType: 'scale',
+            animationEasing: 'elasticOut',
+            animationDelay: function (idx) {
+                return Math.random() * 200;
+            }
+        }
+    ]
+};
+    chart1.setOption(option1);
+    chart2.setOption(option2);
 </script>
 </body>
 	<?php
