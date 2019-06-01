@@ -4,6 +4,7 @@
 
 <title>
 	Best Academia Searching For You!
+	<img src="/EE101-Final_Project/Final_Project/pics/delete1.jpg">
 </title>
 
 <head>
@@ -36,7 +37,7 @@
 <body class="body__homepage">
 	<br><br>
 
-	<h5 class="h1">Best Academia Searching For You! </h5>
+	<h5 class="h1">Your Best Academia Database! </h5>
 	<!-- <hr class="line" /> -->
 
 	<form action="/EE101-Final_Project/Final_Project/search.php" target="_blank">
@@ -44,7 +45,7 @@
 	 	<input type="hidden" name="page" value="1">
 	
 	<div> <!-- GZL -->
-		<div class="input_clear"><i><img src ="/EE101-Final_Project/Final_Project/pics/test.jpg" class="input_clear_image"></i> <!-- GZL -->
+		<div class="input_clear"><i><img src ="/EE101-Final_Project/Final_Project/pics/delete1.jpg"></i> <!-- GZL -->
 		</div> <!-- GZL -->
 
 		<input class="input_button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching">
@@ -68,7 +69,7 @@
 	<!-- <?php
 		echo "<input type=\"reset\" onclick=clear() value=\"CLEAR\">";
 	?> -->
-	<p class="p2">copy right:cyf,gjl,gzl,jzf(ordered by leter)</p>
+	<p class="p2">copy right:cyf,gjl,gzl,jzf(ordered by letter)</p>
 
 </body>
 
