@@ -16,37 +16,39 @@
 <body class="body">
 	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/acemap.png" id="acemap"></a>
 	<div onscroll="SetH(this)">
-	<h1 id="search_result">Search Result</h1>
+		<h1 id="search_result">Search Result</h1>
 
-	<?php
-	function Turn_Page_min_max_page($num_max,$page_limit,&$min_page,&$max_page,$page)
-	{
-		if($num_max<=90)
+		<?php
+		function Turn_Page_min_max_page($num_max,$page_limit,&$min_page,&$max_page,$page)
 		{
-			$min_page=1;
-			if($num_max%$page_limit==0)
-				$max_page=$num_max/$page_limit;
+			if($num_max<=90)
+			{
+				$min_page=1;
+				if($num_max%$page_limit==0)
+					$max_page=$num_max/$page_limit;
+				else
+					$max_page=floor($num_max/$page_limit)+1;
+			}
 			else
-				$max_page=floor($num_max/$page_limit)+1;
-		}
-		else
-		{
-			$min_page=$page-5;
-			while($min_page<1)
-				$min_page++;
-			$max_page=$min_page+9;
-			while(($max_page-1)*$page_limit>=$num_max)
-				$max_page--;
-			if($max_page-$min_page+1<10)
-				$min_page=$max_page-9;
-		}
+			{
+				$min_page=$page-5;
+				while($min_page<1)
+					$min_page++;
+				$max_page=$min_page+9;
+				while(($max_page-1)*$page_limit>=$num_max)
+					$max_page--;
+				if($max_page-$min_page+1<10)
+					$min_page=$max_page-9;
+			}
 		// var_dump($min_page);
 		// var_dump($max_page);
-	}
+		}
 
 	// from index.php:
 		// get paper_title, author_name, conference_name 
 		$key_word = $_GET["key_word"];
+		$key_word_temp = urlencode(key_word);
+
 		// $show_hide=$_GET["show_hide"];
 
 	// Variables for Turning Pages
@@ -99,25 +101,25 @@
 					// new line
 					echo "<tr>";
 					// print the Title
-						echo "<td>";
-						$title_new=$paper['Title'];
-						if(array_key_exists("Title", $result['highlighting'][$paper['id']]))
-						{
-							$title_new_hl=$result['highlighting'][$paper['id']]['Title'][0];
-							$title_for_show=urlencode(str_replace('', '', $title_new));
-							echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$title_new_hl</a>";
-						}
-						else
-							$title_for_show=urlencode(str_replace('', '', $title_new));
-							echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$title_new</a>";
-						echo ";";
-						echo "</td>";
+					echo "<td>";
+					$title_new=$paper['Title'];
+					if(array_key_exists("Title", $result['highlighting'][$paper['id']]))
+					{
+						$title_new_hl=$result['highlighting'][$paper['id']]['Title'][0];
+						$title_for_show=urlencode(str_replace('', '', $title_new));
+						echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$title_new_hl</a>";
+					}
+					else
+						$title_for_show=urlencode(str_replace('', '', $title_new));
+					echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$title_new</a>";
+					echo ";";
+					echo "</td>";
 
 					// print all the Authors_Name
-						echo "<td>";
-						foreach ($paper['Authors_Name'] as $idx => $author)
-						{
-							$author_id = $paper['Authors_ID'][$idx];
+					echo "<td>";
+					foreach ($paper['Authors_Name'] as $idx => $author)
+					{
+						$author_id = $paper['Authors_ID'][$idx];
 						if($author==$key_word && array_key_exists("Authors_Name", $result['highlighting'][$paper['id']]))
 						{
 							$author_hl=$result['highlighting'][$paper['id']]['Authors_Name'][0];
@@ -126,26 +128,26 @@
 						else
 							echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1&author_affi=\" target=\"_blank\">$author</a>";
 						echo "; ";
-						}
-						echo "</td>";
+					}
+					echo "</td>";
 
 					// print the ConferenceName
-						echo "<td>";
-						$conference_Name=$paper['ConferenceName'];
-s
-						if(array_key_exists("ConferenceName", $result['highlighting'][$paper['id']]))
-						{
-							$conference_Name_hl=$result['highlighting'][$paper['id']]['ConferenceName'][0];
-							echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_Name&page=1\" target=\"_blank\">$conference_Name_hl</a>";
-						}
-						else
-							echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_Name&page=1\" target=\"_blank\">$conference_Name</a>";
-						echo ";";
-						echo "</td>";
+					echo "<td>";
+					$conference_Name=$paper['ConferenceName'];
+
+					if(array_key_exists("ConferenceName", $result['highlighting'][$paper['id']]))
+					{
+						$conference_Name_hl=$result['highlighting'][$paper['id']]['ConferenceName'][0];
+						echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_Name&page=1\" target=\"_blank\">$conference_Name_hl</a>";
+					}
+					else
+						echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_Name&page=1\" target=\"_blank\">$conference_Name</a>";
+					echo ";";
+					echo "</td>";
 					echo "</tr>";
 				}
 				echo "</table><br>";
-	
+
 			// Turn Page
 				$num_max=$result["response"]["numFound"];
 				Turn_Page_min_max_page($num_max,$page_limit,$min_page,$max_page,$page);
@@ -160,83 +162,83 @@ s
 				echo "<tr>";
 				// Row One
 					// Previous Page
-					echo "<td>";
-					$i=$page-1;
-					if($i>=1)
-					{
-						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
-						echo "</td><td>";
-						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.jpg\" id=\"search__Turn_Page_prev_page\"></a>";
+				echo "<td>";
+				$i=$page-1;
+				if($i>=1)
+				{
+					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+					echo "</td><td>";
+					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.jpg\" id=\"search__Turn_Page_prev_page\"></a>";
 
-					}
-					else
-					{
-						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\">";
-						echo "</td><td>";
-						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.jpg\" id=\"search__Turn_Page_prev_page\">";
-					}
-					echo "</td>";
+				}
+				else
+				{
+					echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\">";
+					echo "</td><td>";
+					echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.jpg\" id=\"search__Turn_Page_prev_page\">";
+				}
+				echo "</td>";
 					// Pages in the middle
-					for($i=$min_page;$i<=$max_page;$i++)
-					{
-						if($i==$page)
-							echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_selected.jpg\" id=\"search__Turn_Page_selected\"></a></td>";
-						else
-							echo "<td><a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_not_selected.jpg\"  id=\"search__Turn_Page_not_selected\"></a></td>";
-					}
-					// Next Page
-					echo "<td>";
-					$i=$page+1;
-					if (($i-1)*$page_limit<$num_max)
-					{
-						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.jpg\" id=\"search__Turn_Page_next_page\"></a>";
-						echo "</td><td>";
-						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
-					}
+				for($i=$min_page;$i<=$max_page;$i++)
+				{
+					if($i==$page)
+						echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_selected.jpg\" id=\"search__Turn_Page_selected\"></a></td>";
 					else
-					{
-						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.jpg\" id=\"search__Turn_Page_next_page\">";
-						echo "</td><td>";
-						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\">";
-					}
-					echo "</td>";
+						echo "<td><a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_not_selected.jpg\"  id=\"search__Turn_Page_not_selected\"></a></td>";
+				}
+					// Next Page
+				echo "<td>";
+				$i=$page+1;
+				if (($i-1)*$page_limit<$num_max)
+				{
+					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.jpg\" id=\"search__Turn_Page_next_page\"></a>";
+					echo "</td><td>";
+					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+				}
+				else
+				{
+					echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.jpg\" id=\"search__Turn_Page_next_page\">";
+					echo "</td><td>";
+					echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\">";
+				}
+				echo "</td>";
 				echo "</tr>";
 				echo "<tr>";
 				// Row Two
 					// Turn to the Previous Page
-					$i=$page-1;
-					echo "<td>";
-					if ($i>=1)
-					{
-						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><<</a>";
-						echo "</td><td>";
-						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
-					}
-					else
-						echo "<td></td>";
-					echo "</td>";
+				$i=$page-1;
+				echo "<td>";
+				if ($i>=1)
+				{
+					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><<</a>";
+					echo "</td><td>";
+					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+				}
+				else
+					echo "<td></td>";
+				echo "</td>";
 					// Show Page Numbers
-					for($i=$min_page; $i <= $max_page; $i++)
-					{ 
-						echo "<td>";
-						if($i==$page)
-							echo "$page";
-						else
-							echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\">$i</a>";
-						echo "</td>";
-					}
-					// Turn to the Next Page
+				for($i=$min_page; $i <= $max_page; $i++)
+				{ 
 					echo "<td>";
-					$i=$page+1;
-					if (($i-1)*$page_limit<$num_max)
-					{
-						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
-						echo "</td><td>";
-						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\">>></a>";
-					}
+					if($i==$page)
+						echo "$page";
 					else
-						echo "<td></td>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\">$i</a>";
 					echo "</td>";
+				}
+					// Turn to the Next Page
+				echo "<td>";
+				$i=$page+1;
+				if (($i-1)*$page_limit<$num_max)
+				{
+					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+					echo "</td><td>";
+					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\">>></a>";
+				}
+				else
+					echo "<td></td>";
+				echo "</td>";
 				echo "</tr>";
 				echo "</table>";
 				
@@ -257,8 +259,8 @@ s
 			echo "<br><br>ERROR:<br><br>Target not given!";
 			echo "<br><br><br>";
 		}
-	?>
-</div>
+		?>
+	</div>
 </body>
 
 </html>
