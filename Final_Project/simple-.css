@@ -19,17 +19,14 @@
 
 .input_clear
 {
-	width: auto;
-	height: auto;
-	size: 10%;
-	max-width: 4%;
-	max-height: 4%;
+	width: 10px;
+	height: 10px;
 	position:absolute;
 	right:35%;
 	top:60%;
 	cursor:pointer;
-	display:none;
-	z-index: 90;
+	/*display:none;*/
+/*	z-index: 90;*/
 }
 
 .h1
@@ -258,4 +255,9 @@ input[type="number"]
 	-moz-appearance:textfield;
 }
 
+.output_href
+{
+	text-decoration: none;
+	
+}
 
