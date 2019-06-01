@@ -20,7 +20,7 @@
 	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/acemap.png" id="acemap"></a>
 	<div onscroll="SetH(this)">
 
-	<h1 id="search_result">Search Result</h1>
+	<h1 id="title">Your Best Academia Database!</h1>
 
 		<?php
 		function Turn_Page_min_max_page($num_max,$page_limit,&$min_page,&$max_page,$page)
@@ -51,7 +51,6 @@
 	// from index.php:
 		// get paper_title, author_name, conference_name 
 		$key_word = $_GET["key_word"];
-
 		$key_word_temp = urlencode($key_word);
 
 		// $show_hide=$_GET["show_hide"];
@@ -66,8 +65,8 @@
 		
 		echo "<form id=\"search_form\" action=\"/EE101-Final_Project/Final_Project/search.php\">";
 		echo "<input type=\"hidden\" name=\"page\" value=\"1\">";
-		echo "<input type=\"text\" id=\"key_word\" name=\"key_word\" class=\"search__Widget_title\" placeholder=\"Not Required\" value=\"$key_word\">";
-		echo "<input type=\"submit\" value=\"Search!\">";
+		echo "<br><br><br><input class=\"input_button\" type=\"text\" id=\"key_word\" name=\"key_word\" class=\"search__Widget_title\" placeholder=\"Not Required\" value=\"$key_word\">";
+		echo "<input id=\"submit\" type=\"submit\" value=\"Search!\">";
 		// echo "&nbsp;&nbsp;&nbsp;";
 		// echo "<input type=\"reset\" value=\"RECOVER\">";
 		// echo "<input type=\"reset\" onclick=\"clear()\" value=\"CLEAR\">";
@@ -247,9 +246,9 @@
 				echo "</tr>";
 				echo "</table>";
 				
-				// Jump to Page
+				// Jump to Page;
 				echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_multi\">";
-				echo "<input type=\"hidden\" name=\"key_word\" value=\"$key_word\">";
+				echo "<input class=\"input_button\"  type=\"hidden\" name=\"key_word\" value=\"$key_word\">";
 				echo "Jump to: <input type=\"number\" name=\"page\" class=\"all__Turn_Page_jump_to_number\" max=$page_MAX min=\"1\" required>&nbsp;&nbsp;";
 				echo "<input type=\"submit\" value=\"Go!\"></form>";
 				// var_dump($page);
