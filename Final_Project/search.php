@@ -61,11 +61,12 @@
 		$page = floor($_GET["page"]);
 
 	// Search Widget
-		echo "<a href=\"/EE101-Final_Project/Final_Project/index.php\" class=\"search_return_to_homepage_image\"><img src =\"/EE101-Final_Project/Final_Project/pics/Homepage_icon-without_background.jpg\" id=\"all__return_to_homepage_image\"></a>";
+		// echo "<a href=\"/EE101-Final_Project/Final_Project/index.php\" class=\"search_return_to_homepage_image\"><img src =\"/EE101-Final_Project/Final_Project/pics/Homepage_icon-without_background.jpg\" id=\"all__return_to_homepage_image\"></a>";
 		
 		echo "<form id=\"search_form\" action=\"/EE101-Final_Project/Final_Project/search.php\">";
 		echo "<input type=\"hidden\" name=\"page\" value=\"1\">";
 		echo "<br><br><br><input class=\"input_button\" type=\"text\" id=\"key_word\" name=\"key_word\" class=\"search__Widget_title\" placeholder=\"Not Required\" value=\"$key_word\">";
+		echo "\t\t";
 		echo "<input id=\"submit\" type=\"submit\" value=\"Search!\">";
 		// echo "&nbsp;&nbsp;&nbsp;";
 		// echo "<input type=\"reset\" value=\"RECOVER\">";
@@ -111,7 +112,7 @@
 					{
 						$title_new_hl=$result['highlighting'][$paper['id']]['Title'][0];
 						$title_for_show=urlencode(str_replace('', '', $title_new));
-						echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$title_new_hl</a>";
+						echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$title_new_hl</a>";
 					}
 					else
 						$title_for_show=urlencode(str_replace('', '', $title_new));
