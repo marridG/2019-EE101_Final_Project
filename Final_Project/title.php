@@ -108,21 +108,35 @@
 							continue;
 						if($idx>=11)
 							break;
-						echo "<table id=\"table__recommend\"><tr>";
-						echo "<td>[$idx]. </td><td>";
+						echo "[$idx]. ";
 						foreach ($info["Authors_Name"] as $key => $value)
 						{
 							echo "$value";
 							if($key!=count($info["Authors_Name"])-1)
 								echo ",";
 							else
-								echo ".<br>";
+								echo ".";
 						}
 						$recommend_title=$info['Title'];
 						$title_for_show=urlencode(str_replace('', '', $recommend_title));
-						echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$recommend_title</a>.<br>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$recommend_title</a>.";
 						echo $info["ConferenceName"].",".$info["Year"];
-						echo "</td></tr></table>";
+						echo "<br>";
+						// echo "<table id=\"table__recommend\"><tr>";
+						// echo "<td>[$idx]. </td><td>";
+						// foreach ($info["Authors_Name"] as $key => $value)
+						// {
+						// 	echo "$value";
+						// 	if($key!=count($info["Authors_Name"])-1)
+						// 		echo ",";
+						// 	else
+						// 		echo ".<br>";
+						// }
+						// $recommend_title=$info['Title'];
+						// $title_for_show=urlencode(str_replace('', '', $recommend_title));
+						// echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$recommend_title</a>.<br>";
+						// echo $info["ConferenceName"].",".$info["Year"];
+						// echo "</td></tr></table>";
 						echo "<br>";
 					}
 
