@@ -1,21 +1,57 @@
 #title
 {
-	top: 10%;
-	left: 40%
-
+	text-align: center;
+	margin: -4% 0 0 14%;
 }
 
 #acemap
 {
 	width: auto;
 	height: auto;
-	max-width: 20%;
-	max-height: 20%;
-	float: left;
+	max-width: 25%;
+	max-height: 25%;
+	margin: 1% 70% 0 0;
+}
+
+#submit
+{
+	width: 5%;
+	background-color: #3385ff;
+	color: white;
+	padding: 1% 0 1% 0;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	text-align: center;
+}
+
+#submit:hover
+{
+	background-color: #FFFFFF;
+	color: #3385ff;
+	font-family:'HelveticaNeue';
 }
 
 .body
 {
 	background-color:  #C7EDCC;
+}
+
+.input_button
+{
+	width: 30%;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	text-align: left;
+	z-index: 10;
+
+}
+
+.output_href
+{
+	text-decoration: none;
 }
 
