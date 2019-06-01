@@ -65,8 +65,8 @@
 		
 		echo "<form id=\"search_form\" action=\"/EE101-Final_Project/Final_Project/search.php\">";
 		echo "<input type=\"hidden\" name=\"page\" value=\"1\">";
-		echo "<br><br><input class=\"input_button\" type=\"text\" id=\"key_word\" name=\"key_word\" class=\"search__Widget_title\" placeholder=\"Not Required\" value=\"$key_word\">";
-		echo "<input type=\"submit\" value=\"Search!\">";
+		echo "<br><br><br><input class=\"input_button\" type=\"text\" id=\"key_word\" name=\"key_word\" class=\"search__Widget_title\" placeholder=\"Not Required\" value=\"$key_word\">";
+		echo "<input id=\"submit\" type=\"submit\" value=\"Search!\">";
 		// echo "&nbsp;&nbsp;&nbsp;";
 		// echo "<input type=\"reset\" value=\"RECOVER\">";
 		// echo "<input type=\"reset\" onclick=\"clear()\" value=\"CLEAR\">";
