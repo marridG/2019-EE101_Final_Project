@@ -20,7 +20,7 @@
 	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/acemap.png" id="acemap"></a>
 	<div onscroll="SetH(this)">
 
-	<h1 id="search_result">Search Result</h1>
+	<h1 id="">Your Best Academia Database!</h1>
 
 		<?php
 		function Turn_Page_min_max_page($num_max,$page_limit,&$min_page,&$max_page,$page)
