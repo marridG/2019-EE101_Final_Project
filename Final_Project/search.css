@@ -1,7 +1,6 @@
 #title
 {
-	top: 10%;
-	left: 40%
+	text-align: center;
 
 }
 
@@ -17,5 +16,16 @@
 .body
 {
 	background-color:  #C7EDCC;
+}
+
+.input_button
+{
+	width: 30%;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	text-align: left;
+	z-index: 10;
 }
 
