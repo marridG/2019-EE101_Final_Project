@@ -18,19 +18,19 @@
 
 	echo "Paper Title: ".$title;
 
-	$result=mysqli_fetch_array(mysqli_query($link, "SELECT PaperPublishYear from papers where Title='$title'"));
+	$result=mysqli_fetch_row(mysqli_query($link, "SELECT * from papers where Title='$title'"));
 	echo "<br>";
 	echo "</br>";
 
-	echo "Paper publish year: ".$result['PaperPublishYear'];
+	echo "Paper publish year: ".$result[2];
 
-	$result=mysqli_fetch_array(mysqli_query($link, "SELECT PaperID from papers where Title='$title'"));
-	$this_paper_id=$result['PaperID'];
+//	$result=mysqli_fetch_array(mysqli_query($link, "SELECT PaperID from papers where Title='$title'"));
+	$this_paper_id=$result[0];
 	echo "<br></br>";
 	echo "Paper ID: ".$this_paper_id;
 	echo "<br></br>";
 
-	$result_PaperID=$result['PaperID'];;
+	$result_PaperID=$result[0];
 	$author_name_result = mysqli_query($link, "SELECT B.AuthorName, B.AuthorID  from paper_author_affiliation A Inner Join authors B where A.PaperID='$result_PaperID' and A.AuthorID=B.AuthorID Order by A.AuthorSequence");
 
 
@@ -49,10 +49,10 @@
 	// $paper_author_list=array("deng cai","xiaofei he","jiawei han");
 
 
-	$result=mysqli_fetch_array(mysqli_query($link, "SELECT ConferenceID from papers where Title='$title'"))['ConferenceID'];
+	$result=mysqli_fetch_row(mysqli_query($link, "SELECT * from papers where Title='$title'"))[3];
 
-	$conference_name_result = mysqli_fetch_array(mysqli_query($link, "SELECT ConferenceName from conferences where ConferenceID='$result'"));
-	$tmp=$conference_name_result['ConferenceName'];
+	$conference_name_result = mysqli_fetch_row(mysqli_query($link, "SELECT * from conferences where ConferenceID='$result'"));
+	$tmp=$conference_name_result[1];
 	echo "Conference Name: ";
 	echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$tmp&page=1\" target=\"_blank\">$tmp</a>";
 	echo "<br><br>";
@@ -63,8 +63,14 @@
 
 	// Reference Papers
 	//	echo $this_paper_id;
-	//	$reference_paper_result = mysqli_query($link, "SELECT ReferenceID from paper_reference where PaperID='$this_paper_id' limit 0,10");
-	//	var_dump($reference_paper_result);
+		$reference_paper_result = mysqli_query($link, "SELECT ReferenceID from paper_reference where PaperID='$this_paper_id'");
+		$tmp=mysqli_fetch_row($reference_paper_result);
+		var_dump($tmp);
+//		var_dump($reference_paper_result);
+		foreach ($tmp as $result_ReferenceID)
+		{
+			echo"$result_ReferenceID";# code...
+		}
 
 	// Recommend Papers
 		// Search

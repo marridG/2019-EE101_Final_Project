@@ -187,10 +187,10 @@
 	// search and print the AuthorName of the given AuthorID
 	$result = mysqli_query($link, "SELECT AuthorName from authors where AuthorID='$author_id'");
 		// judge whether find the author
-	if ($author_name_res = mysqli_fetch_array($result))
+	if ($author_name_res = mysqli_fetch_row($result))
 	{
 			// var_dump($author_name_res);
-		$author_name=$author_name_res['AuthorName'];
+		$author_name=$author_name_res[0];
 		echo "<a name=\"skip_here\"></a>";
 		echo "Name: $author_name<br>";
 
@@ -208,11 +208,11 @@
 
 				// var_dump($affi_id_name_result);
 				// echo "<br>";
-			if($array_result=mysqli_fetch_array($affi_id_name_result))
+			if($array_result=mysqli_fetch_row($affi_id_name_result))
 			{
 					// var_dump($array_result);
 					// echo "<br>";
-				$affiliation_name = $array_result['AffiliationName'];
+				$affiliation_name = $array_result[1];
 				echo "Affiliation: $affiliation_name<br>";
 			}
 			else
