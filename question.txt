@@ -1,0 +1,6 @@
+jaf：
+1 为什么solr的搜索速度一般比mysql快？
+gjl
+1 如何用Echart处理超过十万条的数据？
+2 如何使Echart过瘾？
+cyf
