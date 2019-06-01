@@ -73,7 +73,9 @@
 					// print the Title
 			echo "<td>";
 			$title_new=$paper['Title'];
-			echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_new&page=1\" target=\"_blank\">$title_new</a>";
+			$title_for_show=urlencode(str_replace('', '', $title_new));
+
+			echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show&page=1\" target=\"_blank\">$title_new</a>";
 			echo ";";
 			echo "</td>";
 

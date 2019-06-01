@@ -8,7 +8,7 @@
 
 <body>
 	<img src="">
-	<h1>PaperID Information</h1>
+	<h1>Paper Information</h1>
 
 	<?php
 
@@ -62,9 +62,9 @@
 		// echo "<br>";
 
 	// Reference Papers
-		echo $this_paper_id;
-		$reference_paper_result = mysqli_query($link, "SELECT ReferenceID from paper_reference where PaperID='$this_paper_id' limit 0,10");
-		var_dump($reference_paper_result);
+	//	echo $this_paper_id;
+	//	$reference_paper_result = mysqli_query($link, "SELECT ReferenceID from paper_reference where PaperID='$this_paper_id' limit 0,10");
+	//	var_dump($reference_paper_result);
 
 	// Recommend Papers
 		// Search
@@ -119,7 +119,8 @@
 								echo ".<br>";
 						}
 						$recommend_title=$info['Title'];
-						echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$recommend_title\" target=\"_blank\">$recommend_title</a>.<br>";
+						$title_for_show=urlencode(str_replace('', '', $recommend_title));
+						echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$recommend_title</a>.<br>";
 						echo $info["ConferenceName"].",".$info["Year"];
 						echo "</td></tr></table>";
 						echo "<br>";
