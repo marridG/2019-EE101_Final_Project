@@ -112,7 +112,7 @@
 					{
 						$title_new_hl=$result['highlighting'][$paper['id']]['Title'][0];
 						$title_for_show=urlencode(str_replace('', '', $title_new));
-						echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$title_new_hl</a>";
+						echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$title_new_hl</a>";
 					}
 					else
 						$title_for_show=urlencode(str_replace('', '', $title_new));
