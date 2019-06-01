@@ -104,10 +104,12 @@
 						if(array_key_exists("Title", $result['highlighting'][$paper['id']]))
 						{
 							$title_new_hl=$result['highlighting'][$paper['id']]['Title'][0];
-							echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_new\" target=\"_blank\">$title_new_hl</a>";
+							$title_for_show=urlencode(str_replace('', '', $title_new));
+							echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$title_new_hl</a>";
 						}
 						else
-							echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_new\" target=\"_blank\">$title_new</a>";
+							$title_for_show=urlencode(str_replace('', '', $title_new));
+							echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$title_new</a>";
 						echo ";";
 						echo "</td>";
 
@@ -130,7 +132,7 @@
 					// print the ConferenceName
 						echo "<td>";
 						$conference_Name=$paper['ConferenceName'];
-						var_dump($conference_Name);
+					//	var_dump($conference_Name);
 						if(array_key_exists("ConferenceName", $result['highlighting'][$paper['id']]))
 						{
 							$conference_Name_hl=$result['highlighting'][$paper['id']]['ConferenceName'][0];
