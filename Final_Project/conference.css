@@ -1,5 +1,19 @@
 
 body
 {
-	background-image: url("/EE101-Final_Project/Final_Project/pics/all_cover1.jpg");
+}
+
+#paper_title
+{
+	color: black;
+}
+
+#author_name
+{
+	color: blue;
+}
+
+#conference_name
+{
+	color: black;
 }

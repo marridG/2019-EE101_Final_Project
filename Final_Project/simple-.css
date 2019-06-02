@@ -138,7 +138,14 @@
 .table__result tr:nth-child(odd)
 {
 	background: #ccc;
+	color: white
 }
+
+.table__result tr:nth-child(even)
+{
+	color: black;
+}
+
 
 .table__result td:nth-child(1)	/*Title*/
 {
@@ -177,15 +184,6 @@
 	width: 150px;
 }
 
-.search__Widget_author_name
-{
-	width: 100px;
-}
-
-.search__Widget_conference_name
-{
-	width: 50px;
-}
 
 #form__jump_to__inline
 {
@@ -206,7 +204,7 @@
 	width: 30px;
 }
 
-#search__Turn_Page_selected
+#search__Turn_Page_selected/*all pages*/
 {
 	width: 30px;
 }
@@ -232,7 +230,7 @@
 	text-align: center;
 }
 
-.all__Turn_Page_jump_to_number
+.all__Turn_Page_jump_to_number/*all pages*/
 {
 	width: 5%;
 }
