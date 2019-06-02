@@ -4,6 +4,8 @@
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/Turn_page.css">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/conference.css">
+<!-- font-family:'NewsGothicBT-Roman'的link -->
+<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/38414/5cf3e354f629d80aac8eb651.css' rel='stylesheet' type='text/css' />
 
 
 
@@ -18,8 +20,13 @@
 
 <body>
 	<img src="">
-	<h1 id="test">C</h1>
-	<div id="chart1" style="width:500px;height:500px;"></div>
+	<h1 id="test">Conference</h1>
+	<div id="all_charts">
+	<table class=\"table__result\" id=\"graph\"><tr><th>graph</th></tr>";
+	<tr>
+		<td>
+	<div id="chart1" style="width: 450px; height:450px;position: absolute; left:80px;top: 250px;"></div></td></tr>
+	</div>
 	<script type="text/javascript">
 		var chart1 = echarts.init(document.getElementById('chart1'));
 		var xAxisData = [];
@@ -112,7 +119,7 @@ option1 = {
 	$conference_name_temp = urlencode($conference_name);
 
 		// echo "<a name=\"skip_conference\"></a>";
-	echo "Conference Name: ".$conference_name;
+	echo "<h1 id=\"title\"> SEARCH RESULT: <br> &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Conference Name: $conference_name </h1>";
 
 	$ch = curl_init();
 	$timeout = 5;
@@ -130,7 +137,7 @@ option1 = {
 	if($result['response']['docs'])
 	{
 
-		echo "<table class=\"table__result\"><tr><th>Title</th><th>Authors</th><th>Conference</th></tr>";
+		echo "<table class=\"table__result\" id=\"conference_table\"><tr><th>Title</th><th>Authors</th><th>Conference</th></tr>";
 			// print the result table
 		foreach ($result['response']['docs'] as $paper)
 		{

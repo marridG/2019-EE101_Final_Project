@@ -3,6 +3,15 @@ body
 {
 }
 
+#title
+{
+
+	margin: 13% 0 15% 0%;
+	size: huge;
+	font-family:'NewsGothicBT-Roman';
+ 
+}
+
 #paper_title
 {
 	color: black;
@@ -17,3 +26,12 @@ body
 {
 	color: black;
 }
+
+#conference_table
+{
+	margin: -10% 0% 10% 37%;
+	border: 0px;
+	width: 850px;
+}
+
+
