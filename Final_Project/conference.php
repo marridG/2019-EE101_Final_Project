@@ -126,9 +126,9 @@ option1 = {
 			// print the result table
 		foreach ($result['response']['docs'] as $paper)
 		{
-			// new line
+					// new line
 			echo "<tr>";
-		// print the Title
+					// print the Title
 			echo "<td>";
 			$title_new=$paper['Title'];
 			$title_for_show=urlencode(str_replace('', '', $title_new));
@@ -137,17 +137,17 @@ option1 = {
 			echo ";";
 			echo "</td>";
 
-		// print all the Authors_Name
+					// print all the Authors_Name
 			echo "<td>";
 			foreach ($paper['Authors_Name'] as $idx => $author)
 			{
 				$author_id = $paper['Authors_ID'][$idx];
-				echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&author_affi=&page=1\" target=\"_blank\">$author</a>";
+				echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1\" target=\"_blank\">$author</a>";
 				echo "; ";
 			}
 			echo "</td>";
 
-		// print ConferenceName
+					// print ConferenceName
 			echo "<td>";
 			$conference_name=$paper['ConferenceName'];
 			echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name&page=1\" target=\"_blank\">$conference_name</a>";
