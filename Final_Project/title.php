@@ -2,6 +2,8 @@
 <html>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
+<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/title.css">
+
 <head>
 	<title>Title</title>
 </head>
@@ -65,12 +67,40 @@
 	//	echo $this_paper_id;
 		$reference_paper_result = mysqli_query($link, "SELECT ReferenceID from paper_reference where PaperID='$this_paper_id'");
 		$tmp=mysqli_fetch_row($reference_paper_result);
-		var_dump($tmp);
-//		var_dump($reference_paper_result);
-		foreach ($tmp as $result_ReferenceID)
-		{
-			echo"$result_ReferenceID";# code...
+
+
+		echo"Reference: ";
+		if(mysqli_fetch_row($reference_paper_result)[0])
+		{		   
+		    $coun=1;
+			
+		    echo "<div class=\"TextLeft\">";
+			while($row=mysqli_fetch_row($reference_paper_result))
+			{
+				$Reference_paper=mysqli_fetch_row(mysqli_query($link,"SELECT * from papers where PaperID='$row[0]'"));
+				$title_for_show=urlencode(str_replace('', '', $Reference_paper[1]));
+				echo"[$coun] ";
+ 			// 	$timeout = 5;
+				// $ch = curl_init();
+				// $url = "http://localhost:8983/solr/lab02/select?indent=on&start=0&rows=11&wt=json&q=Title:".$Reference_paper[1];
+				// curl_setopt ($ch, CURLOPT_URL, $url);
+				// curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+				// curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+				// $result = json_decode(curl_exec($ch), true);
+				// curl_close($ch);
+				// $year_year=$result['response']['doc']['Year'];
+				// var_dump($result);
+				// echo $year_year;
+				echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show&page=1\" target=\"_blank\">$Reference_paper[1]</a>";
+				echo"<br></br>";
+				$coun+=1;
+			}
+			echo "</div>";
+			
+
 		}
+		else  echo"no record!";
+
 
 	// Recommend Papers
 		// Search
@@ -110,7 +140,7 @@
 				{
 					foreach ($result['response']['docs'] as $idx => $info)
 					{
-						if(!$idx)
+							if(!$idx)
 							continue;
 						if($idx>=11)
 							break;
