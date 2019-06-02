@@ -5,6 +5,8 @@
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/Turn_page.css">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/conference.css">
 <!-- font-family:'NewsGothicBT-Roman'的link -->
+<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/45817/5cecef5bf629d80af8efaac6.css' rel='stylesheet' type='text/css' />
+<!-- 	ChannelSlanted2的link -->
 <link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/38414/5cf3e354f629d80aac8eb651.css' rel='stylesheet' type='text/css' />
 
 
@@ -19,13 +21,12 @@
 </head>
 
 <body>
-	<img src="">
-	<h1 id="test">Conference</h1>
+	<div class="heading">
+	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/acemap.jpg" id="acemap"></a>	
+	<h1 id="test">Your Best Academia Database!</h1>
+	</div>
 	<div id="all_charts">
-	<table class=\"table__result\" id=\"graph\"><tr><th>graph</th></tr>";
-	<tr>
-		<td>
-	<div id="chart1" style="width: 450px; height:450px;position: absolute; left:80px;top: 250px;"></div></td></tr>
+	<div id="chart1" style="width: 450px; height:450px;position: absolute; left:80px;top: 350px;"></div>
 	</div>
 	<script type="text/javascript">
 		var chart1 = echarts.init(document.getElementById('chart1'));
@@ -275,9 +276,9 @@ option1 = {
 
 				// Jump to Page
 		echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/conference.php\">";
-		echo "<input type=\"hidden\" name=\"conference_name\" value=$conference_name>";
-		echo "Jump to: <input type=\"number\" name=\"page\" class=\"all__Turn_Page_jump_to_number\" max=$page_MAX min=\"1\"  required>&nbsp;&nbsp;";
-		echo "<input type=\"submit\" value=\"Go!\"></form>";
+		echo "<input  type=\"hidden\" name=\"conference_name\" value=$conference_name>";
+		echo "Jump to: <input class=\"junp_to\" type=\"number\" name=\"page\" class=\"all__Turn_Page_jump_to_number\" max=$page_MAX min=\"1\"  required>&nbsp;&nbsp;";
+		echo "<input class=\"go\" type=\"submit\" value=\"Go!\"></form>";
 				// var_dump($page);
 
 	}

@@ -3,13 +3,35 @@ body
 {
 }
 
+#heading
+{
+	height: 10%;
+	border: 10px solid;
+	background-color: #3914AF;
+}
+
 #title
 {
 
-	margin: 13% 0 15% 0%;
+	margin: 13% 0 15% 20%;
 	size: huge;
 	font-family:'NewsGothicBT-Roman';
- 
+}
+
+#test
+{
+	text-align: center;
+	margin: -5% 0 0 40%;
+	font-family: ChannelSlanted2;
+	font-size: 120%;
+}
+#acemap
+{
+	width: auto;
+	height: auto;
+	max-width: 25%;
+	max-height: 25%;
+	margin: 1% 70% 0 5%;
 }
 
 #paper_title

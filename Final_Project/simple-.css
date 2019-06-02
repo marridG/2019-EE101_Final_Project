@@ -67,6 +67,34 @@
 	
 }
 
+.jump_to
+{
+	width: 10%;
+	padding: 1% 1%;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	text-align: left;
+	margin: -40% 10% -70% 0;
+	z-index: 10;
+}
+
+.go
+{
+	width: 2%;
+	background-color: #3385ff;
+	color: white;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	text-align: center;
+	margin: -20% -28% 15% 0%;
+	font-family:'HelveticaNeue';
+
+}
+
 .submit_reset
 {
 	width: 5%;
