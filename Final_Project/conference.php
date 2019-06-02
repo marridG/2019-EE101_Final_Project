@@ -2,6 +2,11 @@
 <html>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
+<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/Turn_page.css">
+
+<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/44802/5cf3c807f629d80aac8eb641.css' rel='stylesheet' type='text/css' />
+
+
 <script type="text/javascript" src='echarts.js'></script>
 
 <head>
@@ -10,7 +15,7 @@
 
 <body>
 	<img src="">
-	<h1>Conference Information</h1>
+	<h1 id="test">Acemap</h1>
 	<div id="chart1" style="width:500px;height:500px;"></div>
 	<script type="text/javascript">
 		var chart1 = echarts.init(document.getElementById('chart1'));
