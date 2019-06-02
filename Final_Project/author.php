@@ -216,20 +216,20 @@
 					// var_dump($array_result);
 					// echo "<br>";
 				$affiliation_name = $array_result[1];
-				echo "Affiliation: $affiliation_name<br>";
+				echo "class=\"affiliation\" Affiliation: $affiliation_name<br>";
 			}
 			else
 			{
 				$affiliation_name="-1";
-				echo "Affiliation not found!";
+				echo "class=\"affiliation\" Affiliation not found!";
 			}
 		}
 		else
 		{
 			if($affiliation_name=="-1")
-				echo "Affiliation not found!<br>";
+				echo "class=\"affiliation\" Affiliation not found!<br>";
 			else
-				echo "Affiliation: $affiliation_name<br>";
+				echo "class=\"affiliation\" Affiliation: $affiliation_name<br>";
 		}
 		$affiliation_name_temp=urlencode($affiliation_name);
 	}
