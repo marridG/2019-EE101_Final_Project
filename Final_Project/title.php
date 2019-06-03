@@ -3,13 +3,17 @@
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/title.css">
+<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/45817/5cecef5bf629d80af8efaac6.css' rel='stylesheet' type='text/css' />
+<!-- 	ChannelSlanted2的link -->
 
 <head>
 	<title>Title</title>
 </head>
 
 <body>
-	<img src="">
+	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/Acemap1.png" id="acemap"></a>	
+	<h1 id="test">Your Best Academia Database!</h1>
+
 	<h1>Paper Information</h1>
 
 	<?php

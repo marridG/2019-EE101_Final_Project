@@ -210,7 +210,7 @@ option1 = {
 		{
 			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\">";
 			echo "</td><td>";
-			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.jpg\" id=\"search__Turn_Page_prev_page\">";
+			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/A.png\" id=\"search__Turn_Page_prev_page\">";
 		}
 		echo "</td>";
 					// Pages in the middle
@@ -260,7 +260,7 @@ option1 = {
 			if($i==$page)
 				echo "$page";
 			else
-				echo "<a class=\"output_href\" id=\"number\" id=\"page\" href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\">$i</a>";
+				echo "<a class=\"output_href\" id=\"number\" href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\">$i</a>";
 			echo "</td>";
 		}
 					// Turn to the Next Page

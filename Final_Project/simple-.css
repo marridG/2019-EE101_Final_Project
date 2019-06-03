@@ -8,14 +8,11 @@
 #p1
 {
 	text-align: center;
-	margin: 0 0 0 0;
+	margin: -1% 0 6% 0;
+	font-size: 100%
 }
 
-#number
-{
-	font-family:'ActionJackson';
-	color:#2d386e;
-}
+
 
 .body__homepage
 {

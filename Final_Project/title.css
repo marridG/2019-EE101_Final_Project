@@ -1,3 +1,22 @@
+
+#acemap
+{
+	width: auto;
+	height: auto;
+	max-width: 25%;
+	max-height: 25%;
+	margin: 1% 70% 0 5%;
+}
+
+#test
+{
+	text-align: center;
+	margin: -5% 0 0 40%;
+	font-family: ChannelSlanted2;
+	font-size: 120%;
+}
+
+
 .TextLeft
 {
 	text-align: left;
