@@ -26,7 +26,7 @@
 	<h1 id="test">Your Best Academia Database!</h1>
 	</div>
 	<div id="all_charts">
-	<div id="chart1" style="width: 450px; height:450px;position: absolute; left:80px;top: 350px;"></div>
+	<div id="chart1" style="width: 400px; height:400px;position: absolute; left:80px;top: 350px;"></div>
 	</div>
 	<script type="text/javascript">
 		var chart1 = echarts.init(document.getElementById('chart1'));
@@ -189,7 +189,7 @@ option1 = {
 		else
 			$page_MAX=floor($num_max/$page_limit)+1;
 				// print information
-		echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.&nbsp;&nbsp;&nbsp;&nbsp;Altogether: $page_MAX pages.<br>";
+		echo "<p id=\"p1\">Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.&nbsp;&nbsp;&nbsp;&nbsp;Altogether: $page_MAX pages.<br></p>";
 		echo "<table class=\"table__Turn_Page\">";
 		echo "<tr>";
 				// Row One
@@ -200,7 +200,7 @@ option1 = {
 		{
 			echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
 			echo "</td><td>";
-			echo "<a  href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.jpg\" id=\"search__Turn_Page_prev_page\"></a>";
+			echo "<a  href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\"><img src =\"/EE101-Final_Project/Final_Project/pics/A.png\" id=\"search__Turn_Page_prev_page\"></a>";
 
 		}
 		else
@@ -223,7 +223,7 @@ option1 = {
 		$i=$page+1;
 		if (($i-1)*$page_limit<$num_max)
 		{
-			echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.jpg\" id=\"search__Turn_Page_next_page\"></a>";
+			echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/E.png\" id=\"search__Turn_Page_next_page\"><img src=\"/EE101-Final_Project/Final_Project/pics/M.png\" id=\"search__Turn_Page_next_page\"><img  src=\"/EE101-Final_Project/Final_Project/pics/A.png\" id=\"search__Turn_Page_next_page\"><img src=\"/EE101-Final_Project/Final_Project/pics/P.png\" id=\"search__Turn_Page_next_page\"></a>";
 			echo "</td><td>";
 			echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
 		}
@@ -238,13 +238,14 @@ option1 = {
 		echo "<tr>";
 				// Row Two
 					// Turn to the Previous Page
+		/**/
 		$i=$page-1;
 		echo "<td>";
 		if ($i>=1)
 		{
 			echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\"><<</a>";
 			echo "</td><td>";
-			echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+			echo "<a  href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
 		}
 		else
 			echo "<td></td>";
