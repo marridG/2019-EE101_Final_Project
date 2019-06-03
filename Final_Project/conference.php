@@ -214,16 +214,16 @@ option1 = {
 		for($i=$min_page;$i<=$max_page;$i++)
 		{
 			if($i==$page)
-				echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_selected.jpg\" id=\"search__Turn_Page_selected\"></a></td>";
+				echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/C.png\" id=\"search__Turn_Page_selected\"></a></td>";
 			else
-				echo "<td><a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_not_selected.jpg\"  id=\"search__Turn_Page_not_selected\"></a></td>";
+				echo "<td><a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\"><img src =\"/EE101-Final_Project/Final_Project/pics/C2.png\"  id=\"search__Turn_Page_not_selected\"></a></td>";
 		}
 					// Next Page
 		echo "<td>";
 		$i=$page+1;
 		if (($i-1)*$page_limit<$num_max)
 		{
-			echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/E.png\" id=\"search__Turn_Page_next_page\"><img src=\"/EE101-Final_Project/Final_Project/pics/M.png\" id=\"search__Turn_Page_next_page\"><img  src=\"/EE101-Final_Project/Final_Project/pics/A.png\" id=\"search__Turn_Page_next_page\"><img src=\"/EE101-Final_Project/Final_Project/pics/P.png\" id=\"search__Turn_Page_next_page\"></a>";
+			echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/E.png\" id=\"search__Turn_Page_next_page\"></a>";
 			echo "</td><td>";
 			echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
 		}
