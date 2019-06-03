@@ -5,6 +5,7 @@
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/title.css">
 <link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/45817/5cecef5bf629d80af8efaac6.css' rel='stylesheet' type='text/css' />
 <!-- 	ChannelSlanted2的link -->
+<script type="text/javascript" src='echarts-all.js'></script>
 
 <head>
 	<title>Title</title>
@@ -15,6 +16,171 @@
 	<h1 id="test">Your Best Academia Database!</h1>
 
 	<h1>Paper Information</h1>
+	<div id="chart1" style="width:500px;height:500px;"></div>
+	<div id="chart2" style="width:500px;height:500px;"></div>
+<script type="text/javascript">
+    // 初始化图表标签
+        var chart1 = echarts.init(document.getElementById('chart1'));
+        var chart2 = echarts.init(document.getElementById('chart2'));
+    option1 = {
+    title: {
+            text: 'Yearly Citations',
+            subtext: 'Default layout',
+            top: 'top',
+            left: 'center'
+        },
+    xAxis: {
+        type: 'category',
+        data: ['*-1980', '1990-1998', '1999-2006', '2007-2013', '2014-2016']
+    },  
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [820, 932, 901, 934, 1290, 1330, 1320],
+        type: 'line',
+        smooth: true
+    }]
+};
+
+function createRandomItemStyle() {
+    return {
+        normal: {
+            color: 'rgb(' + [
+                Math.round(Math.random() * 160),
+                Math.round(Math.random() * 160),
+                Math.round(Math.random() * 160)
+            ].join(',') + ')'
+        }
+    };
+}
+
+option2= {
+    title: {
+        text: 'Word Cloud'
+    },
+    series: [{
+        name: 'Word Cloud',
+        type: 'wordCloud',
+        size: ['80%', '80%'],
+        textRotation : [0, 45, 90, -45],
+        textPadding: 0,
+        autoSize: {
+            enable: true,
+            minSize: 14
+        },
+        data: [
+            {
+                name: "Sam S Club",
+                value: 10000,
+                itemStyle: {
+                    normal: {
+                        color: 'black'
+                    }
+                }
+            },
+            {
+                name: "Macys",
+                value: 6181,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "Amy Schumer",
+                value: 4386,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "Jurassic World",
+                value: 4055,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "Charter Communications",
+                value: 2467,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "Chick Fil A",
+                value: 2244,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "Planet Fitness",
+                value: 1898,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "Pitch Perfect",
+                value: 1484,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "Express",
+                value: 1112,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "Home",
+                value: 965,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "Johnny Depp",
+                value: 847,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "Lena Dunham",
+                value: 582,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "Lewis Hamilton",
+                value: 555,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "KXAN",
+                value: 550,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "Mary Ellen Mark",
+                value: 462,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "Farrah Abraham",
+                value: 366,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "Rita Ora",
+                value: 360,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "Serena Williams",
+                value: 282,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "NCAA baseball tournament",
+                value: 273,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "Point Break",
+                value: 265,
+                itemStyle: createRandomItemStyle()
+            }
+       	]
+   	}]
+};
+
+chart1.setOption(option1);
+chart2.setOption(option2);
+</script>
 
 	<?php
 

@@ -20,11 +20,10 @@
 </head>
 
 <body class="body">
-	<div id="heading">
-	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/Acemap1.png" id="acemap"></a>
-	<h1 id="title">Your Best Academia Database!</h1>
-	</div>
+	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/acemap.png" id="acemap"></a>
 	<div onscroll="SetH(this)">
+
+	<h1 id="title">Your Best Academia Database!</h1>
 
 		<?php
 		function Turn_Page_min_max_page($num_max,$page_limit,&$min_page,&$max_page,$page)
@@ -70,6 +69,7 @@
 		echo "<form id=\"search_form\" action=\"/EE101-Final_Project/Final_Project/search.php\">";
 		echo "<input type=\"hidden\" name=\"page\" value=\"1\">";
 		echo "<br><br><br><input class=\"input_button\" type=\"text\" id=\"key_word\" name=\"key_word\" class=\"search__Widget_title\" placeholder=\"Not Required\" value=\"$key_word\">";
+		echo "\t\t";
 		echo "<input id=\"submit\" type=\"submit\" value=\"Search!\">";
 		// echo "&nbsp;&nbsp;&nbsp;";
 		// echo "<input type=\"reset\" value=\"RECOVER\">";
@@ -86,7 +86,7 @@
 			$query = urlencode(str_replace(' ', '+', $key_word));
 			// Color Highlight #D9EE0A
 			$url = "http://localhost:8983/solr/lab02/select?indent=on&q=Title:".$query."^1+OR+Authors_Name:".$query."^0.7+OR+ConferenceName:".$query."^0.5&start=".($page_limit*($page-1))."&rows=".$page_limit."&wt=json&hl=on&hl.fl=Title,Authors_Name,ConferenceName&hl.simple.post=<%2Fb><%2Ffont>&hl.simple.pre=<font%20color%3D%23FF0000><b>";
-			
+
 			// No Color Highlight
 			// $url = "http://localhost:8983/solr/lab02/select?indent=on&q=Title:".$query."&start=".($page_limit*($page-1))."&wt=json&hl=on&hl.fl=Title&hl.simple.post=<%2Fb>&hl.simple.pre=<b>";
 
@@ -100,7 +100,7 @@
 			if($result['response']['docs'])
 			{
 				echo "<a name=\"skip_multi\"></a>";
-				echo "Multi Field Search: $key_word";
+				echo "Multi Field Search: ".$key_word;
 
 				echo "<table class=\"table__result\"><tr><th>Title</th><th>Authors</th><th>Conference</th></tr>";
 			// print the result table
