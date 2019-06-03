@@ -35,6 +35,7 @@ cyf:
 2019年6月3日19:09:16
 1 conference.php 做完了
 title.php
+title我没法做，因为Echart的图都没有加，所以就只加了acemap的图和title，此外还改了底色，必须赶紧加Echart的图
 
 
 

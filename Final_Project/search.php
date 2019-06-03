@@ -21,7 +21,7 @@
 
 <body class="body">
 	<div id="heading">
-	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/acemap.png" id="acemap"></a>
+	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/Acemap1.png" id="acemap"></a>
 	<h1 id="title">Your Best Academia Database!</h1>
 	</div>
 	<div onscroll="SetH(this)">
@@ -70,7 +70,6 @@
 		echo "<form id=\"search_form\" action=\"/EE101-Final_Project/Final_Project/search.php\">";
 		echo "<input type=\"hidden\" name=\"page\" value=\"1\">";
 		echo "<br><br><br><input class=\"input_button\" type=\"text\" id=\"key_word\" name=\"key_word\" class=\"search__Widget_title\" placeholder=\"Not Required\" value=\"$key_word\">";
-		echo "\t\t";
 		echo "<input id=\"submit\" type=\"submit\" value=\"Search!\">";
 		// echo "&nbsp;&nbsp;&nbsp;";
 		// echo "<input type=\"reset\" value=\"RECOVER\">";
@@ -101,7 +100,7 @@
 			if($result['response']['docs'])
 			{
 				echo "<a name=\"skip_multi\"></a>";
-				echo "Multi Field Search: ".$key_word;
+				echo "Multi Field Search: $key_word";
 
 				echo "<table class=\"table__result\"><tr><th>Title</th><th>Authors</th><th>Conference</th></tr>";
 			// print the result table

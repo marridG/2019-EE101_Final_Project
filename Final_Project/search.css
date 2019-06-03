@@ -38,21 +38,25 @@
 
 #paper_title
 {
-	color: white;
+	color: black;
 }
 
 #author_name
 {
-	color: white;
+	color: blue;
 }
 
-
-.body
+#keyword
 {
-	background-color:  #000000;
-	color: white;
-	/*background-image: url("/EE101-Final_Project/Final_Project/pics/search_cover3.jpg");*/
+	margin: 0 0 5% 0;
 }
+
+
+body
+{
+	background-color: #f9e9c3;
+}
+
 
 .input_button
 {
@@ -68,6 +72,6 @@
 .output_href
 {
 	font-family:'Regencie';
-	color: white;
+	color: black;
 }
 
