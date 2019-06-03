@@ -22,7 +22,7 @@
 
 <body>
 	<div class="heading">
-	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/acemap.jpg" id="acemap"></a>	
+	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/Acemap1.png" id="acemap"></a>	
 	<h1 id="test">Your Best Academia Database!</h1>
 	</div>
 	<div id="all_charts">
@@ -223,7 +223,7 @@ option1 = {
 		$i=$page+1;
 		if (($i-1)*$page_limit<$num_max)
 		{
-			echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/E.png\" id=\"search__Turn_Page_next_page\"></a>";
+			echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/E1.png\" id=\"search__Turn_Page_next_page\"></a>";
 			echo "</td><td>";
 			echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
 		}
