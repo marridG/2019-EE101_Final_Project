@@ -16,8 +16,9 @@
 	<h1 id="test">Your Best Academia Database!</h1>
 
 	<h1>Paper Information</h1>
-	<div id="chart1" style="width:500px;height:500px;"></div>
-	<div id="chart2" style="width:500px;height:500px;"></div>
+    <br><br>
+	<div id="chart1" style="width:1000px;height:1000px;"></div>
+	<div id="chart2" style="width:1000px;height:1000px;"></div>
 <script type="text/javascript">
     // 初始化图表标签
         var chart1 = echarts.init(document.getElementById('chart1'));
