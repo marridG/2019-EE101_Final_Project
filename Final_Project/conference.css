@@ -52,9 +52,16 @@ body
 
 #conference_table
 {
-	margin: -10% 0% 5% 37%;
+	margin: -10% 0% 3% 37%;
 	border: 0px;
 	width: 850px;
+}
+
+#number
+{
+	font-family:'ActionJackson';
+	color:#2d386e;
+	margin: 0 0 100px 0;
 }
 
 

@@ -9,6 +9,9 @@
 <!-- 	ChannelSlanted2的link -->
 <link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/38414/5cf3e354f629d80aac8eb651.css' rel='stylesheet' type='text/css' />
 
+<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/28595/5cf4eaa7f629d80aac8eb66b.css' rel='stylesheet' type='text/css' />
+<!-- font-family:'ActionJackson';的link
+ -->
 
 
 <link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/44802/5cf3c807f629d80aac8eb641.css' rel='stylesheet' type='text/css' />
@@ -257,7 +260,7 @@ option1 = {
 			if($i==$page)
 				echo "$page";
 			else
-				echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\">$i</a>";
+				echo "<a class=\"output_href\" id=\"number\" id=\"page\" href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i\">$i</a>";
 			echo "</td>";
 		}
 					// Turn to the Next Page
