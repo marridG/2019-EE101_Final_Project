@@ -32,10 +32,19 @@ search.php
 1 把翻页的acemap的图搞定
 
 cyf:
-2019年6月3日19:09:16
-1 conference.php 做完了
+2019年6月3日19:40:29
+conference.php 做完了
 title.php
 title我没法做，因为Echart的图都没有加，所以就只加了acemap的图和title，此外还改了底色，必须赶紧加Echart的图
+index.php
+就差那个叉子了
+search.php
+没有改翻页
+author.php
+还没动
+
+现在急需Echart的图的补充，否则没办法做，如果我们真的要想之前的组那样搞一大堆图的话
+
 
 
 
