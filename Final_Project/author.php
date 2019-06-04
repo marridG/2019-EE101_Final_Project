@@ -8,10 +8,28 @@
 
 <head>
 	<title>Author</title>
-	    
 </head>
 
 <body>
+	<!-- <div class="spinner">
+		<div class="rect1"></div>
+		<div class="rect2"></div>
+		<div class="rect3"></div>
+		<div class="rect4"></div>
+		<div class="rect5"></div>
+	</div>  
+	<script type="text/javascript">
+		(function($)
+		{
+			$(window).load(function()
+			{
+				$(".spinner").fadeOut();
+			});
+
+			$(document).ready(function(){});
+		})(jQuery);
+	</script> -->
+
 	<h1>Author Information</h1>
 	<div id="chart1" class="chart" ></div>
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
