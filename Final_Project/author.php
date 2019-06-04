@@ -4,7 +4,8 @@
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/author.css">
 
-<script type="text/javascript" src='echarts-all.js'></script>
+<!-- <script type="text/javascript" src='/EE101-Final_Project/Final_Project/add-ons/echarts-all.js'></script> -->
+<script type="text/javascript" src="/EE101-Final_Project/Final_Project/add-ons/echart/echarts3.js"></script>
 
 <head>
 	<title>Author</title>
@@ -33,9 +34,9 @@
 
 	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/phantom.png" id="acemap"></a>	
 	<h1>Author Information</h1>
-	<div id="chart1" class="chart" ></div>
+	<div id="chart1" style="width: 400px; height: 400px" class="chart" ></div>
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-	<div id="chart2" class="chart" ></div>
+	<div id="chart2" style="width: 400px; height: 400px" class="chart" ></div>
 <script type="text/javascript">
     // 初始化图表标签
     var chart1 = echarts.init(document.getElementById('chart1'));
@@ -91,10 +92,10 @@
         }
     },
 
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
-    },
+    // tooltip : {
+    //     trigger: 'item',
+    //     formatter: "{a} <br/>{b} : {c} ({d}%)"
+    // },
 
     visualMap: {
         show: false,
