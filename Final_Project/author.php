@@ -13,6 +13,7 @@
 </head>
 
 <body>
+	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/phantom.png" id="acemap"></a>	
 	<h1>Author Information</h1>
 	<div id="chart1" style="width: 400px; height: 400px" class="chart" ></div>
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

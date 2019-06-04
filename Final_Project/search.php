@@ -20,7 +20,7 @@
 </head>
 
 <body class="body">
-	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/acemap.png" id="acemap"></a>
+	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/phantom.png" id="acemap"></a>	
 	<div onscroll="SetH(this)">
 
 	<h1 id="title">Your Best Academia Database!</h1>
