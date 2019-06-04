@@ -17,7 +17,7 @@
 <link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/44802/5cf3c807f629d80aac8eb641.css' rel='stylesheet' type='text/css' />
 
 
-<script type="text/javascript" src='echarts.js'></script>
+<script type="text/javascript" src='echarts-all.js'></script>
 
 <head>
 	<title>Conference</title>
@@ -25,7 +25,7 @@
 
 <body>
 	<div class="heading">
-	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/Acemap1.png" id="acemap"></a>	
+	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/phantom.png" id="acemap"></a>	
 	<h1 id="test">Your Best Academia Database!</h1>
 	</div>
 	<div id="all_charts">
