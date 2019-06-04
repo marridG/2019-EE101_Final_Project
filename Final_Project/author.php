@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/author.css">
 
-<script type="text/javascript" src='echarts.js'></script>
+<script type="text/javascript" src='echarts-all.js'></script>
 
 <head>
 	<title>Author</title>

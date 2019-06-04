@@ -17,7 +17,7 @@
 <link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/44802/5cf3c807f629d80aac8eb641.css' rel='stylesheet' type='text/css' />
 
 
-<script type="text/javascript" src='echarts.js'></script>
+<script type="text/javascript" src='echarts-all.js'></script>
 
 <head>
 	<title>Conference</title>
