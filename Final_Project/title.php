@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/Acemap1.png" id="acemap"></a>	
+	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/phantom.png" id="acemap"></a>    	
 	<h1 id="test">Your Best Academia Database!</h1>
 
 	<h1>Paper Information</h1>
