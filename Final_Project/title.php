@@ -191,7 +191,7 @@ chart2.setOption(option2);
 
 	echo "Paper Title: ".$title;
 
-	$result=mysqli_fetch_row(mysqli_query($link, "SELECT * from papers where Title='$title'"));
+	$result=mysqli_fetch_row(mysqli_query($link, "SELECT * from papers where Title='$title'limit 1"));
 	echo "<br>";
 	echo "</br>";
 
@@ -222,10 +222,10 @@ chart2.setOption(option2);
 	// $paper_author_list=array("deng cai","xiaofei he","jiawei han");
 
 
-	$result=mysqli_fetch_row(mysqli_query($link, "SELECT * from papers where Title='$title'"))[3];
+	$result=mysqli_fetch_row(mysqli_query($link, "SELECT ConferenceID from papers where Title='$title'limit 1"))[0];
 
-	$conference_name_result = mysqli_fetch_row(mysqli_query($link, "SELECT * from conferences where ConferenceID='$result'"));
-	$tmp=$conference_name_result[1];
+	$conference_name_result = mysqli_fetch_row(mysqli_query($link, "SELECT ConferenceName from conferences where ConferenceID='$result'limit 1"));
+	$tmp=$conference_name_result[0];
 	echo "Conference Name: ";
 	echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$tmp&page=1\" target=\"_blank\">$tmp</a>";
 	echo "<br><br>";
@@ -237,19 +237,26 @@ chart2.setOption(option2);
 	// Reference Papers
 	//	echo $this_paper_id;
 		$reference_paper_result = mysqli_query($link, "SELECT ReferenceID from paper_reference where PaperID='$this_paper_id'");
-		$tmp=mysqli_fetch_row($reference_paper_result);
 
+		$tmp=mysqli_fetch_row($reference_paper_result)[0];
 
 		echo"Reference: ";
-		if(mysqli_fetch_row($reference_paper_result)[0])
+		if($tmp)
 		{		   
-		    $coun=1;
-			
 		    echo "<div class=\"TextLeft\">";
+		    $coun=1;
+		    $Reference_paper=mysqli_fetch_row(mysqli_query($link,"SELECT Title from papers where PaperID='$tmp'limit 1"));
+		    $title_for_show=urlencode(str_replace('', '', $Reference_paper[0]));
+		    echo"[$coun] ";
+		    echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show&page=1\" target=\"_blank\">$Reference_paper[0]</a>";
+		    echo"<br></br>";
+		    $coun+=1;
+			
+		    
 			while($row=mysqli_fetch_row($reference_paper_result))
 			{
-				$Reference_paper=mysqli_fetch_row(mysqli_query($link,"SELECT * from papers where PaperID='$row[0]'"));
-				$title_for_show=urlencode(str_replace('', '', $Reference_paper[1]));
+				$Reference_paper=mysqli_fetch_row(mysqli_query($link,"SELECT Title from papers where PaperID='$row[0]'limit 1"));
+				$title_for_show=urlencode(str_replace('', '', $Reference_paper[0]));
 				echo"[$coun] ";
  			// 	$timeout = 5;
 				// $ch = curl_init();
@@ -262,7 +269,7 @@ chart2.setOption(option2);
 				// $year_year=$result['response']['doc']['Year'];
 				// var_dump($result);
 				// echo $year_year;
-				echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show&page=1\" target=\"_blank\">$Reference_paper[1]</a>";
+				echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show&page=1\" target=\"_blank\">$Reference_paper[0]</a>";
 				echo"<br></br>";
 				$coun+=1;
 			}

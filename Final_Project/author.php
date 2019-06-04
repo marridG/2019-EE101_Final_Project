@@ -188,7 +188,7 @@
 	echo "<a href=\"/EE101-Final_Project/Final_Project/index.php\" class=\"search_return_to_homepage_image\"><img src =\"/EE101-Final_Project/Final_Project/pics/Homepage_icon-without_background.jpg\" id=\"all__return_to_homepage_image\"></a><br>";
 
 	// search and print the AuthorName of the given AuthorID
-	$result = mysqli_query($link, "SELECT AuthorName from authors where AuthorID='$author_id'");
+	$result = mysqli_query($link, "SELECT AuthorName from authors where AuthorID='$author_id'limit 1");
 		// judge whether find the author
 	if ($author_name_res = mysqli_fetch_row($result))
 	{
@@ -200,7 +200,12 @@
 		// search and print the most related AffiliationName to the given AuthorID
 		if(!$affiliation_name)
 		{
-			$affi_id_name_result = mysqli_query($link, "SELECT affiliations.AffiliationID, affiliations.AffiliationName from (select AffiliationID, count(*) as cnt from paper_author_affiliation where AuthorID='$author_id' and AffiliationID is not null group by AffiliationID order by cnt desc) as tmp inner join affiliations on tmp.AffiliationID = affiliations.AffiliationID");
+			$affi_id_row=mysqli_fetch_row(mysqli_query($link,"SELECT AffiliationID, count(*) AS count FROM paper_author_affiliation where AuthorID='$author_id'GROUP BY AffiliationID ORDER BY count DESC LIMIT 1"));
+		//	$affi_id_row2=mysqli_fetch_row(mysqli_query($link,"SELECT AffiliationID, count( AffiliationID) AS count FROM paper_author_affiliation where AuthorID='$author_id'GROUP BY AffiliationID ORDER BY count DESC LIMIT 2"));
+			$affi_id=$affi_id_row[0];
+			$affi_id_name_result=mysqli_query($link,"SELECT AffiliationName from affiliations where AffiliationID='$affi_id'");
+
+		//	$affi_id_name_result = mysqli_query($link, "SELECT affiliations.AffiliationID, affiliations.AffiliationName from (select AffiliationID, count(*) as cnt from paper_author_affiliation where AuthorID='$author_id' and AffiliationID is not null group by AffiliationID order by cnt desc) as tmp inner join affiliations on tmp.AffiliationID = affiliations.AffiliationID");
 
 				// while($row=mysqli_fetch_array($affi_id_name_result))
 				// {
@@ -215,21 +220,21 @@
 			{
 					// var_dump($array_result);
 					// echo "<br>";
-				$affiliation_name = $array_result[1];
-				echo "class=\"affiliation\" Affiliation: $affiliation_name<br>";
+				$affiliation_name = $array_result[0];
+				echo " Affiliation: $affiliation_name<br>";
 			}
 			else
 			{
 				$affiliation_name="-1";
-				echo "class=\"affiliation\" Affiliation not found!";
+				echo " Affiliation not found!";
 			}
 		}
 		else
 		{
 			if($affiliation_name=="-1")
-				echo "class=\"affiliation\" Affiliation not found!<br>";
+				echo " Affiliation not found!<br>";
 			else
-				echo "class=\"affiliation\" Affiliation: $affiliation_name<br>";
+				echo " Affiliation: $affiliation_name<br>";
 		}
 		$affiliation_name_temp=urlencode($affiliation_name);
 	}
