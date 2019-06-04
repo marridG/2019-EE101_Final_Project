@@ -33,58 +33,184 @@
 	</div>
 	<script type="text/javascript">
 		var chart1 = echarts.init(document.getElementById('chart1'));
-		var xAxisData = [];
-var data1 = [];
-var data2 = [];
-for (var i = 0; i < 48; i++) {
-    xAxisData.push(1970 + i);
-    data1.push((Math.sin(i / 5) * (i / 50 -10) + i / 6) * 5+50);
-}
-
+		// var xAxisData = [];
+		// var data1 = [];
+		// var data2 = [];
+		// for (var i = 0; i < 48; i++) {
+		//     xAxisData.push(1970 + i);
+		//     data1.push((Math.sin(i / 5) * (i / 50 -10) + i / 6) * 5+50);
+		// 	}
+    var xData = function() {
+    	var data = [];
+    	for (var i =1950; i < 2016; i++) {
+     	   data.push(i + "");
+    	}
+    	return data;
+	}();
 option1 = {
+    backgroundColor: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+            offset: 0,
+            color: '#c86589'
+        },
+        {
+            offset: 1,
+            color: '#06a7ff'
+        }
+    ], false),
     title: {
-        text: 'Publish of Year',
+        text: "OCTOBER 2015",
+        left: "center",
+        bottom: "5%",
+        textStyle: {
+            color: "#fff",
+            fontSize:16
+        }
     },
-    legend: {
-        data: ['publishNumber'],
-        align: 'left'
+    grid: {
+        top: '20%',
+        left: '10%',
+        right: '10%',
+        bottom: '15%',
+        containLabel: true,
     },
-    toolbox: {
-         y: 'bottom',
-        feature: {
-            magicType: {
-                type: ['stack', 'tiled']
-            },
-            dataView: {},
-            saveAsImage: {
-                pixelRatio: 2
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: xData,
+        axisLabel: {
+            margin: 30,
+            color: '#ffffff63'
+        },
+        axisLine: {
+            show: false
+        },
+        axisTick: {
+            show: true,
+            length: 25,
+            lineStyle: {
+                color: "#ffffff1f"
+            }
+        },
+        splitLine: {
+            show: true,
+            lineStyle: {
+                color: '#ffffff1f'
             }
         }
     },
-    tooltip: {},
-    xAxis: {
-        data: xAxisData,
-        silent: false,
+    yAxis: [{
+        type: 'value',
+        position: 'right',
+        axisLabel: {
+            margin: 20,
+            color: '#ffffff63'
+        },
+
+        axisTick: {
+            show: true,
+            length: 15,
+            lineStyle: {
+                color: "#ffffff1f",
+            }
+        },
         splitLine: {
-            show: false
+            show: true,
+            lineStyle: {
+                color: '#ffffff1f'
+            }
+        },
+        axisLine: {
+            lineStyle: {
+                color: '#fff',
+                width: 2
+            }
         }
-    },
-    yAxis: {
-    },
+    }],
     series: [{
-        name: 'publishNumber',
-        type: 'bar',
-        data: data1,
-        animationDelay: function (idx) {
-            return idx * 10;
-        }
-    }
-    ],
-    animationEasing: 'elasticOut',
-    animationDelayUpdate: function (idx) {
-        return idx * 5;
-    }
+        name: '注册总量',
+        type: 'line',
+        smooth: true, //是否平滑曲线显示
+        showAllSymbol: true,
+        symbol: 'circle',
+        symbolSize: 6,
+        lineStyle: {
+            normal: {
+                color: "#fff", // 线条颜色
+            },
+        },
+        label: {
+            show: true,
+            position: 'top',
+            textStyle: {
+                color: '#fff',
+            }
+        },
+        itemStyle: {
+            color: "red",
+            borderColor: "#fff",
+            borderWidth: 3
+        },
+        tooltip: {
+            show: false
+        },
+        areaStyle: {
+            normal: {
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: '#eb64fb'
+                    },
+                    {
+                        offset: 1,
+                        color: '#3fbbff0d'
+                    }
+                ], false),
+            }
+        },
+        data: [393, 438, 485, 631, 689, 824, 987, 1000, 1100, 1200]
+    }]
 };
+
+// 		option1 = {
+// 		    title: {
+// 		        text: 'Publish of Year',
+// 		    },
+// 		    legend: {
+// 		        data: ['publishNumber'],
+// 		        align: 'right',
+// 		        left: 'right'
+// 		    },
+// 		    toolbox: {
+// 		         y: 'bottom',
+// 		        feature: {
+// 		            dataView: {},
+// 		            saveAsImage: {
+// 		                pixelRatio: 2
+// 		            }
+// 		        }
+// 		    },
+// 		    xAxis: {
+// 		        data: xAxisData,
+// 		        silent: false,
+// 		        splitLine: {
+// 		            show: true
+// 		        }
+// 		    },
+// 		    yAxis: {
+// 		    },
+// 		    series: [{
+// 		        name: 'publishNumber',
+// 		        type: 'bar',
+// 		        data: data1,
+// 		        animationDelay: function (idx) {
+// 		            return idx * 10;
+// 		        }
+// 		    }
+// 		    ],
+// 		    animationEasing: 'elasticOut',
+// 		    animationDelayUpdate: function (idx) {
+// 		    return idx * 5;
+//     }
+// };
 	chart1.setOption(option1);
 	</script>
 	<?php

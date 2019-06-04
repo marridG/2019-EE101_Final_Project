@@ -37,132 +37,7 @@
 	<div id="chart1" style="width: 400px; height: 400px" class="chart" ></div>
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	<div id="chart2" style="width: 400px; height: 400px" class="chart" ></div>
-<script type="text/javascript">
-    // 初始化图表标签
-    var chart1 = echarts.init(document.getElementById('chart1'));
-    var chart2 = echarts.init(document.getElementById('chart2'));
-    var option1={
-        //定义一个标题
-        title:{
-            text:'Publish Year'
-        },
-        legend:{
-            data:['Year']
-        },
-        //X轴设置
-        xAxis:{
-            data:['1976','1977','1978','1979','1980','1981','1982']
-        },
-        yAxis:{
-        },
-        //name=legend.data的时候才能显示图例
-        series:[{
-                name:'Year',
-                type:'bar',
-                color:'blue',
-                data:[200,312,431,241,175,275,369],
-                markPoint: {
-                    data: [
-                        {type: 'max', name: '最大值'},
-                        {type: 'min', name: '最小值'}
-                    ]
-                },
-                markLine:{
-                    data:[
-                        {type:'average',name:'平均值',itemStyle:{
-                            normal:{
-                                color:'green'
-                            }
-                        }}
-                    ]
-                }
-            }
-            ]
 
-    };
-    var option2 = {
-    backgroundColor: '#D6FCF1',
-
-    title: {
-        text: 'Paper\'s Conferences',
-        left: 'center',
-        top: 20,
-        textStyle: {
-            color: 'pink'
-        }
-    },
-
-    // tooltip : {
-    //     trigger: 'item',
-    //     formatter: "{a} <br/>{b} : {c} ({d}%)"
-    // },
-
-    visualMap: {
-        show: false,
-        min: 80,
-        max: 600,
-        inRange: {
-            colorLightness: [0, 1]
-        }
-    },
-    series : [
-        {
-            name:'ConferenceName',
-            type:'pie',
-            radius : '55%',
-            center: ['50%', '50%'],
-            data:[
-                {value:335, name:'SIGKDD'},
-                {value:310, name:'IJCAI'},
-                {value:274, name:'AAAI'},
-                {value:235, name:'CVPR'},
-                {value:400, name:'ACL'},
-                {value:200, name:'NIPS'},
-                {value:200, name:'WWW'},
-                {value:335, name:'ICCV'},
-                {value:335, name:'ICML'},
-                {value:335, name:'EMNLP'},
-                {value:335, name:'SIGIR'},
-                {value:335, name:'ECCV'},
-                {value:335, name:'NAACL'},
-            ].sort(function (a, b) { return a.value - b.value; }),
-            roseType: 'radius',
-            label: {
-                normal: {
-                    textStyle: {
-                        color: 'rgba(0 , 0 , 0, 1.0)'
-                    }
-                }
-            },
-            labelLine: {
-                normal: {
-                    lineStyle: {
-                        color: 'rgba(255, 255, 0, 2.0)'
-                    },
-                    smooth: 0.2,
-                    length: 20,
-                    length2: 2
-                }
-            },
-            itemStyle: {
-                normal: {
-                    color: '#c23531',
-                    shadowBlur: 200,
-                    shadowColor: 'rgba(0, 0, 0, 0.5)'
-                }
-            },
-
-            animationType: 'scale',
-            animationEasing: 'elasticOut',
-            animationDelay: function (idx) {
-                return Math.random() * 200;
-            }
-        }
-    ]
-};
-    chart1.setOption(option1);
-    chart2.setOption(option2);
-</script>
 </body>
 	<?php
 	function Turn_Page_min_max_page($num_max,$page_limit,&$min_page,&$max_page,$page)
@@ -424,3 +299,483 @@
 		echo"<br></br>";
 		echo "No record!";
 	}
+
+	$ch = curl_init();
+	$timeout = 5;
+
+	//Search for specified year's paper number in a conference.
+
+	for ($year=1950; $year<2016 ; $year++) { 
+		$keyword = $year;
+		// $author_id = ;
+		$query1 = urlencode(str_replace(' ', '+', $keyword));
+		$query2 = urlencode(str_replace(' ', '+', $author_id));
+		$url = "http://localhost:8983/solr/lab02/select?q=Year%3A%20$query1%20%26%26%20Authors_ID%20%3A%20$query2&rows=98215";
+		curl_setopt ($ch, CURLOPT_URL, $url);
+		curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+
+		$data = json_decode(curl_exec($ch), true);	
+		
+	}
+
+	curl_close($ch);
+	?>
+
+<script type="text/javascript">
+    // 初始化图表标签
+    var chart1 = echarts.init(document.getElementById('chart1'));
+    var chart2 = echarts.init(document.getElementById('chart2'));
+    var xData = function() {
+    var data = [];
+    for (var i =1950; i < 2016; i++) {
+        data.push(i + "");
+    }
+    return data;
+}();
+
+var option1 = {
+    backgroundColor: "#344b58",
+    "title": {
+        "text": "16年1月-16年11月充值客单分析",
+        "subtext": "BY MICVS",
+        x: "4%",
+
+        textStyle: {
+            color: '#fff',
+            fontSize: '22'
+        },
+        subtextStyle: {
+            color: '#90979c',
+            fontSize: '16',
+
+        },
+    },
+    "tooltip": {
+        "trigger": "axis",
+        "axisPointer": {
+            "type": "shadow",
+            textStyle: {
+                color: "#fff"
+            }
+
+        },
+    },
+    "grid": {
+        "borderWidth": 0,
+        "top": 110,
+        "bottom": 95,
+        textStyle: {
+            color: "#fff"
+        }
+    },
+    "legend": {
+        x: '4%',
+        top: '11%',
+        textStyle: {
+            color: '#90979c',
+        },
+        "data": ['老用户', '新用户', '总']
+    },
+     
+
+    "calculable": true,
+    "xAxis": [{
+        "type": "category",
+        "axisLine": {
+            lineStyle: {
+                color: '#90979c'
+            }
+        },
+        "splitLine": {
+            "show": false
+        },
+        "axisTick": {
+            "show": false
+        },
+        "splitArea": {
+            "show": false
+        },
+        "axisLabel": {
+            "interval": 0,
+
+        },
+        "data": xData,
+    }],
+    "yAxis": [{
+        "type": "value",
+        "splitLine": {
+            "show": false
+        },
+        "axisLine": {
+            lineStyle: {
+                color: '#90979c'
+            }
+        },
+        "axisTick": {
+            "show": false
+        },
+        "axisLabel": {
+            "interval": 0,
+
+        },
+        "splitArea": {
+            "show": false
+        },
+
+    }],
+    "dataZoom": [{
+        "show": true,
+        "height": 30,
+        "xAxisIndex": [
+            0
+        ],
+        bottom: 30,
+        "start": 10,
+        "end": 80,
+        handleIcon: 'path://M306.1,413c0,2.2-1.8,4-4,4h-59.8c-2.2,0-4-1.8-4-4V200.8c0-2.2,1.8-4,4-4h59.8c2.2,0,4,1.8,4,4V413z',
+        handleSize: '110%',
+        handleStyle:{
+            color:"#d3dee5",
+            
+        },
+           textStyle:{
+            color:"#fff"},
+           borderColor:"#90979c"
+        
+        
+    }, {
+        "type": "inside",
+        "show": true,
+        "height": 15,
+        "start": 1,
+        "end": 35
+    }],
+    "series": [{
+            "name": "老用户",
+            "type": "bar",
+            "stack": "总量",
+            "barMaxWidth": 35,
+            "barGap": "10%",
+            "itemStyle": {
+                "normal": {
+                    "color": "rgba(255,144,128,1)",
+                    "label": {
+                        "show": true,
+                        "textStyle": {
+                            "color": "#fff"
+                        },
+                        "position": "insideTop",
+                        formatter: function(p) {
+                            return p.value > 0 ? (p.value) : '';
+                        }
+                    }
+                }
+            },
+            "markPoint": {
+                    data: [
+                        {type: 'max', name: '最大值'},
+                        {type: 'min', name: '最小值'}
+                    ]
+                },
+                markLine:{
+                    data:[
+                        {type:'average',name:'平均值',itemStyle:{
+                            normal:{
+                                color:'green'
+                            }
+                        }}
+                    ]
+                },
+            "data": [
+                198.66,
+                330.81,
+                151.95,
+                160.12,
+                222.56,
+                229.05,
+                128.53,
+                250.91,
+                224.47,
+                473.99,
+                126.85,
+                260.50
+            ],
+        },
+
+        {
+            "name": "新用户",
+            "type": "bar",
+            "stack": "总量",
+            "itemStyle": {
+                "normal": {
+                    "color": "rgba(0,191,183,1)",
+                    "barBorderRadius": 0,
+                    "label": {
+                        "show": true,
+                        "position": "top",
+                        formatter: function(p) {
+                            return p.value > 0 ? (p.value) : '';
+                        }
+                    }
+                }
+            },
+            "data": [
+                82.89,
+                67.54,
+                62.07,
+                59.43,
+                67.02,
+                67.09,
+                35.66,
+                71.78,
+                81.61,
+                78.85,
+                79.12,
+                72.30
+            ]
+        }, {
+            "name": "总",
+            "type": "line",
+            "stack": "总量",
+            symbolSize:20,
+            symbol:'circle',
+            "itemStyle": {
+                "normal": {
+                    "color": "rgba(252,230,48,1)",
+                    "barBorderRadius": 0,
+                    "label": {
+                        "show": true,
+                        "position": "top",
+                        formatter: function(p) {
+                            return p.value > 0 ? (p.value) : '';
+                        }
+                    }
+                }
+            },
+            "data": [
+                281.55,
+                398.35,
+                214.02,
+                219.55,
+                289.57,
+                296.14,
+                164.18,
+                322.69,
+                306.08,
+                552.84,
+                205.97,
+                332.79
+            ]
+        },
+    ]
+}
+    // var option1={
+    //     //定义一个标题
+    //     title:{
+    //         text:'Publish Year'
+    //     },
+    //     legend:{
+    //         data:['Year']
+    //     },
+    //     //X轴设置
+    //     xAxis:{
+    //     }
+    //     yAxis:{
+    //     },
+    //     //name=legend.data的时候才能显示图例
+    //     series:[{
+    //             name:'Year',
+    //             type:'bar',
+    //             color:'blue',
+    //             data:[200,312,431,241,175,275,369],
+    //             markPoint: {
+    //                 data: [
+    //                     {type: 'max', name: '最大值'},
+    //                     {type: 'min', name: '最小值'}
+    //                 ]
+    //             },
+    //             markLine:{
+    //                 data:[
+    //                     {type:'average',name:'平均值',itemStyle:{
+    //                         normal:{
+    //                             color:'green'
+    //                         }
+    //                     }}
+    //                 ]
+    //             }
+    //         }
+    //         ]
+
+    // };
+//     var option2 = {
+//     backgroundColor: '#D6FCF1',
+
+//     title: {
+//         text: 'Paper\'s Conferences',
+//         left: 'center',
+//         top: 20,
+//         textStyle: {
+//             color: 'pink'
+//         }
+//     },
+
+//     // tooltip : {
+//     //     trigger: 'item',
+//     //     formatter: "{a} <br/>{b} : {c} ({d}%)"
+//     // },
+
+//     visualMap: {
+//         show: true,
+//         min: 80,
+//         max: 600,
+//         inRange: {
+//             colorLightness: [0, 1]
+//         }
+//     },
+//     series : [
+//         {
+//             name:'ConferenceName',
+//             type:'pie',
+//             radius : '55%',
+//             center: ['50%', '50%'],
+//             data:[
+//                 {value:335, name:'SIGKDD'},
+//                 {value:310, name:'IJCAI'},
+//                 {value:274, name:'AAAI'},
+//                 {value:235, name:'CVPR'},
+//                 {value:400, name:'ACL'},
+//                 {value:200, name:'NIPS'},
+//                 {value:200, name:'WWW'},
+//                 {value:335, name:'ICCV'},
+//                 {value:335, name:'ICML'},
+//                 {value:335, name:'EMNLP'},
+//                 {value:335, name:'SIGIR'},
+//                 {value:335, name:'ECCV'},
+//                 {value:335, name:'NAACL'},
+//             ].sort(function (a, b) { return a.value - b.value; }),
+//             roseType: 'radius',
+//             label: {
+//                 normal: {
+//                     textStyle: {
+//                         color: 'rgba(0 , 0 , 0, 1.0)'
+//                     }
+//                 }
+//             },
+//             labelLine: {
+//                 normal: {
+//                     lineStyle: {
+//                         color: 'rgba(255, 255, 0, 2.0)'
+//                     },
+//                     smooth: 0.2,
+//                     length: 20,
+//                     length2: 2
+//                 }
+//             },
+//             itemStyle: {
+//                 normal: {
+//                     color: '#c23531',
+//                     shadowBlur: 200,
+//                     shadowColor: 'rgba(0, 0, 0, 0.5)'
+//                 }
+//             },
+
+//             animationType: 'scale',
+//             animationEasing: 'elasticOut',
+//             animationDelay: function (idx) {
+//                 return Math.random() * 200;
+//             }
+//         }
+//     ]
+// };
+var option2 = {
+    backgroundColor: '#2c343c',
+    title: {
+        text: '南丁格尔玫瑰图',
+        left: 'center',
+        top: 20,
+        textStyle: {
+            color: '#ccc'
+        }
+    },
+
+    tooltip: {
+        trigger: 'item',
+        formatter: "{b} : {c} ({d}%)"
+    },
+
+    visualMap: {
+        show: false,
+        min: 500,
+        max: 600,
+        inRange: {
+            //colorLightness: [0, 1]
+        }
+    },
+    series: [{
+        name: '访问来源',
+        type: 'pie',
+        radius: '50%',
+        center: ['50%', '50%'],
+        color: ['rgb(131,249,103)', '#FBFE27', '#FE5050', '#1DB7E5'], //'#FBFE27','rgb(11,228,96)','#FE5050'
+        data: [{
+                value: 285,
+                name: '黑名单查询'
+            },
+            {
+                value: 410,
+                name: '红名单查询'
+            },
+            {
+                value: 274,
+                name: '法人行政处罚'
+            },
+            {
+                value: 235,
+                name: '其它查询'
+            }
+        ].sort(function(a, b) {
+            return a.value - b.value
+        }),
+        roseType: 'radius',
+
+        label: {
+            normal: {
+                formatter: ['{c|{c}次}', '{b|{b}}'].join('\n'),
+                rich: {
+                    c: {
+                        color: 'rgb(241,246,104)',
+                        fontSize: 20,
+                        fontWeight:'bold',
+                        lineHeight: 5
+                    },
+                    b: {
+                        color: 'rgb(98,137,169)',
+                        fontSize: 15,
+                        height: 40
+                    },
+                },
+            }
+        },
+        labelLine: {
+            normal: {
+                lineStyle: {
+                    color: 'rgb(98,137,169)',
+                },
+                smooth: 0.2,
+                length: 10,
+                length2: 20,
+
+            }
+        },
+        itemStyle: {
+            normal: {
+                shadowColor: 'rgba(0, 0, 0, 0.8)',
+                shadowBlur: 50,
+            }
+        }
+    }]
+};
+    chart1.setOption(option1);
+    chart2.setOption(option2);
+</script>
