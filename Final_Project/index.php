@@ -61,6 +61,8 @@
 		<!-- &ensp;
 		&ensp; -->
 		<input  class="submit_reset" type="reset" value="RESET">
+		<br>
+		<a href="/EE101-Final_Project/Final_Project/index_search_advanced.php" target="_blank">Advanced Search</a>
      </div> <!-- GZL -->
 
 		<!-- <input type="reset" onclick="clear()" value="CLEAR"> -->
