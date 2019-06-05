@@ -86,6 +86,7 @@
 			$query = urlencode(str_replace(' ', '+', $key_word));
 			// Color Highlight #D9EE0A
 			$url = "http://localhost:8983/solr/lab02/select?indent=on&q=Title:".$query."^1+OR+Authors_Name:".$query."^0.7+OR+ConferenceName:".$query."^0.5&start=".($page_limit*($page-1))."&rows=".$page_limit."&wt=json&hl=on&hl.fl=Title,Authors_Name,ConferenceName&hl.simple.post=<%2Fb><%2Ffont>&hl.simple.pre=<font%20color%3D%23FF0000><b>";
+			// echo $url;
 
 			// No Color Highlight
 			// $url = "http://localhost:8983/solr/lab02/select?indent=on&q=Title:".$query."&start=".($page_limit*($page-1))."&wt=json&hl=on&hl.fl=Title&hl.simple.post=<%2Fb>&hl.simple.pre=<b>";
@@ -111,16 +112,14 @@
 					// print the Title
 					echo "<td>";
 					$title_new=$paper['Title'];
+					$title_for_show=urlencode(str_replace('', '', $title_new));
 					if(array_key_exists("Title", $result['highlighting'][$paper['id']]))
 					{
 						$title_new_hl=$result['highlighting'][$paper['id']]['Title'][0];
-						$title_for_show=urlencode(str_replace('', '', $title_new));
 						echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$title_new_hl</a>";
 					}
 					else
-						$title_for_show=urlencode(str_replace('', '', $title_new));
-					echo "<a class=\"output_href\" id=\"paper_title\" href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$title_new</a>";
-					echo ";";
+						echo "<a class=\"output_href\" id=\"paper_title\" href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$title_new</a>";
 					echo "</td>";
 
 					// print all the Authors_Name
@@ -150,7 +149,6 @@
 					}
 					else
 						echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_Name&page=1\" target=\"_blank\">$conference_Name</a>";
-					echo ";";
 					echo "</td>";
 					echo "</tr>";
 				}
