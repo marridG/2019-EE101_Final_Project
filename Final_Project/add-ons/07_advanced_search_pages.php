@@ -22,9 +22,9 @@
 		$i=$page-1;
 		if($i>=1)
 		{
-			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\" onclick=\"submit_search($i)\" style=\"cursor: pointer;\">";
+			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\" onclick=\"submit_search($i)\">";
 			echo "</td><td>";
-			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/A.png\" id=\"search__Turn_Page_prev_page\" onclick=\"submit_search($i)\" style=\"cursor: pointer;\">";
+			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/A.png\" id=\"search__Turn_Page_prev_page\" onclick=\"submit_search($i)\">";
 
 		}
 		else
@@ -40,16 +40,16 @@
 			if($i==$page)
 				echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/C.png\" id=\"search__Turn_Page_selected\"></td>";
 			else
-				echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/C2.png\" id=\"search__Turn_Page_not_selected\" onclick=\"submit_search($i)\" style=\"cursor: pointer;\"></td>";
+				echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/C2.png\" id=\"search__Turn_Page_not_selected\" onclick=\"submit_search($i)\"></td>";
 		}
 		// Next Page
 		echo "<td>";
 		$i=$page+1;
 		if (($i-1)*$page_limit<$num_max)
 		{
-			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/E1.png\" id=\"search__Turn_Page_next_page\" onclick=\"submit_search($i)\" style=\"cursor: pointer;\">";
+			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/E1.png\" id=\"search__Turn_Page_next_page\" onclick=\"submit_search($i)\">";
 			echo "</td><td>";
-			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\" onclick=\"submit_search($i)\" style=\"cursor: pointer;\">";
+			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\" onclick=\"submit_search($i)\">";
 		}
 		else
 		{
@@ -68,7 +68,7 @@
 		{
 			echo "<a class=\"output_href\" href=\"#\" onclick=\"submit_search($i); return false;\"><<</a>";
 			echo "</td><td>";
-			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\" onclick=\"submit_search($i)\" style=\"cursor: pointer;\">";
+			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\" onclick=\"submit_search($i)\">";
 		}
 		else
 			echo "<td></td>";
@@ -88,7 +88,7 @@
 		$i=$page+1;
 		if (($i-1)*$page_limit<$num_max)
 		{
-			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\" onclick=\"submit_search($i)\" style=\"cursor: pointer;\">";
+			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\" onclick=\"submit_search($i)\">";
 			echo "</td><td>";
 			echo "<a class=\"output_href\" href=\"#\" onclick=\"submit_search($i); return false;\">>></a>";
 		}
@@ -98,11 +98,11 @@
 	echo "</tr>";
 	echo "</table>";
 	
-	// // Jump to Page;
-	// 	echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_multi\">";
-	// 	echo "<input class=\"input_button\"  type=\"hidden\" name=\"key_word\" value=\"$key_word\">";
-	// 	echo "Jump to: <input type=\"number\" name=\"page\" class=\"all__Turn_Page_jump_to_number\" max=$page_MAX min=\"1\" required>&nbsp;&nbsp;";
-	// 	echo "<input type=\"submit\" value=\"Go!\"></form>";
+	// Jump to Page;
+		echo "<div id=\"advanced_search__jump_to__right_hand\">";
+		echo "Jump to: <input type=\"number\" name=\"advanced_search_page\" class=\"all__Turn_Page_jump_to_number\" max=$page_MAX min=\"1\" required>&nbsp;&nbsp;";
+		echo "<button id=\"advanced_search__jump_to__submit\" onclick=\"jump_to_submit()\">Go!</button>";
+		echo "</div>";
 	// // var_dump($page);
 
 ?>

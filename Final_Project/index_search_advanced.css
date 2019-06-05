@@ -1,68 +1,86 @@
 
-body
+.advanced_ancestor	/*serach box - altogether*/
 {
-	background-color: #f9e9c3;
+
+
 }
 
-#heading
-{
-	height: 10%;
-	border: 10px solid;
-	background-color: #3914AF;
-}
-
-#title
+#advanced_boxes_root	/*serach box - container of all lines of search boxes*/
 {
 
-	margin: 13% 0 15% 20%;
-	size: huge;
-	font-family:'NewsGothicBT-Roman';
-}
 
-#test
-{
-	text-align: center;
-	margin: -5% 0 0 40%;
-	font-family: ChannelSlanted2;
-	font-size: 120%;
-}
-
-#acemap
-{
-	width: auto;
-	height: auto;
-	max-width: 25%;
-	max-height: 25%;
-	margin: 1% 70% 0 5%;
-}
-
-#paper_title
-{
-	color: black;
-}
-
-#author_name
-{
-	color: blue;
-}
-
-#conference_name
-{
-	color: black;
-}
-
-#conference_table
-{
-	margin: -10% 0% 3% 37%;
-	border: 0px;
-	width: 850px;
-}
-
-#number
-{
-	font-family:'ActionJackson';
-	color:#2d386e;
-	margin: 0 0 100px 0;
 }
 
 
+.advanced_box	/*every line of box*/
+{
+
+
+}
+
+#advanced_search_target_select	/*select target*/
+{
+
+
+}
+
+#advanced_search_bool_select	/*select bool*/
+{
+
+
+}
+
+#advanced_search_target_select	/*select target*/
+{
+
+	
+}
+
+#advanced_search_word_input_text	/*input_text word*/
+{
+
+
+
+}
+
+.advanced_search_result	/*search result*/
+{
+
+
+}
+
+.advanced_search_result_turn_page	/*search result - turn page*/
+{
+
+
+}
+
+#advanced_search_add_box	/*button - add line*/
+{
+	width: 50px;
+	height: 50px;
+}
+
+#advanced_search_del_box	/*button - del line*/
+{
+	width: 50px;
+	height: 50px;
+	display: none;
+}
+
+#advanced_search_submit	/*button - submit*/
+{
+	width: 50px;
+	height: 50px;
+}
+
+#advanced_search__jump_to__right_hand
+{
+
+}
+
+#advanced_search__jump_to__submit
+{
+
+
+}

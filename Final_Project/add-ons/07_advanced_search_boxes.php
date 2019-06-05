@@ -14,28 +14,28 @@
 				echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 			elseif(!$bo)
 			{
-				echo "<select>";
+				echo "<select id=\"advanced_search_bool_select\">";
 				echo "<option value =\"AND\" selected>And</option>";
 				echo "<option value =\"OR\">Or</option>";
 				echo "</select>";
 			}
 			elseif ($bo=="AND")
 			{
-				echo "<select>";
+				echo "<select id=\"advanced_search_bool_select\">";
 				echo "<option value =\"AND\" selected>And</option>";
 				echo "<option value =\"OR\">Or</option>";
 				echo "</select>";
 			}
 			else
 			{
-				echo "<select>";
+				echo "<select id=\"advanced_search_bool_select\">";
 				echo "<option value =\"AND\">And</option>";
 				echo "<option value =\"OR\" selected>Or</option>";
 				echo "</select>";
 			}
 
 		// target
-			echo "&nbsp;<select>";
+			echo "&nbsp;<select id=\"advanced_search_target_select\">";
 			if (!$tar || $tar=="undefined")
 			{
 				echo "<option value =\"Title\" selected>Title</option>";
@@ -70,9 +70,9 @@
 
 		// word
 		if($wd!="undefined")
-			echo "&nbsp;<input type=\"text\" required value=\"$wd\">";
+			echo "&nbsp;<input type=\"text\" required value=\"$wd\" id=\"advanced_search_word_input_text\">";
 		else
-			echo "&nbsp;<input type=\"text\" required>";
+			echo "&nbsp;<input type=\"text\" required id=\"advanced_search_word_input_text\">";
 
 		echo "</div>";
 	}

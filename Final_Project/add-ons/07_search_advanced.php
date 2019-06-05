@@ -1,30 +1,10 @@
 <!DOCTYPE html> 
 <html>
 <meta charset="utf-8">
+<head></head>
+<body>
 
-<head>
-	<title>Search</title>
-	<!-- Dependent Packages -->
-	<script src="/EE101-Final_Project/Final_Project/add-ons/jquery/jquery-3.4.0.min.js"></script>
-	<!-- <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/search.css"> -->
-	<link rel ="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
-	<!-- <script src="/EE101-Final_Project/Final_Project/add-ons/01_Scroll_Page_to_Original.js"></script> -->
-	<!-- <script src="/EE101-Final_Project/Final_Project/add-ons/02_Clear_Form.js"></script> -->
-	<!-- <script src="/EE101-Final_Project/Final_Project/add-ons/03_Custom_Overflow_Extremum.js"></script> -->
-
-	<!-- <link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/45817/5cecef5bf629d80af8efaac6.css' rel='stylesheet' type='text/css' /> -->
-<!-- 	ChannelSlanted2的link -->
-	<!-- <link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/46721/5cf220b2f629d80774a3a1b2.css' rel='stylesheet' type='text/css' /> -->
-<!-- 	Regencie的link -->
-
-</head>
-
-<body class="body">
-	<!-- <a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/phantom.png" id="acemap"></a>	 -->
-
-	<!-- <h1 id="title">Your Best Academia Database!</h1> -->
-
-	<?php
+<?php
 	// get from request: count
 		$count = $_GET["count"];
 		// var_dump($count);
@@ -78,7 +58,6 @@
 
 			if($result['response']['docs'])
 			{
-				echo "<a name=\"skip_multi\"></a>";
 				echo "Search Results";
 
 				echo "<table class=\"table__result\"><tr><th>Title</th><th>Authors</th><th>Conference</th></tr>";
@@ -142,8 +121,7 @@
 			echo "<br><br>ERROR:<br><br>Target not given!";
 			echo "<br><br><br>";
 		}
-		?>
+?>
 
 </body>
-
 </html>

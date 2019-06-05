@@ -2,7 +2,7 @@
 <html>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
-<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/index_search_advanced.css">
+<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/search_advanced.css">
 <script type="text/javascript" src="/EE101-Final_Project/Final_Project/add-ons/jquery/jquery-3.4.0.min.js"></script>
 <script src="/EE101-Final_Project/Final_Project/add-ons/01_Scroll_Page_to_Original.js"></script>
 
@@ -15,9 +15,6 @@
 	<div>
 		<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/phantom.png" id="acemap"></a>	
 		<h1 id="test">Your Best Academia Database!</h1>
-	</div>
-	<div id="all_charts">
-		<div id="chart1" style="width: 400px; height:400px;position: absolute; left:80px;top: 350px;"></div>
 	</div>
 
 	<script type="text/javascript">	// add/delete rows
@@ -110,7 +107,7 @@
 			}
 
 			// get url and GET
-			var url="/EE101-Final_Project/Final_Project/search_advanced.php?page="+page;
+			var url="/EE101-Final_Project/Final_Project/add-ons/07_search_advanced.php?page="+page;
 			var elements_boxes=$(".advanced_box");
 			var i=0;
 			if(elements_boxes.length>=1)
@@ -213,6 +210,18 @@
 			xmlhttp.open("GET",url, true);
 			xmlhttp.send();
 		}
+
+		function jump_to_submit()
+		{
+			var new_page=document.getElementsByName("advanced_search_page")[0].value;
+			console.log(new_page);
+			if(!new_page)
+			{
+				alert("Please enter the new page number.");
+				return;
+			}
+			submit_search(new_page);
+		}
 	</script>
 	
 	<div class="advanced_ancestor">
@@ -222,23 +231,23 @@
 			<div class="advanced_box">
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				&nbsp;
-				<select>
+				<select id="advanced_search_target_select">
 					<option value ="Title" selected>Title</option>
 					<option value ="Authors_Name">Author's Name</option>
 					<option value ="ConferenceName">Conference</option>
 				</select>
 				&nbsp;
-				<input type="text" required>
+				<input type="text" id="advanced_search_word_input_text" required>
 			</div>
 		</div>
 		<!-- add -->
-		<button id="advanced_search_add_box" onclick="show_boxes(1)" style="width: 50px;height: 50px;">+</button>
+		<button id="advanced_search_add_box" onclick="show_boxes(1)">+</button>
 		<!-- delete -->
-		<button id="advanced_search_del_box" onclick="show_boxes(0)" style="width: 50px;height: 50px;display: none;">-</button>
+		<button id="advanced_search_del_box" onclick="show_boxes(0)">-</button>
 		
 		<!-- submit -->
 		<br><br>
-		<button onclick="submit_search(1)" style="width: 50px;height: 50px;">Search!</button>
+		<button id="advanced_search_submit" onclick="submit_search(1)">Search!</button>
 		
 		<!-- result -->
 		<br><br><br>
