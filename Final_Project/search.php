@@ -188,7 +188,7 @@
 				for($i=$min_page;$i<=$max_page;$i++)
 				{
 					if($i==$page)
-						echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/C.png\" id=\"search__Turn_Page_selected\"></a></td>";
+						echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/C.png\" id=\"search__Turn_Page_selected\"></td>";
 					else
 						echo "<td><a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><img src =\"/EE101-Final_Project/Final_Project/pics/C2.png\"  id=\"search__Turn_Page_not_selected\"></a></td>";
 				}
@@ -257,6 +257,8 @@
 
 				echo "<br><br><br>";
 			}
+			else
+				echo "<br><br>No Results!<br><br>";
 		}
 
 	// if nothing is given

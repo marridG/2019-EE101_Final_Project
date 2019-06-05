@@ -106,3 +106,12 @@ hlfl 用逗号分隔高亮字段即可（注意 MultiValued 字段仍只返回�
 展开收起
 参考：https://blog.csdn.net/baidu_35701759/article/details/76187236
 
+
+图片相关：
+1. 事件绑定: onclick=""
+2. 光标移上去变成手型：style="cursor: pointer;"
+	参考 https://blog.csdn.net/u010682330/article/details/78792244
+
+
+超链接绑定事件-且不跳转页面
+参考：https://blog.csdn.net/fendou123_love/article/details/53585016

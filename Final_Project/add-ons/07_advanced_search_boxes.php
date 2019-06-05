@@ -74,7 +74,6 @@
 		else
 			echo "&nbsp;<input type=\"text\" required>";
 
-
 		echo "</div>";
 	}
 
@@ -108,7 +107,9 @@
 	}
 	else
 	{
-		if($count=="0" || $count=="1")
+		if($count=="0")
+			;
+		elseif ($count=="1")
 		{
 			$target=$_GET["target1"];
 			$word=$_GET["word1"];	
