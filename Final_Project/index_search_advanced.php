@@ -2,7 +2,7 @@
 <html>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
-<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/search_advanced.css">
+<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/index_search_advanced.css">
 <script type="text/javascript" src="/EE101-Final_Project/Final_Project/add-ons/jquery/jquery-3.4.0.min.js"></script>
 <script src="/EE101-Final_Project/Final_Project/add-ons/01_Scroll_Page_to_Original.js"></script>
 
@@ -12,7 +12,7 @@
 
 <body><!-- Advanced Search -->
 <div onscroll="SetH(this)">
-	<div>
+	<div id="advanced_search_head">
 		<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/phantom.png" id="acemap"></a>	
 		<h1 id="test">Your Best Academia Database!</h1>
 	</div>
@@ -225,6 +225,8 @@
 	</script>
 	
 	<div class="advanced_ancestor">
+		<div id="advanced_ancestor_margin"></div>
+		<br><br><br><br><br><br><br><br>
 		<!-- boxes -->
 		<div id="advanced_boxes_root">
 			<!-- initial box -->
@@ -233,7 +235,7 @@
 				&nbsp;
 				<select id="advanced_search_target_select">
 					<option value ="Title" selected>Title</option>
-					<option value ="Authors_Name">Author's Name</option>
+					<option value ="Authors_Name">Author</option>
 					<option value ="ConferenceName">Conference</option>
 				</select>
 				&nbsp;
@@ -248,8 +250,9 @@
 		<!-- submit -->
 		<br><br>
 		<button id="advanced_search_submit" onclick="submit_search(1)">Search!</button>
-		
-		<!-- result -->
+	</div>
+	<div id="advanced_search_result_ancestor">
+	<!-- result -->
 		<br><br><br>
 		<div id="advanced_search_result"></div>
 		<!-- turn page -->

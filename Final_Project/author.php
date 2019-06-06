@@ -544,7 +544,7 @@ curl_close($ch);
     		visualMap: {
     			show: false,
     			min: 0,
-    			max: 60,
+    			max: Math.max(datas2[0],datas2[1],datas2[2],datas2[3],datas2[4],datas2[5],datas2[6],datas2[7],datas2[8],datas2[9],datas2[10], datas2[11],datas2[12])+80,
     			inRange: {
     				colorLightness: [0.3, 1]
     			}
