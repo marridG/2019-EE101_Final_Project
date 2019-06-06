@@ -5,6 +5,8 @@
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/title.css">
 <link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/45817/5cecef5bf629d80af8efaac6.css' rel='stylesheet' type='text/css' />
 <!-- 	ChannelSlanted2的link -->
+<!-- <script type="text/javascript" src='/EE101-Final_Project/Final_Project/add-ons/echart/echarts2.js'></script> -->
+<script type="text/javascript" src='/EE101-Final_Project/Final_Project/add-ons/echart/echarts3.js'></script>
 <script type="text/javascript" src='/EE101-Final_Project/Final_Project/add-ons/echart/echarts-all.js'></script>
 
 <head>
@@ -19,30 +21,215 @@
     <br><br>
     <div id="chart1" style="width:1000px;height:1000px;"></div>
     <div id="chart2" style="width:1000px;height:1000px;"></div>
+    <?php
+        //Search for specified year's paper citaton number.
+
+    $ch = curl_init();
+    $timeout = 5;
+
+    $title = $_GET["title"];
+    $query0 = urlencode(str_replace(' ', '+', $title));
+    $url = "http://localhost:8983/solr/lab02/select?fl=PaperID&q=Title%3A$query0&rows=1";
+    curl_setopt ($ch, CURLOPT_URL, $url);
+    curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+    $data_ID = json_decode(curl_exec($ch), true); 
+    $PaperID = $data_ID['response']['docs'][0]['PaperID'];
+    echo "<script> var datas=new Array() ; </script> ";
+    for ($year=1950; $year<=2016 ; $year++) { 
+        $keyword = $year;
+        $query1 = urlencode(str_replace(' ', '+', $keyword));
+        $query2 = urlencode(str_replace(' ', '+', $PaperID));
+        $url = "http://localhost:8983/solr/lab02/select?q=ReferenceID%20%3A%20$query2%20%26%26%20Year%3A%20$query1&rows=98215";
+        curl_setopt ($ch, CURLOPT_URL, $url);
+        curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+        $data = json_decode(curl_exec($ch), true);  
+        $value = $data['response']['numFound'];
+        echo "<script> datas[$year-1950] = \"$value \" ; </script> ";
+    }
+    curl_close($ch);
+
+    ?>
+
     <script type="text/javascript">
     // 初始化图表标签
     var chart1 = echarts.init(document.getElementById('chart1'));
-    var chart2 = echarts.init(document.getElementById('chart2'));
-    option1 = {
-        title: {
-            text: 'Yearly Citations',
-            subtext: 'Default layout',
-            top: 'top',
-            left: 'center'
+    var chart2 = echarts2.init(document.getElementById('chart2'));
+    // Generate data
+    var category = [];
+    var lineData = [];
+    var xData = function() {
+        var data = [];
+        for (var i =1950; i <= 2016; i++) {
+            data.push(i + "");
+        }
+        return data;
+    }();
+// option
+option1 = {
+    backgroundColor: '#0f375f',
+    "calculable": true,
+    
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow',
+            label: {
+                show: true,
+                backgroundColor: '#333'
+            }
         },
-        xAxis: {
-            type: 'category',
-            data: ['*-1980', '1990-1998', '1999-2006', '2007-2013', '2014-2016']
-        },  
-        yAxis: {
-            type: 'value'
+        formatter: "Number of Citations:{c} "
+    },
+    grid: {
+                top: '20%',
+                left: '10%',
+                right: '10%',
+                bottom: '15%',
+                containLabel: true,
+    },
+    legend: {
+        data: ['Yearly Citations'],
+        textStyle: {
+            color: '#ccc'
+        }
+    },
+    xAxis: {
+        axisLine: {
+            lineStyle: {
+                color: '#ccc'
+            }
         },
+        data: xData,
+    },
+    yAxis: {
+        splitLine: {
+            show: false
+        },
+        axisLine: {
+            lineStyle: {
+                color: '#ccc'
+            }
+        }
+    },
+    dataZoom: [{
+        "show": true,
+        "height": 30,
+        "xAxisIndex": [
+        0
+        ],
+        bottom: 30,
+        "start": 75,
+        "end": 100,
+        handleIcon: 'path://M306.1,413c0,2.2-1.8,4-4,4h-59.8c-2.2,0-4-1.8-4-4V200.8c0-2.2,1.8-4,4-4h59.8c2.2,0,4,1.8,4,4V413z',
+        handleSize: '110%',
+        handleStyle:{
+            color:"#d3dee5",
+
+        },
+        textStyle:{
+            color:"#fff"},
+            borderColor:"#90979c"
+        }, {
+            "type": "inside",
+            "show": true,
+            "height": 15,
+            "start": 1,
+            "end": 35
+        }],
         series: [{
-            data: [820, 932, 901, 934, 1290, 1330, 1320],
+            name: 'Yearly Citations',
             type: 'line',
-            smooth: true
+            smooth: 0.35,
+            showAllSymbol: false,
+            symbol: 'emptyCircle',
+            symbolSize: 15,
+            data:datas,
+            itemStyle: {
+                normal:{
+                    color:'#386db3',
+                    lineStyle:{color:'#386db3'}
+                }
+            }
+        }, {
+            type: 'bar',
+            barGap: '-100%',
+            barWidth: 12,
+            itemStyle: {
+                normal: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [{
+                            offset: 0.2,
+                            color: 'rgba(20,200,212,0.5)'
+                        },
+                        {
+                            offset: 0.5,
+                            color: 'rgba(20,200,212,0.2)'
+                        },
+                        {
+                            offset: 1,
+                            color: 'rgba(20,200,212,0)'
+                        }
+                        ]
+                        )
+                }
+            },
+            z: -12,
+            data: datas
+        }, {
+            type: 'pictorialBar',
+            symbol: 'rect',
+            itemStyle: {
+                normal: {
+                    color: '#0f375f'
+                }
+            },
+            symbolRepeat: true,
+            symbolSize: [12, 2],
+            symbolMargin: 2,
+            z: -10,
+            data: datas
         }]
     };
+    // var xData = function() {
+    //     var data = [];
+    //     for (var i =1950; i <= 2016; i++) {
+    //         data.push(i + "");
+    //     }
+    //     return data;
+    // }();
+    // option1 = {
+
+    //     title: {
+    //         text: 'Yearly Citations',
+    //         subtext: 'Default layout',
+    //         top: 'top',
+    //         left: 'center'
+    //     },
+    //     tooltip: {
+    //         "trigger": "axis",
+    //         "axisPointer": {
+    //             "type": "shadow",
+    //             textStyle: {
+    //                 color: "#fff"
+    //             },
+    //             formatter: "{b}"
+    //         },
+    //     },
+    //     xAxis: {
+    //         type: 'category',
+    //         data: xData,
+    //     yAxis: {
+    //         type: 'value'
+    //     },
+    //     series: [{
+    //         data: [820, 932, 901, 934, 1290, 1330, 1320],
+    //         type: 'line',
+    //         smooth: true
+    //     }]
+    // };
 
     function createRandomItemStyle() {
         return {
@@ -55,7 +242,6 @@
             }
         };
     }
-
     option2= {
         title: {
             text: 'Word Cloud'
