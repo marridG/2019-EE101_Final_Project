@@ -1,0 +1,86 @@
+
+.advanced_ancestor	/*serach box - altogether*/
+{
+
+
+}
+
+#advanced_boxes_root	/*serach box - container of all lines of search boxes*/
+{
+
+
+}
+
+
+.advanced_box	/*every line of box*/
+{
+
+
+}
+
+#advanced_search_target_select	/*select target*/
+{
+
+
+}
+
+#advanced_search_bool_select	/*select bool*/
+{
+
+
+}
+
+#advanced_search_target_select	/*select target*/
+{
+
+	
+}
+
+#advanced_search_word_input_text	/*input_text word*/
+{
+
+
+
+}
+
+.advanced_search_result	/*search result*/
+{
+
+
+}
+
+.advanced_search_result_turn_page	/*search result - turn page*/
+{
+
+
+}
+
+#advanced_search_add_box	/*button - add line*/
+{
+	width: 50px;
+	height: 50px;
+}
+
+#advanced_search_del_box	/*button - del line*/
+{
+	width: 50px;
+	height: 50px;
+	display: none;
+}
+
+#advanced_search_submit	/*button - submit*/
+{
+	width: 50px;
+	height: 50px;
+}
+
+#advanced_search__jump_to__right_hand
+{
+
+}
+
+#advanced_search__jump_to__submit
+{
+
+
+}
