@@ -93,10 +93,12 @@ if ($author_name_res = mysqli_fetch_row($result))
 	echo "<a name=\"skip_here\"></a>";
 	echo "Name: $author_name<br>";
 
-		// search and print the most related AffiliationName to the given AuthorID
+	// search and print the most related AffiliationName to the given AuthorID
 	if(!$affiliation_name)
 	{
 		$affi_id_row=mysqli_fetch_row(mysqli_query($link,"SELECT AffiliationID, count(*) AS count FROM paper_author_affiliation where AuthorID='$author_id'GROUP BY AffiliationID ORDER BY count DESC LIMIT 1"));
+
+
 		//	$affi_id_row2=mysqli_fetch_row(mysqli_query($link,"SELECT AffiliationID, count( AffiliationID) AS count FROM paper_author_affiliation where AuthorID='$author_id'GROUP BY AffiliationID ORDER BY count DESC LIMIT 2"));
 		$affi_id=$affi_id_row[0];
 		$affi_id_name_result=mysqli_query($link,"SELECT AffiliationName from affiliations where AffiliationID='$affi_id'");

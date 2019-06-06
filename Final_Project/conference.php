@@ -318,7 +318,7 @@ curl_close($ch);
 if($result['response']['docs'])
 {
 
-	echo "<table class=\"table__result\" id=\"conference_table\"><tr><th>Title</th><th>Authors</th><th>Conference</th></tr>";
+	echo "<table class=\"table__result\" id=\"conference_table\"><tr><th>Title</th><th>Authors</th><th>Year</th></tr>";
 			// print the result table
 	foreach ($result['response']['docs'] as $paper)
 	{
@@ -333,21 +333,21 @@ if($result['response']['docs'])
 		echo ";";
 		echo "</td>";
 
-					// print all the Authors_Name
+		// print all the Authors_Name
 		echo "<td>";
 		foreach ($paper['Authors_Name'] as $idx => $author)
 		{
 			$author_id = $paper['Authors_ID'][$idx];
-			echo "<a class=\"output_href\" id=\"author_name\" href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1\" target=\"_blank\">$author</a>";
+			echo "<a class=\"output_href\" id=\"author_name\" href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1&author_affi=\" target=\"_blank\">$author</a>";
 			echo "; ";
 		}
 		echo "</td>";
 
-					// print ConferenceName
+		// print ConferenceName
 		echo "<td>";
-		$conference_name=$paper['ConferenceName'];
-		echo "<a class=\"output_href\" id=\"conference_name\" href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name&page=1\" target=\"_blank\">$conference_name</a>";
-		echo ";";
+		$conference_name=$paper['Year'];
+		echo "$conference_name ";
+
 		echo "</td>";
 		echo "</tr>";
 	}
