@@ -28,16 +28,20 @@ cursor.execute("Select \
                     AuthorName,\
                     A.ConferenceID,\
                     ConferenceName,\
-                    PaperPublishYear\
+                    PaperPublishYear,\
+                    D.ReferenceID,\
+                    E.AffiliationID\
                 From \
                     papers A Inner Join \
                     authors B Inner Join \
                     conferences C Inner Join \
-                    paper_author_affiliation E\
+                    paper_author_affiliation E Inner Join \
+                    paper_reference D\
                 ON \
                     A.PaperID=E.PaperID \
                     and B.AuthorID=E.AuthorID \
                     and A.ConferenceID=C.ConferenceID\
+                    and A.PaperID=D.PaperID\
                 Order by \
                     A.PaperID")
 sql_result = cursor.fetchall()
@@ -57,12 +61,24 @@ with codecs.open(FP_out, 'w', 'utf-8-sig') as f:
             "Authors'Name": [result[0][3]],
             "ConferenceID": result[0][4],
             "ConferenceName": result[0][5],
-            "Year": result[0][6]}
+            "Year": result[0][6],
+            "ReferenceID":[result[0][7]]}
+#            "AffiliationID":[result[0][8]]}
     for i in range(1, len(result)):
         out_print = False
         if result[i][0] == data["PaperID"]:
-            data["Authors'ID"].append(result[i][2])
-            data["Authors'Name"].append(result[i][3])
+            if (result[i][2] not in data["Authors'ID"]):
+                data["Authors'ID"].append(result[i][2])
+            if (result[i][3] not in data["Authors'Name"]):
+                data["Authors'Name"].append(result[i][3])
+            if (result[i][7] not in data["ReferenceID"]):
+                data["ReferenceID"].append(result[i][7])
+#        if result[i][0]==data["PaperID"]:
+#            data["AffiliationID"].append(result[i][8])
+
+#        if result[i][0]==data["PaperID"]:
+
+
         else:
             f.write(str(data))
             f.write('\n')
@@ -72,7 +88,10 @@ with codecs.open(FP_out, 'w', 'utf-8-sig') as f:
                     "Authors'Name": [result[i][3]],
                     "ConferenceID": result[i][4],
                     "ConferenceName": result[i][5],
-                    "Year": result[i][6]}
+                    "Year": result[i][6],
+                    "ReferenceID":[result[i][7]]}
+#                    "Affiliation":[result[i][8]]}
+
     f.write(str(data))
     f.write('\n')
 
