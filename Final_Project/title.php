@@ -7,7 +7,7 @@
 <!-- 	ChannelSlanted2的link -->
 <!-- <script type="text/javascript" src='/EE101-Final_Project/Final_Project/add-ons/echart/echarts2.js'></script> -->
 <script type="text/javascript" src='/EE101-Final_Project/Final_Project/add-ons/echart/echarts3.js'></script>
-<script type="text/javascript" src='/EE101-Final_Project/Final_Project/add-ons/echart/echarts-all.js'></script>
+<!-- <script type="text/javascript" src='/EE101-Final_Project/Final_Project/add-ons/echart/echarts-all.js'></script> -->
 
 <head>
 	<title>Title</title>
@@ -55,7 +55,7 @@
     <script type="text/javascript">
     // 初始化图表标签
     var chart1 = echarts.init(document.getElementById('chart1'));
-    var chart2 = echarts2.init(document.getElementById('chart2'));
+    var chart2 = echarts.init(document.getElementById('chart2'));
     // Generate data
     var category = [];
     var lineData = [];
@@ -193,43 +193,6 @@ option1 = {
             data: datas
         }]
     };
-    // var xData = function() {
-    //     var data = [];
-    //     for (var i =1950; i <= 2016; i++) {
-    //         data.push(i + "");
-    //     }
-    //     return data;
-    // }();
-    // option1 = {
-
-    //     title: {
-    //         text: 'Yearly Citations',
-    //         subtext: 'Default layout',
-    //         top: 'top',
-    //         left: 'center'
-    //     },
-    //     tooltip: {
-    //         "trigger": "axis",
-    //         "axisPointer": {
-    //             "type": "shadow",
-    //             textStyle: {
-    //                 color: "#fff"
-    //             },
-    //             formatter: "{b}"
-    //         },
-    //     },
-    //     xAxis: {
-    //         type: 'category',
-    //         data: xData,
-    //     yAxis: {
-    //         type: 'value'
-    //     },
-    //     series: [{
-    //         data: [820, 932, 901, 934, 1290, 1330, 1320],
-    //         type: 'line',
-    //         smooth: true
-    //     }]
-    // };
 
     function createRandomItemStyle() {
         return {
