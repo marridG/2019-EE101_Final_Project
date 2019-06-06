@@ -2,7 +2,7 @@
 <html>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
-<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/search_advanced.css">
+<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/index_search_advanced.css">
 <script type="text/javascript" src="/EE101-Final_Project/Final_Project/add-ons/jquery/jquery-3.4.0.min.js"></script>
 <script src="/EE101-Final_Project/Final_Project/add-ons/01_Scroll_Page_to_Original.js"></script>
 

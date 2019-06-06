@@ -15,22 +15,22 @@
 			elseif(!$bo)
 			{
 				echo "<select id=\"advanced_search_bool_select\">";
-				echo "<option value =\"AND\" selected>And</option>";
-				echo "<option value =\"OR\">Or</option>";
+				echo "<option value =\"and\" selected>And</option>";
+				echo "<option value =\"or\">Or</option>";
 				echo "</select>";
 			}
-			elseif ($bo=="AND")
+			elseif ($bo=="and")
 			{
 				echo "<select id=\"advanced_search_bool_select\">";
-				echo "<option value =\"AND\" selected>And</option>";
-				echo "<option value =\"OR\">Or</option>";
+				echo "<option value =\"and\" selected>And</option>";
+				echo "<option value =\"or\">Or</option>";
 				echo "</select>";
 			}
 			else
 			{
 				echo "<select id=\"advanced_search_bool_select\">";
-				echo "<option value =\"AND\">And</option>";
-				echo "<option value =\"OR\" selected>Or</option>";
+				echo "<option value =\"and\">And</option>";
+				echo "<option value =\"or\" selected>Or</option>";
 				echo "</select>";
 			}
 
