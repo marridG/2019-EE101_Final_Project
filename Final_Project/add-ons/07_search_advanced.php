@@ -45,7 +45,7 @@
 				// echo "<br>$url_q";
 			$url=$url.$url_q;
 			echo "<br>";
-			var_dump($url);
+			// var_dump($url);
 
 			curl_setopt ($ch, CURLOPT_URL, $url);
 			curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);

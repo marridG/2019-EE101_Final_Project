@@ -1,8 +1,43 @@
+#advanced_search_head
+{
+	position: fixed;
+	left:0px;
+	top: 0px;
+	width: 100%;
+	height: 10%;
+	background-color: #7B85F6;
+}
+
+#acemap
+{
+	height: 10%;
+
+}
+
+#test
+{
+	height: 10%;
+	display: inline;
+}
+
+#advanced_ancestor_margin	/*margin*/
+{
+	position: fixed;
+	left: 0px;
+	top: 10%;
+	background-color: #D8E5E9;
+	/*background-color: #E7E3E3;*/
+	height: 15%;
+}
 
 .advanced_ancestor	/*serach box - altogether*/
 {
-
-
+	position: fixed;
+	left: 0px;
+	top: 10%;
+	background-color: #D8E5E9;
+	/*background-color: #E7E3E3;*/
+	height: 100%;
 }
 
 #advanced_boxes_root	/*serach box - container of all lines of search boxes*/
@@ -20,27 +55,27 @@
 
 #advanced_search_target_select	/*select target*/
 {
-
-
+	height: 10%;
+	width: 30%;
 }
 
 #advanced_search_bool_select	/*select bool*/
 {
-
-
-}
-
-#advanced_search_target_select	/*select target*/
-{
-
-	
+	height: 10%;
+	width: 20%;
 }
 
 #advanced_search_word_input_text	/*input_text word*/
 {
+	height: 10%;
+	width: 40%;
+}
 
-
-
+#advanced_search_result_ancestor	/*serach result - altogether*/
+{	
+	width: 80%;
+	margin-left:23%;
+	
 }
 
 .advanced_search_result	/*search result*/

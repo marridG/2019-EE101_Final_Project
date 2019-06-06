@@ -11,7 +11,7 @@
 		
 		// bool
 			if ($bo=="undefined")
-				echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+				echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 			elseif(!$bo)
 			{
 				echo "<select id=\"advanced_search_bool_select\">";
@@ -39,34 +39,36 @@
 			if (!$tar || $tar=="undefined")
 			{
 				echo "<option value =\"Title\" selected>Title</option>";
-				echo "<option value =\"Authors_Name\">Author's Name</option>";
+				echo "<option value =\"Authors_Name\">Author</option>";
 				echo "<option value =\"ConferenceName\">Conference</option>";
 			}
 			elseif ($tar=="Title")
 			{
 				echo "<option value =\"Title\" selected>Title</option>";
-				echo "<option value =\"Authors_Name\">Author's Name</option>";
+				echo "<option value =\"Authors_Name\">Author</option>";
 				echo "<option value =\"ConferenceName\">Conference</option>";
 			}
 			elseif ($tar=="Authors_Name")
 			{
 				echo "<option value =\"Title\">Title</option>";
-				echo "<option value =\"Authors_Name\" selected>Author's Name</option>";
+				echo "<option value =\"Authors_Name\" selected>Author</option>";
 				echo "<option value =\"ConferenceName\">Conference</option>";
 			}
 			elseif ($tar=="ConferenceName")
 			{
 				echo "<option value =\"Title\">Title</option>";
-				echo "<option value =\"Authors_Name\">Author's Name</option>";
+				echo "<option value =\"Authors_Name\">Author</option>";
 				echo "<option value =\"ConferenceName\" selected>Conference</option>";
 			}
 			else
 			{
 				echo "<option value =\"Title\">Title</option>";
-				echo "<option value =\"Authors_Name\">Author's Name</option>";
+				echo "<option value =\"Authors_Name\">Author</option>";
 				echo "<option value =\"ConferenceName\" selected>Conference</option>";
 			}
 			echo "</select>";
+
+		// echo "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 
 		// word
 		if($wd!="undefined")
