@@ -2,6 +2,10 @@
 <html>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/Turn_page.css">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/conference.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -29,8 +33,31 @@
 </head>
 
 <body>
-	<div class="heading">
-		<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/phantom.png" id="acemap"></a>	
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <a href="/EE101-Final_Project/Final_Project/index.php" class="navbar-brand">
+            <img src="/EE101-Final_Project/Final_Project/pics/phantom_reverse.png" s alt="logo" style="width:70px;height:30px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsible">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsible">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a href="#" class="nav-link">link1</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">link1</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">link1</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">link1</a>
+        </li>    
+    </ul>
+    
+</nav>
+	<div class="heading">	
 		<h1 id="test">Your Best Academia Database!</h1>
 	</div>
 	<div id="all_charts">
