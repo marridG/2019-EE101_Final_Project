@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/title.css">
 <link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/45817/5cecef5bf629d80af8efaac6.css' rel='stylesheet' type='text/css' />
 <!-- 	ChannelSlanted2的link -->
-<script type="text/javascript" src='echarts-all.js'></script>
+<script type="text/javascript" src='/EE101-Final_Project/Final_Project/add-ons/echart/echarts-all.js'></script>
 
 <head>
 	<title>Title</title>
