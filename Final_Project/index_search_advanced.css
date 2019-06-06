@@ -32,12 +32,17 @@
 
 .advanced_ancestor	/*serach box - altogether*/
 {
+	/*display: none;*/
 	position: fixed;
 	left: 0px;
-	top: 10%;
+	top: 30%;
 	background-color: #D8E5E9;
 	/*background-color: #E7E3E3;*/
-	height: 100%;
+	/*height: 100%;*/
+	height: auto;
+	width: 25%;
+	/*overflow-y: scroll;*/
+	overflow-x: hidden;
 }
 
 #advanced_boxes_root	/*serach box - container of all lines of search boxes*/
@@ -73,15 +78,23 @@
 
 #advanced_search_result_ancestor	/*serach result - altogether*/
 {	
-	width: 80%;
-	margin-left:23%;
-	
+	margin-left: 3%;
+	/*width: 75%;*/
+	/*margin-left:25%;*/
 }
 
 .advanced_search_result	/*search result*/
 {
 
 
+}
+
+.table__result
+{
+	margin:2% 2%;
+	width: auto;
+	border: 1px solid #000000;
+	text-align: center;
 }
 
 .advanced_search_result_turn_page	/*search result - turn page*/
@@ -105,8 +118,19 @@
 
 #advanced_search_submit	/*button - submit*/
 {
-	width: 50px;
-	height: 50px;
+	width: 25%;
+	height: 10%;
+}
+
+#advanced_search_hide_show
+{
+	position: fixed;
+	top: 30%;
+	left: 25%;
+	background-color: #FF0000;
+	cursor: pointer;
+	width: 3%;
+/*	height: 100%;*/
 }
 
 #advanced_search__jump_to__right_hand
