@@ -65,7 +65,25 @@ body
 	margin: 0 0 100px 0;
 }
 
-.navbar
+.navbar-brand
+{
+	font-family: 书体坊兰亭体;
+	src: url("/EE101-Final_Project/Final_Project/font/书体坊兰亭体I.ttf");
+	display: inline;
+	font-size: huge;
+	padding: 0px;
+	width: 100px;
+	height: 100px;
+}
 
+.navbar
+{
+	display: inline;
+}
+
+.container-fluid
+{
+	display: inline;
+}
 
 
