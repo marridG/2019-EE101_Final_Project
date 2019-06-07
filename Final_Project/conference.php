@@ -26,6 +26,8 @@
 <link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/44802/5cf3c807f629d80aac8eb641.css' rel='stylesheet' type='text/css' />
 
 
+
+
 <script type="text/javascript" src='\EE101-Final_Project\Final_Project\add-ons\echart\echarts3.js'></script>
 
 <head>
@@ -34,21 +36,39 @@
 
 <body>
 
+<style>
+.navbar-brand
+{
+	font-family: 书体坊兰亭体;
+	src: url("/EE101-Final_Project/Final_Project/font/书体坊兰亭体I.ttf");
+	
+	vertical-align: 10%;
+	float: left;
+	width: 50px;
+	height: 100px;
+	font-size: 90px;
+}
+</style>
+
+<nav class="navbar navbar-default" role="navigation">
 
 <div class="navbar-header">
-	<a class="navbar-brand" href="#">Phantom</a>
+	<a class="navbar-brand nav-left" href="#" style="display: inline;">Phantom</a>
 </div>
 
+
 	<div>
-	<ul class="nav nav-pills">
-	<li class="active"><a href="#">Phantom</a></li>
-	<li><a href="#">SVN</a></li>
-	<li><a href="#">iOS</a></li>
-	<li><a href="#">VB.Net</a></li>
-	<li><a href="#">Java</a></li>
-	<li><a href="#">PHP</a></li>
+	<ul class="nav nav-pills nav-left">
+	<li class="choice"><a href="#">Phantom</a></li>
+	<li class="choice"><a href="#">SVN</a></li>
+	<li class="choice"><a href="#">iOS</a></li>
+	<li class="choice"><a href="#">VB.Net</a></li>
+	<li class="choice"><a href="#">Java</a></li>
+	<li class="choice"><a href="#">PHP</a></li>
 </ul>
 </div>
+</nav>
+
 	<div class="heading">	
 		<h1 id="test">Your Best Academia Database!</h1>
 	</div>
@@ -61,7 +81,7 @@
 	$conference_name = $_GET["conference_name"];
 //Search for specified year's paper number in a conference.
 	echo "<script> var datas=new Array() ; </script> ";
-	for ($year=1950; $year<2016 ; $year++) { 
+	for ($year=1950; $year<=2016 ; $year++) { 
 		$keyword = $year;
 		$query1 = urlencode(str_replace(' ', '+', $keyword));
 		$query2 = urlencode(str_replace(' ', '+', $conference_name));

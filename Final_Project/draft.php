@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/44812/5cf3c19ef629d80aac8eb640.css' rel='stylesheet' type='text/css' />
-	<style type="text/css" >
-		p
-		{
-			font-family:'namcoregular';
-			
-		}
-	</style>	
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 
 <body>
+	<nav>
+		
+		
+	</nav>
 
-	<p>ACEMAP</p>	
+		
 
 </body>
 </html>
