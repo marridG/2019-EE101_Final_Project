@@ -41,34 +41,33 @@
 {
 	font-family: 书体坊兰亭体;
 	src: url("/EE101-Final_Project/Final_Project/font/书体坊兰亭体I.ttf");
-	display: inline;
-	padding: 0px;
-	width: 100px;
+	
+	vertical-align: 10%;
+	float: left;
+	width: 50px;
 	height: 100px;
-	font-size: 30px;
-
+	font-size: 90px;
 }
 </style>
 
+<nav class="navbar navbar-default" role="navigation">
 
 <div class="navbar-header">
-	<a class="navbar-brand" href="#">Phantom</a>
+	<a class="navbar-brand nav-left" href="#" style="display: inline;">Phantom</a>
 </div>
-
-
-
 
 
 	<div>
-	<ul class="nav nav-pills">
-	<li class="active"><a href="#">Phantom</a></li>
-	<li><a href="#">SVN</a></li>
-	<li><a href="#">iOS</a></li>
-	<li><a href="#">VB.Net</a></li>
-	<li><a href="#">Java</a></li>
-	<li><a href="#">PHP</a></li>
+	<ul class="nav nav-pills nav-left">
+	<li class="choice"><a href="#">Phantom</a></li>
+	<li class="choice"><a href="#">SVN</a></li>
+	<li class="choice"><a href="#">iOS</a></li>
+	<li class="choice"><a href="#">VB.Net</a></li>
+	<li class="choice"><a href="#">Java</a></li>
+	<li class="choice"><a href="#">PHP</a></li>
 </ul>
 </div>
+</nav>
 
 	<div class="heading">	
 		<h1 id="test">Your Best Academia Database!</h1>
