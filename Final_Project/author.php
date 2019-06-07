@@ -312,7 +312,7 @@ $timeout = 5;
 
 	//Search for specified year's paper number in a conference.
 echo "<script> var datas=new Array() ; </script> ";
-for ($year=1950; $year<2016 ; $year++) { 
+for ($year=1950; $year<=2016 ; $year++) { 
 	$keyword = $year;
 		// $author_id = ;
 	$query1 = urlencode(str_replace(' ', '+', $keyword));
