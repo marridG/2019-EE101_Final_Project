@@ -3,6 +3,7 @@
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/index_search_advanced.css">
+<!-- <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/add-ons/bootstrap/button.css"> -->
 <script type="text/javascript" src="/EE101-Final_Project/Final_Project/add-ons/jquery/jquery-3.4.0.min.js"></script>
 <script src="/EE101-Final_Project/Final_Project/add-ons/01_Scroll_Page_to_Original.js"></script>
 
@@ -32,6 +33,7 @@
 				if (xmlhttp.readyState==4 && xmlhttp.status==200)
 				{
 					document.getElementById("advanced_boxes_root").innerHTML=xmlhttp.responseText;
+					// document.getElementById("advanced_search_hide_show").style.height=$(".advanced_ancestor")[0].scrollHeight+'px';
 				}
 			}
 			
@@ -77,7 +79,7 @@
 				xmlhttp.send();
 		}
 
-		function submit_search(page)	// submit search request
+		function submit_search(page,whether_turn_page)	// submit search request
 		{
 			var xmlhttp;
 			if (window.XMLHttpRequest)	//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
@@ -89,6 +91,9 @@
 			{
 				if (xmlhttp.readyState==4 && xmlhttp.status==200)
 				{
+					if(!whether_turn_page)
+						$("#advanced_search_hide_show")[0].onclick();
+					$("#advanced_search_hide_show")[0].style.display="block";
 					document.getElementById("advanced_search_result").innerHTML=xmlhttp.responseText;
 					var num_max=document.getElementById("advanced_search_result_num_max").value;
 					var page_limit;
@@ -220,16 +225,12 @@
 				alert("Please enter the new page number.");
 				return;
 			}
-			submit_search(new_page);
+			submit_search(new_page,1);
 		}
 	</script>
-
-	<!-- show or hide teh search boxes -->
-	<script type="text/javascript" src="/EE101-Final_Project/Final_Project/add-ons/07_show_hide.js"></script>
 	
 	<div class="advanced_ancestor">
-		<!-- <div id="advanced_ancestor_margin"></div>
-		<br><br><br><br><br><br><br> --><br>
+		<br><br>
 		<!-- boxes -->
 		<div id="advanced_boxes_root">
 			<!-- initial box -->
@@ -244,30 +245,38 @@
 			</div>
 		</div>
 		<br>
-		<!-- add -->
-		<button id="advanced_search_add_box" onclick="show_boxes(1)">+</button>
-		<!-- delete -->
-		<button id="advanced_search_del_box" onclick="show_boxes(0)">-</button>
-
+		
+		<div id="advanced_search_add_del_box">
+			<!-- add -->
+			<button id="advanced_search_add_box" onclick="show_boxes(1)">+</button>
+			&nbsp;&nbsp;
+			<!-- delete -->
+			<button id="advanced_search_del_box" onclick="show_boxes(0)">-</button>
+		</div>
+		
 		<!-- submit -->
-		<br><br><br>
-		<button id="advanced_search_submit" onclick="submit_search(1)">Search!</button>
 		<br><br>
+		<button id="advanced_search_submit" onclick="submit_search(1,0)"><img src="/EE101-Final_Project/Final_Project/pics/search-noBK.jpg" id="advanced_search_submit_image"></button>
+
 	</div>
 
-	<div id="advanced_search_hide_show">
-		<!-- <img src="/EE101-Final_Project/Final_Project/pics/P.png"> -->
-		Hide
-	</div>
+	<!-- <div id="advanced_search_hide_show"> -->
+		<button id="advanced_search_hide_show"><<</button>
+	<!-- </div> -->
 
 	<div id="advanced_search_result_ancestor">
-	<!-- result -->
-		<br><br><br>
+		<img src="/EE101-Final_Project/Final_Project/pics/advanced_BK.jpg" id="advanced_search_default_result_image">
+		<!-- result -->
 		<div id="advanced_search_result"></div>
 		<!-- turn page -->
 		<div id="advanced_search_result_turn_page"></div>
+		<button onclick="send_mail()">send mail</button>
 	</div>
 </div>
 
+	<!-- show or hide teh search boxes -->
+	<script type="text/javascript" src="/EE101-Final_Project/Final_Project/add-ons/07_show_hide.js"></script>
+
+	<script type="text/javascript" src="/EE101-Final_Project/Final_Project/add-ons/07_mail_to.js"></script>
 </body>
 </html>

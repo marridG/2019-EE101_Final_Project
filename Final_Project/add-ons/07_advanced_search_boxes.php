@@ -12,6 +12,10 @@
 		// bool
 			if ($bo=="undefined")
 				echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			elseif($bo=="-1")
+			{
+				;
+			}
 			elseif(!$bo)
 			{
 				echo "<select id=\"advanced_search_bool_select\">";
@@ -111,11 +115,12 @@
 	{
 		if($count=="0")
 			;
-		elseif ($count=="1")
+		elseif ($count=="1" || $count=="2")
 		{
 			$target=$_GET["target1"];
 			$word=$_GET["word1"];	
-			echo_div("undefined",$target,$word);
+			// echo_div("undefined",$target,$word);
+			echo_div("-1",$target,$word);
 		}
 		else
 		{

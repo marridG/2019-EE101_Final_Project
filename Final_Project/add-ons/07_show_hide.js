@@ -8,23 +8,24 @@ var spread = $(".advanced_ancestor")[0];
 var iSpread = true;
 /*高度*/
 var width = spread.scrollWidth
-var left = btn.scrollLeft;
+// var btn_left = btn.scrollLeft;
 /*总时间*/
 var time = 420;
 /*间隔*/
-var interval = 8.4
+var interval = 4.2//8.4
 /*速度*/
 var speed = width/(time/interval)
 /*点击事件*/
-btn.onclick = function show_hide(e) {
+btn.onclick = function show_hide() { 
     btn.disabled = 'disabled'
     if(!iSpread)
     {
+        // btn.style.display="none";
         var speeds = 0
         var timer = setInterval(function () {
             speeds += speed
             spread.style.width = speeds + 'px'
-            btn.style.left=speeds + 'px'
+            btn.style.left = speeds + 'px';
 
             if(parseInt(spread.style.width) >=width)
             {
@@ -36,7 +37,7 @@ btn.onclick = function show_hide(e) {
         // $("#advanced_search_add_box")[0].style.display="block";
         // $("#advanced_search_del_box")[0].style.display="inline";
         // $("#advanced_search_submit")[0].style.display="block";
-        this.innerHTML = 'Hide'
+        this.innerHTML = '<<'
     }
     else
     {
@@ -45,7 +46,7 @@ btn.onclick = function show_hide(e) {
         // $("#advanced_search_add_box")[0].style.display="none";
         // $("#advanced_search_del_box")[0].style.display="none";
         // $("#advanced_search_submit")[0].style.display="none";
-        this.innerHTML = 'Show'
+        this.innerHTML = '>>'
         var timer = setInterval(function () {
             speeds -= speed
             spread.style.width = speeds + 'px'
