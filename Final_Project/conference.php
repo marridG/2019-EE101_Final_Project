@@ -50,11 +50,11 @@
 }
 </style>
 
+
 <div class="navbar-header">
 	<a class="navbar-brand" href="#">Phantom</a>
 </div>
 
-<!-- <div class="navbar-brand">Phantom</div> -->
 
 
 
@@ -69,6 +69,7 @@
 	<li><a href="#">PHP</a></li>
 </ul>
 </div>
+
 	<div class="heading">	
 		<h1 id="test">Your Best Academia Database!</h1>
 	</div>
