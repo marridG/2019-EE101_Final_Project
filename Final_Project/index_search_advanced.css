@@ -10,7 +10,7 @@
 
 #acemap
 {
-	height: 10%;
+	height: 30%;
 }
 
 #test
@@ -96,7 +96,9 @@
 #advanced_search_default_result_image
 {
 	/*height: 10%;*/
-	width: 10%;
+	width: 100%;
+	max-width: 100%;
+	max-height: 90%;
 	/*display: block;*/
 }
 
