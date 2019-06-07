@@ -26,6 +26,8 @@
 <link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/44802/5cf3c807f629d80aac8eb641.css' rel='stylesheet' type='text/css' />
 
 
+
+
 <script type="text/javascript" src='\EE101-Final_Project\Final_Project\add-ons\echart\echarts3.js'></script>
 
 <head>
@@ -34,10 +36,28 @@
 
 <body>
 
+<style>
+.navbar-brand
+{
+	font-family: 书体坊兰亭体;
+	src: url("/EE101-Final_Project/Final_Project/font/书体坊兰亭体I.ttf");
+	display: inline;
+	padding: 0px;
+	width: 100px;
+	height: 100px;
+	font-size: 30px;
+
+}
+</style>
 
 <div class="navbar-header">
 	<a class="navbar-brand" href="#">Phantom</a>
 </div>
+
+<!-- <div class="navbar-brand">Phantom</div> -->
+
+
+
 
 	<div>
 	<ul class="nav nav-pills">
@@ -61,7 +81,7 @@
 	$conference_name = $_GET["conference_name"];
 //Search for specified year's paper number in a conference.
 	echo "<script> var datas=new Array() ; </script> ";
-	for ($year=1950; $year<2016 ; $year++) { 
+	for ($year=1950; $year<=2016 ; $year++) { 
 		$keyword = $year;
 		$query1 = urlencode(str_replace(' ', '+', $keyword));
 		$query2 = urlencode(str_replace(' ', '+', $conference_name));
