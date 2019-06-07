@@ -46,29 +46,41 @@
 	overflow-x: hidden;
 }
 
+#advanced_search_rows_add_del	/*Search box - all rows and the add & del buttons*/
+{
+	width: 95%;
+	margin: 1% auto;
+	border: 3px #808080 solid;
+	border-radius: 0.5vw;
+}
+
 #advanced_boxes_root	/*serach box - container of all lines of search boxes*/
 {}
 
-
 .advanced_box	/*every line of box*/
 {}
-
-#advanced_search_target_select	/*select target*/
-{
-	height: 10%;
-	width: 30%;
-}
 
 #advanced_search_bool_select	/*select bool*/
 {
 	height: 10%;
 	width: 20%;
+	background-color: #EDEDED;
+}
+
+#advanced_search_target_select	/*select target*/
+{
+	height: 10%;
+	width: 30%;
+	background-color: #FFE2E2;
+	border-radius: 5px;
 }
 
 #advanced_search_word_input_text	/*input_text word*/
 {
 	height: 10%;
 	width: 40%;
+	background-color: #EAEAEA;
+	border-radius: 5px;
 }
 
 #advanced_search_result_ancestor/*serach result - altogether*/
@@ -94,17 +106,17 @@
 .advanced_search_result_turn_page	/*search result - turn page*/
 {}
 
-#advanced_search_add_del_box
+/*#advanced_search_add_del_box
 {
 	margin-left:20%;
 	width:10vw;
 	height:1vw;
-}
+}*/
 
 #advanced_search_add_box	/*button - add line*/
 {
-	height: 2vw;
-	width: 2vw;
+	height: 3vw;
+	width: 3vw;
 	background-color: white;
 	color: #3385ff;
 	padding: 1% 0 1% 0;
@@ -114,6 +126,10 @@
 	cursor: pointer;
 	text-align: center;
 	font-weight: 900;
+	text-align: center;
+	/*line-height: 0.5vw;
+	vertical-align: middle;*/
+	font-size: 1.5vw;
 	/*margin: -20% -28% 15% 30%;*/
 	font-family:'HelveticaNeue';
 /*	width: 50px;
@@ -122,8 +138,8 @@
 
 #advanced_search_del_box	/*button - del line*/
 {
-	height: 2vw;
-	width: 2vw;
+	height: 3vw;
+	width: 3vw;
 	background-color: #3385ff;
 	color: white;
 	padding: 1% 0 1% 0;
@@ -132,6 +148,7 @@
 	border-radius: 10px;
 	cursor: pointer;
 	text-align: center;
+	font-size: 1.5vw;
 	/*margin: -20% -28% 15% 30%;*/
 	font-family:'HelveticaNeue';
 	/*width: 50px;
