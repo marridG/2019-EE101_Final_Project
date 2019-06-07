@@ -86,6 +86,8 @@
 				xmlhttp=new XMLHttpRequest();
 			else	// IE6, IE5 浏览器执行代码
 				xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+
+			$("#body")[0]	.css("background-image","");
 			
 			xmlhttp.onreadystatechange=function()
 			{
@@ -271,7 +273,7 @@
 	<!-- </div> -->
 
 	<div id="advanced_search_result_ancestor">
-		<img src="/EE101-Final_Project/Final_Project/pics/advanced_BK.jpg" id="advanced_search_default_result_image">
+		<!-- <img src="/EE101-Final_Project/Final_Project/pics/advanced_BK.jpg" id="advanced_search_default_result_image"> -->
 		<!-- result -->
 		<div id="advanced_search_result"></div>
 		<!-- turn page -->

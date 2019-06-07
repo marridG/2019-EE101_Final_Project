@@ -1,3 +1,4 @@
+
 #advanced_search_head
 {
 	position: fixed;
@@ -5,7 +6,7 @@
 	top: 0px;
 	width: 100%;
 	height: 10%;
-	background-color: #7B85F6;
+	background-color: #838DFE;
 }
 
 #acemap
@@ -71,7 +72,7 @@
 {
 	height: 10%;
 	width: 30%;
-	background-color: #FFE2E2;
+	background-color: #E8FDF9;
 	border-radius: 5px;
 }
 
@@ -86,8 +87,8 @@
 #advanced_search_result_ancestor/*serach result - altogether*/
 {	
 	/*position: absolute;*/
-	margin-top: 10%;
-	margin-left: 3%;
+	/*margin-top: 10%;*/
+	/*margin-left: 3%;*/
 	height: 90%;
 	width: 97%;
 	/*margin-left:25%;*/
@@ -162,7 +163,7 @@
 {
 	height: 5vw;
 	width: 5vw;
-	background-color: #C2F9F0;
+	background-color: #9FFBEC;
 	padding: 1% 0 1% 0;
 	margin-left: 55%;
 	border: none;
