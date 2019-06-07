@@ -230,6 +230,8 @@
 
 		function send_mail()	// change show boxes request
 		{
+			send_mail_btn=$("#send_mail")[0];
+			send_mail_btn.disabled = 'disabled';
 			var xmlhttp;
 			if (window.XMLHttpRequest)	//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
 				xmlhttp=new XMLHttpRequest();
@@ -242,10 +244,20 @@
 				{
 					document.getElementById("advanced_search_result_turn_page").innerHTML=xmlhttp.responseText;
 					alert("ok");
+					send_mail_btn.disabled = '';
+					send_mail_btn.innerHTML="send mail";
 				}
 			}
 			
 			var address=$("#send_mail_address")[0].value;
+			if(!address)
+			{
+				alert("Please fill in your address.");
+				send_mail_btn.disabled = '';
+				return;
+			}
+			else
+				send_mail_btn.innerHTML="sending...";
 			var url="/EE101-Final_Project/Final_Project/add-ons/07_mail_to.php?name=John+smith&address="+address+"&word=I+think+that";
 			
 			// request
@@ -256,7 +268,10 @@
 	</script>
 	
 	<div class="advanced_ancestor">
-		<br><br>
+		<br>
+
+		<div id="advanced_search_rows_add_del"><br>
+		
 		<!-- boxes -->
 		<div id="advanced_boxes_root">
 			<!-- initial box -->
@@ -279,6 +294,8 @@
 			<!-- delete -->
 			<button id="advanced_search_del_box" onclick="show_boxes(0)">-</button>
 		</div>
+
+		</div>
 		
 		<!-- submit -->
 		<br><br>
@@ -297,7 +314,7 @@
 		<!-- turn page -->
 		<div id="advanced_search_result_turn_page"></div>
 		<input type="text" id="send_mail_address">
-		<button onclick="send_mail()">send mail</button>
+		<button onclick="send_mail()" id="send_mail">send mail</button>
 	</div>
 </div>
 

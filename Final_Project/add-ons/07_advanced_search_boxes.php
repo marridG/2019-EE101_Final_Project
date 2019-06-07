@@ -11,7 +11,7 @@
 		
 		// bool
 			if ($bo=="undefined")
-				echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+				echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 			elseif($bo=="-1")
 			{
 				;
@@ -37,6 +37,7 @@
 				echo "<option value =\"or\" selected>Or</option>";
 				echo "</select>";
 			}
+
 
 		// target
 			echo "&nbsp;<select id=\"advanced_search_target_select\">";
@@ -75,17 +76,17 @@
 		// echo "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 
 		// word
-		if($wd!="undefined")
-			echo "&nbsp;<input type=\"text\" required value=\"$wd\" id=\"advanced_search_word_input_text\">";
-		else
-			echo "&nbsp;<input type=\"text\" required id=\"advanced_search_word_input_text\">";
+			if($wd!="undefined")
+				echo "&nbsp;<input type=\"text\" required value=\"$wd\" id=\"advanced_search_word_input_text\">";
+			else
+				echo "&nbsp;<input type=\"text\" required id=\"advanced_search_word_input_text\">";
 
 		echo "</div>";
 	}
 
 	$count=$_GET["count"];
 	$add_del=$_GET["add_del"];
-
+	
 	if($add_del=='1')
 	{
 		if($count=="0")
