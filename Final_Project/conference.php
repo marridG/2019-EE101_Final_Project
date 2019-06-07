@@ -35,20 +35,21 @@
 <body>
 
 
-<div class="navbar-header">
-	<a class="navbar-brand" href="#">Phantom</a>
-</div>
+	<nav class="navbar navbar-defauit navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand">Phantom</a>
+			</div>
+			<div class=""></div>
+			
+		</div>
+		
 
-	<div>
-	<ul class="nav nav-pills">
-	<li class="active"><a href="#">Phantom</a></li>
-	<li><a href="#">SVN</a></li>
-	<li><a href="#">iOS</a></li>
-	<li><a href="#">VB.Net</a></li>
-	<li><a href="#">Java</a></li>
-	<li><a href="#">PHP</a></li>
-</ul>
-</div>
+
+	</nav>
+
+
+
 	<div class="heading">	
 		<h1 id="test">Your Best Academia Database!</h1>
 	</div>

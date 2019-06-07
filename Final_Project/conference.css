@@ -2,20 +2,20 @@
 body
 {
 	background-color: #f9e9c3;
+	padding-top: 70px;
 }
 
 #heading
 {
 	height: 1000px;
 	margin: 0 0 10% 0;
-
 }
 
 #title
 {
 
 	margin: 13% 0 15% 20%;
-	size: huge;
+	size:10000%;
 	font-family:'NewsGothicBT-Roman';
 }
 
@@ -67,11 +67,10 @@ body
 
 .navbar-brand
 {
-	font-family: 书体坊兰亭体;
-	src: url("/EE101-Final_Project/Final_Project/font/书体坊兰亭体I.ttf");
-	display: inline;
-	font-size: huge;
-	padding: 0px;
+	/*font-family: 书体坊兰亭体;
+	src: url("/EE101-Final_Project/Final_Project/font/书体坊兰亭体I.ttf");*/
+	font-size: large;
+
 	width: 100px;
 	height: 100px;
 }
