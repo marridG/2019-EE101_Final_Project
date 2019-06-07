@@ -12,13 +12,13 @@
 
 <body><!-- Advanced Search -->
 <div onscroll="SetH(this)">
-	<div>
+	<div id="advanced_search_head">
 		<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/phantom.png" id="acemap"></a>	
 		<h1 id="test">Your Best Academia Database!</h1>
 	</div>
 
-	<script type="text/javascript">	// add/delete rows
-		function show_boxes(add_del)
+	<script type="text/javascript">
+		function show_boxes(add_del)	// change show boxes request
 		{
 			// var add_del=1;
 			var xmlhttp;
@@ -70,14 +70,14 @@
 				{
 					url=url+"&count=0";
 				}
-				console.log(url);
+				// console.log(url);
 
 			// request
 				xmlhttp.open("GET",url, true);
 				xmlhttp.send();
 		}
 
-		function submit_search(page)
+		function submit_search(page)	// submit search request
 		{
 			var xmlhttp;
 			if (window.XMLHttpRequest)	//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
@@ -151,7 +151,7 @@
 			xmlhttp.send();
 		}
 
-		function turn_page(num_max,page_limit,page)
+		function turn_page(num_max,page_limit,page)	// show turn page
 		{
 			var page_MAX;
 			var min_page;
@@ -211,7 +211,7 @@
 			xmlhttp.send();
 		}
 
-		function jump_to_submit()
+		function jump_to_submit()	// submit jump to page
 		{
 			var new_page=document.getElementsByName("advanced_search_page")[0].value;
 			console.log(new_page);
@@ -223,38 +223,51 @@
 			submit_search(new_page);
 		}
 	</script>
+
+	<!-- show or hide teh search boxes -->
+	<script type="text/javascript" src="/EE101-Final_Project/Final_Project/add-ons/07_show_hide.js"></script>
 	
 	<div class="advanced_ancestor">
+		<!-- <div id="advanced_ancestor_margin"></div>
+		<br><br><br><br><br><br><br> --><br>
 		<!-- boxes -->
 		<div id="advanced_boxes_root">
 			<!-- initial box -->
 			<div class="advanced_box">
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				&nbsp;
 				<select id="advanced_search_target_select">
 					<option value ="Title" selected>Title</option>
-					<option value ="Authors_Name">Author's Name</option>
+					<option value ="Authors_Name">Author</option>
 					<option value ="ConferenceName">Conference</option>
 				</select>
 				&nbsp;
 				<input type="text" id="advanced_search_word_input_text" required>
 			</div>
 		</div>
+		<br>
 		<!-- add -->
 		<button id="advanced_search_add_box" onclick="show_boxes(1)">+</button>
 		<!-- delete -->
 		<button id="advanced_search_del_box" onclick="show_boxes(0)">-</button>
-		
+
 		<!-- submit -->
-		<br><br>
+		<br><br><br>
 		<button id="advanced_search_submit" onclick="submit_search(1)">Search!</button>
-		
-		<!-- result -->
+		<br><br>
+	</div>
+
+	<div id="advanced_search_hide_show">
+		<!-- <img src="/EE101-Final_Project/Final_Project/pics/P.png"> -->
+		Hide
+	</div>
+
+	<div id="advanced_search_result_ancestor">
+	<!-- result -->
 		<br><br><br>
 		<div id="advanced_search_result"></div>
 		<!-- turn page -->
 		<div id="advanced_search_result_turn_page"></div>
 	</div>
 </div>
+
 </body>
 </html>
