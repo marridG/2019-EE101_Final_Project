@@ -227,6 +227,32 @@
 			}
 			submit_search(new_page,1);
 		}
+
+		function send_mail()	// change show boxes request
+		{
+			var xmlhttp;
+			if (window.XMLHttpRequest)	//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+				xmlhttp=new XMLHttpRequest();
+			else	// IE6, IE5 浏览器执行代码
+				xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			
+			xmlhttp.onreadystatechange=function()
+			{
+				if (xmlhttp.readyState==4 && xmlhttp.status==200)
+				{
+					document.getElementById("advanced_search_result_turn_page").innerHTML=xmlhttp.responseText;
+					alert("ok");
+				}
+			}
+			
+			var address=$("#send_mail_address")[0].value;
+			var url="/EE101-Final_Project/Final_Project/add-ons/07_mail_to.php?name=John+smith&address="+address+"&word=I+think+that";
+			
+			// request
+				xmlhttp.open("GET",url, true);
+				xmlhttp.send();
+		}
+
 	</script>
 	
 	<div class="advanced_ancestor">
@@ -270,13 +296,13 @@
 		<div id="advanced_search_result"></div>
 		<!-- turn page -->
 		<div id="advanced_search_result_turn_page"></div>
+		<input type="text" id="send_mail_address">
 		<button onclick="send_mail()">send mail</button>
 	</div>
 </div>
 
-	<!-- show or hide teh search boxes -->
+	<!-- show or hide the search boxes -->
 	<script type="text/javascript" src="/EE101-Final_Project/Final_Project/add-ons/07_show_hide.js"></script>
 
-	<script type="text/javascript" src="/EE101-Final_Project/Final_Project/add-ons/07_mail_to.js"></script>
 </body>
 </html>
