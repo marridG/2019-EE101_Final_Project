@@ -42,6 +42,7 @@
 	font-family: 书体坊兰亭体;
 	src: url("/EE101-Final_Project/Final_Project/font/书体坊兰亭体I.ttf");
 	
+	
 	vertical-align: 10%;
 	float: left;
 	width: 50px;
