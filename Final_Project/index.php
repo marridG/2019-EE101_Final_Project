@@ -26,7 +26,7 @@
 	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/47617/5cf0e6ecf629d80774a3a15a.css' rel='stylesheet' type='text/css' />
 	<!-- Clear Input Form (Under Construction) -->
 	<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/add-ons/04_Clear_Input_Form.css">
-	<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/index.css">
+	<!-- <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/index.css"> -->
 
 	
 	<!-- Test -->
@@ -36,65 +36,65 @@
 <body class="body__homepage">
 	<br><br>
 
-	<div class="cd-main-content">
+	<!-- <div class="cd-main-content">
 		<div class="cd-fixed-bg cd-bg-1">
 			<a href="/EE101-Final_Project/Final_Project/index.php" ><img class="head_pic" src="/EE101-Final_Project/Final_Project/pics/phantom_white.png"></a>
 			<h2 class="h">Your Best Academia Database! </h2>
 			<form action="/EE101-Final_Project/Final_Project/search.php" target="blank">
 
-				<input type="hidden" name="page" value="1">
+				<input type="hidden" name="page" value="1"> --> -->
 
-				<div> <!-- GZL -->
+				<!-- <div> GZL -->
 
-					<div><input class="input_button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching">
+					<!-- <div><input class="input_button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching">
 				 </div>
 
-					<script type="text/javascript" src="/EE101-Final_Project/Final_Project/add-ons/06_input_clear.js"></script> <!-- GZL -->
+					<script type="text/javascript" src="/EE101-Final_Project/Final_Project/add-ons/06_input_clear.js"></script> --> <!-- GZL -->
 
 
 		<!-- * Please notice that at least one information above should be given.
 			<br><br> -->
 
 			<!-- &ensp;&ensp; --><!-- &ensp;&ensp; --> <!-- GZL -->
-			<input class="submit_reset"  type="submit" value="SEARCH" > 	
+			<!-- <input class="submit_reset"  type="submit" value="SEARCH" > 	 -->
 		<!-- &ensp;
 			&ensp; -->
-			<input  class="submit_reset" type="reset" value="RESET">
+			<!-- <input  class="submit_reset" type="reset" value="RESET">
 			<br>
 			<a href="/EE101-Final_Project/Final_Project/index_search_advanced.php" target="_blank">Advanced Search</a>
-		</div> <!-- GZL -->
+		</div> --> <!-- GZL -->
 
 		<!-- <input type="reset" onclick="clear()" value="CLEAR"> -->
-	</form>
-</div> <!-- cd-fixed-bg -->
+	<!-- </form> -->
+<!-- </div> cd-fixed-bg -->
 
-<div class="cd-scrolling-bg cd-color-2">
+<!-- <div class="cd-scrolling-bg cd-color-2">
 	<div class="cd-container">
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore incidunt suscipit similique, dolor corrupti cumque qui consectetur autem laborum fuga quas ipsam doloribus sequi, mollitia, repellendus sapiente repudiandae labore rerum amet culpa inventore, modi non. Illo quod repellendus alias? Cum rem doloremque adipisci accusantium? Saepe, necessitatibus!
 
-		</p>
-	</div> <!-- cd-container -->
-</div> <!-- cd-scrolling-bg -->
+		</p> -->
+	<!-- </div> cd-container -->
+<!-- </div> cd-scrolling-bg -->
 
-<div class="cd-fixed-bg cd-bg-2">
+<!-- <div class="cd-fixed-bg cd-bg-2">
 	<h2>Lorem ipsum dolor sit amet.</h2>
-</div> <!-- cd-fixed-bg -->
+</div> --> <!-- cd-fixed-bg -->
 
-<div class="cd-scrolling-bg cd-color-3">
+<!-- <div class="cd-scrolling-bg cd-color-3">
 	<div class="cd-container">
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore incidunt suscipit similique, dolor corrupti cumque qui consectetur autem laborum fuga quas ipsam doloribus sequi, mollitia, repellendus sapiente repudiandae labore rerum amet culpa inventore, modi non. Quo nisi veritatis vitae nam, labore fugit. Inventore culpa iusto, officia exercitationem. Voluptates quibusdam odit odio incidunt consequatur, consectetur aspernatur optio vitae molestias, quas repellendus fugit ullam culpa, eligendi et dignissimos voluptatibus illum? Molestias aliquam nostrum quasi ipsa culpa, iusto explicabo ut error, consequuntur enim temporibus, adipisci tempora voluptate, id consequatur mollitia eveniet blanditiis. Illo quod repellendus alias? Cum rem doloremque adipisci accusantium? Saepe, necessitatibus!
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore incidunt suscipit similique, dolor corrupti cumque qui consectetur autem laborum fuga quas ipsam doloribus sequi, mollitia, repellendus sapiente repudiandae labore rerum amet culpa inventore, modi non. Quo nisi veritatis vitae nam, labore fugit. Inventore culpa iusto, officia exercitationem. Voluptates quibusdam odit odio incidunt consequatur, consectetur aspernatur optio vitae molestias, quas repellendus fugit ullam culpa, eligendi et dignissimos voluptatibus illum? Molestias aliquam nostrum quasi ipsa culpa, iusto explicabo ut error, consequuntur enim temporibus, adipisci tempora voluptate, id consequatur mollitia eveniet blanditiis. Illo quod repellendus alias? Cum rem doloremque adipisci accusantium? Saepe, necessitatibus!
-		</p>
-	</div> <!-- cd-container -->
-</div> <!-- cd-scrolling-bg -->
+		</p> -->
+	<!-- </div> cd-container -->
+<!-- </div> cd-scrolling-bg -->
 
-<div class="cd-fixed-bg cd-bg-3">
+<!-- <div class="cd-fixed-bg cd-bg-3">
 	<h2>Lorem ipsum dolor sit amet.</h2>
-</div> <!-- cd-fixed-bg -->
+</div>  --><!-- cd-fixed-bg -->
 
-</div> 
+<!-- </div>  -->
 
 
 <!-- <hr class="line" /> -->
