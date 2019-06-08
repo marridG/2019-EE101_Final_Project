@@ -17,6 +17,7 @@
 .body__homepage
 {
 	background-image: url("/EE101-Final_Project/Final_Project/pics/cover1.jpg");
+	background-attachment: fixed;
 
 	background-size: 130%;
 	background-position: center;

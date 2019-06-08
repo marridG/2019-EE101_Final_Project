@@ -43,8 +43,8 @@
         </div>
         <div>
             <ul class="nav nav-right">
-                <li style="display: inline;margin: 0 0 0 30%;"><input class="n-button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching"></li>
-                <li style="display: inline;"><a style="width: 100px; display: inline;" href="/EE101-Final_Project/Final_Project/index.php"><img style="width: 45px;" src="/EE101-Final_Project/Final_Project/pics/search.png"></a></li>
+                <li style="display: inline;margin: 0 0 0 35%;margin-top: 20px;"><input class="n-button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching"></li>
+                <li style="display: inline;"><a style="width: 400px;display: inline;" href="/EE101-Final_Project/Final_Project/index.php"><img style="width: 45px;" src="/EE101-Final_Project/Final_Project/pics/search.png"></a></li>
                 
             </ul>
         </div>
@@ -510,8 +510,9 @@ curl_close($ch);
 		// var_dump($result);
 
 		// Print
+
 echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"/EE101-Final_Project/Final_Project/add-ons/05_test_show_hide.css\">";
-echo "<div id=\"box\">";
+//echo "<div id=\"box\">";
 echo "Related Papers:&nbsp;&nbsp;&nbsp;&nbsp;<button id=\"btn\">Show</button>";
 echo "<div id=\"content\">";
 echo "<div id=\"spread\">";
