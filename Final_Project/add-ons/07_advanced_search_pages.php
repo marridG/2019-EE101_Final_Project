@@ -22,38 +22,38 @@
 		$i=$page-1;
 		if($i>=1)
 		{
-			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\" onclick=\"submit_search($i,1)\">";
+			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\" style=\"cursor:pointer;\" onclick=\"submit_search($i,1)\">";
 			echo "</td><td>";
-			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/A.png\" id=\"search__Turn_Page_prev_page\" onclick=\"submit_search($i,1)\">";
+			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.png\" id=\"search__Turn_Page_prev_page\" style=\"cursor:pointer;\" onclick=\"submit_search($i,1)\">";
 
 		}
 		else
 		{
 			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\">";
 			echo "</td><td>";
-			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/A.png\" id=\"search__Turn_Page_prev_page\">";
+			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.png\" id=\"search__Turn_Page_prev_page\">";
 		}
 		echo "</td>";
 		// Pages in the middle
 		for($i=$min_page;$i<=$max_page;$i++)
 		{
 			if($i==$page)
-				echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/C.png\" id=\"search__Turn_Page_selected\"></td>";
+				echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_selected.png\" id=\"search__Turn_Page_selected\"></td>";
 			else
-				echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/C2.png\" id=\"search__Turn_Page_not_selected\" onclick=\"submit_search($i,1)\"></td>";
+				echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_not_selected.png\" style=\"cursor:pointer;\" id=\"search__Turn_Page_not_selected\" onclick=\"submit_search($i,1)\"></td>";
 		}
 		// Next Page
 		echo "<td>";
 		$i=$page+1;
 		if (($i-1)*$page_limit<$num_max)
 		{
-			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/E1.png\" id=\"search__Turn_Page_next_page\" onclick=\"submit_search($i,1)\">";
+			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.png\" id=\"search__Turn_Page_next_page\" style=\"cursor:pointer;\" onclick=\"submit_search($i,1)\">";
 			echo "</td><td>";
-			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\" onclick=\"submit_search($i,1)\">";
+			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\" style=\"cursor:pointer;\" onclick=\"submit_search($i,1)\">";
 		}
 		else
 		{
-			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.jpg\" id=\"search__Turn_Page_next_page\">";
+			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.png\" id=\"search__Turn_Page_next_page\">";
 			echo "</td><td>";
 			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\">";
 		}
@@ -66,9 +66,9 @@
 		echo "<td>";
 		if ($i>=1)
 		{
-			echo "<a class=\"output_href\" href=\"#\" onclick=\"submit_search($i,1); return false;\">PREV</a>";
+			echo "<a class=\"output_href\" href=\"#\" onclick=\"submit_search($i,1); return false;\">Prev</a>";
 			echo "</td><td>";
-			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\" onclick=\"submit_search($i,1)\">";
+			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\" style=\"cursor:pointer;\" onclick=\"submit_search($i,1)\">";
 		}
 		else
 			echo "<td></td>";
@@ -88,9 +88,9 @@
 		$i=$page+1;
 		if (($i-1)*$page_limit<$num_max)
 		{
-			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\" onclick=\"submit_search($i)\">";
+			echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\" style=\"cursor:pointer;\" onclick=\"submit_search($i,1)\">";
 			echo "</td><td>";
-			echo "<a class=\"output_href\" href=\"#\" onclick=\"submit_search($i,1); return false;\">NEXT</a>";
+			echo "<a class=\"output_href\" href=\"#\" onclick=\"submit_search($i,1); return false;\">Next</a>";
 		}
 		else
 			echo "<td></td>";

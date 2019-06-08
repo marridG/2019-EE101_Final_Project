@@ -168,85 +168,85 @@
 				echo "<tr>";
 				// Row One
 					// Previous Page
-				echo "<td>";
-				$i=$page-1;
-				if($i>=1)
-				{
-					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
-					echo "</td><td>";
-					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><img src =\"/EE101-Final_Project/Final_Project/pics/A.png\" id=\"search__Turn_Page_prev_page\"></a>";
+					echo "<td>";
+					$i=$page-1;
+					if($i>=1)
+					{
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+						echo "</td><td>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.png\" id=\"search__Turn_Page_prev_page\"></a>";
 
-				}
-				else
-				{
-					echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\">";
-					echo "</td><td>";
-					echo "<img src =\"/EE101-Final_Project/Final_Project/pics/A.png\" id=\"search__Turn_Page_prev_page\">";
-				}
-				echo "</td>";
-					// Pages in the middle
-				for($i=$min_page;$i<=$max_page;$i++)
-				{
-					if($i==$page)
-						echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/C.png\" id=\"search__Turn_Page_selected\"></td>";
+					}
 					else
-						echo "<td><a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><img src =\"/EE101-Final_Project/Final_Project/pics/C2.png\"  id=\"search__Turn_Page_not_selected\"></a></td>";
-				}
+					{
+						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\">";
+						echo "</td><td>";
+						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_prev.png\" id=\"search__Turn_Page_prev_page\">";
+					}
+					echo "</td>";
+					// Pages in the middle
+					for($i=$min_page;$i<=$max_page;$i++)
+					{
+						if($i==$page)
+							echo "<td><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_selected.png\" id=\"search__Turn_Page_selected\"></td>";
+						else
+							echo "<td><a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_not_selected.png\"  id=\"search__Turn_Page_not_selected\"></a></td>";
+					}
 					// Next Page
-				echo "<td>";
-				$i=$page+1;
-				if (($i-1)*$page_limit<$num_max)
-				{
-					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/E1.png\" id=\"search__Turn_Page_next_page\"></a>";
-					echo "</td><td>";
-					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
-				}
-				else
-				{
-					echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.jpg\" id=\"search__Turn_Page_next_page\">";
-					echo "</td><td>";
-					echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\">";
-				}
-				echo "</td>";
-				echo "</tr>";
-				echo "<tr>";
+					echo "<td>";
+					$i=$page+1;
+					if (($i-1)*$page_limit<$num_max)
+					{
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.png\" id=\"search__Turn_Page_next_page\"></a>";
+						echo "</td><td>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\" id=\"search__Turn_Page_prev_page\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+					}
+					else
+					{
+						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_next.png\" id=\"search__Turn_Page_next_page\">";
+						echo "</td><td>";
+						echo "<img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\">";
+					}
+					echo "</td>";
+					echo "</tr>";
+					echo "<tr>";
 				// Row Two
 					// Turn to the Previous Page
-				$i=$page-1;
-				echo "<td>";
-				if ($i>=1)
-				{
-					echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><<</a>";
-					echo "</td><td>";
-					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
-				}
-				else
-					echo "<td></td>";
-				echo "</td>";
-					// Show Page Numbers
-				for($i=$min_page; $i <= $max_page; $i++)
-				{ 
+					$i=$page-1;
 					echo "<td>";
-					if($i==$page)
-						echo "$page";
+					if ($i>=1)
+					{
+						echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\">Prev</a>";
+						echo "</td><td>";
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+					}
 					else
-						echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\">$i</a>";
+						echo "<td></td>";
 					echo "</td>";
-				}
+					// Show Page Numbers
+					for($i=$min_page; $i <= $max_page; $i++)
+					{ 
+						echo "<td>";
+						if($i==$page)
+							echo "$page";
+						else
+							echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\">$i</a>";
+						echo "</td>";
+					}
 					// Turn to the Next Page
-				echo "<td>";
-				$i=$page+1;
-				if (($i-1)*$page_limit<$num_max)
-				{
-					echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
-					echo "</td><td>";
-					echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\">>></a>";
-				}
-				else
-					echo "<td></td>";
-				echo "</td>";
-				echo "</tr>";
-				echo "</table>";
+					echo "<td>";
+					$i=$page+1;
+					if (($i-1)*$page_limit<$num_max)
+					{
+						echo "<a href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
+						echo "</td><td>";
+						echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/search.php?key_word=$key_word_temp&page=$i#skip_multi\">Next</a>";
+					}
+					else
+						echo "<td></td>";
+					echo "</td>";
+					echo "</tr>";
+					echo "</table>";
 				
 				// Jump to Page;
 				echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_multi\">";
