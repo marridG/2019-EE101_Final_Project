@@ -352,4 +352,16 @@ input[type="number"]
     transform: scaleY(1.0);
     -webkit-transform: scaleY(1.0);
   }
-}*/
+}
+
+.n-button
+{
+	margin: 15px 0 0 0;
+	border: 1px;
+	border-radius: 10px;
+	width:  1000px;
+	height: 80px;
+
+
+
+}
