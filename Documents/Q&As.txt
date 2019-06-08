@@ -119,6 +119,16 @@ hlfl 用逗号分隔高亮字段即可（注意 MultiValued 字段仍只返回�
 CSS 宽度长度单位 VW VH
 https://blog.csdn.net/weixin_39357177/article/details/81183743
 
+html 发送邮件
+http://www.fly63.com/article/detial/620
+
+PHP exec()
+https://blog.csdn.net/sinat_29862853/article/details/85253384
+
+nodejs 执行命令时带参数
+https://www.jianshu.com/p/474e6d76f867
+https://cloud.tencent.com/developer/article/1363526
+
 PHP 文件读写
 https://www.cnblogs.com/penghuwan/p/6884932.html
 

@@ -24,23 +24,27 @@
 			// No Color Highlight
 			$url = "http://localhost:8983/solr/lab02/select?indent=on&start=".($page_limit*($page-1))."&rows=".$page_limit."&wt=json";
 			// Search target url formation
+				$weight=3;
+				$weight_delta=0.1;
 				$url_q="&q=";
 				$target=$_GET["target1"];
 				$word=$_GET["word1"];
 				if(!$word || $word=="undefined")
-					$url_q=$url_q.$target.":*";
+					$url_q=$url_q.$target.":*^".$weight;
 				else
-					$url_q=$url_q.$target.":".urlencode(str_replace(' ', '+', $word));
+					$url_q=$url_q.$target.":".urlencode(str_replace(' ', '+', $word))."^".$weight;
 				for ($i=2; $i <= $count; $i++)
 				{ 
+					if($weight-$weight_delta>0)
+						$weight-=$weight_delta;
 					$bool=$_GET[("bool".$i)];
 					$target=$_GET[("target".$i)];
 					$word=$_GET[("word".$i)];
 					$url_q=$url_q."+".$bool."+";
 					if(!$word || $word=="undefined")
-						$url_q=$url_q.$target.":*";
+						$url_q=$url_q.$target.":*^".$weight;
 					else
-						$url_q=$url_q.$target.":".urlencode(str_replace(' ', '+', $word));
+						$url_q=$url_q.$target.":".urlencode(str_replace(' ', '+', $word))."^".$weight;
 				}
 				// echo "<br>$url_q";
 			$url=$url.$url_q;
