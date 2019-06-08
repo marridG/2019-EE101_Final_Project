@@ -239,32 +239,34 @@
 #search__Turn_Page_prev_page
 {
 	/*size: 20%;*/
-	width: 28px;
-	cursor: pointer;
+	width: 100px;
+	height: 50px;
+	/*cursor: pointer;*/
 }
 
 #search__Turn_Page_selected/*all pages*/
 {
 	width: 25px;
-	cursor: pointer;
+	/*cursor: pointer;*/
 }
 
 #search__Turn_Page_not_selected
 {
 	width: 25px;
-	cursor: pointer;
+	/*cursor: pointer;*/
 }
 
 #search__Turn_Page_next_page
 {
 	width: 100px;
-	cursor: pointer;
+	/*cursor: pointer;*/
 }
 
 #search__Turn_Page_empty
 {
 	width: 30px;
-	cursor: pointer;
+	/*width: 100px;*/
+	/*cursor: pointer;*/
 }
 
 .table__Turn_Page
