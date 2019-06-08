@@ -72,20 +72,6 @@ a {
 .cd-fixed-bg.cd-bg-4 {
   background-image: url("/EE101-Final_Project/Final_Project/images/cd-background-4.jpg");
 }
-@media only screen and (min-width: 768px) {
-  .cd-fixed-bg h1, .cd-fixed-bg h2 {
-    font-size: 36px;
-  }
-}
-@media only screen and (min-width: 1170px) {
-  .cd-fixed-bg {
-    background-attachment: fixed;
-  }
-  .cd-fixed-bg h1, .cd-fixed-bg h2 {
-    font-size: 48px;
-    font-weight: 300;
-  }
-}
 
 .cd-scrolling-bg {
   position: relative;
