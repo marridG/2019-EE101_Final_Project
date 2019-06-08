@@ -135,9 +135,9 @@
 <body>
 	
 	<script type="text/javascript">
-		function send_mail()	// change show boxes request
+		function feedback_submit_it()	// change show boxes request
 		{
-			send_mail_btn=$("#send_mail")[0];
+			send_mail_btn=$("#feedback_submit")[0];
 			send_mail_btn.disabled = 'disabled';
 			var xmlhttp;
 			if (window.XMLHttpRequest)	//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
@@ -150,22 +150,39 @@
 				if (xmlhttp.readyState==4 && xmlhttp.status==200)
 				{
 					// document.getElementById("advanced_search_result_turn_page").innerHTML=xmlhttp.responseText;
-					alert("ok");
+					alert("Successful!");
 					send_mail_btn.disabled = '';
-					send_mail_btn.innerHTML="send mail";
+					send_mail_btn.innerHTML="Submit";
 				}
 			}
 			
+			var name=$("#feedback_name")[0].value;
 			var address=$("#send_mail_address")[0].value;
-			if(!address)
+			var message=$("#feedback_message")[0].value;
+			if(!name || !address || !message)
 			{
-				alert("Please fill in your address.");
-				send_mail_btn.disabled = '';
-				return;
+				if(!name)
+				{
+					alert("Please fill in your name.");
+					send_mail_btn.disabled = '';
+					return;
+				}
+				if(!address)
+				{
+					alert("Please fill in your email address.");
+					send_mail_btn.disabled = '';
+					return;
+				}
+				if(!message)
+				{
+					alert("Please fill in the message.");
+					send_mail_btn.disabled = '';
+					return;
+				}
 			}
 			else
-				send_mail_btn.innerHTML="sending...";
-			var url="/EE101-Final_Project/Final_Project/add-ons/07_mail_to.php?name=John+smith&address="+address+"&word=I+think+that";
+				send_mail_btn.innerHTML="Processing";
+			var url="/EE101-Final_Project/Final_Project/add-ons/07_mail_to.php?name="+name+"&address="+address+"&word="+message;
 			
 			// request
 			xmlhttp.open("GET",url, true);
@@ -182,12 +199,12 @@
 				</li>
 				<li>
 					<label for="name">Name:</label>
-					<input type="text" id="feedback_name" placeholder="Sunbest" required />
+					<input type="text" id="feedback_name" placeholder="John Robinson" required />
 					<span class="form_hint">Right form：6~18 characters</span>
 				</li>
 				<li>
 					<label for="email">E-mail Address:</label>
-					<input type="email" id="send_mail_address"name="email" placeholder="sayingforever@163.com" required />
+					<input type="email" id="send_mail_address"name="email" placeholder="example@163.com" required />
 					<span class="form_hint">Right form：sayingforever@163.com</span>
 				</li>
 <!--         <li>
@@ -197,10 +214,10 @@
         </li> -->
         <li>
         	<label for="message">Message:</label>
-        	<textarea name="message" cols="40" rows="6" placeholder="" required ></textarea>
+        	<textarea name="message" id="feedback_message" cols="40" rows="6" placeholder="" required ></textarea>
         </li>
         <li>
-        	<button onclick="send_mail()" id="send_mail" class="submit" type="submit">Send E-mail</button>
+        	<button onclick="feedback_submit_it()" id="feedback_submit" class="submit" type="submit">Submit</button>
         </li>
     </ul>
 </form>
@@ -216,11 +233,7 @@
 
 	<button onclick="send_mail()" id="send_mail">send mail</button> 
 
-
-
-<!-- </body>
-
-	</html> -->
+-->
 
 </body>
 </html>
