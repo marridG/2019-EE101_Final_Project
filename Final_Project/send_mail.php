@@ -198,12 +198,12 @@
 					<span class="required_notification">* Necessary</span>
 				</li>
 				<li>
-					<label for="name">Name:</label>
+					<label for="name">Name</label>
 					<input type="text" id="feedback_name" placeholder="John Robinson" required />
 					<span class="form_hint">Right form：6~18 characters</span>
 				</li>
 				<li>
-					<label for="email">E-mail Address:</label>
+					<label for="email">E-mail Address</label>
 					<input type="email" id="send_mail_address"name="email" placeholder="example@163.com" required />
 					<span class="form_hint">Right form：sayingforever@163.com</span>
 				</li>
@@ -213,7 +213,7 @@
             <span class="form_hint">：http://www.amonyous.com</span>
         </li> -->
         <li>
-        	<label for="message">Message:</label>
+        	<label for="message">How can we help you?</label>
         	<textarea name="message" id="feedback_message" cols="40" rows="6" placeholder="" required ></textarea>
         </li>
         <li>
