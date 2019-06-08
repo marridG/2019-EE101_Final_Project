@@ -31,6 +31,10 @@
             height: 100px;
             font-size:60px;
         }
+        body
+        {
+            background-color: #f9e9c3;
+        }
     </style>
 
     <nav class="nav navbar-default" style="height: 70px;" role="navigation">
@@ -409,11 +413,11 @@ echo "Authors: ";
 $paper_author_list=array();
 foreach ($author_name_result as $author)
 {
- $author_name=$author['AuthorName'];
- $author_id=$author['AuthorID'];
- echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1&author_affi=\" target=\"_blank\">$author_name</a>";
- echo ";";
- array_push($paper_author_list,$author["AuthorName"]);
+   $author_name=$author['AuthorName'];
+   $author_id=$author['AuthorID'];
+   echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1&author_affi=\" target=\"_blank\">$author_name</a>";
+   echo ";";
+   array_push($paper_author_list,$author["AuthorName"]);
 }
 echo "<br></br>";
 
@@ -489,9 +493,9 @@ $query = urlencode(str_replace(' ', '+', $title));
 $url = "http://localhost:8983/solr/lab02/select?indent=on&start=0&rows=11&wt=json&q=Title:".$query."^1.5";
 foreach ($paper_author_list as $key => $author)
 {
- $query = urlencode(str_replace(' ', '+', $author));
- $weight=3-$key*0.5;
- if($weight<=0)
+   $query = urlencode(str_replace(' ', '+', $author));
+   $weight=3-$key*0.5;
+   if($weight<=0)
     break;
 $url=$url."+OR+Authors_Name:".$query."^".$weight."";
 }
@@ -514,26 +518,26 @@ echo "<div id=\"spread\">";
 echo "<br>";
 if($result && $result['response']['docs'])
 {
-   foreach ($result['response']['docs'] as $idx => $info)
+ foreach ($result['response']['docs'] as $idx => $info)
+ {
+   if(!$idx)
+       continue;
+   if($idx>=11)
+       break;
+   echo "[$idx]. ";
+   foreach ($info["Authors_Name"] as $key => $value)
    {
-     if(!$idx)
-         continue;
-     if($idx>=11)
-         break;
-     echo "[$idx]. ";
-     foreach ($info["Authors_Name"] as $key => $value)
-     {
-         echo "$value";
-         if($key!=count($info["Authors_Name"])-1)
-            echo ",";
-        else
-            echo ".";
-    }
-    $recommend_title=$info['Title'];
-    $title_for_show=urlencode(str_replace('', '', $recommend_title));
-    echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$recommend_title</a>.";
-    echo $info["ConferenceName"].",".$info["Year"];
-    echo "<br>";
+       echo "$value";
+       if($key!=count($info["Authors_Name"])-1)
+        echo ",";
+    else
+        echo ".";
+}
+$recommend_title=$info['Title'];
+$title_for_show=urlencode(str_replace('', '', $recommend_title));
+echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$recommend_title</a>.";
+echo $info["ConferenceName"].",".$info["Year"];
+echo "<br>";
 						// echo "<table id=\"table__recommend\"><tr>";
 						// echo "<td>[$idx]. </td><td>";
 						// foreach ($info["Authors_Name"] as $key => $value)
@@ -549,7 +553,7 @@ if($result && $result['response']['docs'])
 						// echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$recommend_title</a>.<br>";
 						// echo $info["ConferenceName"].",".$info["Year"];
 						// echo "</td></tr></table>";
-    echo "<br>";
+echo "<br>";
 }
 
 }
