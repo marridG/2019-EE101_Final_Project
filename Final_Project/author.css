@@ -1,3 +1,4 @@
+
 #author_table
 {
 	margin: -10% 40% 10% 3%;
@@ -7,4 +8,90 @@
 
 
 
+
+body
+{
+	background-color: #f9e9c3;
+	padding-top: 70px;
+}
+
+#heading
+{
+	height: 1000px;
+	margin: 0 0 10% 0;
+}
+
+#title
+{
+
+	margin: 13% 0 15% 20%;
+	size:10000%;
+	font-family:'NewsGothicBT-Roman';
+}
+
+#test
+{
+	text-align: center;
+	margin: -5% 0 0 40%;
+	font-family: ChannelSlanted2;
+	font-size: 120%;
+}
+
+#acemap
+{
+	width: auto;
+	height: auto;
+	max-width: 25%;
+	max-height: 25%;
+	margin: 1% 70% 0 5%;
+}
+
+#paper_title
+{
+	color: black;
+}
+
+#author_name
+{
+	color: blue;
+}
+
+#conference_name
+{
+	color: black;
+}
+
+#conference_table
+{
+	margin: -10% 0% 3% 37%;
+	border: 0px;
+	width: 850px;
+}
+
+#number
+{
+	font-family:'ActionJackson';
+	color:#2d386e;
+	margin: 0 0 100px 0;
+}
+
+
+
+
+
+.navbar
+{
+	display: inline;
+}
+
+.container-fluid
+{
+	display: inline;
+}
+
+.choice
+{
+	font-family: 书体坊兰亭体;
+	font-size: 500%;
+}
 

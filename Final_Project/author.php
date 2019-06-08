@@ -4,6 +4,7 @@
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/author.css">
 
+
 <!-- <script type="text/javascript" src='/EE101-Final_Project/Final_Project/add-ons/echarts-all.js'></script> -->
 <script type="text/javascript" src="/EE101-Final_Project/Final_Project/add-ons/echart/echarts3.js"></script>
 
@@ -12,6 +13,45 @@
 </head>
 
 <body>
+
+<style>
+.navbar-brand
+{
+	font-family: 书体坊兰亭体;
+	src: url("/EE101-Final_Project/Final_Project/font/书体坊兰亭体I.ttf");
+	vertical-align: 10%;
+	float: left;
+	width: 400px;
+	height: 100px;
+	font-size: 90px;
+	text-align: left;
+}
+</style>
+
+<nav class="navbar navbar-default" role="navigation">
+
+<div class="navbar-header">
+	<a class="navbar-brand nav-left" href="#" style="display: inline;">Phantom</a>
+</div>
+
+<div class="navbar-brand">Phantom</div>
+
+
+
+
+	<div>
+	<ul class="nav nav-pills nav-left">
+	<li class="choice"><a href="#">Phantom</a></li>
+	<li class="choice"><a href="#">SVN</a></li>
+	<li class="choice"><a href="#">iOS</a></li>
+	<li class="choice"><a href="#">VB.Net</a></li>
+	<li class="choice"><a href="#">Java</a></li>
+	<li class="choice"><a href="#">PHP</a></li>
+</ul>
+</div>
+</nav>
+
+
 	<!-- <div class="spinner">
 		<div class="rect1"></div>
 		<div class="rect2"></div>
@@ -32,7 +72,7 @@
 	</script> -->
 
 
-	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/phantom.png" id="acemap"></a>	
+<!-- 	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/phantom.png" id="acemap"></a> -->	
 	<h1>Author Information</h1>
 	<div id="chart1" style="width: 400px; height: 400px" class="chart" ></div>
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

@@ -41,13 +41,12 @@
 {
 	font-family: 书体坊兰亭体;
 	src: url("/EE101-Final_Project/Final_Project/font/书体坊兰亭体I.ttf");
-	
-	
 	vertical-align: 10%;
 	float: left;
-	width: 50px;
+	width: 400px;
 	height: 100px;
 	font-size: 90px;
+	text-align: left;
 }
 </style>
 
@@ -56,6 +55,10 @@
 <div class="navbar-header">
 	<a class="navbar-brand nav-left" href="#" style="display: inline;">Phantom</a>
 </div>
+
+<!-- <div class="navbar-brand">Phantom</div> -->
+
+
 
 
 	<div>
