@@ -86,8 +86,6 @@
 				xmlhttp=new XMLHttpRequest();
 			else	// IE6, IE5 浏览器执行代码
 				xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-
-			$("#body")[0]	.css("background-image","");
 			
 			xmlhttp.onreadystatechange=function()
 			{

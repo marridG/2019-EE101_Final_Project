@@ -87,7 +87,7 @@
 #advanced_search_result_ancestor/*serach result - altogether*/
 {	
 	/*position: absolute;*/
-	/*margin-top: 10%;*/
+	margin-top: 7%;
 	/*margin-left: 3%;*/
 	height: 90%;
 	width: 97%;
@@ -203,6 +203,4 @@
 }
 
 #advanced_search__jump_to__submit
-{
-
-}
+{}
