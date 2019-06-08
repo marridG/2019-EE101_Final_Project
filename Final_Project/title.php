@@ -7,9 +7,9 @@
 <!-- 	ChannelSlanted2的link -->
 <!-- <script type="text/javascript" src='/EE101-Final_Project/Final_Project/add-ons/echart/echarts2.js'></script> -->
 <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src='\EE101-Final_Project\Final_Project\add-ons\echart\echarts3.js'></script>
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src='\EE101-Final_Project\Final_Project\add-ons\echart\echarts3.js'></script>
 <!-- <script type="text/javascript" src='/EE101-Final_Project/Final_Project/add-ons/echart/echarts-all.js'></script> -->
 
 <head>
@@ -17,14 +17,30 @@
 </head>
 
 <body>
+    <style>
+        .navbar-brand
+        {
+            font-family: 书体坊兰亭体;
+            src: url("/EE101-Final_Project/Final_Project/font/书体坊兰亭体I.ttf");
+            margin: 0 0 5px 0;
 
-    <nav class="nav navbar-default" style="height: 120px;" role="navigation">
+
+            vertical-align: 10%;
+            float: left;
+            width: 50px;
+            height: 100px;
+            font-size:60px;
+        }
+    </style>
+
+    <nav class="nav navbar-default" style="height: 70px;" role="navigation">
         <div class="navbar-header">
             <a href="/EE101-Final_Project/Final_Project/index.php" class="navbar-brand">Phantom</a>
         </div>
         <div>
             <ul class="nav nav-right">
-                <li><input class="n-button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching"></li>
+                <li style="display: inline;margin: 0 0 0 30%;"><input class="n-button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching"></li>
+                <li style="display: inline;"><a style="width: 100px; display: inline;" href="/EE101-Final_Project/Final_Project/index.php"><img style="width: 45px;" src="/EE101-Final_Project/Final_Project/pics/search.png"></a></li>
                 
             </ul>
         </div>
@@ -48,46 +64,44 @@
             </ul>
         </div>
     </nav>
- -->
-    <a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/phantom.png" id="acemap"></a>    	
-    <h1 id="test">Your Best Academia Database!</h1>
+--> 	
 
-    <h1>Paper Information</h1>
-    <br><br>
-    <div id="chart1" style="width:1000px;height:1000px;margin: 200px 0 0 250px;padding: 0 0 0 0;"></div>
-    <div id="chart2" style="width:1000px;height:1000px;"></div>
-    <?php
+<h1>Paper Information</h1>
+<br><br>
+<div id="chart1" style="width:500px;height:500px;margin: 200px 0 0 250px;padding: 0 0 0 0;"></div>
+<div id="chart2" style="width:500px;height:500px;"></div>
+<?php
         //Search for specified year's paper citaton number.
 
-    $ch = curl_init();
-    $timeout = 5;
+$ch = curl_init();
+$timeout = 5;
 
-    $title = $_GET["title"];
-    $query0 = urlencode(str_replace(' ', '+', $title));
-    $url = "http://localhost:8983/solr/lab02/select?fl=PaperID&q=Title%3A$query0&rows=1";
+$title = $_GET["title"];
+$query0 = urlencode(str_replace(' ', '+', $title));
+$url = "http://localhost:8983/solr/lab02/select?fl=PaperID&q=Title%3A$query0&rows=1";
+curl_setopt ($ch, CURLOPT_URL, $url);
+curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+$data_ID = json_decode(curl_exec($ch), true); 
+$PaperID = $data_ID['response']['docs'][0]['PaperID'];
+echo "<script> var datas=new Array() ; </script> ";
+for ($year=1950; $year<=2016 ; $year++) { 
+    $keyword = $year;
+    $query1 = urlencode(str_replace(' ', '+', $keyword));
+    $query2 = urlencode(str_replace(' ', '+', $PaperID));
+    $url = "http://localhost:8983/solr/lab02/select?q=ReferenceID%20%3A%20$query2%20%26%26%20Year%3A%20$query1&rows=98215";
     curl_setopt ($ch, CURLOPT_URL, $url);
     curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-    $data_ID = json_decode(curl_exec($ch), true); 
-    $PaperID = $data_ID['response']['docs'][0]['PaperID'];
-    echo "<script> var datas=new Array() ; </script> ";
-    for ($year=1950; $year<=2016 ; $year++) { 
-        $keyword = $year;
-        $query1 = urlencode(str_replace(' ', '+', $keyword));
-        $query2 = urlencode(str_replace(' ', '+', $PaperID));
-        $url = "http://localhost:8983/solr/lab02/select?q=ReferenceID%20%3A%20$query2%20%26%26%20Year%3A%20$query1&rows=98215";
-        curl_setopt ($ch, CURLOPT_URL, $url);
-        curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-        $data = json_decode(curl_exec($ch), true);  
-        $value = $data['response']['numFound'];
-        echo "<script> datas[$year-1950] = \"$value \" ; </script> ";
-    }
-    curl_close($ch);
+    $data = json_decode(curl_exec($ch), true);  
+    $value = $data['response']['numFound'];
+    echo "<script> datas[$year-1950] = \"$value \" ; </script> ";
+}
+curl_close($ch);
 
-    ?>
+?>
 
-    <script type="text/javascript">
+<script type="text/javascript">
     // 初始化图表标签
     var chart1 = echarts.init(document.getElementById('chart1'));
     var chart2 = echarts.init(document.getElementById('chart2'));
@@ -395,11 +409,11 @@ echo "Authors: ";
 $paper_author_list=array();
 foreach ($author_name_result as $author)
 {
-   $author_name=$author['AuthorName'];
-   $author_id=$author['AuthorID'];
-   echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1&author_affi=\" target=\"_blank\">$author_name</a>";
-   echo ";";
-   array_push($paper_author_list,$author["AuthorName"]);
+ $author_name=$author['AuthorName'];
+ $author_id=$author['AuthorID'];
+ echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=1&author_affi=\" target=\"_blank\">$author_name</a>";
+ echo ";";
+ array_push($paper_author_list,$author["AuthorName"]);
 }
 echo "<br></br>";
 
@@ -475,9 +489,9 @@ $query = urlencode(str_replace(' ', '+', $title));
 $url = "http://localhost:8983/solr/lab02/select?indent=on&start=0&rows=11&wt=json&q=Title:".$query."^1.5";
 foreach ($paper_author_list as $key => $author)
 {
-   $query = urlencode(str_replace(' ', '+', $author));
-   $weight=3-$key*0.5;
-   if($weight<=0)
+ $query = urlencode(str_replace(' ', '+', $author));
+ $weight=3-$key*0.5;
+ if($weight<=0)
     break;
 $url=$url."+OR+Authors_Name:".$query."^".$weight."";
 }
@@ -500,26 +514,26 @@ echo "<div id=\"spread\">";
 echo "<br>";
 if($result && $result['response']['docs'])
 {
- foreach ($result['response']['docs'] as $idx => $info)
- {
-   if(!$idx)
-       continue;
-   if($idx>=11)
-       break;
-   echo "[$idx]. ";
-   foreach ($info["Authors_Name"] as $key => $value)
+   foreach ($result['response']['docs'] as $idx => $info)
    {
-       echo "$value";
-       if($key!=count($info["Authors_Name"])-1)
-        echo ",";
-    else
-        echo ".";
-}
-$recommend_title=$info['Title'];
-$title_for_show=urlencode(str_replace('', '', $recommend_title));
-echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$recommend_title</a>.";
-echo $info["ConferenceName"].",".$info["Year"];
-echo "<br>";
+     if(!$idx)
+         continue;
+     if($idx>=11)
+         break;
+     echo "[$idx]. ";
+     foreach ($info["Authors_Name"] as $key => $value)
+     {
+         echo "$value";
+         if($key!=count($info["Authors_Name"])-1)
+            echo ",";
+        else
+            echo ".";
+    }
+    $recommend_title=$info['Title'];
+    $title_for_show=urlencode(str_replace('', '', $recommend_title));
+    echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$recommend_title</a>.";
+    echo $info["ConferenceName"].",".$info["Year"];
+    echo "<br>";
 						// echo "<table id=\"table__recommend\"><tr>";
 						// echo "<td>[$idx]. </td><td>";
 						// foreach ($info["Authors_Name"] as $key => $value)
@@ -535,7 +549,7 @@ echo "<br>";
 						// echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show\" target=\"_blank\">$recommend_title</a>.<br>";
 						// echo $info["ConferenceName"].",".$info["Year"];
 						// echo "</td></tr></table>";
-echo "<br>";
+    echo "<br>";
 }
 
 }
