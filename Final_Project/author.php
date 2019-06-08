@@ -4,6 +4,10 @@
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/author.css">
 
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
 <!-- <script type="text/javascript" src='/EE101-Final_Project/Final_Project/add-ons/echarts-all.js'></script> -->
 <script type="text/javascript" src="/EE101-Final_Project/Final_Project/add-ons/echart/echarts3.js"></script>
@@ -14,42 +18,39 @@
 
 <body>
 
-<style>
-.navbar-brand
-{
-	font-family: 书体坊兰亭体;
-	src: url("/EE101-Final_Project/Final_Project/font/书体坊兰亭体I.ttf");
-	vertical-align: 10%;
-	float: left;
-	width: 400px;
-	height: 100px;
-	font-size: 90px;
-	text-align: left;
-}
-</style>
-
-<nav class="navbar navbar-default" role="navigation">
-
-<div class="navbar-header">
-	<a class="navbar-brand nav-left" href="#" style="display: inline;">Phantom</a>
-</div>
-
-<div class="navbar-brand">Phantom</div>
+    <style>
+        .navbar-brand
+        {
+            font-family: 书体坊兰亭体;
+            src: url("/EE101-Final_Project/Final_Project/font/书体坊兰亭体I.ttf");
+            margin: 0 0 5px 0;
 
 
+            vertical-align: 10%;
+            float: left;
+            width: 50px;
+            height: 100px;
+            font-size:60px;
+        }
+        body
+        {
+            background-color: #f9e9c3;
+        }
+    </style>
 
-
-	<div>
-	<ul class="nav nav-pills nav-left">
-	<li class="choice"><a href="#">Phantom</a></li>
-	<li class="choice"><a href="#">SVN</a></li>
-	<li class="choice"><a href="#">iOS</a></li>
-	<li class="choice"><a href="#">VB.Net</a></li>
-	<li class="choice"><a href="#">Java</a></li>
-	<li class="choice"><a href="#">PHP</a></li>
-</ul>
-</div>
-</nav>
+    <nav class="nav navbar-default" style="height: 70px;" role="navigation">
+        <div class="navbar-header">
+            <a href="/EE101-Final_Project/Final_Project/index.php" class="navbar-brand">Phantom</a>
+        </div>
+        <div>
+            <ul class="nav nav-right">
+                <li style="display: inline;margin: 0 0 0 35%;margin-top: 20px;"><input class="n-button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching"></li>
+                <li style="display: inline;"><a style="width: 400px;display: inline;" href="/EE101-Final_Project/Final_Project/index.php"><img style="width: 45px;" src="/EE101-Final_Project/Final_Project/pics/search.png"></a></li>
+                
+            </ul>
+        </div>
+        
+    </nav>
 
 
 	<!-- <div class="spinner">
@@ -72,7 +73,7 @@
 	</script> -->
 
 
-<!-- 	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/phantom.png" id="acemap"></a> -->	
+	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/phantom.png" id="acemap"></a>	
 	<h1>Author Information</h1>
 	<div id="chart1" style="width: 400px; height: 400px" class="chart" ></div>
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

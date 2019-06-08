@@ -2,18 +2,22 @@
 <html>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
-<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/Turn_page.css">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/conference.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+
+
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
 
 <!-- font-family:'NewsGothicBT-Roman'的link -->
+
 <link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/45817/5cecef5bf629d80af8efaac6.css' rel='stylesheet' type='text/css' />
 <!-- 	ChannelSlanted2的link -->
 <link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/38414/5cf3e354f629d80aac8eb651.css' rel='stylesheet' type='text/css' />
@@ -23,9 +27,11 @@
 -->
 
 
-<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/44802/5cf3c807f629d80aac8eb641.css' rel='stylesheet' type='text/css' />
+<!-- <link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/44802/5cf3c807f629d80aac8eb641.css' rel='stylesheet' type='text/css' /> -->
 
-
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
 <script type="text/javascript" src='\EE101-Final_Project\Final_Project\add-ons\echart\echarts3.js'></script>
@@ -36,7 +42,39 @@
 
 <body>
 
-<style>
+	<style>
+	.navbar-brand
+	{
+		font-family: 书体坊兰亭体;
+		src: url("/EE101-Final_Project/Final_Project/font/书体坊兰亭体I.ttf");
+		margin: 0 0 5px 0;
+		vertical-align: 10%;
+		float: left;
+		width: 50px;
+		height: 100px;
+		font-size:60px;
+	}
+	body
+	{
+		background-color: #f9e9c3;
+	}
+</style>
+
+<nav class="nav navbar-default navbar-fixed-top" style="height: 70px;margin: 0 0 0 0;" role="navigation">
+	<div class="navbar-header">
+		<a href="/EE101-Final_Project/Final_Project/index.php" class="navbar-brand">Phantom</a>
+	</div>
+	<div>
+		<ul class="nav nav-right">
+			<li style="display: inline;margin: 0 0 0 35%;"><input class="n-button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching"></li>
+			<li style="display: inline;"><a style="width: 400px;display: inline;" href="/EE101-Final_Project/Final_Project/index.php"><img style="width: 45px;" src="/EE101-Final_Project/Final_Project/pics/search.png"></a></li>
+
+		</ul>
+	</div>
+
+</nav>
+
+<!-- <style>
 .navbar-brand
 {
 	font-family: 书体坊兰亭体;
@@ -56,7 +94,7 @@
 	<a class="navbar-brand nav-left" href="#" style="display: inline;">Phantom</a>
 </div>
 
-<!-- <div class="navbar-brand">Phantom</div> -->
+
 
 
 
@@ -71,11 +109,11 @@
 	<li class="choice"><a href="#">PHP</a></li>
 </ul>
 </div>
-</nav>
+</nav> -->
 
-	<div class="heading">	
+<!-- 	<div class="heading">	
 		<h1 id="test">Your Best Academia Database!</h1>
-	</div>
+	</div> -->
 	<div id="all_charts">
 		<div id="chart1" style="width: 400px; height:400px;position: absolute; left:80px;top: 350px;"></div>
 	</div>

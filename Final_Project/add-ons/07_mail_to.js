@@ -42,13 +42,21 @@ var arguments = process.argv.splice(2);
 	    ssl:     true                   // using ssl
 	});
 
-	console.log(server);
+	heading=arguments[0]+": <br><br>";
+	body="Greetings.<br><br>Thanks for your precious advice. We will contact you soon.<br><br><br>";
+	breaker="<hr style=\"width:200px; margin:0 0 0 0;\"";
+	signature="Best wishes,<br>Phantom Operations Group<br>"+arguments[2];
+	// console.log(server);
 	//开始发送邮件
 	server.send({
-	    text:    arguments[0]+": Thanks for your advice.",       // Content
+	    text:    heading+body+breaker+signature,       // Content
 	    from:    "marridG@sjtu.edu.cn",        // From
 	    to:      arguments[1],       // To
-	    subject: "Phantom: Thanks for contact."
+	    subject: "Phantom: Thanks for Your Feedback.",
+	    attachment:
+	    [
+	    	{data:"<html>"+heading+body+breaker+signature+"</html>",alternative:true}
+	    ]
 	}, function(err, message) {
 	    //回调函数
 	    console.log(err || message);
