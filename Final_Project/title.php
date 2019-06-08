@@ -490,7 +490,7 @@ $query = urlencode(str_replace(' ', '+', $title));
 		// Color Highlight #D9EE0A
 		// $url = "http://localhost:8983/solr/lab02/select?indent=on&q=Title:".$query."^1+OR+Authors_Name:".$query."^0.7+OR+ConferenceName:".$query."^0.5&start=".($page_limit*($page-1))."&rows=".$page_limit."&wt=json&hl=on&hl.fl=Title,Authors_Name,ConferenceName&hl.simple.post=<%2Fb><%2Ffont>&hl.simple.pre=<font%20color%3D%23D9EE0A><b>";
 		// No Color Highlight
-$url = "http://localhost:8983/solr/lab02/select?indent=on&start=0&rows=11&wt=json&q=Title:".$query."^1.5";
+$url = "http://localhost:8983/solr/lab02/select?indent=on&start=0&rows=11&wt=json&q=ReferenceID:".$PaperID."^5+OR+Title:".$query."^2.5";
 foreach ($paper_author_list as $key => $author)
 {
    $query = urlencode(str_replace(' ', '+', $author));
