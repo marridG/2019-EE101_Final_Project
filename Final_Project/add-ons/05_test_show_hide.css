@@ -11,13 +11,15 @@
     width: 80%;
     text-align: center;
     margin: 0 0 0 50%;
+    float:left;
 }
 #content
 {
     background-color: #b3dae9;
-    border-radius: 8px;
+    border-radius: 5px;
     box-shadow: 1px 1px 1px #ccc;
     border:1px solid #EEEEEE;
+    float:left;
 }
 /*h4{
     font-size: 16px;
@@ -27,6 +29,7 @@ h4,p{
 }*/
 #btn{
     width: 80px;
+    float:left;
 }
 #spread{
     text-align: left;
