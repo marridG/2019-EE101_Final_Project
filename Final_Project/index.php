@@ -40,7 +40,7 @@
 <body class="body__homepage">
 	<br><br>
 
-	<h1>Your Best Academia Database!</h1>
+	<h1 class="greeting">Your Best Academia Database!</h1>
 
 	<form action="/EE101-Final_Project/Final_Project/search.php" target="_blank">
 
@@ -70,7 +70,8 @@
 	</form>
 		<div>
 		<br>
-		<a href="/EE101-Final_Project/Final_Project/index_search_advanced.php" target="_blank">Advanced Search</a>
+		<a href="/EE101-Final_Project/Final_Project/index_search_advanced.php" target="_blank"><button class="button" style="vertical-align:middle;display: inline;"><span>Advanced Searching</span></button>
+</a>
      	</div>
 
 	<p id="copyright_ancestor">

@@ -172,10 +172,54 @@ text-align: left;
   border-radius: 4px;
   text-align: center;
   font-family:'HelveticaNeue';
+  transition-duration: 0.4s;
 }
 
 .submit__reset:hover
 {
   color: #3385ff;
   background-color: white;
+}
+
+.button {
+  display: inline;
+  border-radius: 4px;
+  background-color: #39A136;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  /*padding: 20px;*/
+  width: 23%;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '»';
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.greeting
+{
+  margin: -7% 3% 17% 50%;
+  font-size: 150%;
 }
