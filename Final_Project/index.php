@@ -68,10 +68,16 @@
 
 		<!-- <input type="reset" onclick="clear()" value="CLEAR"> -->
 	</form>
-		<div>
-		<br>
+		<p>
 		<a href="/EE101-Final_Project/Final_Project/index_search_advanced.php" target="_blank">Advanced Search</a>
-     	</div>
+     	</p>
+
+     	<p>
+     	<a href="/EE101-Final_Project/Final_Project/send_mail.php">Contact Us</a>
+     	</p>
+
+     	<p>
+     	<a href="https://github.com/marridG/EE101-Final_Project">Open Source</a>
 
 	<p id="copyright_ancestor">
 		<span id="copyright__copyright">© </span>
