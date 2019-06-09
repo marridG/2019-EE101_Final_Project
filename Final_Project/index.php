@@ -49,7 +49,8 @@
 	
 	 <!-- GZL -->
 <!-- 		<div class="input_clear"><i><img src ="/EE101-Final_Project/Final_Project/pics/delete1.jpg"> </i> -->
-		<div><input class="input_button" type="text" id="key_word" name="key_word" placeholder="Welcome To Phantom Academia Searching"> </div>
+		<div class="whole_input">
+		<input class="input__button" type="text" id="key_word" name="key_word" placeholder="Welcome To Phantom Academia Searching">
 
 		<script type="text/javascript" src="/EE101-Final_Project/Final_Project/add-ons/06_input_clear.js"></script> <!-- GZL -->
 
@@ -58,11 +59,10 @@
 		<br><br> -->
 		
 		<!-- &ensp;&ensp; --><!-- &ensp;&ensp; --> <!-- GZL -->
-		<div>
-		<input class="submit_reset"  type="submit" value="SEARCH" > 	
+		<input class="submit__reset"  type="submit" value="SEARCH" > 	
 		<!-- &ensp;
 		&ensp; -->
-		<input  class="submit_reset" type="reset" value="RESET">
+		<input  class="submit__reset" type="reset" value="RESET">
 		</div>
  <!-- GZL -->
 
