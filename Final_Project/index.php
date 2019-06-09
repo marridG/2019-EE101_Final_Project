@@ -4,7 +4,7 @@
 
 <title>
 	Best Academia Searching For You!
-	<img src="/EE101-Final_Project/Final_Project/pics/delete1.jpg">
+	<!-- <img src="/EE101-Final_Project/Final_Project/pics/delete1.jpg"> -->
 </title>
 
 <head>
@@ -15,6 +15,8 @@
 	
 <!-- Project Size CSS File -->
 	<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
+
+	<link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/index.css">
 	
 	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/45817/5cecef5bf629d80af8efaac6.css' rel='stylesheet' type='text/css' />
 <!-- 	ChannelSlanted2的link -->
@@ -70,10 +72,13 @@
 		<br>
 		<a href="/EE101-Final_Project/Final_Project/index_search_advanced.php" target="_blank">Advanced Search</a>
      	</div>
-	<!-- <?php
-		echo "<input type=\"reset\" onclick=clear() value=\"CLEAR\">";
-	?> -->
-	<p class="p2">copy right:cyf,gjl,gzl,jaf(ordered by letter)</p>
+
+	<p id="copyright_ancestor">
+		<span id="copyright__copyright">© </span>
+		<span id="copyright__webpage_name">Phantom </span>
+		<span id="copyright__year">2018 S2 </span>
+		<span id="copyright__course">EE101</span>
+	</p>
 
 </body>
 
