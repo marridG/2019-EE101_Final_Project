@@ -75,3 +75,21 @@ body
 	color: black;
 }
 
+.field_search
+{
+	font-family: 书体坊赵九江钢笔楷书;
+	src: url("/EE101-Final_Project/Final_Project/font/书体坊赵九江钢笔楷书体.ttf");
+	font-size: 200%;
+	text-align: center;
+}
+
+.found
+{
+	font-family: 书体坊赵九江钢笔楷书;
+	src: url("/EE101-Final_Project/Final_Project/font/书体坊赵九江钢笔楷书体.ttf");
+	font-size: 120%;
+	text-align: center;
+	margin: 3% 0 5% 0;
+}
+
+

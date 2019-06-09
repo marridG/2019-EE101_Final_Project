@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/46721/5cf220b2f629d80774a3a1b2.css' rel='stylesheet' type='text/css' />
+	<!-- 	Regencie的link -->
 
 
 <!-- <script type="text/javascript" src='/EE101-Final_Project/Final_Project/add-ons/echarts-all.js'></script> -->
@@ -24,8 +26,6 @@
             font-family: 书体坊兰亭体;
             src: url("/EE101-Final_Project/Final_Project/font/书体坊兰亭体I.ttf");
             margin: 0 0 5px 0;
-
-
             vertical-align: 10%;
             float: left;
             width: 50px;
@@ -38,13 +38,13 @@
         }
     </style>
 
-    <nav class="nav navbar-default" style="height: 70px;" role="navigation">
+    <nav class="nav navbar-default navbar-fixed-top" style="height: 70px;" role="navigation">
         <div class="navbar-header">
             <a href="/EE101-Final_Project/Final_Project/index.php" class="navbar-brand">Phantom</a>
         </div>
         <div>
             <ul class="nav nav-right">
-                <li style="display: inline;margin: 0 0 0 35%;margin-top: 20px;"><input class="n-button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching"></li>
+                <li style="display: inline;margin: 0 0 0 35%;margin-top: 20px;"><input class="n-button" type="text" id="key_word" name="key_word" placeholder="Welcome To Phantom Academia Searching"></li>
                 <li style="display: inline;"><a style="width: 400px;display: inline;" href="/EE101-Final_Project/Final_Project/index.php"><img style="width: 45px;" src="/EE101-Final_Project/Final_Project/pics/search.png"></a></li>
                 
             </ul>
@@ -71,13 +71,11 @@
 			$(document).ready(function(){});
 		})(jQuery);
 	</script> -->
-
-
-	<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/phantom.png" id="acemap"></a>	
-	<h1>Author Information</h1>
-	<div id="chart1" style="width: 400px; height: 400px" class="chart" ></div>
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-	<div id="chart2" style="width: 400px; height: 400px" class="chart" ></div>
+	
+	<h1 id="author_information">Author Information</h1>
+	<div id="chart1" style="width: 300px; height: 300px;margin: 22% 10% 0 8%;" class="chart" ></div>
+	<br><br><br><br>
+	<div id="chart2" style="width: 300px; height: 300px;margin: 0 10% 0 8%;" class="chart" ></div>
 
 </body>
 <?php
@@ -122,7 +120,7 @@ $link = mysqli_connect("127.0.0.1", "root", "", "lab01");
 mysqli_query($link, 'SET NAMES utf8');
 
 	// return_to_homepage widget
-echo "<a href=\"/EE101-Final_Project/Final_Project/index.php\" class=\"search_return_to_homepage_image\"><img src =\"/EE101-Final_Project/Final_Project/pics/Homepage_icon-without_background.jpg\" id=\"all__return_to_homepage_image\"></a><br>";
+// echo "<a href=\"/EE101-Final_Project/Final_Project/index.php\" class=\"search_return_to_homepage_image\"><img src =\"/EE101-Final_Project/Final_Project/pics/Homepage_icon-without_background.jpg\" id=\"all__return_to_homepage_image\"></a><br>";
 
 	// search and print the AuthorName of the given AuthorID
 $result = mysqli_query($link, "SELECT AuthorName from authors where AuthorID='$author_id'limit 1");
@@ -132,7 +130,7 @@ if ($author_name_res = mysqli_fetch_row($result))
 			// var_dump($author_name_res);
 	$author_name=$author_name_res[0];
 	echo "<a name=\"skip\"></a>";
-	echo "Name: $author_name<br>";
+	echo "<p class=\"output_result\">Name: $author_name<br></p>";
 
 	// search and print the most related AffiliationName to the given AuthorID
 	if(!$affiliation_name)
@@ -160,12 +158,12 @@ if ($author_name_res = mysqli_fetch_row($result))
 					// var_dump($array_result);
 					// echo "<br>";
 			$affiliation_name = $array_result[0];
-			echo " Affiliation: $affiliation_name<br>";
+			echo "<p class=\"output__result\"> Affiliation: $affiliation_name<br></p>";
 		}
 		else
 		{
 			$affiliation_name="-1";
-			echo " Affiliation not found!";
+			echo "<p class=\"output__result\"> Affiliation not found!</p>";
 		}
 	}
 	else
@@ -213,7 +211,7 @@ if ($result['response']['docs'])
 		echo "<td>";
 		$title_new=$paper['Title'];
 		$title_for_show=urlencode(str_replace('', '', $title_new));
-		echo "<a class=\"output_href\"  href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show&page=1\" target=\"_blank\">$title_new</a>";
+		echo "<a class=\"output_href\" id=\"paper_title\" href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show&page=1\" target=\"_blank\">$title_new</a>";
 		echo ";";
 		echo "</td>";
 
@@ -230,7 +228,7 @@ if ($result['response']['docs'])
 					// print ConferenceName
 		echo "<td>";
 		$conference_Name=$paper['ConferenceName'];
-		echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_Name&page=1\" target=\"_blank\">$conference_Name</a>";
+		echo "<a class=\"output_href\" id=\"conference\" href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_Name&page=1\" target=\"_blank\">$conference_Name</a>";
 		echo ";";
 		echo "</td>";
 		echo "</tr>";
@@ -246,7 +244,7 @@ if ($result['response']['docs'])
 	else
 		$page_MAX=floor($num_max/$page_limit)+1;
 				// print information
-	echo "Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.&nbsp;&nbsp;&nbsp;&nbsp;Altogether: $page_MAX pages.<br>";
+	echo "<p class=\"found\">Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.&nbsp;&nbsp;&nbsp;&nbsp;Altogether: $page_MAX pages.<br></p>";
 	echo "<table class=\"table__Turn_Page\">";
 	echo "<tr>";
 				// Row One
@@ -323,7 +321,7 @@ if ($result['response']['docs'])
 	{
 		echo "<a href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp#skip\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
 		echo "</td><td>";
-		echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp#skip\">>></a>";
+		echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp#skip\">next</a>";
 	}
 	else
 		echo "<td></td>";
