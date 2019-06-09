@@ -151,7 +151,6 @@
 	margin: 0 auto;
 	width: 88%;
 	border: 0;
-	border: 1px solid #000000;
 	text-align: center;
 }
 
@@ -247,13 +246,15 @@
 
 #search__Turn_Page_selected/*all pages*/
 {
-	width: 25px;
+	width: 28px;
+	margin: 14px 0 0 0;
 	/*cursor: pointer;*/
 }
 
 #search__Turn_Page_not_selected
 {
-	width: 25px;
+	width: 28px;
+	margin: 14px 0 0 0;
 	/*cursor: pointer;*/
 }
 

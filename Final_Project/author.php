@@ -38,7 +38,7 @@
         }
     </style>
 
-    <nav class="nav navbar-default" style="height: 70px;" role="navigation">
+    <nav class="nav navbar-default navbar-fixed-top" style="height: 70px;" role="navigation">
         <div class="navbar-header">
             <a href="/EE101-Final_Project/Final_Project/index.php" class="navbar-brand">Phantom</a>
         </div>
