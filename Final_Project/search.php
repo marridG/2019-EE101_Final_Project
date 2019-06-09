@@ -64,7 +64,7 @@
 		<?php
 		function Turn_Page_min_max_page($num_max,$page_limit,&$min_page,&$max_page,$page)
 		{
-			if($num_max<=90)
+			if($num_max<=9*$page_limit)
 			{
 				$min_page=1;
 				if($num_max%$page_limit==0)
@@ -83,8 +83,8 @@
 				if($max_page-$min_page+1<10)
 					$min_page=$max_page-9;
 			}
-		// var_dump($min_page);
-		// var_dump($max_page);
+				// var_dump($min_page);
+				// var_dump($max_page);
 		}
 
 	// from index.php:

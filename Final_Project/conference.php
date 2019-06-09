@@ -146,7 +146,7 @@
     		data.push(i + "");
     	}
     	return data;
-    }();
+    	}();
 		option1 = {
 			backgroundColor: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
 				offset: 0,
@@ -396,6 +396,7 @@ function Turn_Page_min_max_page($num_max,$page_limit,&$min_page,&$max_page,$page
 	// $query = urlencode(str_replace(' ', '+', $author_name));
 	$url = "http://localhost:8983/solr/lab02/select?indent=on&q=ConferenceName:".$query."&start=".($page_limit*($page-1))."&wt=json";
 
+
 	curl_setopt ($ch, CURLOPT_URL, $url);
 	curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
@@ -433,8 +434,8 @@ function Turn_Page_min_max_page($num_max,$page_limit,&$min_page,&$max_page,$page
 
 			// print ConferenceName
 			echo "<td>";
-			$conference_name=$paper['Year'];
-			echo "$conference_name ";
+			$year=$paper['Year'];
+			echo "$year ";
 
 			echo "</td>";
 			echo "</tr>";
@@ -546,7 +547,9 @@ function Turn_Page_min_max_page($num_max,$page_limit,&$min_page,&$max_page,$page
 			echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/conference.php#skip_conference\">";
 			echo "<input  type=\"hidden\" name=\"conference_name\" value=$conference_name>";
 			echo "Jump to: <input class=\"junp_to\" type=\"number\" name=\"page\" class=\"all__Turn_Page_jump_to_number\" max=$page_MAX min=\"1\"  required>&nbsp;&nbsp;";
-			echo "<input class=\"jump_page_button\" type=\"submit\" value=\"Go!\"></form>";
+			echo "<input class=\"jump_page_button\" class=\"go\" type=\"submit\" value=\"Go!\"></form>";
 		// var_dump($page);
 	}
+	else
+		echo "No Results.";
 ?>
