@@ -13,7 +13,7 @@ body
 #title
 {
 
-	margin: 13% 0 15% 20%;
+	margin: 10% 60% 18% 5%;
 	size:10000%;
 	font-family:'NewsGothicBT-Roman';
 }
@@ -57,12 +57,12 @@ body
 	width: 850px;
 }
 
-#number
+/*#number
 {
 	font-family:'ActionJackson';
 	color:#2d386e;
 	margin: 0 0 100px 0;
-}
+}*/
 
 
 
@@ -82,4 +82,14 @@ body
 {
 	font-family: 书体坊兰亭体;
 	font-size: 500%;
+}
+
+.found
+{
+	font-family: 书体坊赵九江钢笔楷书;
+	src: url("/EE101-Final_Project/Final_Project/font/书体坊赵九江钢笔楷书体.ttf");
+	font-size: 120%;
+	text-align: center;
+	margin: 3% 0 5% 0;
+
 }

@@ -22,9 +22,10 @@
 <!-- 	ChannelSlanted2的link -->
 <link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/38414/5cf3e354f629d80aac8eb651.css' rel='stylesheet' type='text/css' />
 
-<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/28595/5cf4eaa7f629d80aac8eb66b.css' rel='stylesheet' type='text/css' />
-<!-- font-family:'ActionJackson';的link
--->
+
+<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/46721/5cf220b2f629d80774a3a1b2.css' rel='stylesheet' type='text/css' />
+ 	<!-- Regencie的link -->
+
 
 
 <!-- <link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/44802/5cf3c807f629d80aac8eb641.css' rel='stylesheet' type='text/css' /> -->
@@ -66,7 +67,7 @@
 	</div>
 	<div>
 		<ul class="nav nav-right">
-			<li style="display: inline;margin: 0 0 0 35%;"><input class="n-button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching"></li>
+			<li style="display: inline;margin: 0 0 0 35%;"><input class="n-button" type="text" id="key_word" name="key_word" placeholder="Welcome To Phantom Academia Searching"></li>
 			<li style="display: inline;"><a style="width: 400px;display: inline;" href="/EE101-Final_Project/Final_Project/index.php"><img style="width: 45px;" src="/EE101-Final_Project/Final_Project/pics/search.png"></a></li>
 
 		</ul>
@@ -115,7 +116,7 @@
 		<h1 id="test">Your Best Academia Database!</h1>
 	</div> -->
 	<div id="all_charts">
-		<div id="chart1" style="width: 400px; height:400px;position: absolute; left:80px;top: 350px;"></div>
+		<div id="chart1" style="width: 400px; height:400px;position: absolute; left:75px;top: 364px;"></div>
 	</div>
 	<?php
 	$ch = curl_init();
@@ -387,7 +388,7 @@ function Turn_Page_min_max_page($num_max,$page_limit,&$min_page,&$max_page,$page
 	$conference_name_temp = urlencode($conference_name);
 
 	echo "<a name=\"skip_conference\"></a>";
-	echo "<h1 id=\"title\"> SEARCH RESULT: <br> &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Conference Name: $conference_name </h1>";
+	echo "<h1 id=\"title\"> Conference Name: $conference_name </h1>";
 
 	$ch = curl_init();
 	$timeout = 5;
@@ -456,7 +457,7 @@ function Turn_Page_min_max_page($num_max,$page_limit,&$min_page,&$max_page,$page
 		else
 			$page_MAX=floor($num_max/$page_limit)+1;
 					// print information
-		echo "<p id=\"p1\">Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.&nbsp;&nbsp;&nbsp;&nbsp;Altogether: $page_MAX pages.<br></p>";
+		echo "<p class=\"found\">Found $num_max results.&nbsp;&nbsp;&nbsp;&nbsp;Each page: $page_limit items.&nbsp;&nbsp;&nbsp;&nbsp;Altogether: $page_MAX pages.<br></p>";
 		echo "<table class=\"table__Turn_Page\">";
 		echo "<tr>";
 		// Row One
