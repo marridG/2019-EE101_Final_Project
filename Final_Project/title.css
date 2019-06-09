@@ -23,11 +23,71 @@
 	font-size: 120%;
 }
 
+#paper_title
+{
+	font-family: 书体坊赵九江钢笔楷书;
+	src: url("/EE101-Final_Project/Final_Project/font/书体坊赵九江钢笔楷书体.ttf");
+	font-size: 200%;
+	text-align: center;
+	position: absolute;
+	top:200px;
+	left: 80px;
+}
+
+#paper_publish_year
+{
+	margin: 10% 0 0 5%;
+}
+
+#paperid
+{
+	margin: 0 0 0 5%;
+}
+
+#authors
+{
+	margin: 0 0 0 5%;
+}
+
+#conferences
+{
+	margin: 0 0 0 6%;
+}
+
+#references
+{
+	margin: 0 0 0 5%;
+}
+
+#output_href_title
+{
+	text-decoration: none;
+	font-family:'Regencie';
+}
+
+#related_paper
+{
+	position: absolute;
+	left: 100px;
+}
 
 .TextLeft
 {
 	text-align: left;
 	margin:0 0 0 34%;
-	width:40%;
+	width:50%;
+	font-family:'Regencie';
+	font-size: 120%;
 
+}
+
+.output
+{
+		font-family:'Regencie';
+		font-size: 150%
+}
+
+.whole_result
+{
+	margin: 150px 0 0 250px;
 }

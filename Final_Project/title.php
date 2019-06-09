@@ -13,6 +13,9 @@
 <script type="text/javascript" src="\EE101-Final_Project\Final_Project\add-ons\echart\dataTool.min.js"></script>
 <!-- <script type="text/javascript" src='/EE101-Final_Project/Final_Project/add-ons/echart/echarts-all.js'></script> -->
 
+<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/46721/5cf220b2f629d80774a3a1b2.css' rel='stylesheet' type='text/css' />
+    <!--    Regencie的link -->
+
 <head>
 	<title>Title</title>
 </head>
@@ -24,8 +27,6 @@
             font-family: 书体坊兰亭体;
             src: url("/EE101-Final_Project/Final_Project/font/书体坊兰亭体I.ttf");
             margin: 0 0 5px 0;
-
-
             vertical-align: 10%;
             float: left;
             width: 50px;
@@ -73,8 +74,8 @@
 
 <h1>Paper Information</h1>
 <br><br>
-<div id="chart1" style="width:500px;height:500px;margin: 200px 0 0 250px;padding: 0 0 0 0;"></div>
-<div id="chart2" style="width:500px;height:500px;margin: 200px 0 0 250px;padding: 0 0 0 0;"></div>
+<div id="chart1" style="width:400px;height:400px;position: absolute;top: 380px ;left:90px;"></div>
+<div id="chart2" style="width:400px;height:400px;position: absolute;top: 820px; left:90px;"></div>
 <?php
         //Search for specified year's paper citaton number.
 
@@ -345,25 +346,25 @@ $title = $_GET["title"];
 $link = mysqli_connect("127.0.0.1", "root", "", "lab01");
 mysqli_query($link, 'SET NAMES utf8');
 
-echo "Paper Title: ".$title;
+echo "<P id=\"paper_title\">Paper Title: $title</p>";
 
 $result=mysqli_fetch_row(mysqli_query($link, "SELECT * from papers where Title='$title'limit 1"));
 echo "<br>";
 echo "</br>";
-
-echo "Paper publish year: ".$result[2];
+echo "<div class=\"whole_result\">";
+echo "<P class=\"output\" id=\"paper_publish_year\">Paper publish year: $result[2]</p>";
 
 //	$result=mysqli_fetch_array(mysqli_query($link, "SELECT PaperID from papers where Title='$title'"));
 $this_paper_id=$result[0];
 echo "<br></br>";
-echo "Paper ID: ".$this_paper_id;
+echo "<P class=\"output\" id=\"paperid\"> Paper ID: $this_paper_id</p>";
 echo "<br></br>";
 
 $result_PaperID=$result[0];
 $author_name_result = mysqli_query($link, "SELECT B.AuthorName, B.AuthorID  from paper_author_affiliation A Inner Join authors B where A.PaperID='$result_PaperID' and A.AuthorID=B.AuthorID Order by A.AuthorSequence");
 
 
-echo "Authors: ";
+echo "<P class=\"output\" id=\"authors\">Authors: ";
 $paper_author_list=array();
 foreach ($author_name_result as $author)
 {
@@ -373,6 +374,7 @@ foreach ($author_name_result as $author)
    echo ";";
    array_push($paper_author_list,$author["AuthorName"]);
 }
+echo "</p>";
 echo "<br></br>";
 
 	// $paper_author_list=array("deng cai","xiaofei he","jiawei han");
@@ -382,8 +384,9 @@ $result=mysqli_fetch_row(mysqli_query($link, "SELECT ConferenceID from papers wh
 
 $conference_name_result = mysqli_fetch_row(mysqli_query($link, "SELECT ConferenceName from conferences where ConferenceID='$result'limit 1"));
 $tmp=$conference_name_result[0];
-echo "Conference Name: ";
+echo "<P class=\"output\" id=\"conferences\">Conference Name: ";
 echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$tmp&page=1\" target=\"_blank\">$tmp</a>";
+echo "</p>";
 echo "<br><br>";
 
 		// var_dump($paper_author_list);
@@ -396,7 +399,7 @@ $reference_paper_result = mysqli_query($link, "SELECT ReferenceID from paper_ref
 
 $tmp=mysqli_fetch_row($reference_paper_result)[0];
 
-echo"Reference: ";
+echo"<P class=\"output\" id=\"references\">Reference: ";
 if($tmp)
 {		   
   echo "<div class=\"TextLeft\">";
@@ -404,7 +407,8 @@ if($tmp)
   $Reference_paper=mysqli_fetch_row(mysqli_query($link,"SELECT Title from papers where PaperID='$tmp'limit 1"));
   $title_for_show=urlencode(str_replace('', '', $Reference_paper[0]));
   echo"[$coun] ";
-  echo "<a href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show&page=1\" target=\"_blank\">$Reference_paper[0]</a>";
+  echo "<a class=\"output_href\" id=\"output_href_title\" href=\"/EE101-Final_Project/Final_Project/title.php?title=$title_for_show&page=1\" target=\"_blank\">$Reference_paper[0]</a>";
+  echo "</p>";
   echo"<br></br>";
   $coun+=1;
   
@@ -429,6 +433,7 @@ if($tmp)
     echo"<br></br>";
     $coun+=1;
 }
+echo "</div>";
 echo "</div>";
 
 
@@ -467,7 +472,7 @@ curl_close($ch);
 
 echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"/EE101-Final_Project/Final_Project/add-ons/05_test_show_hide.css\">";
 //echo "<div id=\"box\">";
-echo "Related Papers:&nbsp;&nbsp;&nbsp;&nbsp;<button id=\"btn\">Show</button>";
+echo "<p class=\"output\" id=\"related_paper\">Related Papers:&nbsp;&nbsp;&nbsp;&nbsp;<br><button id=\"btn\">Show</button>";
 echo "<div id=\"content\">";
 echo "<div id=\"spread\">";
 echo "<br>";
@@ -479,7 +484,7 @@ if($result && $result['response']['docs'])
        continue;
    if($idx>=11)
        break;
-   echo "[$idx]. ";
+   echo "[$idx].";
    foreach ($info["Authors_Name"] as $key => $value)
    {
        echo "$value";
