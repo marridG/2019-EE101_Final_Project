@@ -72,7 +72,7 @@
 	<!-- <?php
 		echo "<input type=\"reset\" onclick=clear() value=\"CLEAR\">";
 	?> -->
-	<p class="p2">copy right:cyf,gjl,gzl,jzf(ordered by letter)</p>
+	<p class="p2">copy right:cyf,gjl,gzl,jaf(ordered by letter)</p>
 
 </body>
 

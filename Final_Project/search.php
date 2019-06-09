@@ -26,37 +26,34 @@
 
 <body class="body">
 	<style>
-        .navbar-brand
-        {
-            font-family: 书体坊兰亭体;
-            src: url("/EE101-Final_Project/Final_Project/font/书体坊兰亭体I.ttf");
-            margin: 0 0 5px 0;
+	.navbar-brand
+	{
+		font-family: 书体坊兰亭体;
+		src: url("/EE101-Final_Project/Final_Project/font/书体坊兰亭体I.ttf");
+		margin: 0 0 5px 0;
+		vertical-align: 10%;
+		float: left;
+		width: 50px;
+		height: 100px;
+		font-size:60px;
+	}
+	body
+	{
+		background-color: #f9e9c3;
+	}
+</style>
 
+<nav class="nav navbar-default navbar-fixed-top" style="height: 70px;margin: 0 0 0 0;" role="navigation">
+	<div class="navbar-header">
+		<a href="/EE101-Final_Project/Final_Project/index.php" class="navbar-brand">Phantom</a>
+	</div>
+	<div>
+		<ul class="nav nav-right">
+			<li style="display: inline;margin: 0 0 0 35%;"><form id="search_form" action="/EE101-Final_Project/Final_Project/search.php"><input class="n-button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching" ><input  type="hidden" name="page" value="1"><input class="ssss" id="submit" type="submit" value="Search"></form></li>
+		</ul>
+	</div>
 
-            vertical-align: 10%;
-            float: left;
-            width: 50px;
-            height: 100px;
-            font-size:60px;
-        }
-        body
-        {
-            background-color: #f9e9c3;
-        }
-    </style>
-    <nav class="nav navbar-default" style="height: 70px;" role="navigation">
-        <div class="navbar-header">
-            <a href="/EE101-Final_Project/Final_Project/index.php" class="navbar-brand">Phantom</a>
-        </div>
-        <div>
-            <ul class="nav nav-right">
-                <li style="display: inline;margin: 0 0 0 35%;margin-top: 20px;"><input class="n-button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching"></li>
-                <li style="display: inline;"><a style="width: 400px;display: inline;" href="/EE101-Final_Project/Final_Project/index.php"><img style="width: 45px;" src="/EE101-Final_Project/Final_Project/pics/search.png"></a></li>
-                
-            </ul>
-        </div>
-        
-    </nav>
+</nav>
 	
 	<div onscroll="SetH(this)">
 
@@ -108,11 +105,12 @@
 		// echo "<br><br><br><input class=\"input_button\" type=\"text\" id=\"key_word\" name=\"key_word\" class=\"search__Widget_title\" placeholder=\"Not Required\" value=\"$key_word\">";
 		// echo "\t\t";
 		// echo "<input id=\"submit\" type=\"submit\" value=\"Search!\">";
+
+		// echo "</form>";
+
 		// echo "&nbsp;&nbsp;&nbsp;";
 		// echo "<input type=\"reset\" value=\"RECOVER\">";
 		// echo "<input type=\"reset\" onclick=\"clear()\" value=\"CLEAR\">";
-		// echo "</form>";
-		
 		echo "<br>";
 
 	// Test Multi-field Search
@@ -138,7 +136,7 @@
 			if($result['response']['docs'])
 			{
 				echo "<a name=\"skip_multi\"></a>";
-				echo "<br><br>";
+				echo "<br><br><br>";
 				echo "<p class=\"field_search\"> Multi Field Search: $key_word</p>";
 				echo "<br><br><br>";
 

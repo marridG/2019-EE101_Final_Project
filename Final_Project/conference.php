@@ -66,9 +66,7 @@
 	</div>
 	<div>
 		<ul class="nav nav-right">
-			<li style="display: inline;margin: 0 0 0 35%;"><input class="n-button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching"></li>
-			<li style="display: inline;"><a style="width: 400px;display: inline;" href="/EE101-Final_Project/Final_Project/index.php"><img style="width: 45px;" src="/EE101-Final_Project/Final_Project/pics/search.png"></a></li>
-
+			<li style="display: inline;margin: 0 0 0 35%;"><form id="search_form" action="/EE101-Final_Project/Final_Project/search.php"><input class="n-button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching" ><input  type="hidden" name="page" value="1"><input class="ssss" id="submit" type="submit" value="Search"></form></li>
 		</ul>
 	</div>
 

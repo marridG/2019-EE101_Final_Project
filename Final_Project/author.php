@@ -18,39 +18,37 @@
 
 <body>
 
-    <style>
-        .navbar-brand
-        {
-            font-family: 书体坊兰亭体;
-            src: url("/EE101-Final_Project/Final_Project/font/书体坊兰亭体I.ttf");
-            margin: 0 0 5px 0;
+	<style>
+	.navbar-brand
+	{
+		font-family: 书体坊兰亭体;
+		src: url("/EE101-Final_Project/Final_Project/font/书体坊兰亭体I.ttf");
+		margin: 0 0 5px 0;
 
 
-            vertical-align: 10%;
-            float: left;
-            width: 50px;
-            height: 100px;
-            font-size:60px;
-        }
-        body
-        {
-            background-color: #f9e9c3;
-        }
-    </style>
+		vertical-align: 10%;
+		float: left;
+		width: 50px;
+		height: 100px;
+		font-size:60px;
+	}
+	body
+	{
+		background-color: #f9e9c3;
+	}
+</style>
 
-    <nav class="nav navbar-default navbar-fixed-top" style="height: 70px;" role="navigation">
-        <div class="navbar-header">
-            <a href="/EE101-Final_Project/Final_Project/index.php" class="navbar-brand">Phantom</a>
-        </div>
-        <div>
-            <ul class="nav nav-right">
-                <li style="display: inline;margin: 0 0 0 35%;margin-top: 20px;"><input class="n-button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching"></li>
-                <li style="display: inline;"><a style="width: 400px;display: inline;" href="/EE101-Final_Project/Final_Project/index.php"><img style="width: 45px;" src="/EE101-Final_Project/Final_Project/pics/search.png"></a></li>
-                
-            </ul>
-        </div>
-        
-    </nav>
+<nav class="nav navbar-default navbar-fixed-top" style="height: 70px;margin: 0 0 0 0;" role="navigation">
+	<div class="navbar-header">
+		<a href="/EE101-Final_Project/Final_Project/index.php" class="navbar-brand">Phantom</a>
+	</div>
+	<div>
+		<ul class="nav nav-right">
+			<li style="display: inline;margin: 0 0 0 35%;"><form id="search_form" action="/EE101-Final_Project/Final_Project/search.php"><input class="n-button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching" ><input  type="hidden" name="page" value="1"><input  id="submit" type="submit" value="Search"></form></li>
+		</ul>
+	</div>
+
+</nav>
 
 
 	<!-- <div class="spinner">

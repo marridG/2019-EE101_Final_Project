@@ -37,19 +37,17 @@
         }
     </style>
 
-    <nav class="nav navbar-default" style="height: 70px;" role="navigation">
-        <div class="navbar-header">
-            <a href="/EE101-Final_Project/Final_Project/index.php" class="navbar-brand">Phantom</a>
-        </div>
-        <div>
-            <ul class="nav nav-right">
-                <li style="display: inline;margin: 0 0 0 35%;margin-top: 20px;"><input class="n-button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching"></li>
-                <li style="display: inline;"><a style="width: 400px;display: inline;" href="/EE101-Final_Project/Final_Project/index.php"><img style="width: 45px;" src="/EE101-Final_Project/Final_Project/pics/search.png"></a></li>
-                
-            </ul>
-        </div>
-        
-    </nav>
+<nav class="nav navbar-default navbar-fixed-top" style="height: 70px;margin: 0 0 0 0;" role="navigation">
+    <div class="navbar-header">
+        <a href="/EE101-Final_Project/Final_Project/index.php" class="navbar-brand">Phantom</a>
+    </div>
+    <div>
+        <ul class="nav nav-right">
+            <li style="display: inline;margin: 0 0 0 35%;"><form id="search_form" action="/EE101-Final_Project/Final_Project/search.php"><input class="n-button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching" ><input  type="hidden" name="page" value="1"><input  id="submit" type="submit" value="Search"></form></li>
+        </ul>
+    </div>
+
+</nav>
     <!-- <nav class="navbar navbar-default" role="navigation">
 
         <div class="navbar-header">
