@@ -4,12 +4,13 @@
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/simple-.css">
 <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/title.css">
 <link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/45817/5cecef5bf629d80af8efaac6.css' rel='stylesheet' type='text/css' />
-<!-- 	ChannelSlanted2的link -->
+	<!-- ChannelSlanted2的link -->
 <!-- <script type="text/javascript" src='/EE101-Final_Project/Final_Project/add-ons/echart/echarts2.js'></script> -->
 <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src='\EE101-Final_Project\Final_Project\add-ons\echart\echarts3.js'></script>
+<script type="text/javascript" src="\EE101-Final_Project\Final_Project\add-ons\echart\dataTool.min.js"></script>
 <!-- <script type="text/javascript" src='/EE101-Final_Project/Final_Project/add-ons/echart/echarts-all.js'></script> -->
 
 <head>
@@ -73,7 +74,7 @@
 <h1>Paper Information</h1>
 <br><br>
 <div id="chart1" style="width:500px;height:500px;margin: 200px 0 0 250px;padding: 0 0 0 0;"></div>
-<div id="chart2" style="width:500px;height:500px;"></div>
+<div id="chart2" style="width:500px;height:500px;margin: 200px 0 0 250px;padding: 0 0 0 0;"></div>
 <?php
         //Search for specified year's paper citaton number.
 
@@ -247,142 +248,95 @@ option1 = {
         }]
     };
 
-    function createRandomItemStyle() {
-        return {
-            normal: {
-                color: 'rgb(' + [
-                Math.round(Math.random() * 160),
-                Math.round(Math.random() * 160),
-                Math.round(Math.random() * 160)
-                ].join(',') + ')'
-            }
+    // function createRandomItemStyle() {
+    //     return {
+    //         normal: {
+    //             color: 'rgb(' + [
+    //             Math.round(Math.random() * 160),
+    //             Math.round(Math.random() * 160),
+    //             Math.round(Math.random() * 160)
+    //             ].join(',') + ')'
+    //         }
+    //     };
+    // }
+    chart2.showLoading();
+$.get('/EE101-Final_Project/relations.gexf', function (xml) {
+    chart2.hideLoading();
+
+    var graph = echarts.dataTool.gexf.parse(xml);
+    var categories = [];
+    for (var i = 0; i < 9; i++) {
+        categories[i] = {
+            name: '类目' + i
         };
     }
-    option2= {
+    graph.nodes.forEach(function (node) {
+        node.itemStyle = null;
+        node.value = node.symbolSize;
+        node.symbolSize /= 1.5;
+        node.label = {
+            normal: {
+                show: node.symbolSize > 30
+            }
+        };
+        node.category = node.attributes.modularity_class;
+    });
+    option2 = {
         title: {
-            text: 'Word Cloud'
+            text: 'Citation\'s relations',
+            // subtext: 'Default layout',
+            top: '15%',
+            left: 'center'
         },
-        series: [{
-            name: 'Word Cloud',
-            type: 'wordCloud',
-            size: ['80%', '80%'],
-            textRotation : [0, 45, 90, -45],
-            textPadding: 0,
-            autoSize: {
-                enable: true,
-                minSize: 14
-            },
-            data: [
+        // tooltip: {},
+        legend: [{
+            // selectedMode: 'single',
+                data: categories.map(function (a) {
+                    return a.name;
+            })
+        }],
+        animationDuration: 1500,
+        animationEasingUpdate: 'quinticInOut',
+        series : [
             {
-                name: "Sam S Club",
-                value: 10000,
+                name: 'Citation\'s relations',
+                type: 'graph',
+                layout: 'none',
+                data: graph.nodes,
+                links: graph.links,
+                categories: categories,
+                roam: true,
+                focusNodeAdjacency: true,
                 itemStyle: {
                     normal: {
-                        color: 'black'
+                        borderColor: '#fff',
+                        borderWidth: 1,
+                        shadowBlur: 10,
+                        shadowColor: 'rgba(0, 0, 0, 0.3)'
+                    }
+                },
+                label: {
+                    position: 'right',
+                    formatter: '{b}'
+                },
+                lineStyle: {
+                    color: 'source',
+                    curveness: 0.3
+                },
+                emphasis: {
+                    lineStyle: {
+                        width: 10
                     }
                 }
-            },
-            {
-                name: "Macys",
-                value: 6181,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "Amy Schumer",
-                value: 4386,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "Jurassic World",
-                value: 4055,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "Charter Communications",
-                value: 2467,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "Chick Fil A",
-                value: 2244,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "Planet Fitness",
-                value: 1898,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "Pitch Perfect",
-                value: 1484,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "Express",
-                value: 1112,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "Home",
-                value: 965,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "Johnny Depp",
-                value: 847,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "Lena Dunham",
-                value: 582,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "Lewis Hamilton",
-                value: 555,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "KXAN",
-                value: 550,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "Mary Ellen Mark",
-                value: 462,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "Farrah Abraham",
-                value: 366,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "Rita Ora",
-                value: 360,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "Serena Williams",
-                value: 282,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "NCAA baseball tournament",
-                value: 273,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "Point Break",
-                value: 265,
-                itemStyle: createRandomItemStyle()
             }
-            ]
-        }]
+        ]
     };
 
-    chart1.setOption(option1);
     chart2.setOption(option2);
+}, 'xml');
+
+    chart1.setOption(option1);
+    // chart2.setOption(option2);
 </script>
 
 <?php
