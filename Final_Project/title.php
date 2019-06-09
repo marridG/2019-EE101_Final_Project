@@ -72,8 +72,11 @@
 
 <h1>Paper Information</h1>
 <br><br>
-<div id="chart1" style="width:400px;height:400px;position: absolute;top: 380px ;left:90px;"></div>
-<div id="chart2" style="width:400px;height:400px;position: absolute;top: 820px; left:90px;"></div>
+<div class="charts">
+<div id="chart1" style="width:400px;height:400px;"></div>
+<br><br>
+<div id="chart2" style="width:400px;height:400px;"></div>
+</div>
 <?php
         //Search for specified year's paper citaton number.
 
@@ -344,7 +347,11 @@ $title = $_GET["title"];
 $link = mysqli_connect("127.0.0.1", "root", "", "lab01");
 mysqli_query($link, 'SET NAMES utf8');
 
+echo "<div class=\"panel panel-default\>";
+echo "<div class=\"panel-body\">";
 echo "<P id=\"paper_title\">Paper Title: $title</p>";
+echo "</div>";
+echo "</div>";
 
 $result=mysqli_fetch_row(mysqli_query($link, "SELECT * from papers where Title='$title'limit 1"));
 echo "<br>";
