@@ -347,11 +347,8 @@ $title = $_GET["title"];
 $link = mysqli_connect("127.0.0.1", "root", "", "lab01");
 mysqli_query($link, 'SET NAMES utf8');
 
-echo "<div class=\"panel panel-default\>";
-echo "<div class=\"panel-body\">";
+
 echo "<P id=\"paper_title\">Paper Title: $title</p>";
-echo "</div>";
-echo "</div>";
 
 $result=mysqli_fetch_row(mysqli_query($link, "SELECT * from papers where Title='$title'limit 1"));
 echo "<br>";
