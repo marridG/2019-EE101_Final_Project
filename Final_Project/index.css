@@ -188,11 +188,15 @@ text-align: left;
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 28px;
+  font-size: 43%;
   /*padding: 20px;*/
-  width: 23%;
+  width: 14%;
   transition: all 0.5s;
   cursor: pointer;
+  font-family:'HelveticaNeue';
+  padding: 1% 0 1% 0;
+  margin: 0.25% 0 0 0;
+
 }
 
 .button span {
@@ -223,3 +227,17 @@ text-align: left;
   margin: -7% 3% 17% 50%;
   font-size: 150%;
 }
+
+.two_choice
+{
+  font-size: 80%;
+  margin: 10% 0 0 60%;
+  transition-duration: 0.3s;
+}
+
+.two_choice:hover
+{
+  color: white;
+
+}
+

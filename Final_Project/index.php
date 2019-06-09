@@ -63,6 +63,8 @@
 		<!-- &ensp;
 		&ensp; -->
 		<input  class="submit__reset" type="reset" value="RESET">
+		<a href="/EE101-Final_Project/Final_Project/index_search_advanced.php" target="_blank"><button class="button" style="vertical-align:middle;display: inline;"><span>Advanced Searching</span></button>
+</a>
 		</div>
  <!-- GZL -->
 
@@ -70,16 +72,17 @@
 	</form>
 		<div>
 		<br>
-		<a href="/EE101-Final_Project/Final_Project/index_search_advanced.php" target="_blank"><button class="button" style="vertical-align:middle;display: inline;"><span>Advanced Searching</span></button>
-</a>
+		
      	</div>
 
-     	<p>
-     	<a href="/EE101-Final_Project/Final_Project/send_mail.php"><button class="button" style="vertical-align:middle;display: inline;"><span>Contact Us</span></button></a>
-     	</p>
+     	<div class="two_choice">
 
      	<p>
-     	<a href="https://github.com/marridG/EE101-Final_Project"><button class="button" style="vertical-align:middle;display: inline;"><span>Open Source</span></button></a>
+     	<a href="/EE101-Final_Project/Final_Project/send_mail.php">Contact Us</a> 
+     	&ensp;&ensp;
+     	<a href="https://github.com/marridG/EE101-Final_Project">Open Source</a>
+     </p>
+ </div>
 
 
 	<p id="copyright_ancestor">

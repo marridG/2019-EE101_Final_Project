@@ -130,14 +130,15 @@
 	margin: -80% -28% -80% 30%;
 	font-family:'HelveticaNeue';
 /*	font-family:'Impact';*/
+transition-duration: 0.4s;
 }
 
-/*.submit_reset:hover
+.submit_reset:hover
 {
 	background-color: #FFFFFF;
 	color: #3385ff;
 	font-family:'HelveticaNeue';
-}*/
+}
 
 .p2
 {
