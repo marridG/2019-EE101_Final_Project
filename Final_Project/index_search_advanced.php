@@ -12,11 +12,39 @@
 </head>
 
 <body><!-- Advanced Search -->
+
+	<style>
+	.navbar-brand
+	{
+		font-family: 书体坊兰亭体;
+		src: url("/EE101-Final_Project/Final_Project/font/书体坊兰亭体I.ttf");
+		margin: -20px 0 5px 0;
+		vertical-align: 10%;
+		float: left;
+		width: 50px;
+		height: 100px;
+		font-size:60px;
+	}
+	body
+	{
+		background-color: #f9e9c3;
+	}
+	</style>
+<nav class="nav navbar-default navbar-fixed-top" style="height: 80px;margin: 0 0 0 0;" role="navigation">
+    <div class="navbar-header">
+        <a href="/EE101-Final_Project/Final_Project/index.php" class="navbar-brand">Phantom</a>
+    </div>
+    <div>
+        <ul class="nav nav-right">
+        	<li style="display: inline;margin: 0 0 0 45%;"><h1>Your Best Academia Database!</h1></li>
+</nav>
+
 <div onscroll="SetH(this)">
-	<div id="advanced_search_head">
+
+<!-- 	<div id="advanced_search_head">
 		<a href="/EE101-Final_Project/Final_Project/index.php"> <img src="/EE101-Final_Project/Final_Project/pics/phantom.png" id="acemap"></a>	
-		<h1 id="test">Your Best Academia Database!</h1>
-	</div>
+		<h1 >Your Best Academia Database!</h1>
+	</div> -->
 
 	<script type="text/javascript">
 		function show_boxes(add_del)	// change show boxes request

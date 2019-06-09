@@ -343,7 +343,7 @@ if ($result['response']['docs'])
 	echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/author.php#skip\">";
 	echo "<input type=\"hidden\" name=\"author_id\" value=\"$author_id\"><input type=\"hidden\" name=\"author_affi\" value=\"$affiliation_name\">";
 	echo "Jump to: <input type=\"number\" name=\"page\" class=\"all__Turn_Page_jump_to_number\" max=$page_MAX min=\"1\" required>&nbsp;&nbsp;";
-	echo "<input type=\"submit\" value=\"Go!\"></form>";
+	echo "<input class=\"jump_page_button\" type=\"submit\" value=\"Go!\"></form>";
 				// var_dump($page_title);
 
 				// echo "<br><br><br>";
