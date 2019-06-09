@@ -510,7 +510,7 @@ function Turn_Page_min_max_page($num_max,$page_limit,&$min_page,&$max_page,$page
 				echo "<td>";
 				if ($i>=1)
 				{
-					echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i#skip_conference\"><<</a>";
+					echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i#skip_conference\">Prev</a>";
 					echo "</td><td>";
 					echo "<a  href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i#skip_conference\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
 				}
@@ -534,7 +534,7 @@ function Turn_Page_min_max_page($num_max,$page_limit,&$min_page,&$max_page,$page
 				{
 					echo "<a href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i#skip_conference\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
 					echo "</td><td>";
-					echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i#skip_conference\">>></a>";
+					echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/conference.php?conference_name=$conference_name_temp&page=$i#skip_conference\">Next</a>";
 				}
 				else
 					echo "<td></td>";

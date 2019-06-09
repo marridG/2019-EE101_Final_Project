@@ -74,6 +74,14 @@
 </a>
      	</div>
 
+     	<p>
+     	<a href="/EE101-Final_Project/Final_Project/send_mail.php"><button class="button" style="vertical-align:middle;display: inline;"><span>Contact Us</span></button></a>
+     	</p>
+
+     	<p>
+     	<a href="https://github.com/marridG/EE101-Final_Project"><button class="button" style="vertical-align:middle;display: inline;"><span>Open Source</span></button></a>
+
+
 	<p id="copyright_ancestor">
 		<span id="copyright__copyright">© </span>
 		<span id="copyright__webpage_name">Phantom </span>
