@@ -6,6 +6,13 @@
 <!-- <link rel="stylesheet" type="text/css" href="/EE101-Final_Project/Final_Project/add-ons/bootstrap/button.css"> -->
 <script type="text/javascript" src="/EE101-Final_Project/Final_Project/add-ons/jquery/jquery-3.4.0.min.js"></script>
 <script src="/EE101-Final_Project/Final_Project/add-ons/01_Scroll_Page_to_Original.js"></script>
+<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129558/45817/5cecef5bf629d80af8efaac6.css' rel='stylesheet' type='text/css' />
+<!-- 	ChannelSlanted2的link -->
+
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
 <head>
 	<title>Advanced Search</title>
@@ -30,13 +37,13 @@
 		background-color: #f9e9c3;
 	}
 	</style>
-<nav class="nav navbar-default navbar-fixed-top" style="height: 80px;margin: 0 0 0 0;" role="navigation">
+<nav class="nav navbar-default navbar-fixed-top" style="height: 80px;margin: 0 0 5% 0;" role="navigation">
     <div class="navbar-header">
-        <a href="/EE101-Final_Project/Final_Project/index.php" class="navbar-brand">Phantom</a>
+        <a href="/EE101-Final_Project/Final_Project/index.php" class="navbar-brand" style="margin: 1% 0 -2% 0;">Phantom</a>
     </div>
     <div>
-        <ul class="nav nav-right">
-        	<li style="display: inline;margin: 0 0 0 45%;"><h1>Your Best Academia Database!</h1></li>
+        <ul class="nav nav-right" style="margin: -1% 0 0 50%;">
+        	<li style="display: inline;margin: 0 0 0 70%;"><h1 style="font-family: ChannelSlanted2;font-size: 140%">Your Best Academia Database!</h1></li>
 </nav>
 
 <div onscroll="SetH(this)">

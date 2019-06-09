@@ -47,25 +47,31 @@
 	overflow-x: hidden;
 }
 
-#advanced_search_rows_add_del	/*Search box - all rows and the add & del buttons*/
+/*#advanced_search_rows_add_del	/*Search box - all rows and the add & del buttons灰色的框*/
 {
 	width: 95%;
 	margin: 1% auto;
-	border: 3px #808080 solid;
+	border:10px solid #cceff5;
+	background:#fafcfd
+
 	border-radius: 0.5vw;
-}
+}*/
 
 #advanced_boxes_root	/*serach box - container of all lines of search boxes*/
 {}
 
 .advanced_box	/*every line of box*/
 {}
-
+/*我要改的*/
 #advanced_search_bool_select	/*select bool*/
 {
 	height: 10%;
 	width: 20%;
-	background-color: #EDEDED;
+	/*#EDEDED*/
+	background-color:white;
+	border-radius: 6px;
+
+
 }
 
 #advanced_search_target_select	/*select target*/
