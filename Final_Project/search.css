@@ -107,6 +107,20 @@ body
 	color: white;
 }
 
+.jump_page_button
+{
+    width: 30px;
+    height: 30px;
+    text-align: left;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-left: 30px;
+	background-color: #3385ff;
+	color: white;
+    border: 1px solid #d5d5d5;
+
+}
+
 /*.n_button
 {
 	border: 1px;

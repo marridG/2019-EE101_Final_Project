@@ -67,8 +67,7 @@
 
 #related_paper
 {
-	position: absolute;
-	left: 100px;
+	margin: 20% 50% 0 0;
 }
 
 .TextLeft
@@ -78,7 +77,6 @@
 	width:50%;
 	font-family:'Regencie';
 	font-size: 120%;
-
 }
 
 .output
@@ -89,5 +87,10 @@
 
 .whole_result
 {
-	margin: 150px 0 0 250px;
+	margin:-67% 0 0 50%;
+}
+
+.charts
+{
+	margin: 20% 40% 0 10%; 
 }

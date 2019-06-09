@@ -291,7 +291,7 @@
 				echo "<form id=\"form__jump_to__right_hand\" action=\"/EE101-Final_Project/Final_Project/search.php#skip_multi\">";
 				echo "<input class=\"input_button\"  type=\"hidden\" name=\"key_word\" value=\"$key_word\">";
 				echo "Jump to: <input type=\"number\" name=\"page\" class=\"all__Turn_Page_jump_to_number\" max=$page_MAX min=\"1\" required>&nbsp;&nbsp;";
-				echo "<input class=\"n_button\" type=\"submit\" value=\"Go!\"></form>";
+				echo "<input class=\"jump_page_button\" type=\"submit\" value=\"Go!\"></form>";
 				// var_dump($page);
 
 				echo "<br><br><br>";
