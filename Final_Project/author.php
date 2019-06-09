@@ -47,11 +47,17 @@
 	</div>
 	<div>
 		<ul class="nav nav-right">
-			<li style="display: inline;margin: 0 0 0 35%;"><form id="search_form" action="/EE101-Final_Project/Final_Project/search.php"><input class="n-button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching" ><input  type="hidden" name="page" value="1"><input  id="submit" type="submit" value="Search"></form></li>
+			<li style="display: inline;margin: 0 0 0 35%;"><form id="search_form" action="/EE101-Final_Project/Final_Project/search.php"><input class="n_button" type="text" id="key_word" name="key_word" placeholder="Welcome To Phantom Academia Searching" style="margin: 0 0 0 60%;"><input  type="hidden" name="page" value="1"><input class="input_search" id="submit" type="submit" value="Search"></form></li>
 		</ul>
 	</div>
 
 </nav>
+
+<!-- <div>
+  <button type="button">
+    Stylish dude
+  </button>
+</div> -->
 
 
 
@@ -78,6 +84,7 @@
 	<div id="chart1" style="width: 300px; height: 300px;margin: 22% 10% 0 8%;" class="chart" ></div>
 	<br><br><br><br>
 	<div id="chart2" style="width: 300px; height: 300px;margin: 0 10% 0 8%;" class="chart" ></div>
+
 
 </body>
 <?php
