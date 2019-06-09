@@ -40,7 +40,7 @@
 <body class="body__homepage">
 	<br><br>
 
-
+	<h1>Your Best Academia Database!</h1>
 
 	<form action="/EE101-Final_Project/Final_Project/search.php" target="_blank">
 
