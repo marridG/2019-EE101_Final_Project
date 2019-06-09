@@ -1,11 +1,45 @@
 
 #author_table
 {
-	margin: -10% 40% 10% 3%;
+	position: absolute;
+	top: 450px;
+	left: 500px;
+	right: 50px
 	border: 0px;
-	width: 1000px;
+	width: 850px;
 }
 
+#author_information
+{
+	font-family: 书体坊赵九江钢笔楷书;
+	src: url("/EE101-Final_Project/Final_Project/font/书体坊赵九江钢笔楷书体.ttf");
+	font-size: 300%;
+	text-align: center;
+}
+
+#paper_title
+{
+	color: black;
+}
+
+#author_name
+{
+	color: blue;
+}
+
+#conference
+{
+	color: black;
+}
+
+.found
+{
+	font-family: 书体坊赵九江钢笔楷书;
+	src: url("/EE101-Final_Project/Final_Project/font/书体坊赵九江钢笔楷书体.ttf");
+	font-size: 120%;
+	text-align: center;
+	margin: 3% 0 5% 0;
+}
 
 
 
@@ -94,3 +128,24 @@ body
 	font-size: 500%;
 }
 
+.output_result
+{
+	font-family: 书体坊赵九江钢笔楷书;
+	src: url("/EE101-Final_Project/Final_Project/font/书体坊赵九江钢笔楷书体.ttf");
+	font-size: 200%;
+	text-align: center;
+	position: absolute;
+	top:250px;
+	left: 100px;
+}
+
+.output__result
+{
+	font-family: 书体坊赵九江钢笔楷书;
+	src: url("/EE101-Final_Project/Final_Project/font/书体坊赵九江钢笔楷书体.ttf");
+	font-size: 200%;
+	text-align: center;
+	position: absolute;
+	top:300px;
+	left:100px;
+}

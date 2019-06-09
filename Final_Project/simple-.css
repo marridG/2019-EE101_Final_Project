@@ -301,6 +301,7 @@ input[type="number"]
 .output_href
 {
 	text-decoration: none;
+	font-family:'Regencie';
 }
 
 /*.spinner {

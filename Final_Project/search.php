@@ -52,8 +52,8 @@
 			<li style="display: inline;margin: 0 0 0 35%;"><form id="search_form" action="/EE101-Final_Project/Final_Project/search.php"><input class="n-button" type="text" id="key_word" name="key_word" placeholder="Welcome To ACEMAP Academia Searching" ><input  type="hidden" name="page" value="1"><input class="ssss" id="submit" type="submit" value="Search"></form></li>
 		</ul>
 	</div>
-
 </nav>
+
 	
 	<div onscroll="SetH(this)">
 
