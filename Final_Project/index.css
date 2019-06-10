@@ -26,8 +26,6 @@ a {
   text-decoration: none;
 }
 
-
-
 .cd-main-content {
   /* you need to assign a min-height to the main content so that the children can inherit it*/
   height: 100%;
@@ -204,9 +202,9 @@ text-align: left;
   display: inline-block;
   transition: 0.5s;
 }
-
+/*»*/
 .button span:after {
-  content: '»';
+  content: ' >>';
   opacity: 0;
   top: 0;
   right: -20px;
