@@ -158,6 +158,7 @@
 			
 			var name=$("#feedback_name")[0].value;
 			var address=$("#send_mail_address")[0].value;
+			var subject=$("#send_mail_subject")[0].value;
 			var message=$("#feedback_message")[0].value;
 			if(!name || !address || !message)
 			{
@@ -173,6 +174,12 @@
 					send_mail_btn.disabled = '';
 					return;
 				}
+				if(!subject)
+				{
+					alert("Please fill in the subject.");
+					send_mail_btn.disabled = '';
+					return;
+				}
 				if(!message)
 				{
 					alert("Please fill in the message.");
@@ -182,8 +189,9 @@
 			}
 			else
 				send_mail_btn.innerHTML="Processing";
-			var url="/EE101-Final_Project/Final_Project/add-ons/07_mail_to.php?name="+name+"&address="+address+"&word="+message;
+			var url="/EE101-Final_Project/Final_Project/add-ons/07_mail_to.php?name="+name.replace(/ /g,"+")+"&address="+address+"&subject="+subject.replace(/ /g,"+")+"&word="+message.replace(/ /g,"+");
 			
+			console.log(url);
 			// request
 			xmlhttp.open("GET",url, true);
 			xmlhttp.send();
