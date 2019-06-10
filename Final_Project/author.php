@@ -408,7 +408,7 @@ curl_close($ch);
     var option1 = {
     	backgroundColor: "#344b58",
     	"title": {
-    		"text": "Papernumber of Year",
+    		"text": "",
     		// x: "4%",
     		left: 'center',
 
@@ -470,7 +470,9 @@ curl_close($ch);
     		"data": xData,
     	}],
     	"yAxis": [{
+    		"name" : "Number",
     		"type": "value",
+
     		"splitLine": {
     			"show": false
     		},
@@ -571,11 +573,11 @@ curl_close($ch);
 //     }
 
     	var option2 = {
-    		backgroundColor: '#EDEFAB',
+    		backgroundColor: '#f9e9c3',
     		title: {
-    			text: 'Publish in Conferences',
+    			text: 'Conferences',
     			left: 'center',
-    			top: 20,
+    			top: 0,
     			textStyle: {
     				color: 'black',
     				fontFamily: 'Times New Roman'

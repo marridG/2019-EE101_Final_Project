@@ -158,9 +158,9 @@
 			}
 			], false),
 			title: {
-				text: "Publish of Year",
+				text: "Publication - Year",
 
-				left: "center",
+				left: "left",
 				bottom: "83%",
 				textStyle: {
 					color: "#fff",

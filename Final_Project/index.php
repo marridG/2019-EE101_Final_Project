@@ -3,8 +3,7 @@
 <meta charset="utf-8">
 
 <title>
-	Best Academia Searching For You!
-	<!-- <img src="/EE101-Final_Project/Final_Project/pics/delete1.jpg"> -->
+	Your Best Academia Database!
 </title>
 
 <head>
