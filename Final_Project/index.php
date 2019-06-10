@@ -70,7 +70,7 @@
 
 		<!-- <input type="reset" onclick="clear()" value="CLEAR"> -->
 	</form>
-		<div>
+		<!-- <div>
 		<br>
 		
      	</div>
@@ -81,7 +81,7 @@
      	<a href="/EE101-Final_Project/Final_Project/send_mail.php">Contact Us</a> 
      	&ensp;&ensp;
      	<a href="https://github.com/marridG/EE101-Final_Project">Open Source</a>
-     </p>
+     </p> -->
  </div>
 
 
