@@ -128,3 +128,8 @@ body
 	height: 35px;
 	text-align: left;
 }*/
+
+.table__result	/*Special Case*/
+{
+	border: 1px solid black;
+}
