@@ -150,9 +150,10 @@ transition-duration: 0.4s;
 
 .table__result
 {
+	/*border: 0;*/
+	/*border: 1px solid black;*/
 	margin: 0 auto;
 	width: 88%;
-	border: 0;
 	text-align: center;
 }
 
@@ -191,7 +192,6 @@ transition-duration: 0.4s;
 {
 	font-family: Arial;
 	font-style: italic;
-
 }
 
 .table__result td:nth-child(2)	/*Author Name*/
