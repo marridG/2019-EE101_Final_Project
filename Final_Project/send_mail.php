@@ -199,13 +199,13 @@
 				</li>
 				<li>
 					<label for="name">Name</label>
-					<input type="text" id="feedback_name" placeholder="John Robinson" required />
-					<span class="form_hint">Right form：6~18 characters</span>
+					<input type="text" id="feedback_name" placeholder="How should we call you?" required />
+					<span class="form_hint">Example: The Phanton</span>
 				</li>
 				<li>
 					<label for="email">E-mail Address</label>
-					<input type="email" id="send_mail_address"name="email" placeholder="example@163.com" required />
-					<span class="form_hint">Right form：sayingforever@163.com</span>
+					<input type="email" id="send_mail_address"name="email" placeholder="How can we contact you?" required />
+					<span class="form_hint">Example：example@gmail.com</span>
 				</li>
 <!--         <li>
             <label for="website">网站:</label>
@@ -213,8 +213,8 @@
             <span class="form_hint">：http://www.amonyous.com</span>
         </li> -->
         <li>
-        	<label for="message">How can we help you?</label>
-        	<textarea name="message" id="feedback_message" cols="40" rows="6" placeholder="" required ></textarea>
+        	<label for="message">Feedback</label>
+        	<textarea name="message" id="feedback_message" cols="40" rows="6" placeholder="How can we help you?" required ></textarea>
         </li>
         <li>
         	<button onclick="feedback_submit_it()" id="feedback_submit" class="submit" type="submit">Submit</button>

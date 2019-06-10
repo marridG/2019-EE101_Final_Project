@@ -77,3 +77,9 @@ Email Address: example@gmail.com
 Comment: hello world
 ******** END ********
 
+=== UTC/GMT+08:00 2019-06-10 20:52:18 ===
+Name: The phantom
+Email Address: 123@phantom.com
+Comment: hello world!
+******** END ********
+

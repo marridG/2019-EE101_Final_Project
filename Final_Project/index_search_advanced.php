@@ -256,12 +256,12 @@
 			var page_MAX=Math.floor(document.getElementById("advanced_search_result_page_MAX").value);
 			var new_page=Math.floor(document.getElementsByName("advanced_search_page")[0].value);
 			console.log(new_page);
-			if(!new_page)
+			if(new_page=="")
 			{
 				alert("Please enter the new page number.");
 				return;
 			}
-			if(new_page>page_MAX || new_page<=0)
+			if(new_page>page_MAX || new_page<0)
 			{
 				alert("Page Number Overflow.");
 				return;
