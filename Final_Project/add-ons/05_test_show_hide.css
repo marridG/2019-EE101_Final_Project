@@ -7,21 +7,33 @@
     font-size: 14px;
     color: #222222;
 }*/
-#box{
-    width: 80%;
+.output
+{
+    width: 50%;
+    margin-left: auto;
+    margin-right: 0;
     text-align: center;
-    margin: 0 0 0 50%;
+    font-family:'Regencie';
+    font-size: 150%
+}
+
+#box{
+    width: 30%;
+    text-align: center;
+    margin: 0 50% 0 0;
     float:left;
 }
 #content
 {
+    width: 50%;
     background-color: #b3dae9;
     border-radius: 5px;
     box-shadow: 1px 1px 1px #ccc;
     border:1px solid #EEEEEE;
-    float:left;
+    /*float:left;*/
     font-family:'Regencie';
-    margin: 0 0 0 5%;
+    margin-left: auto;
+    margin-right: 5%;
 }
 /*h4{
     font-size: 16px;
@@ -32,6 +44,7 @@ h4,p{
 #btn{
     width: 80px;
     margin: 0 50% 0 0
+
 }
 #spread{
     text-align: left;

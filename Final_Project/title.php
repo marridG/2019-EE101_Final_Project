@@ -215,7 +215,7 @@ curl_close($ch);
                 echo "
                 <script> 
                 graph.nodes.push({category: 'Level Two Citations', name: '$k', value: 25 , label: '$title'});
-                graph.links.push({source: '$i', target: '$k', value: 50});
+                graph.links.push({source: '$p', target: '$k', value: 50});
                 </script>
                 ";
                 $k++;
@@ -583,7 +583,7 @@ curl_close($ch);
 
 echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"/EE101-Final_Project/Final_Project/add-ons/05_test_show_hide.css\">";
 //echo "<div id=\"box\">";
-echo "<p class=\"output\" id=\"related_paper\">Related Papers:&nbsp;&nbsp;&nbsp;&nbsp;<br><button id=\"btn\">Show</button>";
+echo "<div class=\"output\" id=\"related_paper\">Related Papers: <button id=\"btn\">Show</button></div>";
 echo "<div id=\"content\">";
 echo "<div id=\"spread\">";
 echo "<br>";
@@ -595,7 +595,7 @@ if($result && $result['response']['docs'])
        continue;
    if($idx>=11)
        break;
-   echo "[$idx].";
+   echo "[$idx]. ";
    foreach ($info["Authors_Name"] as $key => $value)
    {
        echo "$value";
@@ -631,6 +631,6 @@ echo "<br>";
 echo "</div>";
 echo "</div>";
 echo "<script src=\"/EE101-Final_Project/Final_Project/add-ons/05_test_show_hide.js\"></script>";
-echo "</div>";
+// echo "</div>";
 
 ?>
