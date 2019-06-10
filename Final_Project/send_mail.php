@@ -207,14 +207,15 @@
 					<input type="email" id="send_mail_address"name="email" placeholder="How can we contact you?" required />
 					<span class="form_hint">Example：example@gmail.com</span>
 				</li>
-<!--         <li>
-            <label for="website">网站:</label>
-            <input type="url" name="website" placeholder="http://www.amonyous.com" required pattern="(http|https)://.+"/>
-            <span class="form_hint">：http://www.amonyous.com</span>
-        </li> -->
+				<li>
+					<label for="subject">Subject</label>
+					<input type="message" id="send_mail_subject" cols="40" rows="6" name="message" placeholder="Brief summary?" required >
+				</li>
+
+
         <li>
         	<label for="message">Feedback</label>
-        	<textarea name="message" id="feedback_message" cols="40" rows="6" placeholder="How can we help you?" required ></textarea>
+        	<textarea  type="message" id="feedback_message" cols="40" rows="6"  required ></textarea>
         </li>
         <li>
         	<button onclick="feedback_submit_it()" id="feedback_submit" class="submit" type="submit">Submit</button>
