@@ -37,6 +37,17 @@ cyf：
 各位dl，陈彩笔惨痛的教训：如果一个css文件被很多php或html文件引用，那么就称这个css是公有的，千万不要在公有的css中设置element的位置属性，尤其是position，margin这两个属性。padding可以考虑，但最好还是不要这么做。因为各个网站即使相同的元素其位置也可能不一样，这时候要是修改css中元素的位置就会将所有网站中的元素位置修改。更讨厌的是，你往往会忘了到底那些位置属性是公有的，哪些是私有的，这时候你什么都不敢做。
 所以，千万千万不要在公有的.css文件中写任何和位置有关的属性！！！！！！
 
+cyf：
+关于index.php中的advanced search button链接到search.php中的问题的解决：
+原代码请参见\EE101-Final_Project\Documents\life_experience\06_10index.php_advanced_search\修改前.jpg
+注意用荧光笔画出的form的位置
+修改后的代码请参见相同位置的修改后.jpg
+请注意form的位置
+error的原因：这个问题出现的原因在于将advanced_search这个button写在了form里面，高级搜索按钮正是受到form的影响才会跳转到search.php中的；同时，button毕竟拥有属于自己的href，这个href怎么说也得显示出来，于是就形成了href squeeze的情况，所以把高级搜索的button写出form这个问题就解决了。
+但是这个解决方法带来了新的问题，那就是高级搜索按钮的位置变成了相同目录下  新index.jpg的样子
+所以还需要调整button的位置，但是href的问题已经解决了
+
+
 
 在完成翻页功能时，控制页数的变量在各页面间传递较复杂（如 index-search 不能有相应表格）
 php 值传递：

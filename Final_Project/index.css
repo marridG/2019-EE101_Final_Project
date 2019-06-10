@@ -193,8 +193,8 @@ text-align: left;
   transition: all 0.5s;
   cursor: pointer;
   font-family:'HelveticaNeue';
-  padding: 1% 0 1% 0;
-  margin: 0.25% 0 0 0;
+  padding: 0.9% 0 0.9% 0;
+  margin:-5.66% 0 0 60%;
 
 }
 
@@ -210,6 +210,12 @@ text-align: left;
   top: 0;
   right: -20px;
   transition: 0.5s;
+}
+
+.button:hover
+{
+  color:#39A136;
+  background-color: white;
 }
 
 .button:hover span {
@@ -247,4 +253,9 @@ text-align: left;
   font-family: "3ds";/*"Calibri";*/
   font-size: 50%;
   color: white;
+}
+
+.input_submit
+{
+  margin: 0 10% 0 0;
 }
