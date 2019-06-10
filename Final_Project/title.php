@@ -164,13 +164,16 @@ curl_close($ch);
         curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
         $data = json_decode(curl_exec($ch), true);  
         // var_dump($data);
-        $title = $data['response']['docs'][0]['Title'];
-        $p = $i+1;
-        // var_dump($p);
-        echo "<script>
-        graph.nodes.push({category: 'Level One Citations', name: '$p', value: 45 , label: '$title'});
-        </script>
-        ";
+        if ($data['response']['docs']) {
+            $title = $data['response']['docs'][0]['Title'];
+            $p = $i+1;
+            // var_dump($p);
+            echo "<script>
+            graph.nodes.push({category: 'Level One Citations', name: '$p', value: 45 , label: '$title'});
+            </script>
+            "; 
+        }
+        
 
     //Search for the Refernece of Level One Citations.
         $url = "http://localhost:8983/solr/lab02/select?fl=ReferenceID&q=PaperID%20%3A%20$query1%20&rows=98215";
@@ -179,11 +182,13 @@ curl_close($ch);
         curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
         $data = json_decode(curl_exec($ch), true);  
         // var_dump($data);
-        $ReferenceID = $data['response']['docs'][0]['ReferenceID'];
-        $get[$p] = $ReferenceID;
-        echo "<script>
-        graph.links.push({source:'0', target:'$p',value:200});
-        </script>";
+        if ($data['response']['docs']) {
+            $ReferenceID = $data['response']['docs'][0]['ReferenceID'];
+            $get[$p] = $ReferenceID;
+            echo "<script>
+            graph.links.push({source:'0', target:'$p',value:200});
+            </script>";
+        }
 
 
         // echo("<br>");
