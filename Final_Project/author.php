@@ -178,9 +178,9 @@ if ($author_name_res = mysqli_fetch_row($result))
 	else
 	{
 		if($affiliation_name=="-1")
-			echo " Affiliation not found!<br>";
+			echo "<p class=\"output__result\"> Affiliation not found!<br></p>";
 		else
-			echo " Affiliation: $affiliation_name<br>";
+			echo "<p class=\"output__result\"> Affiliation: $affiliation_name<br></p>";
 	}
 	$affiliation_name_temp=urlencode($affiliation_name);
 }
@@ -306,7 +306,7 @@ if ($result['response']['docs'])
 	echo "<td>";
 	if ($i>=1)
 	{
-		echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp#skip\"><<</a>";
+		echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp#skip\">previous</a>";
 		echo "</td><td>";
 		echo "<a class=\"output_href\" href=\"/EE101-Final_Project/Final_Project/author.php?author_id=$author_id&page=$i&author_affi=$affiliation_name_temp#skip\"><img src =\"/EE101-Final_Project/Final_Project/pics/Turn_Page_empty.jpg\" id=\"search__Turn_Page_empty\"></a>";
 	}
