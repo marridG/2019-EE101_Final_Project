@@ -86,10 +86,18 @@
 
 
 	<p id="copyright_ancestor">
+		&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
 		<span id="copyright__copyright">© </span>
 		<span id="copyright__webpage_name">Phantom </span>
 		<span id="copyright__year">2018 S2 </span>
 		<span id="copyright__course">EE101</span>
+		
+		&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+		<a href="/EE101-Final_Project/Final_Project/send_mail.php" id="two_choices" target="_blank">Contact Us</a>
+		
+		<a id="two_choices">&ensp;&ensp;|&ensp;&ensp;</a>
+     	
+     	<a href="https://github.com/marridG/EE101-Final_Project" id="two_choices"  target="_blank">Open Source</a>
 	</p>
 
 </body>

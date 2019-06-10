@@ -118,7 +118,7 @@ a {
 
 #copyright_ancestor
 {
-  vertical-align: bottom;
+  /*vertical-align: bottom;*/
   position: absolute;
   text-align: center;
   bottom: 0;
@@ -126,13 +126,14 @@ a {
 
 #copyright__copyright  /*©*/,#copyright__year,#copyright__course
 {
-  vertical-align: middle;
+  /*vertical-align: middle;*/
   font-family: "3ds";/*"Calibri";*/
   font-size: 50%;
 }
 
 #copyright__webpage_name  /*Phantom */
 {
+  /*vertical-align: bottom;*/
   font-family:'Agnes-Bold';
   font-size: 60%;
 }
@@ -239,3 +240,11 @@ text-align: left;
 
 }
 
+#two_choices
+{
+  text-align: right;
+  vertical-align: middle;
+  font-family: "3ds";/*"Calibri";*/
+  font-size: 50%;
+  color: white;
+}
