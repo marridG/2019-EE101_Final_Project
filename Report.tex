@@ -376,6 +376,40 @@ shows the trend of his/her academic activity to give users a clear impression ab
 % JAF
 % ------>	
 
+\section{Hyperlinks}
+\textbf{\emph{--- By Aofan Jiang 518030910275 ---}}\newline\par
+As required in the final project, I add the hyperlink of each title, author and conference. So the users can click to get more information about the result they want to search for.
+\subsection{Hyperlink of each title}
+Different from the table about the information of key words, the title page is simply a series of main information about the corresponding paper. It includes the paper ID, the publish year, the authors, conference name, and reference papers. This can make the whole page clearer,just as the following picture.\newline\par
+\includegraphics[width=0.9\textwidth]{jaf/titleexample.PNG}\newline\par
+ It might be ignored that the table of reference paper title of each paper is given in the original data. Although it is not required in the lab two, I still add it as a field in Solr to make sure that more detailed information can be gotten by the users. This explains the existence of references in the paper page.\newline\par
+What’s more, to make a user-friendly website, you can see in the following picture that at the top of website, the link information about the title. It’s also clear and easy to find the information. It’s linked by the symbol of addition.\par
+\includegraphics[width=0.9\textwidth]{jaf/link.PNG}\newline\par
+ On the comparison, you can see even in Baidu NetDisk that the link is not so comfortable as ours. They are all connected with \%2 while our website link are connected with + . Since all the information is imported in solr, the searching speed is quite fast with no delay.\par
+\includegraphics[width=0.9\textwidth]{jaf/linked.PNG}\newline\par
+\subsection{Hyperlink of each conference}
+This page is also mainly an information table like the main searching page. It includes each paper’s title, authors published on the given conference name. However, at the last column of table, the original conference name is replaced by the publish year of each paper published in this conference.\par
+\includegraphics[width=0.9\textwidth]{jaf/conference.PNG}\newline\par
+\subsection{others}
+Even at different pages among paper, author, conferences. Almost all the items are hyperlinked. So it means you can jump to different pages in any given page. Here comes an example of authors' information\par
+\includegraphics[width=0.9\textwidth]{jaf/author.PNG}\par
+
+\section{Code optimization}
+\subsection{Solr}
+By testing, I find that the searching speed by solr is faster than mysql. So all the places that can be used in solr are changed from mysql.\par
+\subsection{Mysql}
+When using mysql, there are still some methods to improve the speed of program.\par If the searching result is only one piece. For instance, the publish year, the affiliation and the conference and so on. We can limit the searching result numbers by add the code “LIMIT 1 ”. As a result, when mysql get one information about the result, it will stop the searching process, which is a great improvement in the speed of a program.\par
+\includegraphics[width=0.9\textwidth]{jaf/limit.PNG}\newline\par
+ Instead of using inner join, try to use more simple searching and output the result together is faster.\par
+\includegraphics[width=0.9\textwidth]{jaf/affold.PNG}\newline\par
+\includegraphics[width=0.9\textwidth]{jaf/affnew.PNG}\newline\par
+As for the code in php, we can choose to use mysqli\_fetch\_row rather than mysqli\_fetch\_array since the information class is of each column is known to us.\par
+
+\section{Contact and Open source}
+At the home page, you can find the word “contact us ”. After clicking it, you will jump to a new page with a sophisticated chart. You can input your information and your information, we will get your feedback after you clicking the submit button.\newline\par
+\includegraphics[width=0.9\textwidth]{jaf/contact.PNG}\newline\par
+Also, you can find the word ”open source ”. After clicking it, you will jump to our project on Github website. At here, you can check all the detailed codes and corresponding documents.\newline\par
+\includegraphics[width=0.9\textwidth]{jaf/git.PNG}\newline\par
 \newpage
 
 % <------
