@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.22)  22 JUN 2019 16:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.22)  22 JUN 2019 17:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1077,306 +1077,319 @@ Overfull \hbox (7.25058pt too wide) in paragraph at lines 228--229
  the search.php.Therefore
  []
 
-[10 <./cyf/author2.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 266--266
+<cyf/Title1.PNG, id=187, 1072.005pt x 570.63188pt>
+File: cyf/Title1.PNG Graphic file (type png)
+<use cyf/Title1.PNG>
+Package pdftex.def Info: cyf/Title1.PNG  used on input line 232.
+(pdftex.def)             Requested size: 345.0pt x 183.64207pt.
+<cyf/Title2.PNG, id=188, 1071.25218pt x 568.37344pt>
+File: cyf/Title2.PNG Graphic file (type png)
+<use cyf/Title2.PNG>
+Package pdftex.def Info: cyf/Title2.PNG  used on input line 235.
+(pdftex.def)             Requested size: 345.0pt x 183.04535pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10 <./cyf/author2.PNG> <./cyf/Title1.PNG>] [11 <./cyf/Title2.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 282--282
 
  []
 
-<gjl/overview.jpg, id=191, 669.09975pt x 350.5095pt>
+<gjl/overview.jpg, id=198, 669.09975pt x 350.5095pt>
 File: gjl/overview.jpg Graphic file (type jpg)
 <use gjl/overview.jpg>
-Package pdftex.def Info: gjl/overview.jpg  used on input line 269.
+Package pdftex.def Info: gjl/overview.jpg  used on input line 285.
 (pdftex.def)             Requested size: 310.4979pt x 162.65364pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--269
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--270
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--271
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 272--272
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
-
- []
-
-Package CJKpunct Info: use punctuation spaces for family 'rm' with punctstyle (
-quanjiao) on input line 276.
-[11 <./gjl/overview.JPG>]
 Underfull \hbox (badness 10000) in paragraph at lines 287--287
 
  []
 
-<gjl/formdata.jpg, id=198, 316.18124pt x 217.41225pt>
-File: gjl/formdata.jpg Graphic file (type jpg)
-<use gjl/formdata.jpg>
-Package pdftex.def Info: gjl/formdata.jpg  used on input line 288.
-(pdftex.def)             Requested size: 310.4979pt x 213.52034pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 288--288
 
  []
 
-[12 <./gjl/formdata.JPG>]
-<gjl/11.jpg, id=202, 225.2415pt x 221.02576pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 289--289
+
+ []
+
+Package CJKpunct Info: use punctuation spaces for family 'rm' with punctstyle (
+quanjiao) on input line 292.
+[12 <./gjl/overview.JPG>]
+Underfull \hbox (badness 10000) in paragraph at lines 303--303
+
+ []
+
+<gjl/formdata.jpg, id=205, 316.18124pt x 217.41225pt>
+File: gjl/formdata.jpg Graphic file (type jpg)
+<use gjl/formdata.jpg>
+Package pdftex.def Info: gjl/formdata.jpg  used on input line 304.
+(pdftex.def)             Requested size: 310.4979pt x 213.52034pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 304--304
+
+ []
+
+[13 <./gjl/formdata.JPG>]
+<gjl/11.jpg, id=209, 225.2415pt x 221.02576pt>
 File: gjl/11.jpg Graphic file (type jpg)
 <use gjl/11.jpg>
-Package pdftex.def Info: gjl/11.jpg  used on input line 300.
+Package pdftex.def Info: gjl/11.jpg  used on input line 316.
 (pdftex.def)             Requested size: 137.9979pt x 135.41571pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
+Underfull \hbox (badness 10000) in paragraph at lines 316--316
 
  []
 
-<gjl/12.jpg, id=203, 266.79675pt x 239.6955pt>
+<gjl/12.jpg, id=210, 266.79675pt x 239.6955pt>
 File: gjl/12.jpg Graphic file (type jpg)
 <use gjl/12.jpg>
-Package pdftex.def Info: gjl/12.jpg  used on input line 301.
+Package pdftex.def Info: gjl/12.jpg  used on input line 317.
 (pdftex.def)             Requested size: 137.9979pt x 123.98402pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--301
+Underfull \hbox (badness 10000) in paragraph at lines 317--317
 
  []
 
-<gjl/21.jpg, id=204, 296.307pt x 296.307pt>
+<gjl/21.jpg, id=211, 296.307pt x 296.307pt>
 File: gjl/21.jpg Graphic file (type jpg)
 <use gjl/21.jpg>
-Package pdftex.def Info: gjl/21.jpg  used on input line 302.
+Package pdftex.def Info: gjl/21.jpg  used on input line 318.
 (pdftex.def)             Requested size: 137.9979pt x 137.99835pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--302
+Underfull \hbox (badness 10000) in paragraph at lines 318--318
 
  []
 
 
 Underfull \vbox (badness 5490) has occurred while \output is active []
 
- [13 <./gjl/11.JPG> <./gjl/12.JPG>]
-<gjl/22.jpg, id=208, 332.442pt x 322.20375pt>
+ [14 <./gjl/11.JPG> <./gjl/12.JPG>]
+<gjl/22.jpg, id=215, 332.442pt x 322.20375pt>
 File: gjl/22.jpg Graphic file (type jpg)
 <use gjl/22.jpg>
-Package pdftex.def Info: gjl/22.jpg  used on input line 303.
+Package pdftex.def Info: gjl/22.jpg  used on input line 319.
 (pdftex.def)             Requested size: 137.9979pt x 133.74648pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--303
+Underfull \hbox (badness 10000) in paragraph at lines 319--319
 
  []
 
-<gjl/3.jpg, id=209, 301.125pt x 301.125pt>
+<gjl/3.jpg, id=216, 301.125pt x 301.125pt>
 File: gjl/3.jpg Graphic file (type jpg)
 <use gjl/3.jpg>
-Package pdftex.def Info: gjl/3.jpg  used on input line 304.
+Package pdftex.def Info: gjl/3.jpg  used on input line 320.
 (pdftex.def)             Requested size: 137.9979pt x 138.00455pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--304
+Underfull \hbox (badness 10000) in paragraph at lines 320--320
 
  []
 
-[14 <./gjl/21.JPG> <./gjl/22.JPG> <./gjl/3.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 322--322
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
+[15 <./gjl/21.JPG> <./gjl/22.JPG> <./gjl/3.JPG>]
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--324
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--325
+Underfull \hbox (badness 10000) in paragraph at lines 340--340
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--326
+Underfull \hbox (badness 10000) in paragraph at lines 341--341
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--327
+Underfull \hbox (badness 10000) in paragraph at lines 342--342
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--328
+Underfull \hbox (badness 10000) in paragraph at lines 343--343
 
  []
 
-<gzl/01.png, id=213, 796.8972pt x 433.62pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 344--344
+
+ []
+
+<gzl/01.png, id=221, 796.8972pt x 433.62pt>
 File: gzl/01.png Graphic file (type png)
 <use gzl/01.png>
-Package pdftex.def Info: gzl/01.png  used on input line 329.
+Package pdftex.def Info: gzl/01.png  used on input line 345.
 (pdftex.def)             Requested size: 310.4979pt x 168.95232pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15 <./gzl/01.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 334--334
+ [16 <./gzl/01.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 350--350
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--335
+Underfull \hbox (badness 10000) in paragraph at lines 351--351
 
  []
 
-<gzl/02.jpg, id=219, 265.99374pt x 70.2625pt>
+<gzl/02.jpg, id=226, 265.99374pt x 70.2625pt>
 File: gzl/02.jpg Graphic file (type jpg)
 <use gzl/02.jpg>
-Package pdftex.def Info: gzl/02.jpg  used on input line 336.
+Package pdftex.def Info: gzl/02.jpg  used on input line 352.
 (pdftex.def)             Requested size: 310.4979pt x 82.02559pt.
-[16 <./gzl/02.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 387--387
+[17 <./gzl/02.JPG>]
+Underfull \hbox (badness 10000) in paragraph at lines 403--403
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 390--390
+Underfull \hbox (badness 10000) in paragraph at lines 406--406
 
  []
 
-<jaf/titleexample.PNG, id=223, 447.47176pt x 366.168pt>
+<jaf/titleexample.PNG, id=230, 447.47176pt x 366.168pt>
 File: jaf/titleexample.PNG Graphic file (type png)
 <use jaf/titleexample.PNG>
-Package pdftex.def Info: jaf/titleexample.PNG  used on input line 391.
+Package pdftex.def Info: jaf/titleexample.PNG  used on input line 407.
 (pdftex.def)             Requested size: 310.4979pt x 254.08093pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--391
+Underfull \hbox (badness 10000) in paragraph at lines 407--407
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 392--392
+Underfull \hbox (badness 10000) in paragraph at lines 408--408
 
  []
 
-[17 <./jaf/titleexample.PNG>]
-<jaf/link.PNG, id=228, 602.25pt x 17.46526pt>
+[18 <./jaf/titleexample.PNG>]
+<jaf/link.PNG, id=235, 602.25pt x 17.46526pt>
 File: jaf/link.PNG Graphic file (type png)
 <use jaf/link.PNG>
-Package pdftex.def Info: jaf/link.PNG  used on input line 394.
+Package pdftex.def Info: jaf/link.PNG  used on input line 410.
 (pdftex.def)             Requested size: 310.4979pt x 9.00468pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--394
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 
  []
 
-<jaf/linked.PNG, id=229, 632.96475pt x 18.66975pt>
+<jaf/linked.PNG, id=236, 632.96475pt x 18.66975pt>
 File: jaf/linked.PNG Graphic file (type png)
 <use jaf/linked.PNG>
-Package pdftex.def Info: jaf/linked.PNG  used on input line 396.
+Package pdftex.def Info: jaf/linked.PNG  used on input line 412.
 (pdftex.def)             Requested size: 310.4979pt x 9.1585pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 396--396
-
- []
-
-<jaf/conference.PNG, id=230, 641.39626pt x 342.68025pt>
-File: jaf/conference.PNG Graphic file (type png)
-<use jaf/conference.PNG>
-Package pdftex.def Info: jaf/conference.PNG  used on input line 399.
-(pdftex.def)             Requested size: 310.4979pt x 165.89122pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 399--399
-
- []
-
-<jaf/author.PNG, id=231, 638.385pt x 248.72925pt>
-File: jaf/author.PNG Graphic file (type png)
-<use jaf/author.PNG>
-Package pdftex.def Info: jaf/author.PNG  used on input line 402.
-(pdftex.def)             Requested size: 310.4979pt x 120.97511pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [18 <./jaf/link.PNG> <./jaf/linked.PNG> <./jaf/conference.PNG>]
-<jaf/limit.PNG, id=238, 698.00775pt x 18.66975pt>
-File: jaf/limit.PNG Graphic file (type png)
-<use jaf/limit.PNG>
-Package pdftex.def Info: jaf/limit.PNG  used on input line 409.
-(pdftex.def)             Requested size: 310.4979pt x 8.30472pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 409--409
-
- []
-
-<jaf/affold.PNG, id=239, 685.3605pt x 62.03175pt>
-File: jaf/affold.PNG Graphic file (type png)
-<use jaf/affold.PNG>
-Package pdftex.def Info: jaf/affold.PNG  used on input line 411.
-(pdftex.def)             Requested size: 310.4979pt x 28.10332pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 411--411
-
- []
-
-<jaf/affnew.PNG, id=240, 777.50475pt x 84.315pt>
-File: jaf/affnew.PNG Graphic file (type png)
-<use jaf/affnew.PNG>
-Package pdftex.def Info: jaf/affnew.PNG  used on input line 412.
-(pdftex.def)             Requested size: 310.4979pt x 33.67136pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 412--412
 
  []
 
+<jaf/conference.PNG, id=237, 641.39626pt x 342.68025pt>
+File: jaf/conference.PNG Graphic file (type png)
+<use jaf/conference.PNG>
+Package pdftex.def Info: jaf/conference.PNG  used on input line 415.
+(pdftex.def)             Requested size: 310.4979pt x 165.89122pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 416--416
+Underfull \hbox (badness 10000) in paragraph at lines 415--415
 
  []
 
-[19 <./jaf/author.PNG> <./jaf/limit.PNG> <./jaf/affold.PNG> <./jaf/affnew.PNG>]
-<jaf/contact.PNG, id=248, 548.64975pt x 330.63525pt>
+<jaf/author.PNG, id=238, 638.385pt x 248.72925pt>
+File: jaf/author.PNG Graphic file (type png)
+<use jaf/author.PNG>
+Package pdftex.def Info: jaf/author.PNG  used on input line 418.
+(pdftex.def)             Requested size: 310.4979pt x 120.97511pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19 <./jaf/link.PNG> <./jaf/linked.PNG> <./jaf/conference.PNG>]
+<jaf/limit.PNG, id=245, 698.00775pt x 18.66975pt>
+File: jaf/limit.PNG Graphic file (type png)
+<use jaf/limit.PNG>
+Package pdftex.def Info: jaf/limit.PNG  used on input line 425.
+(pdftex.def)             Requested size: 310.4979pt x 8.30472pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 425--425
+
+ []
+
+<jaf/affold.PNG, id=246, 685.3605pt x 62.03175pt>
+File: jaf/affold.PNG Graphic file (type png)
+<use jaf/affold.PNG>
+Package pdftex.def Info: jaf/affold.PNG  used on input line 427.
+(pdftex.def)             Requested size: 310.4979pt x 28.10332pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 427--427
+
+ []
+
+<jaf/affnew.PNG, id=247, 777.50475pt x 84.315pt>
+File: jaf/affnew.PNG Graphic file (type png)
+<use jaf/affnew.PNG>
+Package pdftex.def Info: jaf/affnew.PNG  used on input line 428.
+(pdftex.def)             Requested size: 310.4979pt x 33.67136pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 428--428
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 432--432
+
+ []
+
+[20 <./jaf/author.PNG> <./jaf/limit.PNG> <./jaf/affold.PNG> <./jaf/affnew.PNG>]
+<jaf/contact.PNG, id=255, 548.64975pt x 330.63525pt>
 File: jaf/contact.PNG Graphic file (type png)
 <use jaf/contact.PNG>
-Package pdftex.def Info: jaf/contact.PNG  used on input line 417.
+Package pdftex.def Info: jaf/contact.PNG  used on input line 433.
 (pdftex.def)             Requested size: 310.4979pt x 187.12206pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--417
+Underfull \hbox (badness 10000) in paragraph at lines 433--433
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 418--418
+Underfull \hbox (badness 10000) in paragraph at lines 434--434
 
  []
 
-<jaf/git.PNG, id=249, 740.16525pt x 410.7345pt>
+<jaf/git.PNG, id=256, 740.16525pt x 410.7345pt>
 File: jaf/git.PNG Graphic file (type png)
 <use jaf/git.PNG>
-Package pdftex.def Info: jaf/git.PNG  used on input line 419.
+Package pdftex.def Info: jaf/git.PNG  used on input line 435.
 (pdftex.def)             Requested size: 310.4979pt x 172.30049pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 419--419
+Underfull \hbox (badness 10000) in paragraph at lines 435--435
 
  []
 
-[20 <./jaf/contact.PNG> <./jaf/git.PNG>] (./Report.aux) ) 
+[21 <./jaf/contact.PNG> <./jaf/git.PNG>] (./Report.aux) ) 
 Here is how much of TeX's memory you used:
- 15816 strings out of 492609
- 292260 string characters out of 6132818
+ 15826 strings out of 492609
+ 292430 string characters out of 6132818
  314647 words of memory out of 5000000
- 19422 multiletter control sequences out of 15000+600000
+ 19430 multiletter control sequences out of 15000+600000
  542582 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,63p,479b,317s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,6n,63p,897b,317s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/Windows/Fonts/sims
 un.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fo
 nts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Wi
@@ -1390,10 +1403,10 @@ live/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2019/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2019/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2019/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmti10.pfb>
-Output written on Report.pdf (24 pages, 3342099 bytes).
+Output written on Report.pdf (25 pages, 3522671 bytes).
 PDF statistics:
- 325 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
+ 333 PDF objects out of 1000 (max. 8388607)
+ 124 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 431 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 441 words of extra memory for PDF output out of 10000 (max. 10000000)
 

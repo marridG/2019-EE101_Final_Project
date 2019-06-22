@@ -17,22 +17,23 @@
 \contentsline {subsection}{\numberline {2.4}Conference.php}{8}% 
 \contentsline {subsection}{\numberline {2.5}Author.php}{9}% 
 \contentsline {subsection}{\numberline {2.6}Title.php}{10}% 
-\contentsline {section}{\numberline {3}Graphs}{11}% 
-\contentsline {subsection}{\numberline {3.1}Overview}{11}% 
-\contentsline {subsection}{\numberline {3.2}Design}{11}% 
-\contentsline {subsection}{\numberline {3.3}Searching Data}{12}% 
-\contentsline {subsubsection}{\numberline {3.3.1}From Mysql to Solr}{12}% 
-\contentsline {subsubsection}{\numberline {3.3.2}Searching in Solr}{13}% 
-\contentsline {subsection}{\numberline {3.4}Formatting Data}{13}% 
-\contentsline {subsection}{\numberline {3.5}Drawing Graph}{13}% 
-\contentsline {subsection}{\numberline {3.6}Fruits' Display}{13}% 
-\contentsline {section}{\numberline {4}Overview}{15}% 
-\contentsline {section}{\numberline {5}Keyword Highlighting}{16}% 
-\contentsline {section}{\numberline {6}Hyperlinks}{17}% 
-\contentsline {subsection}{\numberline {6.1}Hyperlink of each title}{17}% 
-\contentsline {subsection}{\numberline {6.2}Hyperlink of each conference}{18}% 
-\contentsline {subsection}{\numberline {6.3}others}{18}% 
-\contentsline {section}{\numberline {7}Code optimization}{19}% 
-\contentsline {subsection}{\numberline {7.1}Solr}{19}% 
-\contentsline {subsection}{\numberline {7.2}Mysql}{19}% 
-\contentsline {section}{\numberline {8}Contact and Open source}{20}% 
+\contentsline {subsection}{\numberline {2.7}Acknowledgment}{11}% 
+\contentsline {section}{\numberline {3}Graphs}{12}% 
+\contentsline {subsection}{\numberline {3.1}Overview}{12}% 
+\contentsline {subsection}{\numberline {3.2}Design}{12}% 
+\contentsline {subsection}{\numberline {3.3}Searching Data}{13}% 
+\contentsline {subsubsection}{\numberline {3.3.1}From Mysql to Solr}{13}% 
+\contentsline {subsubsection}{\numberline {3.3.2}Searching in Solr}{14}% 
+\contentsline {subsection}{\numberline {3.4}Formatting Data}{14}% 
+\contentsline {subsection}{\numberline {3.5}Drawing Graph}{14}% 
+\contentsline {subsection}{\numberline {3.6}Fruits' Display}{14}% 
+\contentsline {section}{\numberline {4}Overview}{16}% 
+\contentsline {section}{\numberline {5}Keyword Highlighting}{17}% 
+\contentsline {section}{\numberline {6}Hyperlinks}{18}% 
+\contentsline {subsection}{\numberline {6.1}Hyperlink of each title}{18}% 
+\contentsline {subsection}{\numberline {6.2}Hyperlink of each conference}{19}% 
+\contentsline {subsection}{\numberline {6.3}others}{19}% 
+\contentsline {section}{\numberline {7}Code optimization}{20}% 
+\contentsline {subsection}{\numberline {7.1}Solr}{20}% 
+\contentsline {subsection}{\numberline {7.2}Mysql}{20}% 
+\contentsline {section}{\numberline {8}Contact and Open source}{21}% 
