@@ -140,14 +140,97 @@
 % ----------   END   ------------	 
 	
 	
+
+
 % ----------  BEGIN  ------------
-% CYF
+% GJL
 % ------>	
 
 
 % <------
-% CYF
+% GJL
 % ----------   END   ------------
+
+
+\newpage
+
+
+% ----------  BEGIN  ------------
+% GZL
+% ------>	
+
+	\section{Overview}
+		\textbf{\emph{[Start] --- By Ziliang Guo 518030910273 ---}}\newline\par
+		(1) I took the initiative that we take full advantage of Github to accelerate our project. I also create a document to take notes of the porblems we met and the solutions.\newline\par
+		(2) Actually, I wrote the manual and uploaded my Lab 01 - 03 codes to unify the databases.\newline\par
+		(3)	I mainly focus on the back-end development.\newline\par
+		(4) Of all my codes, I wanna highlight that approximately 85\% are mainly created  independently. For the remaining codes, modification is applied, with reference to some online blogs.\newline\par
+		(5) Meanwhile, during my coding, I always remember to leave interfaces for my collaborators.\newline\par
+		(6)	As is vividly depicted in the timeline graph, I realized and improved different sections separately, in other words, term by term. Of course, my constant improvements are shown.\newline\par
+		\includegraphics[width=0.9\textwidth]{gzl/01.png}
+
+
+	\section{Keyword Highlighting}
+		I adopted the “hl” settings of Solr. It is somehow very simple. Just echo the corresponding urls will do.\par
+		However, please notice that, for multivalued fields such as Authors\_Name, only the highlighted part is returned. So I made judgements in such special cases.\newline\par
+		Codes:\newline\par
+		\includegraphics[width=0.9\textwidth]{gzl/02.jpg}
+
+
+		% 4.	Page Turning
+		% Now, here comes the page turning part. It appears in several pages, namely, search, author, conference, advanced search. Actually, this part undergoes about three versions, and you guys can see the V2.0 and the advanced version.
+
+		% As for the features of the versions:
+		% Hyperlink means that I use hyperlinks to jump to a new page.
+		% Anchor refers to the fact that after turning pages, the page will be automatically guided to the titles of the result tables for better user experience.
+		% Jump to stands for the jump-to function, which enables users to jump to a valid page of results.
+		% Actually, the 2.0 and higher version, I tried to imitate the page-turning function of Google. But for the methods, improved hyperlinks for the former, while Jquery and Ajax for the latter.
+
+
+		% As you can see, the current page is highlighted in red and the red u cannot be clicked.
+		% Previous page and next page buttons appear if and only if such a page is applicable.
+
+		% The simple search V1.0 is just that of my Lab03. It’s simple and sometimes naïve.
+		% For the V2.0, multi-field search is applied. All the results, containing the target keywords in Fields Title, Authors_Name, and Conference, will be displayed. These fields are of the same importance. By the way, I designed some widgets.
+		% Now let’s have a look at the webpages.
+		% (Open the browser)
+
+		% I also implemented some tiny webpage features.
+		% For all the pages, after refreshing, the page will jump to the location where the user was previously browsing.
+		% Still, for all the pages, if a hyperlink is clicked, the new page will be opened in a new window.
+		% In addition, I improved the loading speed of the author page.
+
+		% Paper recommendation in academic formats, which can be hidden and shown, is available on the title page.
+		% The order and weight account for three parameters. Cited times are given top priority, followed by authors and title. The authors of a certain paper are given a descending weight and the weight of the title is similar to that of the first author.
+		% (Open the browser)
+
+
+		% The advanced search is key to a good search engine.
+		% This page is made separately using Jquery and Ajax. A slowly descending The keywords are given a slowly descending weight.
+
+
+		% We value users’ precious feedbacks. So we add a feedback page.
+		% The unfilled blanks will be alerted and the pending status will be clearly illustrated. What’s more, the log will be saved locally. I take advantage of NodeJS and emailjs to implement the function.
+		% Considering the network and the fact that this function is still a beta version, probably the outcome is not that satisfactory. But, does anybody wanna have a try?
+
+	\textbf{\emph{[End] --- By Ziliang Guo 518030910273 ---}}
+% <------
+% GZL
+% ----------   END   ------------
+
+\newpage
+
+% ----------  BEGIN  ------------
+% JAF
+% ------>	
+
+\newpage
+
+% <------
+% JAF
+% ----------   END   ------------
+
+
 
 
 \end{document}
