@@ -203,6 +203,7 @@ written by Yifu Chen
 		The first of which is to get all the data we need in order to draw a graph.\newline\par
 		The second part of which is to format all the data into the form that the corresponding graph is needed.\newline\par
 		The last part of which is just to use specific javascript library to create graphs and make them beautiful. \newline\par
+		
 
 	\subsection{Design}
 		\par In author page’s left part, I add a collumn graph, which displays the number of publication the author has yearly and
@@ -216,17 +217,51 @@ shows the trend of his/her academic activity to give users a clear impression ab
 		\par In this subsection I mainly discuss the first part of graph drawing, get data from database. Since diverse graphs need diverse data, here I just demonstrate a specific example of getting data, which can mostly stand for my means of searching data.
 		\subsubsection{From Mysql to Solr}
 			\par Taking time cost into consideration, we may need to import data into solr from mysql in advance, for searching from solr will spend more time than from mysql. Thereby, it is required that we write the referenceID of reference papers into solr's schema, which allows us to search the reference papers of a paper just from solr when needed.
-			\par The final data we put in solr is formed in this way:\newline\par
+			\par The final data we put in solr is formed in this way:\par
 			\includegraphics[width=0.9\textwidth]{gjl/formdata.jpg}\newline\par
 		You can refer to the codes attached for detailed information.
 		\subsubsection{Searching in Solr}
 			\par The first step is getting value form user's input, then create the url link to search in solr. After this step, we can get a .json file with the result.
 
 	\subsection{Formatting Data}
-		\par In this section, we mainly discuss how to change the search result into suitable formation of drawing a graph. 
+		\par In this section, we mainly discuss how to change the search result into suitable formation of drawing a graph. Since I searche data using php sentence, this time I have to turn php to javascript because the graph uses javascript. \newline \newline
+		Force directed graph: \par Force Graph is a graph whose format is rather difficult to handle, which contains two parts. The first one is called node categories, for which we need to name every node and divide them: \par
+		\includegraphics[width=1.0\textwidth]{gjl/03.jpg}\par
+		The second part is line data, for which we need to give the source and target of a line as well as its value. In addition, in php foreach sentense is helpful in handle plenty of data when formatting them.\par
+		\includegraphics[width=0.8\textwidth]{gjl/04.jpg}\newline
+		Collumn Graph:\par In collumn graph, an array which stores the value of yearly publication is needed. So a basic command of Javascript's array is required in order to draw a collumn graph. Also, the key that turn php sentence to js is echo structure, which is shown in the following picture: \par
+		\includegraphics[width=0.8\textwidth]{gjl/01.jpg}\par
+		\includegraphics[width=0.8\textwidth]{gjl/02.jpg}\newline
+		Pie Graph: \par In pie graph, the case is almost similar to collumn. I just start another array in order to put the data into it. \newline\newline
+		Line Graph:\par In terms of line graph, it is also needed that a container to put all the data, which means an array is a good choice for us to use.\newline
+		
 
 	\subsection{Drawing Graph}
-		\par In the section, the process of drawing with echarts is mainly discussed.
+		\par In the section, the process of drawing with echarts is mainly discussed. Echarts is an opensourse visualization library realized by JavaScript, compatible with most current browsers (IE8/9/10/11, Chrome, Firefox, Safari, etc.) . This is a very useful tool in drawing graphs. Compared to D3.js, echarts is much more easier to learn to edit, and saving much more time in writing codes. Therefore, I chose echarts anyway. 
+		\par When drawing graphs the totle step is (1) prepare a container,(2) initiate a echart, (3) draw a graph, (4) set options. The first step is just use <div> to put a graph, and easy to use. I'll introduce different ways to draw graphs and candidates.
+		\subsubsection{Collunmn Graphs}
+			\par Collumn graphs can show clearly the exact number of data, I chose it to showcase the yearly citations of an author. 
+			\par Basically I need to set the x-axis, y-axis and the legend. What's more, I used function in realize the formatter setting :\par
+			\includegraphics[width=0.8\textwidth]{gjl/05.jpg}\par
+			And datazoom is imported in order to show diverse year's of publication. Users can drag it and change the length of time:\par
+			\includegraphics[width=0.8\textwidth]{gjl/06.jpg}\par
+			Moreover, I set functions as well to find the maximum and average of data : \par
+			\includegraphics[width=0.8\textwidth]{gjl/07.jpg}\par
+
+		\subsubsection{Pie Graphs}
+			\par Pie graphs can display the ratio of a part to a total part. Since there are static amount of conferences, I just check the number of each conference to draw the graph, and then eliminate the zeros. \par
+			\includegraphics[width=0.8\textwidth]{gjl/13.jpg}\par
+
+		\subsubsection{Force Directed Graphs}
+			\par Force directed graph can be divided into lines,nodes and lables. 
+			\par Lines' setting can change their length based on their correlation degree, the curvature and color.\par
+			\includegraphics[width=0.8\textwidth]{gjl/08.jpg}\par
+			\par Nodes' setting can change their size,color, etc.\par
+			\includegraphics[width=0.8\textwidth]{gjl/09.jpg}\par
+			\par Lables can make data more easy to different.\par
+			\includegraphics[width=0.8\textwidth]{gjl/10.jpg}\par
+			
+		
 
 	\subsection{Fruits' Display}
 		\includegraphics[width=0.4\textwidth]{gjl/11.jpg}\newline\par
