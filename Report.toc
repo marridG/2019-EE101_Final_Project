@@ -13,14 +13,14 @@
 \contentsline {subsubsection}{\numberline {2.2.3}Paper Turning \& "Jump to" Button }{7}% 
 \contentsline {subsection}{\numberline {2.3}Conference.php}{7}% 
 \contentsline {subsection}{\numberline {2.4}Author.php}{8}% 
-\contentsline {section}{\numberline {3}Graphs}{9}% 
-\contentsline {subsection}{\numberline {3.1}Overview}{9}% 
-\contentsline {subsection}{\numberline {3.2}Design}{9}% 
-\contentsline {subsection}{\numberline {3.3}Searching Data}{10}% 
-\contentsline {subsubsection}{\numberline {3.3.1}From Mysql to Solr}{10}% 
-\contentsline {subsubsection}{\numberline {3.3.2}Searching in Solr}{11}% 
-\contentsline {subsection}{\numberline {3.4}Formatting Data}{11}% 
-\contentsline {subsection}{\numberline {3.5}Drawing Graph}{11}% 
-\contentsline {subsection}{\numberline {3.6}Fruits' Display}{11}% 
-\contentsline {section}{\numberline {4}Overview}{13}% 
-\contentsline {section}{\numberline {5}Keyword Highlighting}{14}% 
+\contentsline {section}{\numberline {3}Graphs}{10}% 
+\contentsline {subsection}{\numberline {3.1}Overview}{10}% 
+\contentsline {subsection}{\numberline {3.2}Design}{10}% 
+\contentsline {subsection}{\numberline {3.3}Searching Data}{11}% 
+\contentsline {subsubsection}{\numberline {3.3.1}From Mysql to Solr}{11}% 
+\contentsline {subsubsection}{\numberline {3.3.2}Searching in Solr}{12}% 
+\contentsline {subsection}{\numberline {3.4}Formatting Data}{12}% 
+\contentsline {subsection}{\numberline {3.5}Drawing Graph}{12}% 
+\contentsline {subsection}{\numberline {3.6}Fruits' Display}{12}% 
+\contentsline {section}{\numberline {4}Overview}{14}% 
+\contentsline {section}{\numberline {5}Keyword Highlighting}{15}% 
