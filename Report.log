@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.22)  22 JUN 2019 15:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.22)  22 JUN 2019 16:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1004,201 +1004,217 @@ File: cyf/SEARCH_struct1.png Graphic file (type png)
 <use cyf/SEARCH_struct1.png>
 Package pdftex.def Info: cyf/SEARCH_struct1.png  used on input line 169.
 (pdftex.def)             Requested size: 345.0pt x 181.61719pt.
+<cyf/SEARCH_2_struct2.png, id=140, 1068.99374pt x 566.86781pt>
+File: cyf/SEARCH_2_struct2.png Graphic file (type png)
+<use cyf/SEARCH_2_struct2.png>
+Package pdftex.def Info: cyf/SEARCH_2_struct2.png  used on input line 171.
+(pdftex.def)             Requested size: 345.0pt x 182.94969pt.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 169--170
+Overfull \hbox (20.0pt too wide) in paragraph at lines 169--172
 [][] 
  []
 
-[5 <./cyf/Advanced_searching29.png> <./cyf/Advanced_searching30.png> <./cyf/Adv
-anced_searching31.png> <./cyf/SEARCH_struct1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 198--198
 
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<gjl/overview.jpg, id=147, 669.09975pt x 350.5095pt>
-File: gjl/overview.jpg Graphic file (type jpg)
-<use gjl/overview.jpg>
-Package pdftex.def Info: gjl/overview.jpg  used on input line 201.
-(pdftex.def)             Requested size: 310.4979pt x 162.65364pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 202--202
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 203--203
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 204--204
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 205--205
-
- []
-
-Package CJKpunct Info: use punctuation spaces for family 'rm' with punctstyle (
-quanjiao) on input line 208.
-[6 <./gjl/overview.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 219--219
-
- []
-
-<gjl/formdata.jpg, id=154, 316.18124pt x 217.41225pt>
-File: gjl/formdata.jpg Graphic file (type jpg)
-<use gjl/formdata.jpg>
-Package pdftex.def Info: gjl/formdata.jpg  used on input line 220.
-(pdftex.def)             Requested size: 310.4979pt x 213.52034pt.
-
+ [5 <./cyf/Advanced_searching29.png> <./cyf/Advanced_searching30.png> <./cyf/Ad
+vanced_searching31.png> <./cyf/SEARCH_struct1.png>]
+<cyf/Google.jpg, id=153, 547.04375pt x 286.06876pt>
+File: cyf/Google.jpg Graphic file (type jpg)
+<use cyf/Google.jpg>
+Package pdftex.def Info: cyf/Google.jpg  used on input line 186.
+(pdftex.def)             Requested size: 172.5pt x 90.20816pt.
+ [6 <./cyf/SEARCH_2_struct2.png> <./cyf/Google.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 220--220
 
  []
 
-[7 <./gjl/formdata.JPG>]
-<gjl/11.jpg, id=158, 225.2415pt x 221.02576pt>
+<gjl/overview.jpg, id=163, 669.09975pt x 350.5095pt>
+File: gjl/overview.jpg Graphic file (type jpg)
+<use gjl/overview.jpg>
+Package pdftex.def Info: gjl/overview.jpg  used on input line 223.
+(pdftex.def)             Requested size: 310.4979pt x 162.65364pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--223
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--224
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--226
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--227
+
+ []
+
+Package CJKpunct Info: use punctuation spaces for family 'rm' with punctstyle (
+quanjiao) on input line 230.
+[7 <./gjl/overview.JPG>]
+Underfull \hbox (badness 10000) in paragraph at lines 241--241
+
+ []
+
+<gjl/formdata.jpg, id=170, 316.18124pt x 217.41225pt>
+File: gjl/formdata.jpg Graphic file (type jpg)
+<use gjl/formdata.jpg>
+Package pdftex.def Info: gjl/formdata.jpg  used on input line 242.
+(pdftex.def)             Requested size: 310.4979pt x 213.52034pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--242
+
+ []
+
+[8 <./gjl/formdata.JPG>]
+<gjl/11.jpg, id=174, 225.2415pt x 221.02576pt>
 File: gjl/11.jpg Graphic file (type jpg)
 <use gjl/11.jpg>
-Package pdftex.def Info: gjl/11.jpg  used on input line 232.
+Package pdftex.def Info: gjl/11.jpg  used on input line 254.
 (pdftex.def)             Requested size: 137.9979pt x 135.41571pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--232
-
- []
-
-<gjl/12.jpg, id=159, 266.79675pt x 239.6955pt>
-File: gjl/12.jpg Graphic file (type jpg)
-<use gjl/12.jpg>
-Package pdftex.def Info: gjl/12.jpg  used on input line 233.
-(pdftex.def)             Requested size: 137.9979pt x 123.98402pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 233--233
-
- []
-
-<gjl/21.jpg, id=160, 296.307pt x 296.307pt>
-File: gjl/21.jpg Graphic file (type jpg)
-<use gjl/21.jpg>
-Package pdftex.def Info: gjl/21.jpg  used on input line 234.
-(pdftex.def)             Requested size: 137.9979pt x 137.99835pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 234--234
-
- []
-
-
-Underfull \vbox (badness 5490) has occurred while \output is active []
-
- [8 <./gjl/11.JPG> <./gjl/12.JPG>]
-<gjl/22.jpg, id=164, 332.442pt x 322.20375pt>
-File: gjl/22.jpg Graphic file (type jpg)
-<use gjl/22.jpg>
-Package pdftex.def Info: gjl/22.jpg  used on input line 235.
-(pdftex.def)             Requested size: 137.9979pt x 133.74648pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 235--235
-
- []
-
-<gjl/3.jpg, id=165, 301.125pt x 301.125pt>
-File: gjl/3.jpg Graphic file (type jpg)
-<use gjl/3.jpg>
-Package pdftex.def Info: gjl/3.jpg  used on input line 236.
-(pdftex.def)             Requested size: 137.9979pt x 138.00455pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--236
-
- []
-
-[9 <./gjl/21.JPG> <./gjl/22.JPG> <./gjl/3.JPG>]
 Underfull \hbox (badness 10000) in paragraph at lines 254--254
 
  []
 
+<gjl/12.jpg, id=175, 266.79675pt x 239.6955pt>
+File: gjl/12.jpg Graphic file (type jpg)
+<use gjl/12.jpg>
+Package pdftex.def Info: gjl/12.jpg  used on input line 255.
+(pdftex.def)             Requested size: 137.9979pt x 123.98402pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 255--255
 
  []
 
+<gjl/21.jpg, id=176, 296.307pt x 296.307pt>
+File: gjl/21.jpg Graphic file (type jpg)
+<use gjl/21.jpg>
+Package pdftex.def Info: gjl/21.jpg  used on input line 256.
+(pdftex.def)             Requested size: 137.9979pt x 137.99835pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 256--256
 
  []
 
 
+Underfull \vbox (badness 5490) has occurred while \output is active []
+
+ [9 <./gjl/11.JPG> <./gjl/12.JPG>]
+<gjl/22.jpg, id=180, 332.442pt x 322.20375pt>
+File: gjl/22.jpg Graphic file (type jpg)
+<use gjl/22.jpg>
+Package pdftex.def Info: gjl/22.jpg  used on input line 257.
+(pdftex.def)             Requested size: 137.9979pt x 133.74648pt.
+
 Underfull \hbox (badness 10000) in paragraph at lines 257--257
 
  []
 
+<gjl/3.jpg, id=181, 301.125pt x 301.125pt>
+File: gjl/3.jpg Graphic file (type jpg)
+<use gjl/3.jpg>
+Package pdftex.def Info: gjl/3.jpg  used on input line 258.
+(pdftex.def)             Requested size: 137.9979pt x 138.00455pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 258--258
 
  []
 
+[10 <./gjl/21.JPG> <./gjl/22.JPG> <./gjl/3.JPG>]
+Underfull \hbox (badness 10000) in paragraph at lines 276--276
 
-Underfull \hbox (badness 10000) in paragraph at lines 259--259
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--277
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 260--260
+Underfull \hbox (badness 10000) in paragraph at lines 278--278
 
  []
 
-<gzl/01.png, id=169, 796.8972pt x 433.62pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--279
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--280
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--281
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--282
+
+ []
+
+<gzl/01.png, id=186, 796.8972pt x 433.62pt>
 File: gzl/01.png Graphic file (type png)
 <use gzl/01.png>
-Package pdftex.def Info: gzl/01.png  used on input line 261.
+Package pdftex.def Info: gzl/01.png  used on input line 283.
 (pdftex.def)             Requested size: 310.4979pt x 168.95232pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10 <./gzl/01.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 266--266
+ [11 <./gzl/01.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--267
+Underfull \hbox (badness 10000) in paragraph at lines 289--289
 
  []
 
-<gzl/02.jpg, id=175, 265.99374pt x 70.2625pt>
+<gzl/02.jpg, id=191, 265.99374pt x 70.2625pt>
 File: gzl/02.jpg Graphic file (type jpg)
 <use gzl/02.jpg>
-Package pdftex.def Info: gzl/02.jpg  used on input line 268.
+Package pdftex.def Info: gzl/02.jpg  used on input line 290.
 (pdftex.def)             Requested size: 310.4979pt x 82.02559pt.
-[11 <./gzl/02.JPG>] (./Report.aux) ) 
+[12 <./gzl/02.JPG>] (./Report.aux) ) 
 Here is how much of TeX's memory you used:
- 15694 strings out of 492609
- 290140 string characters out of 6132818
+ 15736 strings out of 492609
+ 290777 string characters out of 6132818
  312647 words of memory out of 5000000
- 19328 multiletter control sequences out of 15000+600000
- 541232 words of font info for 56 fonts, out of 8000000 for 9000
+ 19358 multiletter control sequences out of 15000+600000
+ 542582 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,6n,63p,477b,317s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/Windows/Fonts/simsun.ttc><c:/Windows/Fo
 nts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Wi
-ndows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.tt
-f><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/s
-imsun.ttc><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texl
-ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/201
-9/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2019/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2019/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2019/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmti10.pfb>
-Output written on Report.pdf (14 pages, 2498642 bytes).
+ndows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.tt
+c><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/s
+imsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows
+/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:
+/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/
+2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2019/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2019/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2019/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr17.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmti10.pfb>
+Output written on Report.pdf (15 pages, 2635767 bytes).
 PDF statistics:
- 233 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
+ 265 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 321 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 351 words of extra memory for PDF output out of 10000 (max. 10000000)
 
