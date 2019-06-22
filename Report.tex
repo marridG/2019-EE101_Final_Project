@@ -192,7 +192,52 @@ written by Yifu Chen
 % GJL
 % ------>	
 
+\newpage
 
+	\section{Graphs}
+		\textbf{\emph{[Start] --- By Jialong Guo 518030910272 ---}}\newline\par
+
+	\subsection{Overview}
+		\includegraphics[width=0.9\textwidth]{gjl/overview.jpg}\newline\par
+		When it comes to our graph part, it can be chiefly divided into three parts: \newline \par
+		The first of which is to get all the data we need in order to draw a graph.\newline\par
+		The second part of which is to format all the data into the form that the corresponding graph is needed.\newline\par
+		The last part of which is just to use specific javascript library to create graphs and make them beautiful. \newline\par
+
+	\subsection{Design}
+		\par In author page’s left part, I add a collumn graph, which displays the number of publication the author has yearly and
+shows the trend of his/her academic activity to give users a clear impression about the author’s research fruit and the frequency of his/her delivery.
+		\par In author page’s left part, I also add a pie graph, which showcases how many papers the author publishs in a conference which brings a clear view on the author is mostly connected with what conference.
+		\par In paper page's upper part, there’s a line-collumn graph showing its yearly citations, from which we can gain a insight into the popularity of its research field.
+		\par In paper page's lower part, I use a force directed graph to display the relations between similar papers. It gives a convience way to find related papers and messages.
+		\par In conference page, a line graph of its yearly amount of papers may reveal its academic influence.
+
+	\subsection{Searching Data}
+		\par In this subsection I mainly discuss the first part of graph drawing, get data from database. Since diverse graphs need diverse data, here I just demonstrate a specific example of getting data, which can mostly stand for my means of searching data.
+		\subsubsection{From Mysql to Solr}
+			\par Taking time cost into consideration, we may need to import data into solr from mysql in advance, for searching from solr will spend more time than from mysql. Thereby, it is required that we write the referenceID of reference papers into solr's schema, which allows us to search the reference papers of a paper just from solr when needed.
+			\par The final data we put in solr is formed in this way:\newline\par
+			\includegraphics[width=0.9\textwidth]{gjl/formdata.jpg}\newline\par
+		You can refer to the codes attached for detailed information.
+		\subsubsection{Searching in Solr}
+			\par The first step is getting value form user's input, then create the url link to search in solr. After this step, we can get a .json file with the result.
+
+	\subsection{Formatting Data}
+		\par In this section, we mainly discuss how to change the search result into suitable formation of drawing a graph. 
+
+	\subsection{Drawing Graph}
+		\par In the section, the process of drawing with echarts is mainly discussed.
+
+	\subsection{Fruits' Display}
+		\includegraphics[width=0.4\textwidth]{gjl/11.jpg}\newline\par
+		\includegraphics[width=0.4\textwidth]{gjl/12.jpg}\newline\par
+		\includegraphics[width=0.4\textwidth]{gjl/21.jpg}\newline\par
+		\includegraphics[width=0.4\textwidth]{gjl/22.jpg}\newline\par
+		\includegraphics[width=0.4\textwidth]{gjl/3.jpg}\newline\par
+
+		\textbf{\emph{[End] --- By Ziliang Guo 518030910273 ---}}
+
+		
 % <------
 % GJL
 % ----------   END   ------------
