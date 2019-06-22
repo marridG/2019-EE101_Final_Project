@@ -10,5 +10,14 @@
 \contentsline {subsection}{\numberline {2.2}Search.php}{5}% 
 \contentsline {subsubsection}{\numberline {2.2.1}Navigation Bar}{5}% 
 \contentsline {subsubsection}{\numberline {2.2.2}Body Part}{5}% 
-\contentsline {section}{\numberline {3}Overview}{6}% 
-\contentsline {section}{\numberline {4}Keyword Highlighting}{7}% 
+\contentsline {section}{\numberline {3}Graphs}{6}% 
+\contentsline {subsection}{\numberline {3.1}Overview}{6}% 
+\contentsline {subsection}{\numberline {3.2}Design}{6}% 
+\contentsline {subsection}{\numberline {3.3}Searching Data}{7}% 
+\contentsline {subsubsection}{\numberline {3.3.1}From Mysql to Solr}{7}% 
+\contentsline {subsubsection}{\numberline {3.3.2}Searching in Solr}{8}% 
+\contentsline {subsection}{\numberline {3.4}Formatting Data}{8}% 
+\contentsline {subsection}{\numberline {3.5}Drawing Graph}{8}% 
+\contentsline {subsection}{\numberline {3.6}Fruits' Display}{8}% 
+\contentsline {section}{\numberline {4}Overview}{10}% 
+\contentsline {section}{\numberline {5}Keyword Highlighting}{11}% 
