@@ -205,59 +205,223 @@ written by Yifu Chen
 % GZL
 % ------>	
 
-	\section{Overview}
+	\section{Introduction}
 		\textbf{\emph{[Start] --- By Ziliang Guo 518030910273 ---}}\newline\par
+		I want to highlight that I greatly emphasize the \textbf{\underline{user-friendliness}} of my work.\par
 		(1) I took the initiative that we take full advantage of Github to accelerate our project. I also create a document to take notes of the porblems we met and the solutions.\newline\par
 		(2) Actually, I wrote the manual and uploaded my Lab 01 - 03 codes to unify the databases.\newline\par
 		(3)	I mainly focus on the back-end development.\newline\par
-		(4) Of all my codes, I wanna highlight that approximately 85\% are mainly created  independently. For the remaining codes, modification is applied, with reference to some online blogs.\newline\par
+		(4) Of all my codes, I wanna highlight that approximately 85\% are mainly created \textbf{independently}. For the remaining codes, modification is applied, with reference to some online blogs.\newline\par
 		(5) Meanwhile, during my coding, I always remember to leave interfaces for my collaborators.\newline\par
 		(6)	As is vividly depicted in the timeline graph, I realized and improved different sections separately, in other words, term by term. Of course, my constant improvements are shown.\newline\par
 		\includegraphics[width=0.9\textwidth]{gzl/01.png}
 
+	\newpage
 
 	\section{Keyword Highlighting}
+		\emph{Mainly in “search”.}\newline\par
 		I adopted the “hl” settings of Solr. It is somehow very simple. Just echo the corresponding urls will do.\par
-		However, please notice that, for multivalued fields such as Authors\_Name, only the highlighted part is returned. So I made judgements in such special cases.\newline\par
+		However, please notice that, for multivalued fields such as Authors\_Name, only the highlighted part is returned. So I made judgements in such special cases.\par
+		Also refer to: http://www.aboutyun.com/thread-9433-1-1.html\newline\par
+		Effects:\newline\par
+		\includegraphics[width=0.8\textwidth]{gzl/02.png}\newline\par
 		Codes:\newline\par
-		\includegraphics[width=0.9\textwidth]{gzl/02.jpg}
+		\includegraphics[width=0.7\textwidth]{gzl/02.jpg}
+			%\newline\par
+			\newpage
+		\includegraphics[width=1\textwidth]{gzl/03.jpg}\par
 
 
-		% 4.	Page Turning
-		% Now, here comes the page turning part. It appears in several pages, namely, search, author, conference, advanced search. Actually, this part undergoes about three versions, and you guys can see the V2.0 and the advanced version.
+	\section{Page Turning}
+		\emph{In “search”, “author”, “conference”, “advanced search”.}
 
-		% As for the features of the versions:
-		% Hyperlink means that I use hyperlinks to jump to a new page.
-		% Anchor refers to the fact that after turning pages, the page will be automatically guided to the titles of the result tables for better user experience.
-		% Jump to stands for the jump-to function, which enables users to jump to a valid page of results.
-		% Actually, the 2.0 and higher version, I tried to imitate the page-turning function of Google. But for the methods, improved hyperlinks for the former, while Jquery and Ajax for the latter.
+	\subsection{Brief Introduction}
+		Actually, this part undergoes about three versions, and the V1.X version has been discarded because it is too simple.\par
+		The features of the versions are:\newline\par
+		\includegraphics[width=1\textwidth]{gzl/03.png}\par
+		As for the details:\par
+		\indent\indent(1) Hyperlink means that I use hyperlinks to jump to a new page.\par
+		\indent\indent(2) Anchor refers to the fact that after turning pages, the page will be automatically guided to the titles of the result tables for better user experience.\par
+		\indent\indent(3) Jump to stands for the jump-to function, which enables users to jump to a valid page of results.\newline\par
+		\indent\indent(4) Actually, the 2.0 and higher version, I tried to imitate the page-turning function of Google. But for the methods, improved hyperlinks for the former, while Jquery and Ajax for the latter.
+
+	\subsection{Details}
+	\subsubsection{V1.X}
+		This version is just that of my Lab 03 outcomes. It is so simple that only turning to the previous and the next page is availableto users.\newline\par
+		Effects:\par
+			\indent\indent\includegraphics[width=0.3\textwidth]{gzl/04.png}\par
+	\subsubsection{V2.0}
+		\emph{In “search”, “author”, “conference”.}\par
+		For this version, hyperlinks are used.\newline\par
+		As is mentioned above, I try to imitate the page turning function of Google.\par
+		In fact, the page number of the current page and the “red-n” above it cannot be clicked and the other numbers and “black-n”s can be clicked, which will direct the user to the corresponding pages.\par
+		Meanwhile, when the next page is applicable, the “tom”, the blanked area below, the blanked area to the right and the “Next” can all be clicked. Of course, “Next” appears if and only if the next page exists. It is similar for the previous page, except for the different words (“Pha”, “Prev”).\par
+		To implement such function, just create a 2-row table and plug in the corresponding items. Also make judgements whether a page number is the current page. If not, enable cursor and hyperlinks and viceversa.\par
+		At first, I wrote a function to calculate the maximum page numebrs using textbf{variable-passing-by-reference}.\par
+		Actually, there are altogether four pictures here --- “Pha”, “red-n”, “black-n”, “tom” ---. They are given different file names and CSS features, so it is easy to change images.\newline\par
+		%
+		I also added the jump-to-page function. To click the “Go” button, a valid number input is reuqired. Otherwise, an error will be raised. The number should be a number greater or equal to 1 and less than or equal to the maximum page number.\par
+		If a floating number is inputted, say 1.1 (the same for 1.9), it will be treated as 1. Actually, I am conscious that regular expressions can be adopted here to further ensure the validation. But because of a lack of time, I failed to learn how to use it.\par
+		I found "type = number" helpful, but the default up-and-down-arrows confused me a lot. It is ugly and even disgusting!! I found a simple solution using "webkit" of CSS.\par
+		Refer to: https://my.oschina.net/qii/blog/341439\newline\par
+		Effects:\newline\par
+		\includegraphics[width=1\textwidth]{gzl/05.png}\newline\par
+		Codes:\newline\par
+		\includegraphics[width=1\textwidth]{gzl/04.jpg}
+		% \newline\par
+		\newpage
+		\includegraphics[width=1\textwidth]{gzl/05.jpg}\newline\par
+		\includegraphics[width=1\textwidth]{gzl/06.jpg}\newline\par
+	\subsubsection{Advanced}
+		\emph{In “advanced”.}\par
+		For this version, JQuery and Ajax are implemented.\newline\par
+		The features are just similar to that of V2.0. It will be introduced later, in section “Advanced Search”.
 
 
-		% As you can see, the current page is highlighted in red and the red u cannot be clicked.
-		% Previous page and next page buttons appear if and only if such a page is applicable.
+	\section{Search - Simple and Multi-field}
+		\emph{In “search”.}\newline\par
+		The simple search V1.0 is just that of my Lab03. It’s simple and sometimes naïve. By the way, some widgets are designed.\newline\par
+		%
+		For the V2.0, multi-field search is applied. Only one blank is shown. All the results, containing the target keywords in Fields Title, Authors\_Name, and Conference, will be displayed. These fields are of the same importance. Similarly, noinput will lead to an error.\newline\par
+		Also refer to:\par
+		\indent\indent(1) https://blog.csdn.net/upxiaofeng/article/details/51460042\par
+		\indent\indent(2) https://blog.csdn.net/lies\_joker/article/details/51684453\newline\par
+		Effects:\newline\par
+		\includegraphics[width=0.8\textwidth]{gzl/02.png}\newline\par
+		Codes:\newline\par
+		\includegraphics[width=0.7\textwidth]{gzl/02.jpg}\newline\par
 
-		% The simple search V1.0 is just that of my Lab03. It’s simple and sometimes naïve.
-		% For the V2.0, multi-field search is applied. All the results, containing the target keywords in Fields Title, Authors_Name, and Conference, will be displayed. These fields are of the same importance. By the way, I designed some widgets.
-		% Now let’s have a look at the webpages.
-		% (Open the browser)
+	\newpage
 
-		% I also implemented some tiny webpage features.
-		% For all the pages, after refreshing, the page will jump to the location where the user was previously browsing.
-		% Still, for all the pages, if a hyperlink is clicked, the new page will be opened in a new window.
-		% In addition, I improved the loading speed of the author page.
+	\section{Webpage Features}
+		\includegraphics[width=1\textwidth]{gzl/06.png}
+	\subsection{Refresh}
+		For all the pages, after refreshing, the page will jump to the location where the user was previously browsing.\par
+		This function is implemented using cookies with reference to: https://www.jb51.net/article/99749.htm\par
+		Just include all the body parts in a \emph{<div onscroll=“SetH(this)”>}.\par
+		Actually, to a certain extent, I have understood the codes. However, without any hints, I find it hard to do it all on my own.\newline\par
+		Codes:\newline\par
+		\includegraphics[width=0.75\textwidth]{gzl/07.jpg}
+	\subsection{Click Hyperlinks}
+		Still, for all the pages, if a hyperlink is clicked, the new page will be opened in a new window.\par
+		It is easy to realize using parameter “target="\_blank"”.\newline\par
+		Codes:\newline\par
+		\includegraphics[width=1\textwidth]{gzl/08.jpg}
+	\subsection{Page Turning Anchors}
+		It is \textbf{absolutely extremely disgusting} to be not guided to the head of the result table while turning pages!\par
+		Therefore, at the beginning of each result table, I set a anchor, which is added into the hyperlinks.\newline\par
+		Codes:\newline\par
+		\includegraphics[width=1\textwidth]{gzl/09.jpg}
+	\subsection{Loading Speed Improvements}
+		In addition, I improved the loading speed of the author page.\par
+		Originally, a request will be delivered to MySQL to search the most related affiliation. However, such a process is actually unnecessary at all!\par
+		So I pass the most related affiliation name while turning pages. The outcome is apparent!
 
-		% Paper recommendation in academic formats, which can be hidden and shown, is available on the title page.
-		% The order and weight account for three parameters. Cited times are given top priority, followed by authors and title. The authors of a certain paper are given a descending weight and the weight of the title is similar to that of the first author.
-		% (Open the browser)
+	\section{Paper Recommendation}
+		Ten recommended papers in academic formats, which can be hidden and shown, is available on the title page.\par
+		\includegraphics[width=1\textwidth]{gzl/07.png}\par
+		The order and weight account for three parameters. Cited times are given top priority, followed by authors and title. The authors of a certain paper are given a descending weight and the weight of the title is similar to that of the first author.\newline\par
+		%
+		The implementation is similar to that of the multi-field search, except that in this case, different parameters are assigned varied weight.\par
+		Notice that:\par
+		\indent\indent(1) The recommended papers can be clicked to acquire a deeper insight.\par
+		\indent\indent(2) Few groups pay attention to the \textbf{academic format of paper information}.\newline\par
+		%
+		Actually, the hide-and-show process is very very \textbf{fluent}!\par
+		To implement such function, I adopted JavaScript with reference to:\par
+		\indent\indent https://blog.csdn.net/baidu\_35701759/article/details/76187236\par
+		It helps a lot at the beginning.\newline\par
+		%
+		Effects:\newline\par
+		\includegraphics[width=1\textwidth]{gzl/10.jpg}\newline\par
+		%
+		Codes:\newline\par
+		\includegraphics[width=0.9\textwidth]{gzl/11.jpg}
 
+	\newpage
 
-		% The advanced search is key to a good search engine.
-		% This page is made separately using Jquery and Ajax. A slowly descending The keywords are given a slowly descending weight.
+	\section{Advanced Search}
+	\subsection{Overview}
+		\begin{large}\underline{\textbf{The advanced search is key to a good search engine!}}\end{large}\newline\par
+		\includegraphics[width=1\textwidth]{gzl/14.jpg}\newline\par
+		Here, we may reach some agreements on the names:\par
+		\indent\indent(1) The area with the key word boxes is called: Search Bar;\par
+		\indent\indent(2) The empty area now in yellow is called: Result Area.\par
+		This page is made separately using mianly Jquery. I was also in charge of \textbf{most of its front-end coding}.\par
+		For this part, since the unclarity and difficulty of division, I recommend that if you are interesting in the codes, please have a look at the source codes attached. I will point out the exact file names.\par
+		The main page (default file) is “\underline{index\_search\_advanced.php}”.
+	\subsection{Search Bar}
+		Apparently, the “+” and “-” are bound to different incidents, which will send requests to “\underline{07\_advanced\_search\_boxes.php}” to update the number of boxes.\par
+		For the bool part, users can choose \emph{And} or \emph{Or}.\par
+		For the target part, users can choose \emph{Title}, \emph{Author} or \emph{Conference}.
+		Foe the input part, users can input anything. Phrases with spaces are also ok.
+		There are some \textbf{details worth consideration}:\par
+		(1) After clicking the add-or-delete buttons, the filled values must be kept. Therefore, while requesting, the url contains all the values of the existing items. The approach is simple, just get the values according to the id and sequence them. Then, in the php file, GET these values and set it as the default values.\par
+		(2) When there is only one line, the “-” button must be hidden. Just change the display mode while updating the “innerHTML” content.\par
+		(3) Check for unfilled blanks and alert if exists when the search button is clicked. Loop works well. But attention must be paid to some small aspects.\par
+		(4) When there are too many lines, how should it appears? Actually, “overflow-y=auto” will do.\par
+		(5) Take care if there are spaces in the values! String replacement is required.\par
+		(6) Absolutely, for the first line, boolean selection is unnecessary. Thus, for both directions - add to two rows, delete to one row - deserves carefulness.\newline\par
+		%
+		Effects:\newline\par
+		\includegraphics[width=0.5\textwidth]{gzl/10.png}
+	
+	\subsection{Submit}
+		After clicking the submit button, the parameters will be contained in the request, and the results will be shown in the Result Area.\par
+		It is a multi-field search. The keywords are given a slowly descending weight.\par
+		When clicked, a request containing all the parameters is sent to\newline“\underline{07\_search\_advanced.php}”. The codes there are similar to that of “search” page.\par
+		Then, the reults are loaded.\par
+		But the page turning area is loaded with he function “turn\_page()”, where maximum and minimum page numbers are calculated and a request, containing the target page number, is sent to “\underline{07\_advanced\_search\_pages}”.
+		Please notice that, I am greatly anxious about the user-friendliness. Therefore, I made it a rule that every successfull search will lead to the fact that the Search Bar \textbf{gradually slides and hides}. When it is hidden, a bar is for calling it back and viceversa. Of course, at first, this call-back-bar can not be seen. Here, the main part is similar to that of the paper recommendation hide-and-show of the “title” page, except for some details. You may refer to “07\_show\_hide.js”.\newline\par
+		Effects:\newline\par
+		\includegraphics[width=0.9\textwidth]{gzl/15.jpg}
 
+	\subsection{Page Turning and Jump-to}
+		Firstly, page turning codes in “\underline{07\_advanced\_search\_pages.php}”:\par
+		Similar to the traditional page turning functions, show the numbers and the images. But here, the images are bound with “onclick()” functions instead of hyperlinks. For the numbers, the hyperlink is bound with a “onclick(submit\_search(\$new\_page,1))” function and must not be jumped to “href”. Thus, this approach works:\par
+		\indent\indent href="\#" onclick="submit\_search(\$new\_page,1); return false;"\par
+		Also refer to:\par
+		\indent\indent https://blog.csdn.net/fendou123\_love/article/details/53585016\newline\par
+		%
+		Secondly, “submit\_search(page,1)” in “\underline{index\_advanced\_search.php}”:\par
+		Turing pages are just the same as submitting a search request, except for the fact that the former requires the search bar always being kept hidden and the latter being changed from visible to invisible. Therefore, I need a parameter to indicate such difference(1 for turning pages, 0 for submits).\newline\par
+		%
+		Thirdly, jump-to function in “\underline{07\_advanced\_search\_pages.php}”:\par
+		The main codes are similar to those of the traditional search. But here, the JUMP button is bound with “onclick=jump\_to\_submit()” instead of a hyperlink.\newline\par
+		%
+		Fourthly, “jump\_to\_submit()” in “\underline{index\_advanced\_search.php}”:\par
+		The validation (i.e. filled/unfilled, maximum, minimum) of the inputted target page number is checked first. If it not valid, alert the error. Then, just the same as turning pages, call “submit\_search(new\_page,1);”\newline\par
+		%
+		Effects:\newline\par
+		\includegraphics[width=1\textwidth]{gzl/16.jpg}
 
-		% We value users’ precious feedbacks. So we add a feedback page.
-		% The unfilled blanks will be alerted and the pending status will be clearly illustrated. What’s more, the log will be saved locally. I take advantage of NodeJS and emailjs to implement the function.
-		% Considering the network and the fact that this function is still a beta version, probably the outcome is not that satisfactory. But, does anybody wanna have a try?
+	\newpage
+
+	\section{Feedback}
+		We value users’ precious feedbacks. So we add a feedback page.\par
+		We are curious about four fields: the user's name, the e-mail address, the subject and what we can do for the user. Therefore, four blanks are required. The unfilled blanks will be alerted and the pending status will be clearly illustrated.\par
+		\indent\indent\includegraphics[width=0.35\textwidth]{gzl/08.png}\newline\par
+		%
+		What’s more, the log will be saved locally in a clear enough format.\par
+		\indent\indent\includegraphics[width=0.65\textwidth]{gzl/09.png}\newline\par
+		%
+		Although PHPMailer seems to be much more convenient, something wrong occurred such as missing an authentic certificate. In the end, such approach was discarded.I take advantage of NodeJS and emailjs to implement the function.\par
+		Still, I mainly use JQeury to implement this section. When clicked, the valid messages will be connected together and passed to the requested .php file, where the cmd console will be run (using “exec()”) to call the nodejs mail-sending function.\newline\par
+		%
+		Reference:\par
+		\indent\indent(1) HTML - send e-mails: http://www.fly63.com/article/detial/620\par
+		\indent\indent(2) PHP - exce(): https://blog.csdn.net/sinat\_29862853/article/details/85253384\par
+		\indent\indent(3) PHP - get system time: https://www.jb51.net/article/148361.htm\par
+		\indent\indent(4) PHP - file read: https://www.cnblogs.com/penghuwan/p/6884932.html\par
+		\indent\indent(5) PHP - file read: https://www.cnblogs.com/penghuwan/p/6884932.html\par
+		\indent\indent(6) NodeJS - run with given parameters:\par
+			\indent\indent\indent https://www.jianshu.com/p/474e6d76f867\par
+			\indent\indent\indent https://cloud.tencent.com/developer/article/1363526\newline\par
+		%
+		\newpage
+		Codes:\newline\par
+		\includegraphics[width=0.9\textwidth]{gzl/12.jpg}\newline\par
+		\includegraphics[width=0.9\textwidth]{gzl/13.jpg}\newline\par
 
 	\textbf{\emph{[End] --- By Ziliang Guo 518030910273 ---}}
 % <------
