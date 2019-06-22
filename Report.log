@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.22)  22 JUN 2019 16:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.22)  22 JUN 2019 16:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -731,528 +731,669 @@ LaTeX Font Info:    Try loading font information for C70+rm on input line 15.
 File: c70rm.fd 2019/05/29 v2.4.16 Chinese font definition (CTEX)
 ) [1
 
-] [2] (./Report.toc)
+] [2] (./Report.toc
+[3
+
+])
 \tf@toc=\write3
 \openout3 = `Report.toc'.
 
-
-[3
-
-] [1]
-<cyf/index_structure.PNG, id=30, 1068.24094pt x 572.1375pt>
+ [4] [1]
+<cyf/contribution.PNG, id=33, 274.77657pt x 149.8097pt>
+File: cyf/contribution.PNG Graphic file (type png)
+<use cyf/contribution.PNG>
+Package pdftex.def Info: cyf/contribution.PNG  used on input line 51.
+(pdftex.def)             Requested size: 241.49895pt x 131.67062pt.
+<cyf/frequency.PNG, id=35, 779.91376pt x 176.15813pt>
+File: cyf/frequency.PNG Graphic file (type png)
+<use cyf/frequency.PNG>
+Package pdftex.def Info: cyf/frequency.PNG  used on input line 55.
+(pdftex.def)             Requested size: 241.49895pt x 54.54662pt.
+<cyf/index_structure.PNG, id=36, 1068.24094pt x 572.1375pt>
 File: cyf/index_structure.PNG Graphic file (type png)
 <use cyf/index_structure.PNG>
-Package pdftex.def Info: cyf/index_structure.PNG  used on input line 50.
+Package pdftex.def Info: cyf/index_structure.PNG  used on input line 62.
 (pdftex.def)             Requested size: 241.49895pt x 129.33649pt.
- [2 <./cyf/index_structure.png>]
-<cyf/search1.png, id=45, 263.48438pt x 39.14626pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2 <./cyf/contribution.PNG> <./cyf/frequency.PNG>]
+<cyf/search1.png, id=47, 263.48438pt x 39.14626pt>
 File: cyf/search1.png Graphic file (type png)
 <use cyf/search1.png>
-Package pdftex.def Info: cyf/search1.png  used on input line 71.
+Package pdftex.def Info: cyf/search1.png  used on input line 83.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/search2.png, id=46, 263.48438pt x 39.14626pt>
+<cyf/search2.png, id=48, 263.48438pt x 39.14626pt>
 File: cyf/search2.png Graphic file (type png)
 <use cyf/search2.png>
-Package pdftex.def Info: cyf/search2.png  used on input line 73.
+Package pdftex.def Info: cyf/search2.png  used on input line 85.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/search3.png, id=47, 263.48438pt x 39.14626pt>
+<cyf/search3.png, id=49, 263.48438pt x 39.14626pt>
 File: cyf/search3.png Graphic file (type png)
 <use cyf/search3.png>
-Package pdftex.def Info: cyf/search3.png  used on input line 75.
+Package pdftex.def Info: cyf/search3.png  used on input line 87.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/search4.png, id=48, 263.48438pt x 39.14626pt>
+<cyf/search4.png, id=50, 263.48438pt x 39.14626pt>
 File: cyf/search4.png Graphic file (type png)
 <use cyf/search4.png>
-Package pdftex.def Info: cyf/search4.png  used on input line 77.
+Package pdftex.def Info: cyf/search4.png  used on input line 89.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/search5.png, id=49, 263.48438pt x 39.14626pt>
+<cyf/search5.png, id=51, 263.48438pt x 39.14626pt>
 File: cyf/search5.png Graphic file (type png)
 <use cyf/search5.png>
-Package pdftex.def Info: cyf/search5.png  used on input line 79.
+Package pdftex.def Info: cyf/search5.png  used on input line 91.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/search6.png, id=50, 263.48438pt x 39.14626pt>
+<cyf/search6.png, id=52, 263.48438pt x 39.14626pt>
 File: cyf/search6.png Graphic file (type png)
 <use cyf/search6.png>
-Package pdftex.def Info: cyf/search6.png  used on input line 81.
+Package pdftex.def Info: cyf/search6.png  used on input line 93.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/search7.png, id=51, 263.48438pt x 39.14626pt>
+<cyf/search7.png, id=53, 263.48438pt x 39.14626pt>
 File: cyf/search7.png Graphic file (type png)
 <use cyf/search7.png>
-Package pdftex.def Info: cyf/search7.png  used on input line 83.
+Package pdftex.def Info: cyf/search7.png  used on input line 95.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/reset1.png, id=52, 263.48438pt x 39.14626pt>
+<cyf/reset1.png, id=54, 263.48438pt x 39.14626pt>
 File: cyf/reset1.png Graphic file (type png)
 <use cyf/reset1.png>
-Package pdftex.def Info: cyf/reset1.png  used on input line 85.
+Package pdftex.def Info: cyf/reset1.png  used on input line 97.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/reset2.png, id=53, 263.48438pt x 39.14626pt>
+<cyf/reset2.png, id=55, 263.48438pt x 39.14626pt>
 File: cyf/reset2.png Graphic file (type png)
 <use cyf/reset2.png>
-Package pdftex.def Info: cyf/reset2.png  used on input line 87.
+Package pdftex.def Info: cyf/reset2.png  used on input line 99.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/reset3.png, id=54, 263.48438pt x 39.14626pt>
+<cyf/reset3.png, id=56, 263.48438pt x 39.14626pt>
 File: cyf/reset3.png Graphic file (type png)
 <use cyf/reset3.png>
-Package pdftex.def Info: cyf/reset3.png  used on input line 89.
+Package pdftex.def Info: cyf/reset3.png  used on input line 101.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/reset4.png, id=55, 263.48438pt x 39.14626pt>
+<cyf/reset4.png, id=57, 263.48438pt x 39.14626pt>
 File: cyf/reset4.png Graphic file (type png)
 <use cyf/reset4.png>
-Package pdftex.def Info: cyf/reset4.png  used on input line 91.
+Package pdftex.def Info: cyf/reset4.png  used on input line 103.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/reset5.png, id=56, 263.48438pt x 39.14626pt>
+<cyf/reset5.png, id=58, 263.48438pt x 39.14626pt>
 File: cyf/reset5.png Graphic file (type png)
 <use cyf/reset5.png>
-Package pdftex.def Info: cyf/reset5.png  used on input line 93.
+Package pdftex.def Info: cyf/reset5.png  used on input line 105.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/reset6.png, id=57, 263.48438pt x 39.14626pt>
+<cyf/reset6.png, id=59, 263.48438pt x 39.14626pt>
 File: cyf/reset6.png Graphic file (type png)
 <use cyf/reset6.png>
-Package pdftex.def Info: cyf/reset6.png  used on input line 95.
+Package pdftex.def Info: cyf/reset6.png  used on input line 107.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/reset7.png, id=58, 263.48438pt x 39.14626pt>
+<cyf/reset7.png, id=60, 263.48438pt x 39.14626pt>
 File: cyf/reset7.png Graphic file (type png)
 <use cyf/reset7.png>
-Package pdftex.def Info: cyf/reset7.png  used on input line 97.
+Package pdftex.def Info: cyf/reset7.png  used on input line 109.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching1.png, id=59, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching1.png, id=61, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching1.png Graphic file (type png)
 <use cyf/Advanced_searching1.png>
-Package pdftex.def Info: cyf/Advanced_searching1.png  used on input line 99.
+Package pdftex.def Info: cyf/Advanced_searching1.png  used on input line 111.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching2.png, id=60, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching2.png, id=62, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching2.png Graphic file (type png)
 <use cyf/Advanced_searching2.png>
-Package pdftex.def Info: cyf/Advanced_searching2.png  used on input line 101.
+Package pdftex.def Info: cyf/Advanced_searching2.png  used on input line 113.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching3.png, id=61, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching3.png, id=63, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching3.png Graphic file (type png)
 <use cyf/Advanced_searching3.png>
-Package pdftex.def Info: cyf/Advanced_searching3.png  used on input line 103.
+Package pdftex.def Info: cyf/Advanced_searching3.png  used on input line 115.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching4.png, id=62, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching4.png, id=64, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching4.png Graphic file (type png)
 <use cyf/Advanced_searching4.png>
-Package pdftex.def Info: cyf/Advanced_searching4.png  used on input line 105.
+Package pdftex.def Info: cyf/Advanced_searching4.png  used on input line 117.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching5.png, id=63, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching5.png, id=65, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching5.png Graphic file (type png)
 <use cyf/Advanced_searching5.png>
-Package pdftex.def Info: cyf/Advanced_searching5.png  used on input line 107.
+Package pdftex.def Info: cyf/Advanced_searching5.png  used on input line 119.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching6.png, id=64, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching6.png, id=66, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching6.png Graphic file (type png)
 <use cyf/Advanced_searching6.png>
-Package pdftex.def Info: cyf/Advanced_searching6.png  used on input line 109.
+Package pdftex.def Info: cyf/Advanced_searching6.png  used on input line 121.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching7.png, id=65, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching7.png, id=67, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching7.png Graphic file (type png)
 <use cyf/Advanced_searching7.png>
-Package pdftex.def Info: cyf/Advanced_searching7.png  used on input line 111.
+Package pdftex.def Info: cyf/Advanced_searching7.png  used on input line 123.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching8.png, id=66, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching8.png, id=68, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching8.png Graphic file (type png)
 <use cyf/Advanced_searching8.png>
-Package pdftex.def Info: cyf/Advanced_searching8.png  used on input line 113.
+Package pdftex.def Info: cyf/Advanced_searching8.png  used on input line 125.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching9.png, id=67, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching9.png, id=69, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching9.png Graphic file (type png)
 <use cyf/Advanced_searching9.png>
-Package pdftex.def Info: cyf/Advanced_searching9.png  used on input line 115.
+Package pdftex.def Info: cyf/Advanced_searching9.png  used on input line 127.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching10.png, id=68, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching10.png, id=70, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching10.png Graphic file (type png)
 <use cyf/Advanced_searching10.png>
-Package pdftex.def Info: cyf/Advanced_searching10.png  used on input line 117.
+Package pdftex.def Info: cyf/Advanced_searching10.png  used on input line 129.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching11.png, id=69, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching11.png, id=71, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching11.png Graphic file (type png)
 <use cyf/Advanced_searching11.png>
-Package pdftex.def Info: cyf/Advanced_searching11.png  used on input line 119.
+Package pdftex.def Info: cyf/Advanced_searching11.png  used on input line 131.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching12.png, id=70, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching12.png, id=72, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching12.png Graphic file (type png)
 <use cyf/Advanced_searching12.png>
-Package pdftex.def Info: cyf/Advanced_searching12.png  used on input line 121.
+Package pdftex.def Info: cyf/Advanced_searching12.png  used on input line 133.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching13.png, id=71, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching13.png, id=73, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching13.png Graphic file (type png)
 <use cyf/Advanced_searching13.png>
-Package pdftex.def Info: cyf/Advanced_searching13.png  used on input line 123.
+Package pdftex.def Info: cyf/Advanced_searching13.png  used on input line 135.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching14.png, id=72, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching14.png, id=74, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching14.png Graphic file (type png)
 <use cyf/Advanced_searching14.png>
-Package pdftex.def Info: cyf/Advanced_searching14.png  used on input line 125.
+Package pdftex.def Info: cyf/Advanced_searching14.png  used on input line 137.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching15.png, id=73, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching15.png, id=75, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching15.png Graphic file (type png)
 <use cyf/Advanced_searching15.png>
-Package pdftex.def Info: cyf/Advanced_searching15.png  used on input line 127.
+Package pdftex.def Info: cyf/Advanced_searching15.png  used on input line 139.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching16.png, id=74, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching16.png, id=76, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching16.png Graphic file (type png)
 <use cyf/Advanced_searching16.png>
-Package pdftex.def Info: cyf/Advanced_searching16.png  used on input line 129.
+Package pdftex.def Info: cyf/Advanced_searching16.png  used on input line 141.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching17.png, id=75, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching17.png, id=77, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching17.png Graphic file (type png)
 <use cyf/Advanced_searching17.png>
-Package pdftex.def Info: cyf/Advanced_searching17.png  used on input line 131.
+Package pdftex.def Info: cyf/Advanced_searching17.png  used on input line 143.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching18.png, id=76, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching18.png, id=78, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching18.png Graphic file (type png)
 <use cyf/Advanced_searching18.png>
-Package pdftex.def Info: cyf/Advanced_searching18.png  used on input line 133.
+Package pdftex.def Info: cyf/Advanced_searching18.png  used on input line 145.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching19.png, id=77, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching19.png, id=79, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching19.png Graphic file (type png)
 <use cyf/Advanced_searching19.png>
-Package pdftex.def Info: cyf/Advanced_searching19.png  used on input line 135.
+Package pdftex.def Info: cyf/Advanced_searching19.png  used on input line 147.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching20.png, id=78, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching20.png, id=80, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching20.png Graphic file (type png)
 <use cyf/Advanced_searching20.png>
-Package pdftex.def Info: cyf/Advanced_searching20.png  used on input line 137.
+Package pdftex.def Info: cyf/Advanced_searching20.png  used on input line 149.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching21.png, id=79, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching21.png, id=81, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching21.png Graphic file (type png)
 <use cyf/Advanced_searching21.png>
-Package pdftex.def Info: cyf/Advanced_searching21.png  used on input line 139.
+Package pdftex.def Info: cyf/Advanced_searching21.png  used on input line 151.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching22.png, id=80, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching22.png, id=82, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching22.png Graphic file (type png)
 <use cyf/Advanced_searching22.png>
-Package pdftex.def Info: cyf/Advanced_searching22.png  used on input line 141.
+Package pdftex.def Info: cyf/Advanced_searching22.png  used on input line 153.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching23.png, id=81, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching23.png, id=83, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching23.png Graphic file (type png)
 <use cyf/Advanced_searching23.png>
-Package pdftex.def Info: cyf/Advanced_searching23.png  used on input line 143.
+Package pdftex.def Info: cyf/Advanced_searching23.png  used on input line 155.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching24.png, id=82, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching24.png, id=84, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching24.png Graphic file (type png)
 <use cyf/Advanced_searching24.png>
-Package pdftex.def Info: cyf/Advanced_searching24.png  used on input line 145.
+Package pdftex.def Info: cyf/Advanced_searching24.png  used on input line 157.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching25.png, id=83, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching25.png, id=85, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching25.png Graphic file (type png)
 <use cyf/Advanced_searching25.png>
-Package pdftex.def Info: cyf/Advanced_searching25.png  used on input line 147.
+Package pdftex.def Info: cyf/Advanced_searching25.png  used on input line 159.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching26.png, id=84, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching26.png, id=86, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching26.png Graphic file (type png)
 <use cyf/Advanced_searching26.png>
-Package pdftex.def Info: cyf/Advanced_searching26.png  used on input line 149.
+Package pdftex.def Info: cyf/Advanced_searching26.png  used on input line 161.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching27.png, id=85, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching27.png, id=87, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching27.png Graphic file (type png)
 <use cyf/Advanced_searching27.png>
-Package pdftex.def Info: cyf/Advanced_searching27.png  used on input line 151.
+Package pdftex.def Info: cyf/Advanced_searching27.png  used on input line 163.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching28.png, id=86, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching28.png, id=88, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching28.png Graphic file (type png)
 <use cyf/Advanced_searching28.png>
-Package pdftex.def Info: cyf/Advanced_searching28.png  used on input line 153.
+Package pdftex.def Info: cyf/Advanced_searching28.png  used on input line 165.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching29.png, id=87, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching29.png, id=89, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching29.png Graphic file (type png)
 <use cyf/Advanced_searching29.png>
-Package pdftex.def Info: cyf/Advanced_searching29.png  used on input line 155.
+Package pdftex.def Info: cyf/Advanced_searching29.png  used on input line 167.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching30.png, id=88, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching30.png, id=90, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching30.png Graphic file (type png)
 <use cyf/Advanced_searching30.png>
-Package pdftex.def Info: cyf/Advanced_searching30.png  used on input line 157.
+Package pdftex.def Info: cyf/Advanced_searching30.png  used on input line 169.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching31.png, id=89, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching31.png, id=91, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching31.png Graphic file (type png)
 <use cyf/Advanced_searching31.png>
-Package pdftex.def Info: cyf/Advanced_searching31.png  used on input line 159.
+Package pdftex.def Info: cyf/Advanced_searching31.png  used on input line 171.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--160
+Underfull \hbox (badness 10000) in paragraph at lines 80--172
 
  []
 
-[3 <./cyf/search1.png> <./cyf/search2.png> <./cyf/search3.png> <./cyf/search4.p
-ng> <./cyf/search5.png> <./cyf/search6.png> <./cyf/search7.png> <./cyf/reset1.p
-ng> <./cyf/reset2.png> <./cyf/reset3.png> <./cyf/reset4.png> <./cyf/reset5.png>
-]
+[3 <./cyf/index_structure.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4 <./cyf/reset6.png> <./cyf/reset7.png> <./cyf/Advanced_searching1.png> <./cy
-f/Advanced_searching2.png> <./cyf/Advanced_searching3.png> <./cyf/Advanced_sear
-ching4.png> <./cyf/Advanced_searching5.png> <./cyf/Advanced_searching6.png> <./
-cyf/Advanced_searching7.png> <./cyf/Advanced_searching8.png> <./cyf/Advanced_se
-arching9.png> <./cyf/Advanced_searching10.png> <./cyf/Advanced_searching11.png>
- <./cyf/Advanced_searching12.png> <./cyf/Advanced_searching13.png> <./cyf/Advan
-ced_searching14.png>]
+ [4 <./cyf/search1.png> <./cyf/search2.png> <./cyf/search3.png> <./cyf/search4.
+png> <./cyf/search5.png> <./cyf/search6.png> <./cyf/search7.png> <./cyf/reset1.
+png> <./cyf/reset2.png> <./cyf/reset3.png> <./cyf/reset4.png> <./cyf/reset5.png
+> <./cyf/reset6.png> <./cyf/reset7.png> <./cyf/Advanced_searching1.png> <./cyf/
+Advanced_searching2.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5 <./cyf/Advanced_searching15.png> <./cyf/Advanced_searching16.png> <./cyf/Ad
-vanced_searching17.png> <./cyf/Advanced_searching18.png> <./cyf/Advanced_search
-ing19.png> <./cyf/Advanced_searching20.png> <./cyf/Advanced_searching21.png> <.
-/cyf/Advanced_searching22.png> <./cyf/Advanced_searching23.png> <./cyf/Advanced
-_searching24.png> <./cyf/Advanced_searching25.png> <./cyf/Advanced_searching26.
-png> <./cyf/Advanced_searching27.png> <./cyf/Advanced_searching28.png> <./cyf/A
-dvanced_searching29.png> <./cyf/Advanced_searching30.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 167--169
+ [5 <./cyf/Advanced_searching3.png> <./cyf/Advanced_searching4.png> <./cyf/Adva
+nced_searching5.png> <./cyf/Advanced_searching6.png> <./cyf/Advanced_searching7
+.png> <./cyf/Advanced_searching8.png> <./cyf/Advanced_searching9.png> <./cyf/Ad
+vanced_searching10.png> <./cyf/Advanced_searching11.png> <./cyf/Advanced_search
+ing12.png> <./cyf/Advanced_searching13.png> <./cyf/Advanced_searching14.png> <.
+/cyf/Advanced_searching15.png> <./cyf/Advanced_searching16.png> <./cyf/Advanced
+_searching17.png> <./cyf/Advanced_searching18.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 179--181
 
  []
 
-<cyf/SEARCH_struct1.png, id=144, 1082.54437pt x 569.87906pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <./cyf/Advanced_searching19.png> <./cyf/Advanced_searching20.png> <./cyf/Ad
+vanced_searching21.png> <./cyf/Advanced_searching22.png> <./cyf/Advanced_search
+ing23.png> <./cyf/Advanced_searching24.png> <./cyf/Advanced_searching25.png> <.
+/cyf/Advanced_searching26.png> <./cyf/Advanced_searching27.png> <./cyf/Advanced
+_searching28.png> <./cyf/Advanced_searching29.png> <./cyf/Advanced_searching30.
+png> <./cyf/Advanced_searching31.png>]
+<cyf/SEARCH_struct1.png, id=155, 1082.54437pt x 569.87906pt>
 File: cyf/SEARCH_struct1.png Graphic file (type png)
 <use cyf/SEARCH_struct1.png>
-Package pdftex.def Info: cyf/SEARCH_struct1.png  used on input line 170.
+Package pdftex.def Info: cyf/SEARCH_struct1.png  used on input line 182.
 (pdftex.def)             Requested size: 345.0pt x 181.61719pt.
-<cyf/SEARCH_2_struct2.png, id=145, 1068.99374pt x 566.86781pt>
+<cyf/SEARCH_2_struct2.png, id=156, 1068.99374pt x 566.86781pt>
 File: cyf/SEARCH_2_struct2.png Graphic file (type png)
 <use cyf/SEARCH_2_struct2.png>
-Package pdftex.def Info: cyf/SEARCH_2_struct2.png  used on input line 172.
+Package pdftex.def Info: cyf/SEARCH_2_struct2.png  used on input line 184.
 (pdftex.def)             Requested size: 345.0pt x 182.94969pt.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 170--173
+Overfull \hbox (20.0pt too wide) in paragraph at lines 182--185
 [][] 
  []
 
-
-Underfull \vbox (badness 5533) has occurred while \output is active []
-
- [6 <./cyf/Advanced_searching31.png> <./cyf/SEARCH_struct1.png> <./cyf/SEARCH_2
-_struct2.png>]
-<cyf/Google.jpg, id=157, 547.04375pt x 286.06876pt>
+[7 <./cyf/SEARCH_struct1.png> <./cyf/SEARCH_2_struct2.png>]
+<cyf/Google.jpg, id=172, 547.04375pt x 286.06876pt>
 File: cyf/Google.jpg Graphic file (type jpg)
 <use cyf/Google.jpg>
-Package pdftex.def Info: cyf/Google.jpg  used on input line 187.
+Package pdftex.def Info: cyf/Google.jpg  used on input line 199.
 (pdftex.def)             Requested size: 172.5pt x 90.20816pt.
-<cyf/Conference.PNG, id=158, 1070.49937pt x 568.37344pt>
+<cyf/Conference.PNG, id=173, 1070.49937pt x 568.37344pt>
 File: cyf/Conference.PNG Graphic file (type png)
 <use cyf/Conference.PNG>
-Package pdftex.def Info: cyf/Conference.PNG  used on input line 198.
+Package pdftex.def Info: cyf/Conference.PNG  used on input line 210.
 (pdftex.def)             Requested size: 345.0pt x 183.17545pt.
- [7 <./cyf/Google.jpg> <./cyf/Conference.PNG>]
-<cyf/Conference2.PNG, id=168, 1069.74657pt x 571.38469pt>
+<cyf/Conference2.PNG, id=174, 1069.74657pt x 571.38469pt>
 File: cyf/Conference2.PNG Graphic file (type png)
 <use cyf/Conference2.PNG>
-Package pdftex.def Info: cyf/Conference2.PNG  used on input line 201.
+Package pdftex.def Info: cyf/Conference2.PNG  used on input line 213.
 (pdftex.def)             Requested size: 345.0pt x 184.27669pt.
 
-Overfull \hbox (7.52835pt too wide) in paragraph at lines 204--205
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8 <./cyf/Google.jpg> <./cyf/Conference.PNG>]
+Overfull \hbox (7.52835pt too wide) in paragraph at lines 216--217
 []\OT1/cmr/m/n/10 The beau-ti-fi-ca-tion of Con-fer-ence.php was si-m-il-iar to
  the search.php.Therefore
  []
 
-<cyf/author1.PNG, id=169, 1069.74657pt x 569.12625pt>
+<cyf/author1.PNG, id=179, 1069.74657pt x 569.12625pt>
 File: cyf/author1.PNG Graphic file (type png)
 <use cyf/author1.PNG>
-Package pdftex.def Info: cyf/author1.PNG  used on input line 210.
+Package pdftex.def Info: cyf/author1.PNG  used on input line 222.
 (pdftex.def)             Requested size: 345.0pt x 183.54832pt.
-<cyf/author2.PNG, id=170, 1068.99374pt x 569.12625pt>
+<cyf/author2.PNG, id=180, 1068.99374pt x 569.12625pt>
 File: cyf/author2.PNG Graphic file (type png)
 <use cyf/author2.PNG>
-Package pdftex.def Info: cyf/author2.PNG  used on input line 213.
+Package pdftex.def Info: cyf/author2.PNG  used on input line 225.
 (pdftex.def)             Requested size: 345.0pt x 183.67857pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8 <./cyf/Conference2.PNG> <./cyf/author1.PNG>]
-Overfull \hbox (7.25058pt too wide) in paragraph at lines 216--217
+ [9 <./cyf/Conference2.PNG> <./cyf/author1.PNG>]
+Overfull \hbox (7.25058pt too wide) in paragraph at lines 228--229
 []\OT1/cmr/m/n/10 The beau-ti-fi-ca-tion of the page au-thor was si-m-il-iar to
  the search.php.Therefore
  []
 
-[9 <./cyf/author2.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 252--252
+[10 <./cyf/author2.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 266--266
 
  []
 
-<gjl/overview.jpg, id=180, 669.09975pt x 350.5095pt>
+<gjl/overview.jpg, id=191, 669.09975pt x 350.5095pt>
 File: gjl/overview.jpg Graphic file (type jpg)
 <use gjl/overview.jpg>
-Package pdftex.def Info: gjl/overview.jpg  used on input line 255.
+Package pdftex.def Info: gjl/overview.jpg  used on input line 269.
 (pdftex.def)             Requested size: 310.4979pt x 162.65364pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--255
+Underfull \hbox (badness 10000) in paragraph at lines 269--269
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--256
+Underfull \hbox (badness 10000) in paragraph at lines 270--270
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--257
+Underfull \hbox (badness 10000) in paragraph at lines 271--271
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--258
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 259--259
-
- []
-
-Package CJKpunct Info: use punctuation spaces for family 'rm' with punctstyle (
-quanjiao) on input line 262.
-[10 <./gjl/overview.JPG>]
 Underfull \hbox (badness 10000) in paragraph at lines 273--273
 
  []
 
-<gjl/formdata.jpg, id=188, 316.18124pt x 217.41225pt>
-File: gjl/formdata.jpg Graphic file (type jpg)
-<use gjl/formdata.jpg>
-Package pdftex.def Info: gjl/formdata.jpg  used on input line 274.
-(pdftex.def)             Requested size: 310.4979pt x 213.52034pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 274--274
-
- []
-
-[11 <./gjl/formdata.JPG>]
-<gjl/11.jpg, id=192, 225.2415pt x 221.02576pt>
-File: gjl/11.jpg Graphic file (type jpg)
-<use gjl/11.jpg>
-Package pdftex.def Info: gjl/11.jpg  used on input line 286.
-(pdftex.def)             Requested size: 137.9979pt x 135.41571pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 286--286
-
- []
-
-<gjl/12.jpg, id=193, 266.79675pt x 239.6955pt>
-File: gjl/12.jpg Graphic file (type jpg)
-<use gjl/12.jpg>
-Package pdftex.def Info: gjl/12.jpg  used on input line 287.
-(pdftex.def)             Requested size: 137.9979pt x 123.98402pt.
-
+Package CJKpunct Info: use punctuation spaces for family 'rm' with punctstyle (
+quanjiao) on input line 276.
+[11 <./gjl/overview.JPG>]
 Underfull \hbox (badness 10000) in paragraph at lines 287--287
 
  []
 
-<gjl/21.jpg, id=194, 296.307pt x 296.307pt>
-File: gjl/21.jpg Graphic file (type jpg)
-<use gjl/21.jpg>
-Package pdftex.def Info: gjl/21.jpg  used on input line 288.
-(pdftex.def)             Requested size: 137.9979pt x 137.99835pt.
+<gjl/formdata.jpg, id=198, 316.18124pt x 217.41225pt>
+File: gjl/formdata.jpg Graphic file (type jpg)
+<use gjl/formdata.jpg>
+Package pdftex.def Info: gjl/formdata.jpg  used on input line 288.
+(pdftex.def)             Requested size: 310.4979pt x 213.52034pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 288--288
+
+ []
+
+[12 <./gjl/formdata.JPG>]
+<gjl/11.jpg, id=202, 225.2415pt x 221.02576pt>
+File: gjl/11.jpg Graphic file (type jpg)
+<use gjl/11.jpg>
+Package pdftex.def Info: gjl/11.jpg  used on input line 300.
+(pdftex.def)             Requested size: 137.9979pt x 135.41571pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 300--300
+
+ []
+
+<gjl/12.jpg, id=203, 266.79675pt x 239.6955pt>
+File: gjl/12.jpg Graphic file (type jpg)
+<use gjl/12.jpg>
+Package pdftex.def Info: gjl/12.jpg  used on input line 301.
+(pdftex.def)             Requested size: 137.9979pt x 123.98402pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--301
+
+ []
+
+<gjl/21.jpg, id=204, 296.307pt x 296.307pt>
+File: gjl/21.jpg Graphic file (type jpg)
+<use gjl/21.jpg>
+Package pdftex.def Info: gjl/21.jpg  used on input line 302.
+(pdftex.def)             Requested size: 137.9979pt x 137.99835pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 302--302
 
  []
 
 
 Underfull \vbox (badness 5490) has occurred while \output is active []
 
- [12 <./gjl/11.JPG> <./gjl/12.JPG>]
-<gjl/22.jpg, id=198, 332.442pt x 322.20375pt>
+ [13 <./gjl/11.JPG> <./gjl/12.JPG>]
+<gjl/22.jpg, id=208, 332.442pt x 322.20375pt>
 File: gjl/22.jpg Graphic file (type jpg)
 <use gjl/22.jpg>
-Package pdftex.def Info: gjl/22.jpg  used on input line 289.
+Package pdftex.def Info: gjl/22.jpg  used on input line 303.
 (pdftex.def)             Requested size: 137.9979pt x 133.74648pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--289
+Underfull \hbox (badness 10000) in paragraph at lines 303--303
 
  []
 
-<gjl/3.jpg, id=199, 301.125pt x 301.125pt>
+<gjl/3.jpg, id=209, 301.125pt x 301.125pt>
 File: gjl/3.jpg Graphic file (type jpg)
 <use gjl/3.jpg>
-Package pdftex.def Info: gjl/3.jpg  used on input line 290.
+Package pdftex.def Info: gjl/3.jpg  used on input line 304.
 (pdftex.def)             Requested size: 137.9979pt x 138.00455pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--290
+Underfull \hbox (badness 10000) in paragraph at lines 304--304
 
  []
 
-[13 <./gjl/21.JPG> <./gjl/22.JPG> <./gjl/3.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 308--308
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 309--309
+[14 <./gjl/21.JPG> <./gjl/22.JPG> <./gjl/3.JPG>]
+Underfull \hbox (badness 10000) in paragraph at lines 322--322
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--310
+Underfull \hbox (badness 10000) in paragraph at lines 323--323
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--311
+Underfull \hbox (badness 10000) in paragraph at lines 324--324
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
+Underfull \hbox (badness 10000) in paragraph at lines 325--325
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 313--313
+Underfull \hbox (badness 10000) in paragraph at lines 326--326
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
+Underfull \hbox (badness 10000) in paragraph at lines 327--327
 
  []
 
-<gzl/01.png, id=203, 796.8972pt x 433.62pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 328--328
+
+ []
+
+<gzl/01.png, id=213, 796.8972pt x 433.62pt>
 File: gzl/01.png Graphic file (type png)
 <use gzl/01.png>
-Package pdftex.def Info: gzl/01.png  used on input line 315.
+Package pdftex.def Info: gzl/01.png  used on input line 329.
 (pdftex.def)             Requested size: 310.4979pt x 168.95232pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14 <./gzl/01.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 320--320
+ [15 <./gzl/01.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 334--334
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--321
+Underfull \hbox (badness 10000) in paragraph at lines 335--335
 
  []
 
-<gzl/02.jpg, id=208, 265.99374pt x 70.2625pt>
+<gzl/02.jpg, id=219, 265.99374pt x 70.2625pt>
 File: gzl/02.jpg Graphic file (type jpg)
 <use gzl/02.jpg>
-Package pdftex.def Info: gzl/02.jpg  used on input line 322.
+Package pdftex.def Info: gzl/02.jpg  used on input line 336.
 (pdftex.def)             Requested size: 310.4979pt x 82.02559pt.
-[15 <./gzl/02.JPG>] (./Report.aux) ) 
+[16 <./gzl/02.JPG>]
+Underfull \hbox (badness 10000) in paragraph at lines 387--387
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--390
+
+ []
+
+<jaf/titleexample.PNG, id=223, 447.47176pt x 366.168pt>
+File: jaf/titleexample.PNG Graphic file (type png)
+<use jaf/titleexample.PNG>
+Package pdftex.def Info: jaf/titleexample.PNG  used on input line 391.
+(pdftex.def)             Requested size: 310.4979pt x 254.08093pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--391
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--392
+
+ []
+
+[17 <./jaf/titleexample.PNG>]
+<jaf/link.PNG, id=228, 602.25pt x 17.46526pt>
+File: jaf/link.PNG Graphic file (type png)
+<use jaf/link.PNG>
+Package pdftex.def Info: jaf/link.PNG  used on input line 394.
+(pdftex.def)             Requested size: 310.4979pt x 9.00468pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--394
+
+ []
+
+<jaf/linked.PNG, id=229, 632.96475pt x 18.66975pt>
+File: jaf/linked.PNG Graphic file (type png)
+<use jaf/linked.PNG>
+Package pdftex.def Info: jaf/linked.PNG  used on input line 396.
+(pdftex.def)             Requested size: 310.4979pt x 9.1585pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--396
+
+ []
+
+<jaf/conference.PNG, id=230, 641.39626pt x 342.68025pt>
+File: jaf/conference.PNG Graphic file (type png)
+<use jaf/conference.PNG>
+Package pdftex.def Info: jaf/conference.PNG  used on input line 399.
+(pdftex.def)             Requested size: 310.4979pt x 165.89122pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--399
+
+ []
+
+<jaf/author.PNG, id=231, 638.385pt x 248.72925pt>
+File: jaf/author.PNG Graphic file (type png)
+<use jaf/author.PNG>
+Package pdftex.def Info: jaf/author.PNG  used on input line 402.
+(pdftex.def)             Requested size: 310.4979pt x 120.97511pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18 <./jaf/link.PNG> <./jaf/linked.PNG> <./jaf/conference.PNG>]
+<jaf/limit.PNG, id=238, 698.00775pt x 18.66975pt>
+File: jaf/limit.PNG Graphic file (type png)
+<use jaf/limit.PNG>
+Package pdftex.def Info: jaf/limit.PNG  used on input line 409.
+(pdftex.def)             Requested size: 310.4979pt x 8.30472pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--409
+
+ []
+
+<jaf/affold.PNG, id=239, 685.3605pt x 62.03175pt>
+File: jaf/affold.PNG Graphic file (type png)
+<use jaf/affold.PNG>
+Package pdftex.def Info: jaf/affold.PNG  used on input line 411.
+(pdftex.def)             Requested size: 310.4979pt x 28.10332pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--411
+
+ []
+
+<jaf/affnew.PNG, id=240, 777.50475pt x 84.315pt>
+File: jaf/affnew.PNG Graphic file (type png)
+<use jaf/affnew.PNG>
+Package pdftex.def Info: jaf/affnew.PNG  used on input line 412.
+(pdftex.def)             Requested size: 310.4979pt x 33.67136pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--412
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 416--416
+
+ []
+
+[19 <./jaf/author.PNG> <./jaf/limit.PNG> <./jaf/affold.PNG> <./jaf/affnew.PNG>]
+<jaf/contact.PNG, id=248, 548.64975pt x 330.63525pt>
+File: jaf/contact.PNG Graphic file (type png)
+<use jaf/contact.PNG>
+Package pdftex.def Info: jaf/contact.PNG  used on input line 417.
+(pdftex.def)             Requested size: 310.4979pt x 187.12206pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--417
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 418--418
+
+ []
+
+<jaf/git.PNG, id=249, 740.16525pt x 410.7345pt>
+File: jaf/git.PNG Graphic file (type png)
+<use jaf/git.PNG>
+Package pdftex.def Info: jaf/git.PNG  used on input line 419.
+(pdftex.def)             Requested size: 310.4979pt x 172.30049pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 419--419
+
+ []
+
+[20 <./jaf/contact.PNG> <./jaf/git.PNG>] (./Report.aux) ) 
 Here is how much of TeX's memory you used:
- 15756 strings out of 492609
- 291172 string characters out of 6132818
- 312647 words of memory out of 5000000
- 19374 multiletter control sequences out of 15000+600000
+ 15816 strings out of 492609
+ 292260 string characters out of 6132818
+ 314647 words of memory out of 5000000
+ 19422 multiletter control sequences out of 15000+600000
  542582 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,63p,477b,317s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fo
+ 41i,6n,63p,479b,317s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/Windows/Fonts/sims
+un.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fo
 nts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Wi
 ndows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.tt
-c><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/s
-imsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows
-/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:
-/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/
-2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2019/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2019/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2019/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr17.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmti10.pfb>
-Output written on Report.pdf (18 pages, 3001626 bytes).
+c><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/s
+imhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows
+/Fonts/simsun.ttc><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+bx10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+<c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/tex
+live/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2019/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2019/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2019/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmti10.pfb>
+Output written on Report.pdf (24 pages, 3342099 bytes).
 PDF statistics:
- 282 PDF objects out of 1000 (max. 8388607)
- 108 compressed objects within 2 object streams
+ 325 PDF objects out of 1000 (max. 8388607)
+ 121 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 371 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 431 words of extra memory for PDF output out of 10000 (max. 10000000)
 
