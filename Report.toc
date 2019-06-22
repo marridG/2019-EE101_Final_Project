@@ -6,3 +6,4 @@
 \contentsline {subsubsection}{\numberline {2.1.1}Logo}{1}% 
 \contentsline {subsubsection}{\numberline {2.1.2}Greeting Words}{2}% 
 \contentsline {subsubsection}{\numberline {2.1.3}Search box \& buttons}{2}% 
+\contentsline {subsubsection}{\numberline {2.1.4}Copyright \& Related Websites}{5}% 
