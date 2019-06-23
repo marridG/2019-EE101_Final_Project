@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.22)  23 JUN 2019 10:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.22)  23 JUN 2019 10:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -786,252 +786,256 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 41--41
  []
 
 [2 <./jaf/com.PNG> <./jaf/lala.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+
+ []
+
 <cyf/contribution.PNG, id=35, 274.77657pt x 149.8097pt>
 File: cyf/contribution.PNG Graphic file (type png)
 <use cyf/contribution.PNG>
-Package pdftex.def Info: cyf/contribution.PNG  used on input line 67.
+Package pdftex.def Info: cyf/contribution.PNG  used on input line 68.
 (pdftex.def)             Requested size: 241.49895pt x 131.67062pt.
 <cyf/frequency.PNG, id=36, 779.91376pt x 176.15813pt>
 File: cyf/frequency.PNG Graphic file (type png)
 <use cyf/frequency.PNG>
-Package pdftex.def Info: cyf/frequency.PNG  used on input line 71.
+Package pdftex.def Info: cyf/frequency.PNG  used on input line 72.
 (pdftex.def)             Requested size: 241.49895pt x 54.54662pt.
 <cyf/index_structure.PNG, id=37, 1068.24094pt x 572.1375pt>
 File: cyf/index_structure.PNG Graphic file (type png)
 <use cyf/index_structure.PNG>
-Package pdftex.def Info: cyf/index_structure.PNG  used on input line 78.
+Package pdftex.def Info: cyf/index_structure.PNG  used on input line 79.
 (pdftex.def)             Requested size: 241.49895pt x 129.33649pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3 <./cyf/contribution.PNG> <./cyf/frequency.PNG>]
-<cyf/search1.png, id=49, 263.48438pt x 39.14626pt>
+<cyf/search1.png, id=50, 263.48438pt x 39.14626pt>
 File: cyf/search1.png Graphic file (type png)
 <use cyf/search1.png>
-Package pdftex.def Info: cyf/search1.png  used on input line 99.
+Package pdftex.def Info: cyf/search1.png  used on input line 100.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/search2.png, id=50, 263.48438pt x 39.14626pt>
+<cyf/search2.png, id=51, 263.48438pt x 39.14626pt>
 File: cyf/search2.png Graphic file (type png)
 <use cyf/search2.png>
-Package pdftex.def Info: cyf/search2.png  used on input line 101.
+Package pdftex.def Info: cyf/search2.png  used on input line 102.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/search3.png, id=51, 263.48438pt x 39.14626pt>
+<cyf/search3.png, id=52, 263.48438pt x 39.14626pt>
 File: cyf/search3.png Graphic file (type png)
 <use cyf/search3.png>
-Package pdftex.def Info: cyf/search3.png  used on input line 103.
+Package pdftex.def Info: cyf/search3.png  used on input line 104.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/search4.png, id=52, 263.48438pt x 39.14626pt>
+<cyf/search4.png, id=53, 263.48438pt x 39.14626pt>
 File: cyf/search4.png Graphic file (type png)
 <use cyf/search4.png>
-Package pdftex.def Info: cyf/search4.png  used on input line 105.
+Package pdftex.def Info: cyf/search4.png  used on input line 106.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/search5.png, id=53, 263.48438pt x 39.14626pt>
+<cyf/search5.png, id=54, 263.48438pt x 39.14626pt>
 File: cyf/search5.png Graphic file (type png)
 <use cyf/search5.png>
-Package pdftex.def Info: cyf/search5.png  used on input line 107.
+Package pdftex.def Info: cyf/search5.png  used on input line 108.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/search6.png, id=54, 263.48438pt x 39.14626pt>
+<cyf/search6.png, id=55, 263.48438pt x 39.14626pt>
 File: cyf/search6.png Graphic file (type png)
 <use cyf/search6.png>
-Package pdftex.def Info: cyf/search6.png  used on input line 109.
+Package pdftex.def Info: cyf/search6.png  used on input line 110.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/search7.png, id=55, 263.48438pt x 39.14626pt>
+<cyf/search7.png, id=56, 263.48438pt x 39.14626pt>
 File: cyf/search7.png Graphic file (type png)
 <use cyf/search7.png>
-Package pdftex.def Info: cyf/search7.png  used on input line 111.
+Package pdftex.def Info: cyf/search7.png  used on input line 112.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/reset1.png, id=56, 263.48438pt x 39.14626pt>
+<cyf/reset1.png, id=57, 263.48438pt x 39.14626pt>
 File: cyf/reset1.png Graphic file (type png)
 <use cyf/reset1.png>
-Package pdftex.def Info: cyf/reset1.png  used on input line 113.
+Package pdftex.def Info: cyf/reset1.png  used on input line 114.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/reset2.png, id=57, 263.48438pt x 39.14626pt>
+<cyf/reset2.png, id=58, 263.48438pt x 39.14626pt>
 File: cyf/reset2.png Graphic file (type png)
 <use cyf/reset2.png>
-Package pdftex.def Info: cyf/reset2.png  used on input line 115.
+Package pdftex.def Info: cyf/reset2.png  used on input line 116.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/reset3.png, id=58, 263.48438pt x 39.14626pt>
+<cyf/reset3.png, id=59, 263.48438pt x 39.14626pt>
 File: cyf/reset3.png Graphic file (type png)
 <use cyf/reset3.png>
-Package pdftex.def Info: cyf/reset3.png  used on input line 117.
+Package pdftex.def Info: cyf/reset3.png  used on input line 118.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/reset4.png, id=59, 263.48438pt x 39.14626pt>
+<cyf/reset4.png, id=60, 263.48438pt x 39.14626pt>
 File: cyf/reset4.png Graphic file (type png)
 <use cyf/reset4.png>
-Package pdftex.def Info: cyf/reset4.png  used on input line 119.
+Package pdftex.def Info: cyf/reset4.png  used on input line 120.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/reset5.png, id=60, 263.48438pt x 39.14626pt>
+<cyf/reset5.png, id=61, 263.48438pt x 39.14626pt>
 File: cyf/reset5.png Graphic file (type png)
 <use cyf/reset5.png>
-Package pdftex.def Info: cyf/reset5.png  used on input line 121.
+Package pdftex.def Info: cyf/reset5.png  used on input line 122.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/reset6.png, id=61, 263.48438pt x 39.14626pt>
+<cyf/reset6.png, id=62, 263.48438pt x 39.14626pt>
 File: cyf/reset6.png Graphic file (type png)
 <use cyf/reset6.png>
-Package pdftex.def Info: cyf/reset6.png  used on input line 123.
+Package pdftex.def Info: cyf/reset6.png  used on input line 124.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/reset7.png, id=62, 263.48438pt x 39.14626pt>
+<cyf/reset7.png, id=63, 263.48438pt x 39.14626pt>
 File: cyf/reset7.png Graphic file (type png)
 <use cyf/reset7.png>
-Package pdftex.def Info: cyf/reset7.png  used on input line 125.
+Package pdftex.def Info: cyf/reset7.png  used on input line 126.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching1.png, id=63, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching1.png, id=64, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching1.png Graphic file (type png)
 <use cyf/Advanced_searching1.png>
-Package pdftex.def Info: cyf/Advanced_searching1.png  used on input line 127.
+Package pdftex.def Info: cyf/Advanced_searching1.png  used on input line 128.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching2.png, id=64, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching2.png, id=65, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching2.png Graphic file (type png)
 <use cyf/Advanced_searching2.png>
-Package pdftex.def Info: cyf/Advanced_searching2.png  used on input line 129.
+Package pdftex.def Info: cyf/Advanced_searching2.png  used on input line 130.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching3.png, id=65, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching3.png, id=66, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching3.png Graphic file (type png)
 <use cyf/Advanced_searching3.png>
-Package pdftex.def Info: cyf/Advanced_searching3.png  used on input line 131.
+Package pdftex.def Info: cyf/Advanced_searching3.png  used on input line 132.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching4.png, id=66, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching4.png, id=67, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching4.png Graphic file (type png)
 <use cyf/Advanced_searching4.png>
-Package pdftex.def Info: cyf/Advanced_searching4.png  used on input line 133.
+Package pdftex.def Info: cyf/Advanced_searching4.png  used on input line 134.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching5.png, id=67, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching5.png, id=68, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching5.png Graphic file (type png)
 <use cyf/Advanced_searching5.png>
-Package pdftex.def Info: cyf/Advanced_searching5.png  used on input line 135.
+Package pdftex.def Info: cyf/Advanced_searching5.png  used on input line 136.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching6.png, id=68, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching6.png, id=69, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching6.png Graphic file (type png)
 <use cyf/Advanced_searching6.png>
-Package pdftex.def Info: cyf/Advanced_searching6.png  used on input line 137.
+Package pdftex.def Info: cyf/Advanced_searching6.png  used on input line 138.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching7.png, id=69, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching7.png, id=70, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching7.png Graphic file (type png)
 <use cyf/Advanced_searching7.png>
-Package pdftex.def Info: cyf/Advanced_searching7.png  used on input line 139.
+Package pdftex.def Info: cyf/Advanced_searching7.png  used on input line 140.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching8.png, id=70, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching8.png, id=71, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching8.png Graphic file (type png)
 <use cyf/Advanced_searching8.png>
-Package pdftex.def Info: cyf/Advanced_searching8.png  used on input line 141.
+Package pdftex.def Info: cyf/Advanced_searching8.png  used on input line 142.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching9.png, id=71, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching9.png, id=72, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching9.png Graphic file (type png)
 <use cyf/Advanced_searching9.png>
-Package pdftex.def Info: cyf/Advanced_searching9.png  used on input line 143.
+Package pdftex.def Info: cyf/Advanced_searching9.png  used on input line 144.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching10.png, id=72, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching10.png, id=73, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching10.png Graphic file (type png)
 <use cyf/Advanced_searching10.png>
-Package pdftex.def Info: cyf/Advanced_searching10.png  used on input line 145.
+Package pdftex.def Info: cyf/Advanced_searching10.png  used on input line 146.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching11.png, id=73, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching11.png, id=74, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching11.png Graphic file (type png)
 <use cyf/Advanced_searching11.png>
-Package pdftex.def Info: cyf/Advanced_searching11.png  used on input line 147.
+Package pdftex.def Info: cyf/Advanced_searching11.png  used on input line 148.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching12.png, id=74, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching12.png, id=75, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching12.png Graphic file (type png)
 <use cyf/Advanced_searching12.png>
-Package pdftex.def Info: cyf/Advanced_searching12.png  used on input line 149.
+Package pdftex.def Info: cyf/Advanced_searching12.png  used on input line 150.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching13.png, id=75, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching13.png, id=76, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching13.png Graphic file (type png)
 <use cyf/Advanced_searching13.png>
-Package pdftex.def Info: cyf/Advanced_searching13.png  used on input line 151.
+Package pdftex.def Info: cyf/Advanced_searching13.png  used on input line 152.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching14.png, id=76, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching14.png, id=77, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching14.png Graphic file (type png)
 <use cyf/Advanced_searching14.png>
-Package pdftex.def Info: cyf/Advanced_searching14.png  used on input line 153.
+Package pdftex.def Info: cyf/Advanced_searching14.png  used on input line 154.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching15.png, id=77, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching15.png, id=78, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching15.png Graphic file (type png)
 <use cyf/Advanced_searching15.png>
-Package pdftex.def Info: cyf/Advanced_searching15.png  used on input line 155.
+Package pdftex.def Info: cyf/Advanced_searching15.png  used on input line 156.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching16.png, id=78, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching16.png, id=79, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching16.png Graphic file (type png)
 <use cyf/Advanced_searching16.png>
-Package pdftex.def Info: cyf/Advanced_searching16.png  used on input line 157.
+Package pdftex.def Info: cyf/Advanced_searching16.png  used on input line 158.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching17.png, id=79, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching17.png, id=80, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching17.png Graphic file (type png)
 <use cyf/Advanced_searching17.png>
-Package pdftex.def Info: cyf/Advanced_searching17.png  used on input line 159.
+Package pdftex.def Info: cyf/Advanced_searching17.png  used on input line 160.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching18.png, id=80, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching18.png, id=81, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching18.png Graphic file (type png)
 <use cyf/Advanced_searching18.png>
-Package pdftex.def Info: cyf/Advanced_searching18.png  used on input line 161.
+Package pdftex.def Info: cyf/Advanced_searching18.png  used on input line 162.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching19.png, id=81, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching19.png, id=82, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching19.png Graphic file (type png)
 <use cyf/Advanced_searching19.png>
-Package pdftex.def Info: cyf/Advanced_searching19.png  used on input line 163.
+Package pdftex.def Info: cyf/Advanced_searching19.png  used on input line 164.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching20.png, id=82, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching20.png, id=83, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching20.png Graphic file (type png)
 <use cyf/Advanced_searching20.png>
-Package pdftex.def Info: cyf/Advanced_searching20.png  used on input line 165.
+Package pdftex.def Info: cyf/Advanced_searching20.png  used on input line 166.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching21.png, id=83, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching21.png, id=84, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching21.png Graphic file (type png)
 <use cyf/Advanced_searching21.png>
-Package pdftex.def Info: cyf/Advanced_searching21.png  used on input line 167.
+Package pdftex.def Info: cyf/Advanced_searching21.png  used on input line 168.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching22.png, id=84, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching22.png, id=85, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching22.png Graphic file (type png)
 <use cyf/Advanced_searching22.png>
-Package pdftex.def Info: cyf/Advanced_searching22.png  used on input line 169.
+Package pdftex.def Info: cyf/Advanced_searching22.png  used on input line 170.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching23.png, id=85, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching23.png, id=86, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching23.png Graphic file (type png)
 <use cyf/Advanced_searching23.png>
-Package pdftex.def Info: cyf/Advanced_searching23.png  used on input line 171.
+Package pdftex.def Info: cyf/Advanced_searching23.png  used on input line 172.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching24.png, id=86, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching24.png, id=87, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching24.png Graphic file (type png)
 <use cyf/Advanced_searching24.png>
-Package pdftex.def Info: cyf/Advanced_searching24.png  used on input line 173.
+Package pdftex.def Info: cyf/Advanced_searching24.png  used on input line 174.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching25.png, id=87, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching25.png, id=88, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching25.png Graphic file (type png)
 <use cyf/Advanced_searching25.png>
-Package pdftex.def Info: cyf/Advanced_searching25.png  used on input line 175.
+Package pdftex.def Info: cyf/Advanced_searching25.png  used on input line 176.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching26.png, id=88, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching26.png, id=89, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching26.png Graphic file (type png)
 <use cyf/Advanced_searching26.png>
-Package pdftex.def Info: cyf/Advanced_searching26.png  used on input line 177.
+Package pdftex.def Info: cyf/Advanced_searching26.png  used on input line 178.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching27.png, id=89, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching27.png, id=90, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching27.png Graphic file (type png)
 <use cyf/Advanced_searching27.png>
-Package pdftex.def Info: cyf/Advanced_searching27.png  used on input line 179.
+Package pdftex.def Info: cyf/Advanced_searching27.png  used on input line 180.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching28.png, id=90, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching28.png, id=91, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching28.png Graphic file (type png)
 <use cyf/Advanced_searching28.png>
-Package pdftex.def Info: cyf/Advanced_searching28.png  used on input line 181.
+Package pdftex.def Info: cyf/Advanced_searching28.png  used on input line 182.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching29.png, id=91, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching29.png, id=92, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching29.png Graphic file (type png)
 <use cyf/Advanced_searching29.png>
-Package pdftex.def Info: cyf/Advanced_searching29.png  used on input line 183.
+Package pdftex.def Info: cyf/Advanced_searching29.png  used on input line 184.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching30.png, id=92, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching30.png, id=93, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching30.png Graphic file (type png)
 <use cyf/Advanced_searching30.png>
-Package pdftex.def Info: cyf/Advanced_searching30.png  used on input line 185.
+Package pdftex.def Info: cyf/Advanced_searching30.png  used on input line 186.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
-<cyf/Advanced_searching31.png, id=93, 263.48438pt x 39.14626pt>
+<cyf/Advanced_searching31.png, id=94, 263.48438pt x 39.14626pt>
 File: cyf/Advanced_searching31.png Graphic file (type png)
 <use cyf/Advanced_searching31.png>
-Package pdftex.def Info: cyf/Advanced_searching31.png  used on input line 187.
+Package pdftex.def Info: cyf/Advanced_searching31.png  used on input line 188.
 (pdftex.def)             Requested size: 241.49895pt x 35.88177pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--188
+Underfull \hbox (badness 10000) in paragraph at lines 97--189
 
  []
 
@@ -1052,7 +1056,7 @@ vanced_searching10.png> <./cyf/Advanced_searching11.png> <./cyf/Advanced_search
 ing12.png> <./cyf/Advanced_searching13.png> <./cyf/Advanced_searching14.png> <.
 /cyf/Advanced_searching15.png> <./cyf/Advanced_searching16.png> <./cyf/Advanced
 _searching17.png> <./cyf/Advanced_searching18.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 195--197
+Underfull \hbox (badness 10000) in paragraph at lines 196--198
 
  []
 
@@ -1065,103 +1069,88 @@ ing23.png> <./cyf/Advanced_searching24.png> <./cyf/Advanced_searching25.png> <.
 /cyf/Advanced_searching26.png> <./cyf/Advanced_searching27.png> <./cyf/Advanced
 _searching28.png> <./cyf/Advanced_searching29.png> <./cyf/Advanced_searching30.
 png> <./cyf/Advanced_searching31.png>]
-<cyf/SEARCH_struct1.png, id=156, 1082.54437pt x 569.87906pt>
+<cyf/SEARCH_struct1.png, id=157, 1082.54437pt x 569.87906pt>
 File: cyf/SEARCH_struct1.png Graphic file (type png)
 <use cyf/SEARCH_struct1.png>
-Package pdftex.def Info: cyf/SEARCH_struct1.png  used on input line 198.
+Package pdftex.def Info: cyf/SEARCH_struct1.png  used on input line 199.
 (pdftex.def)             Requested size: 345.0pt x 181.61719pt.
-<cyf/SEARCH_2_struct2.png, id=157, 1068.99374pt x 566.86781pt>
+<cyf/SEARCH_2_struct2.png, id=158, 1068.99374pt x 566.86781pt>
 File: cyf/SEARCH_2_struct2.png Graphic file (type png)
 <use cyf/SEARCH_2_struct2.png>
-Package pdftex.def Info: cyf/SEARCH_2_struct2.png  used on input line 200.
+Package pdftex.def Info: cyf/SEARCH_2_struct2.png  used on input line 201.
 (pdftex.def)             Requested size: 345.0pt x 182.94969pt.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 198--201
+Overfull \hbox (20.0pt too wide) in paragraph at lines 199--202
 [][] 
  []
 
 [8 <./cyf/SEARCH_struct1.png> <./cyf/SEARCH_2_struct2.png>]
-<cyf/Google.jpg, id=173, 547.04375pt x 286.06876pt>
+<cyf/Google.jpg, id=174, 547.04375pt x 286.06876pt>
 File: cyf/Google.jpg Graphic file (type jpg)
 <use cyf/Google.jpg>
-Package pdftex.def Info: cyf/Google.jpg  used on input line 215.
+Package pdftex.def Info: cyf/Google.jpg  used on input line 216.
 (pdftex.def)             Requested size: 172.5pt x 90.20816pt.
-<cyf/Conference.PNG, id=174, 1070.49937pt x 568.37344pt>
+<cyf/Conference.PNG, id=175, 1070.49937pt x 568.37344pt>
 File: cyf/Conference.PNG Graphic file (type png)
 <use cyf/Conference.PNG>
-Package pdftex.def Info: cyf/Conference.PNG  used on input line 226.
+Package pdftex.def Info: cyf/Conference.PNG  used on input line 227.
 (pdftex.def)             Requested size: 345.0pt x 183.17545pt.
-<cyf/Conference2.PNG, id=175, 1069.74657pt x 571.38469pt>
+<cyf/Conference2.PNG, id=176, 1069.74657pt x 571.38469pt>
 File: cyf/Conference2.PNG Graphic file (type png)
 <use cyf/Conference2.PNG>
-Package pdftex.def Info: cyf/Conference2.PNG  used on input line 229.
+Package pdftex.def Info: cyf/Conference2.PNG  used on input line 230.
 (pdftex.def)             Requested size: 345.0pt x 184.27669pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9 <./cyf/Google.jpg> <./cyf/Conference.PNG>]
-Overfull \hbox (7.52835pt too wide) in paragraph at lines 232--233
+Overfull \hbox (7.52835pt too wide) in paragraph at lines 233--234
 []\OT1/cmr/m/n/10 The beau-ti-fi-ca-tion of Con-fer-ence.php was si-m-il-iar to
  the search.php.Therefore
  []
 
-<cyf/author1.PNG, id=181, 1069.74657pt x 569.12625pt>
+<cyf/author1.PNG, id=182, 1069.74657pt x 569.12625pt>
 File: cyf/author1.PNG Graphic file (type png)
 <use cyf/author1.PNG>
-Package pdftex.def Info: cyf/author1.PNG  used on input line 238.
+Package pdftex.def Info: cyf/author1.PNG  used on input line 239.
 (pdftex.def)             Requested size: 345.0pt x 183.54832pt.
-<cyf/author2.PNG, id=182, 1068.99374pt x 569.12625pt>
+<cyf/author2.PNG, id=183, 1068.99374pt x 569.12625pt>
 File: cyf/author2.PNG Graphic file (type png)
 <use cyf/author2.PNG>
-Package pdftex.def Info: cyf/author2.PNG  used on input line 241.
+Package pdftex.def Info: cyf/author2.PNG  used on input line 242.
 (pdftex.def)             Requested size: 345.0pt x 183.67857pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10 <./cyf/Conference2.PNG> <./cyf/author1.PNG>]
-Overfull \hbox (7.25058pt too wide) in paragraph at lines 244--245
+Overfull \hbox (7.25058pt too wide) in paragraph at lines 245--246
 []\OT1/cmr/m/n/10 The beau-ti-fi-ca-tion of the page au-thor was si-m-il-iar to
  the search.php.Therefore
  []
 
-<cyf/Title1.PNG, id=188, 1072.005pt x 570.63188pt>
+<cyf/Title1.PNG, id=189, 1072.005pt x 570.63188pt>
 File: cyf/Title1.PNG Graphic file (type png)
 <use cyf/Title1.PNG>
-Package pdftex.def Info: cyf/Title1.PNG  used on input line 248.
+Package pdftex.def Info: cyf/Title1.PNG  used on input line 249.
 (pdftex.def)             Requested size: 345.0pt x 183.64207pt.
-<cyf/Title2.PNG, id=189, 1071.25218pt x 568.37344pt>
+<cyf/Title2.PNG, id=190, 1071.25218pt x 568.37344pt>
 File: cyf/Title2.PNG Graphic file (type png)
 <use cyf/Title2.PNG>
-Package pdftex.def Info: cyf/Title2.PNG  used on input line 251.
+Package pdftex.def Info: cyf/Title2.PNG  used on input line 252.
 (pdftex.def)             Requested size: 345.0pt x 183.04535pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11 <./cyf/author2.PNG> <./cyf/Title1.PNG>] [12 <./cyf/Title2.PNG>] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-
- []
-
-<gjl/overview.jpg, id=202, 669.09975pt x 350.5095pt>
-File: gjl/overview.jpg Graphic file (type jpg)
-<use gjl/overview.jpg>
-Package pdftex.def Info: gjl/overview.jpg  used on input line 303.
-(pdftex.def)             Requested size: 310.4979pt x 162.65364pt.
-
 Underfull \hbox (badness 10000) in paragraph at lines 303--303
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 304--304
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 305--305
-
- []
-
+<gjl/overview.jpg, id=203, 669.09975pt x 350.5095pt>
+File: gjl/overview.jpg Graphic file (type jpg)
+<use gjl/overview.jpg>
+Package pdftex.def Info: gjl/overview.jpg  used on input line 306.
+(pdftex.def)             Requested size: 310.4979pt x 162.65364pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 306--306
 
@@ -1172,54 +1161,69 @@ Underfull \hbox (badness 10000) in paragraph at lines 307--307
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 308--308
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--309
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--310
+
+ []
+
 [14 <./gjl/overview.JPG>]
 <gjl/formdata.jpg, id=207, 316.18124pt x 217.41225pt>
 File: gjl/formdata.jpg Graphic file (type jpg)
 <use gjl/formdata.jpg>
-Package pdftex.def Info: gjl/formdata.jpg  used on input line 323.
+Package pdftex.def Info: gjl/formdata.jpg  used on input line 326.
 (pdftex.def)             Requested size: 310.4979pt x 213.52034pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
+Underfull \hbox (badness 10000) in paragraph at lines 326--326
 
  []
 
 [15 <./gjl/formdata.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 329--330
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
 
  []
 
 <gjl/03.jpg, id=212, 528.17325pt x 34.9305pt>
 File: gjl/03.jpg Graphic file (type jpg)
 <use gjl/03.jpg>
-Package pdftex.def Info: gjl/03.jpg  used on input line 331.
+Package pdftex.def Info: gjl/03.jpg  used on input line 334.
 (pdftex.def)             Requested size: 345.0pt x 22.817pt.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 331--331
+Overfull \hbox (20.0pt too wide) in paragraph at lines 334--334
 [][] 
  []
 
 <gjl/04.jpg, id=213, 311.9655pt x 36.73724pt>
 File: gjl/04.jpg Graphic file (type jpg)
 <use gjl/04.jpg>
-Package pdftex.def Info: gjl/04.jpg  used on input line 333.
+Package pdftex.def Info: gjl/04.jpg  used on input line 336.
 (pdftex.def)             Requested size: 276.00105pt x 32.5043pt.
 <gjl/01.jpg, id=214, 293.898pt x 12.64725pt>
 File: gjl/01.jpg Graphic file (type jpg)
 <use gjl/01.jpg>
-Package pdftex.def Info: gjl/01.jpg  used on input line 335.
+Package pdftex.def Info: gjl/01.jpg  used on input line 338.
 (pdftex.def)             Requested size: 276.00105pt x 11.87778pt.
 <gjl/02.jpg, id=215, 340.27126pt x 18.0675pt>
 File: gjl/02.jpg Graphic file (type jpg)
 <use gjl/02.jpg>
-Package pdftex.def Info: gjl/02.jpg  used on input line 336.
+Package pdftex.def Info: gjl/02.jpg  used on input line 339.
 (pdftex.def)             Requested size: 276.00105pt x 14.65553pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--338
+Underfull \hbox (badness 10000) in paragraph at lines 340--341
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--339
+Underfull \hbox (badness 10000) in paragraph at lines 341--342
 
  []
 
@@ -1230,12 +1234,12 @@ Underfull \vbox (badness 1540) has occurred while \output is active []
 <gjl/05.jpg, id=219, 233.673pt x 40.35075pt>
 File: gjl/05.jpg Graphic file (type jpg)
 <use gjl/05.jpg>
-Package pdftex.def Info: gjl/05.jpg  used on input line 347.
+Package pdftex.def Info: gjl/05.jpg  used on input line 350.
 (pdftex.def)             Requested size: 276.00105pt x 47.66272pt.
 <gjl/06.jpg, id=220, 254.75175pt x 309.5565pt>
 File: gjl/06.jpg Graphic file (type jpg)
 <use gjl/06.jpg>
-Package pdftex.def Info: gjl/06.jpg  used on input line 349.
+Package pdftex.def Info: gjl/06.jpg  used on input line 352.
 (pdftex.def)             Requested size: 276.00105pt x 335.37408pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1244,36 +1248,36 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <gjl/07.jpg, id=224, 331.2375pt x 162.00525pt>
 File: gjl/07.jpg Graphic file (type jpg)
 <use gjl/07.jpg>
-Package pdftex.def Info: gjl/07.jpg  used on input line 351.
+Package pdftex.def Info: gjl/07.jpg  used on input line 354.
 (pdftex.def)             Requested size: 276.00105pt x 134.99579pt.
 <gjl/13.jpg, id=225, 283.65974pt x 113.223pt>
 File: gjl/13.jpg Graphic file (type jpg)
 <use gjl/13.jpg>
-Package pdftex.def Info: gjl/13.jpg  used on input line 355.
+Package pdftex.def Info: gjl/13.jpg  used on input line 358.
 (pdftex.def)             Requested size: 276.00105pt x 110.16652pt.
  [18 <./gjl/06.JPG> <./gjl/07.JPG>]
 <gjl/08.jpg, id=229, 362.5545pt x 82.50826pt>
 File: gjl/08.jpg Graphic file (type jpg)
 <use gjl/08.jpg>
-Package pdftex.def Info: gjl/08.jpg  used on input line 360.
+Package pdftex.def Info: gjl/08.jpg  used on input line 363.
 (pdftex.def)             Requested size: 276.00105pt x 62.81392pt.
 <gjl/09.jpg, id=230, 275.8305pt x 102.3825pt>
 File: gjl/09.jpg Graphic file (type jpg)
 <use gjl/09.jpg>
-Package pdftex.def Info: gjl/09.jpg  used on input line 362.
+Package pdftex.def Info: gjl/09.jpg  used on input line 365.
 (pdftex.def)             Requested size: 276.00105pt x 102.45097pt.
 <gjl/10.jpg, id=231, 297.5115pt x 115.02975pt>
 File: gjl/10.jpg Graphic file (type jpg)
 <use gjl/10.jpg>
-Package pdftex.def Info: gjl/10.jpg  used on input line 364.
+Package pdftex.def Info: gjl/10.jpg  used on input line 367.
 (pdftex.def)             Requested size: 276.00105pt x 106.71678pt.
 <gjl/11.jpg, id=232, 225.2415pt x 221.02576pt>
 File: gjl/11.jpg Graphic file (type jpg)
 <use gjl/11.jpg>
-Package pdftex.def Info: gjl/11.jpg  used on input line 369.
+Package pdftex.def Info: gjl/11.jpg  used on input line 372.
 (pdftex.def)             Requested size: 137.9979pt x 135.41571pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--369
+Underfull \hbox (badness 10000) in paragraph at lines 372--372
 
  []
 
@@ -1284,30 +1288,30 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <gjl/12.jpg, id=236, 266.79675pt x 239.6955pt>
 File: gjl/12.jpg Graphic file (type jpg)
 <use gjl/12.jpg>
-Package pdftex.def Info: gjl/12.jpg  used on input line 370.
+Package pdftex.def Info: gjl/12.jpg  used on input line 373.
 (pdftex.def)             Requested size: 137.9979pt x 123.98402pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 370--370
+Underfull \hbox (badness 10000) in paragraph at lines 373--373
 
  []
 
 <gjl/21.jpg, id=237, 296.307pt x 296.307pt>
 File: gjl/21.jpg Graphic file (type jpg)
 <use gjl/21.jpg>
-Package pdftex.def Info: gjl/21.jpg  used on input line 371.
+Package pdftex.def Info: gjl/21.jpg  used on input line 374.
 (pdftex.def)             Requested size: 137.9979pt x 137.99835pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--371
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
 
  []
 
 <gjl/22.jpg, id=238, 332.442pt x 322.20375pt>
 File: gjl/22.jpg Graphic file (type jpg)
 <use gjl/22.jpg>
-Package pdftex.def Info: gjl/22.jpg  used on input line 372.
+Package pdftex.def Info: gjl/22.jpg  used on input line 375.
 (pdftex.def)             Requested size: 137.9979pt x 133.74648pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--372
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
 
  []
 
@@ -1318,10 +1322,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <gjl/3.jpg, id=242, 301.125pt x 301.125pt>
 File: gjl/3.jpg Graphic file (type jpg)
 <use gjl/3.jpg>
-Package pdftex.def Info: gjl/3.jpg  used on input line 373.
+Package pdftex.def Info: gjl/3.jpg  used on input line 376.
 (pdftex.def)             Requested size: 137.9979pt x 138.00455pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--373
+Underfull \hbox (badness 10000) in paragraph at lines 376--376
 
  []
 
@@ -1329,30 +1333,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 373--373
 <gjl/15.jpg, id=247, 731.73375pt x 454.69875pt>
 File: gjl/15.jpg Graphic file (type jpg)
 <use gjl/15.jpg>
-Package pdftex.def Info: gjl/15.jpg  used on input line 376.
+Package pdftex.def Info: gjl/15.jpg  used on input line 379.
 (pdftex.def)             Requested size: 731.73196pt x 454.69763pt.
 
-Overfull \hbox (406.73196pt too wide) in paragraph at lines 376--376
+Overfull \hbox (406.73196pt too wide) in paragraph at lines 379--379
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--376
+Underfull \hbox (badness 10000) in paragraph at lines 379--379
 
  []
 
 <gjl/14.jpg, id=248, 439.04025pt x 487.8225pt>
 File: gjl/14.jpg Graphic file (type jpg)
 <use gjl/14.jpg>
-Package pdftex.def Info: gjl/14.jpg  used on input line 377.
+Package pdftex.def Info: gjl/14.jpg  used on input line 380.
 (pdftex.def)             Requested size: 345.0pt x 383.33601pt.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 377--377
+Overfull \hbox (20.0pt too wide) in paragraph at lines 380--380
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--377
+Underfull \hbox (badness 10000) in paragraph at lines 380--380
 
  []
 
@@ -1360,22 +1364,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 377--377
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22 <./gjl/15.JPG>] [23 <./gjl/14.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 394--394
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 396--396
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 397--397
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 398--398
 
  []
 
@@ -1394,41 +1383,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 401--401
 
  []
 
-<gzl/01.png, id=255, 796.8972pt x 433.62pt>
-File: gzl/01.png Graphic file (type png)
-<use gzl/01.png>
-Package pdftex.def Info: gzl/01.png  used on input line 402.
-(pdftex.def)             Requested size: 310.4979pt x 168.95232pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 402--402
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 403--403
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--404
+
+ []
+
+<gzl/01.png, id=255, 796.8972pt x 433.62pt>
+File: gzl/01.png Graphic file (type png)
+<use gzl/01.png>
+Package pdftex.def Info: gzl/01.png  used on input line 405.
+(pdftex.def)             Requested size: 310.4979pt x 168.95232pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 405--405
+
+ []
+
 [24 <./gzl/01.png>]
 Package CJKpunct Info: use punctuation spaces for family 'zhkai' with punctstyl
-e (quanjiao) on input line 408.
-
-Underfull \hbox (badness 10000) in paragraph at lines 408--408
-
- []
-
+e (quanjiao) on input line 411.
 
 Underfull \hbox (badness 10000) in paragraph at lines 411--411
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 412--412
-
- []
-
-<gzl/02.png, id=260, 622.39423pt x 345.15155pt>
-File: gzl/02.png Graphic file (type png)
-<use gzl/02.png>
-Package pdftex.def Info: gzl/02.png  used on input line 413.
-(pdftex.def)             Requested size: 276.00105pt x 153.05739pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 413--413
 
  []
 
@@ -1437,99 +1421,119 @@ Underfull \hbox (badness 10000) in paragraph at lines 414--414
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 415--415
+
+ []
+
+<gzl/02.png, id=260, 622.39423pt x 345.15155pt>
+File: gzl/02.png Graphic file (type png)
+<use gzl/02.png>
+Package pdftex.def Info: gzl/02.png  used on input line 416.
+(pdftex.def)             Requested size: 276.00105pt x 153.05739pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 416--416
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--417
+
+ []
+
 <gzl/02.jpg, id=261, 265.99374pt x 70.2625pt>
 File: gzl/02.jpg Graphic file (type jpg)
 <use gzl/02.jpg>
-Package pdftex.def Info: gzl/02.jpg  used on input line 415.
+Package pdftex.def Info: gzl/02.jpg  used on input line 418.
 (pdftex.def)             Requested size: 241.49895pt x 63.79422pt.
 [25 <./gzl/02.png> <./gzl/02.JPG>]
 <gzl/03.jpg, id=266, 630.85687pt x 303.63437pt>
 File: gzl/03.jpg Graphic file (type jpg)
 <use gzl/03.jpg>
-Package pdftex.def Info: gzl/03.jpg  used on input line 418.
+Package pdftex.def Info: gzl/03.jpg  used on input line 421.
 (pdftex.def)             Requested size: 345.0pt x 166.04962pt.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 418--418
+Overfull \hbox (20.0pt too wide) in paragraph at lines 421--421
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 426--426
+Underfull \hbox (badness 10000) in paragraph at lines 429--429
 
  []
 
 <gzl/03.png, id=267, 849.8952pt x 388.3308pt>
 File: gzl/03.png Graphic file (type png)
 <use gzl/03.png>
-Package pdftex.def Info: gzl/03.png  used on input line 427.
+Package pdftex.def Info: gzl/03.png  used on input line 430.
 (pdftex.def)             Requested size: 345.0pt x 157.63455pt.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 427--427
+Overfull \hbox (20.0pt too wide) in paragraph at lines 430--430
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--431
+Underfull \hbox (badness 10000) in paragraph at lines 434--434
 
  []
 
 [26 <./gzl/03.JPG> <./gzl/03.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 436--436
+Underfull \hbox (badness 10000) in paragraph at lines 439--439
 
  []
 
 <gzl/04.png, id=271, 211.34421pt x 33.4021pt>
 File: gzl/04.png Graphic file (type png)
 <use gzl/04.png>
-Package pdftex.def Info: gzl/04.png  used on input line 438.
+Package pdftex.def Info: gzl/04.png  used on input line 441.
 (pdftex.def)             Requested size: 103.50105pt x 16.35849pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 441--441
+Underfull \hbox (badness 10000) in paragraph at lines 444--444
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 447--447
+Underfull \hbox (badness 10000) in paragraph at lines 450--450
 
  []
 
 [27 <./gzl/04.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 452--452
+Underfull \hbox (badness 10000) in paragraph at lines 455--455
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 453--453
+Underfull \hbox (badness 10000) in paragraph at lines 456--456
 
  []
 
 <gzl/05.png, id=277, 397.485pt x 149.8398pt>
 File: gzl/05.png Graphic file (type png)
 <use gzl/05.png>
-Package pdftex.def Info: gzl/05.png  used on input line 454.
+Package pdftex.def Info: gzl/05.png  used on input line 457.
 (pdftex.def)             Requested size: 345.0pt x 130.05775pt.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 454--454
+Overfull \hbox (20.0pt too wide) in paragraph at lines 457--457
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 454--454
+Underfull \hbox (badness 10000) in paragraph at lines 457--457
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 455--455
+Underfull \hbox (badness 10000) in paragraph at lines 458--458
 
  []
 
 <gzl/04.jpg, id=278, 628.84938pt x 184.69pt>
 File: gzl/04.jpg Graphic file (type jpg)
 <use gzl/04.jpg>
-Package pdftex.def Info: gzl/04.jpg  used on input line 456.
+Package pdftex.def Info: gzl/04.jpg  used on input line 459.
 (pdftex.def)             Requested size: 345.0pt x 101.32335pt.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 456--458
+Overfull \hbox (20.0pt too wide) in paragraph at lines 459--461
 [][] 
  []
 
@@ -1537,31 +1541,26 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 456--458
 <gzl/05.jpg, id=283, 576.65437pt x 366.36874pt>
 File: gzl/05.jpg Graphic file (type jpg)
 <use gzl/05.jpg>
-Package pdftex.def Info: gzl/05.jpg  used on input line 459.
+Package pdftex.def Info: gzl/05.jpg  used on input line 462.
 (pdftex.def)             Requested size: 345.0pt x 219.19682pt.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 459--459
+Overfull \hbox (20.0pt too wide) in paragraph at lines 462--462
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 459--459
+Underfull \hbox (badness 10000) in paragraph at lines 462--462
 
  []
 
 <gzl/06.jpg, id=284, 662.475pt x 109.40875pt>
 File: gzl/06.jpg Graphic file (type jpg)
 <use gzl/06.jpg>
-Package pdftex.def Info: gzl/06.jpg  used on input line 460.
+Package pdftex.def Info: gzl/06.jpg  used on input line 463.
 (pdftex.def)             Requested size: 345.0pt x 56.97633pt.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 460--460
+Overfull \hbox (20.0pt too wide) in paragraph at lines 463--463
 [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 460--460
-
  []
 
 
@@ -1570,12 +1569,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 463--463
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 468--468
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 469--469
+Underfull \hbox (badness 10000) in paragraph at lines 466--466
 
  []
 
@@ -1584,36 +1578,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 471--471
 
  []
 
-[29 <./gzl/05.JPG> <./gzl/06.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 474--474
+
+Underfull \hbox (badness 10000) in paragraph at lines 472--472
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 475--475
+Underfull \hbox (badness 10000) in paragraph at lines 474--474
+
+ []
+
+[29 <./gzl/05.JPG> <./gzl/06.JPG>]
+Underfull \hbox (badness 10000) in paragraph at lines 477--477
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 478--478
 
  []
 
 File: gzl/02.png Graphic file (type png)
 <use gzl/02.png>
-Package pdftex.def Info: gzl/02.png  used on input line 476.
+Package pdftex.def Info: gzl/02.png  used on input line 479.
 (pdftex.def)             Requested size: 276.00105pt x 153.05739pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--476
+Underfull \hbox (badness 10000) in paragraph at lines 479--479
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--477
+Underfull \hbox (badness 10000) in paragraph at lines 480--480
 
  []
 
 File: gzl/02.jpg Graphic file (type jpg)
 <use gzl/02.jpg>
-Package pdftex.def Info: gzl/02.jpg  used on input line 478.
+Package pdftex.def Info: gzl/02.jpg  used on input line 481.
 (pdftex.def)             Requested size: 241.49895pt x 63.79422pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 478--478
+Underfull \hbox (badness 10000) in paragraph at lines 481--481
 
  []
 
@@ -1621,71 +1625,71 @@ Underfull \hbox (badness 10000) in paragraph at lines 478--478
 <gzl/06.png, id=291, 841.7046pt x 387.849pt>
 File: gzl/06.png Graphic file (type png)
 <use gzl/06.png>
-Package pdftex.def Info: gzl/06.png  used on input line 483.
+Package pdftex.def Info: gzl/06.png  used on input line 486.
 (pdftex.def)             Requested size: 345.0pt x 158.97176pt.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 483--484
+Overfull \hbox (20.0pt too wide) in paragraph at lines 486--487
 [][] 
  []
 
 
-Overfull \hbox (115.91751pt too wide) in paragraph at lines 486--486
+Overfull \hbox (115.91751pt too wide) in paragraph at lines 489--489
 []\OT1/cmr/m/n/10 This func-tion is im-ple-mented us-ing cook-ies with ref-er-e
 nce to: https://www.jb51.net/article/99749.htm 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 488--488
+Underfull \hbox (badness 10000) in paragraph at lines 491--491
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 489--489
+Underfull \hbox (badness 10000) in paragraph at lines 492--492
 
  []
 
 <gzl/07.jpg, id=292, 460.72125pt x 420.06938pt>
 File: gzl/07.jpg Graphic file (type jpg)
 <use gzl/07.jpg>
-Package pdftex.def Info: gzl/07.jpg  used on input line 490.
+Package pdftex.def Info: gzl/07.jpg  used on input line 493.
 (pdftex.def)             Requested size: 258.75pt x 235.91669pt.
 [31 <./gzl/06.png> <./gzl/07.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 493--493
+Underfull \hbox (badness 10000) in paragraph at lines 496--496
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 494--494
+Underfull \hbox (badness 10000) in paragraph at lines 497--497
 
  []
 
 <gzl/08.jpg, id=297, 558.58687pt x 48.18pt>
 File: gzl/08.jpg Graphic file (type jpg)
 <use gzl/08.jpg>
-Package pdftex.def Info: gzl/08.jpg  used on input line 495.
+Package pdftex.def Info: gzl/08.jpg  used on input line 498.
 (pdftex.def)             Requested size: 345.0pt x 29.75806pt.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 495--496
+Overfull \hbox (20.0pt too wide) in paragraph at lines 498--499
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 498--498
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--499
+Underfull \hbox (badness 10000) in paragraph at lines 502--502
 
  []
 
 <gzl/09.jpg, id=298, 474.27188pt x 255.95625pt>
 File: gzl/09.jpg Graphic file (type jpg)
 <use gzl/09.jpg>
-Package pdftex.def Info: gzl/09.jpg  used on input line 500.
+Package pdftex.def Info: gzl/09.jpg  used on input line 503.
 (pdftex.def)             Requested size: 345.0pt x 186.19817pt.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 500--501
+Overfull \hbox (20.0pt too wide) in paragraph at lines 503--504
 [][] 
  []
 
@@ -1693,41 +1697,21 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 500--501
 <gzl/07.png, id=302, 845.0772pt x 332.442pt>
 File: gzl/07.png Graphic file (type png)
 <use gzl/07.png>
-Package pdftex.def Info: gzl/07.png  used on input line 508.
+Package pdftex.def Info: gzl/07.png  used on input line 511.
 (pdftex.def)             Requested size: 345.0pt x 135.71873pt.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 508--508
+Overfull \hbox (20.0pt too wide) in paragraph at lines 511--511
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 509--509
+Underfull \hbox (badness 10000) in paragraph at lines 512--512
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 514--514
+Underfull \hbox (badness 10000) in paragraph at lines 517--517
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 519--519
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 521--521
-
- []
-
-<gzl/10.jpg, id=303, 483.30562pt x 144.03813pt>
-File: gzl/10.jpg Graphic file (type jpg)
-<use gzl/10.jpg>
-Package pdftex.def Info: gzl/10.jpg  used on input line 522.
-(pdftex.def)             Requested size: 345.0pt x 102.82382pt.
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 522--522
-[][] 
  []
 
 
@@ -1735,76 +1719,91 @@ Underfull \hbox (badness 10000) in paragraph at lines 522--522
 
  []
 
-[33 <./gzl/07.png> <./gzl/10.JPG>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 524--524
+
+ []
+
+<gzl/10.jpg, id=303, 483.30562pt x 144.03813pt>
+File: gzl/10.jpg Graphic file (type jpg)
+<use gzl/10.jpg>
+Package pdftex.def Info: gzl/10.jpg  used on input line 525.
+(pdftex.def)             Requested size: 345.0pt x 102.82382pt.
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 525--525
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 525--525
+
+ []
+
+[33 <./gzl/07.png> <./gzl/10.JPG>]
+Underfull \hbox (badness 10000) in paragraph at lines 527--527
 
  []
 
 <gzl/11.jpg, id=309, 334.75063pt x 452.18938pt>
 File: gzl/11.jpg Graphic file (type jpg)
 <use gzl/11.jpg>
-Package pdftex.def Info: gzl/11.jpg  used on input line 525.
+Package pdftex.def Info: gzl/11.jpg  used on input line 528.
 (pdftex.def)             Requested size: 310.4979pt x 419.4623pt.
 [34 <./gzl/11.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 531--531
+Underfull \hbox (badness 10000) in paragraph at lines 534--534
 
  []
 
 <gzl/14.jpg, id=313, 963.09813pt x 486.81876pt>
 File: gzl/14.jpg Graphic file (type jpg)
 <use gzl/14.jpg>
-Package pdftex.def Info: gzl/14.jpg  used on input line 532.
+Package pdftex.def Info: gzl/14.jpg  used on input line 535.
 (pdftex.def)             Requested size: 345.0pt x 174.38551pt.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 532--532
+Overfull \hbox (20.0pt too wide) in paragraph at lines 535--535
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 532--532
+Underfull \hbox (badness 10000) in paragraph at lines 535--535
 
  []
 
 [35 <./gzl/14.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 550--550
+Underfull \hbox (badness 10000) in paragraph at lines 553--553
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 552--552
+Underfull \hbox (badness 10000) in paragraph at lines 555--555
 
  []
 
 <gzl/10.png, id=317, 229.35687pt x 190.21063pt>
 File: gzl/10.png Graphic file (type png)
 <use gzl/10.png>
-Package pdftex.def Info: gzl/10.png  used on input line 553.
+Package pdftex.def Info: gzl/10.png  used on input line 556.
 (pdftex.def)             Requested size: 172.5pt x 143.06395pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 560--561
+Underfull \hbox (badness 10000) in paragraph at lines 563--564
 
  []
 
 [36 <./gzl/10.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 562--562
+Underfull \hbox (badness 10000) in paragraph at lines 565--565
 
  []
 
 <gzl/15.jpg, id=322, 507.8975pt x 409.02812pt>
 File: gzl/15.jpg Graphic file (type jpg)
 <use gzl/15.jpg>
-Package pdftex.def Info: gzl/15.jpg  used on input line 563.
+Package pdftex.def Info: gzl/15.jpg  used on input line 566.
 (pdftex.def)             Requested size: 310.4979pt x 250.06226pt.
 
-Overfull \hbox (84.69705pt too wide) in paragraph at lines 567--567
+Overfull \hbox (84.69705pt too wide) in paragraph at lines 570--570
 \OT1/cmr/m/n/10 hy-per-links. For the num-bers, the hy-per-link is bound with a
   |\C70/rm/m/n/10/20 ^^\|\OT1/cmr/m/n/10 onclick(submit[]search($new[]page,1))|
 \C70/rm/m/n/10/20 ^^]|
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 570--570
-
  []
 
 
@@ -1812,28 +1811,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 573--573
 
  []
 
-[37 <./gzl/15.JPG>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 576--576
 
  []
 
-
+[37 <./gzl/15.JPG>]
 Underfull \hbox (badness 10000) in paragraph at lines 579--579
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 581--581
+Underfull \hbox (badness 10000) in paragraph at lines 582--582
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 584--584
 
  []
 
 <gzl/16.jpg, id=326, 960.58875pt x 411.03563pt>
 File: gzl/16.jpg Graphic file (type jpg)
 <use gzl/16.jpg>
-Package pdftex.def Info: gzl/16.jpg  used on input line 582.
+Package pdftex.def Info: gzl/16.jpg  used on input line 585.
 (pdftex.def)             Requested size: 345.0pt x 147.62775pt.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 582--583
+Overfull \hbox (20.0pt too wide) in paragraph at lines 585--586
 [][] 
  []
 
@@ -1841,98 +1845,98 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 582--583
 <gzl/08.png, id=330, 234.6366pt x 40.4712pt>
 File: gzl/08.png Graphic file (type png)
 <use gzl/08.png>
-Package pdftex.def Info: gzl/08.png  used on input line 589.
+Package pdftex.def Info: gzl/08.png  used on input line 592.
 (pdftex.def)             Requested size: 120.7521pt x 20.82776pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 589--589
+Underfull \hbox (badness 10000) in paragraph at lines 592--592
 
  []
 
 <gzl/09.png, id=331, 370.11pt x 105.85pt>
 File: gzl/09.png Graphic file (type png)
 <use gzl/09.png>
-Package pdftex.def Info: gzl/09.png  used on input line 592.
+Package pdftex.def Info: gzl/09.png  used on input line 595.
 (pdftex.def)             Requested size: 224.2479pt x 64.13553pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 592--592
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 595--595
 
  []
 
 
-Overfull \hbox (44.9608pt too wide) in paragraph at lines 599--599
+Underfull \hbox (badness 10000) in paragraph at lines 598--598
+
+ []
+
+
+Overfull \hbox (44.9608pt too wide) in paragraph at lines 602--602
 [][]\OT1/cmr/m/n/10 (2) PHP - exce(): https://blog.csdn.net/sinat[]29862853/art
 icle/details/85253384 
  []
 
 
-Overfull \hbox (19.30513pt too wide) in paragraph at lines 601--601
+Overfull \hbox (19.30513pt too wide) in paragraph at lines 604--604
 [][]\OT1/cmr/m/n/10 (4) PHP - file read: https://www.cnblogs.com/penghuwan/p/68
 84932.html 
  []
 
 
-Overfull \hbox (19.30513pt too wide) in paragraph at lines 602--602
+Overfull \hbox (19.30513pt too wide) in paragraph at lines 605--605
 [][]\OT1/cmr/m/n/10 (5) PHP - file read: https://www.cnblogs.com/penghuwan/p/68
 84932.html 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 605--605
+Underfull \hbox (badness 10000) in paragraph at lines 608--608
 
  []
 
 [39 <./gzl/08.png> <./gzl/09.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 608--608
+Underfull \hbox (badness 10000) in paragraph at lines 611--611
 
  []
 
 <gzl/12.jpg, id=338, 588.69937pt x 438.13687pt>
 File: gzl/12.jpg Graphic file (type jpg)
 <use gzl/12.jpg>
-Package pdftex.def Info: gzl/12.jpg  used on input line 609.
+Package pdftex.def Info: gzl/12.jpg  used on input line 612.
 (pdftex.def)             Requested size: 310.4979pt x 231.08827pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 609--609
+Underfull \hbox (badness 10000) in paragraph at lines 612--612
 
  []
 
 <gzl/13.jpg, id=339, 624.3325pt x 379.91937pt>
 File: gzl/13.jpg Graphic file (type jpg)
 <use gzl/13.jpg>
-Package pdftex.def Info: gzl/13.jpg  used on input line 610.
+Package pdftex.def Info: gzl/13.jpg  used on input line 613.
 (pdftex.def)             Requested size: 310.4979pt x 188.94472pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 610--610
+Underfull \hbox (badness 10000) in paragraph at lines 613--613
 
  []
 
 [40 <./gzl/12.JPG> <./gzl/13.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 624--624
+Underfull \hbox (badness 10000) in paragraph at lines 627--627
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 627--627
+Underfull \hbox (badness 10000) in paragraph at lines 630--630
 
  []
 
 <jaf/titleexample.PNG, id=343, 447.47176pt x 366.168pt>
 File: jaf/titleexample.PNG Graphic file (type png)
 <use jaf/titleexample.PNG>
-Package pdftex.def Info: jaf/titleexample.PNG  used on input line 628.
+Package pdftex.def Info: jaf/titleexample.PNG  used on input line 631.
 (pdftex.def)             Requested size: 310.4979pt x 254.08093pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 628--628
+Underfull \hbox (badness 10000) in paragraph at lines 631--631
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 629--629
+Underfull \hbox (badness 10000) in paragraph at lines 632--632
 
  []
 
@@ -1940,37 +1944,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 629--629
 <jaf/link.PNG, id=348, 602.25pt x 17.46526pt>
 File: jaf/link.PNG Graphic file (type png)
 <use jaf/link.PNG>
-Package pdftex.def Info: jaf/link.PNG  used on input line 631.
+Package pdftex.def Info: jaf/link.PNG  used on input line 634.
 (pdftex.def)             Requested size: 310.4979pt x 9.00468pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 631--631
+Underfull \hbox (badness 10000) in paragraph at lines 634--634
 
  []
 
 <jaf/linked.PNG, id=349, 632.96475pt x 18.66975pt>
 File: jaf/linked.PNG Graphic file (type png)
 <use jaf/linked.PNG>
-Package pdftex.def Info: jaf/linked.PNG  used on input line 633.
+Package pdftex.def Info: jaf/linked.PNG  used on input line 636.
 (pdftex.def)             Requested size: 310.4979pt x 9.1585pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 633--633
+Underfull \hbox (badness 10000) in paragraph at lines 636--636
 
  []
 
 <jaf/conference.PNG, id=350, 641.39626pt x 342.68025pt>
 File: jaf/conference.PNG Graphic file (type png)
 <use jaf/conference.PNG>
-Package pdftex.def Info: jaf/conference.PNG  used on input line 636.
+Package pdftex.def Info: jaf/conference.PNG  used on input line 639.
 (pdftex.def)             Requested size: 310.4979pt x 165.89122pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 636--636
+Underfull \hbox (badness 10000) in paragraph at lines 639--639
 
  []
 
 <jaf/author.PNG, id=351, 638.385pt x 248.72925pt>
 File: jaf/author.PNG Graphic file (type png)
 <use jaf/author.PNG>
-Package pdftex.def Info: jaf/author.PNG  used on input line 639.
+Package pdftex.def Info: jaf/author.PNG  used on input line 642.
 (pdftex.def)             Requested size: 310.4979pt x 120.97511pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1979,35 +1983,35 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <jaf/limit.PNG, id=358, 698.00775pt x 18.66975pt>
 File: jaf/limit.PNG Graphic file (type png)
 <use jaf/limit.PNG>
-Package pdftex.def Info: jaf/limit.PNG  used on input line 646.
+Package pdftex.def Info: jaf/limit.PNG  used on input line 649.
 (pdftex.def)             Requested size: 310.4979pt x 8.30472pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 646--646
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
 
  []
 
 <jaf/affold.PNG, id=359, 685.3605pt x 62.03175pt>
 File: jaf/affold.PNG Graphic file (type png)
 <use jaf/affold.PNG>
-Package pdftex.def Info: jaf/affold.PNG  used on input line 648.
+Package pdftex.def Info: jaf/affold.PNG  used on input line 651.
 (pdftex.def)             Requested size: 310.4979pt x 28.10332pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 648--648
+Underfull \hbox (badness 10000) in paragraph at lines 651--651
 
  []
 
 <jaf/affnew.PNG, id=360, 777.50475pt x 84.315pt>
 File: jaf/affnew.PNG Graphic file (type png)
 <use jaf/affnew.PNG>
-Package pdftex.def Info: jaf/affnew.PNG  used on input line 649.
+Package pdftex.def Info: jaf/affnew.PNG  used on input line 652.
 (pdftex.def)             Requested size: 310.4979pt x 33.67136pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 649--649
+Underfull \hbox (badness 10000) in paragraph at lines 652--652
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 653--653
+Underfull \hbox (badness 10000) in paragraph at lines 656--656
 
  []
 
@@ -2015,25 +2019,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 653--653
 <jaf/contact.PNG, id=368, 548.64975pt x 330.63525pt>
 File: jaf/contact.PNG Graphic file (type png)
 <use jaf/contact.PNG>
-Package pdftex.def Info: jaf/contact.PNG  used on input line 654.
+Package pdftex.def Info: jaf/contact.PNG  used on input line 657.
 (pdftex.def)             Requested size: 310.4979pt x 187.12206pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 654--654
+Underfull \hbox (badness 10000) in paragraph at lines 657--657
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 655--655
+Underfull \hbox (badness 10000) in paragraph at lines 658--658
 
  []
 
 <jaf/git.PNG, id=369, 740.16525pt x 410.7345pt>
 File: jaf/git.PNG Graphic file (type png)
 <use jaf/git.PNG>
-Package pdftex.def Info: jaf/git.PNG  used on input line 656.
+Package pdftex.def Info: jaf/git.PNG  used on input line 659.
 (pdftex.def)             Requested size: 310.4979pt x 172.30049pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 656--656
+Underfull \hbox (badness 10000) in paragraph at lines 659--659
 
  []
 
@@ -2057,7 +2061,7 @@ e1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmr10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmr12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17
 .pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Report.pdf (48 pages, 5999681 bytes).
+Output written on Report.pdf (48 pages, 6000566 bytes).
 PDF statistics:
  435 PDF objects out of 1000 (max. 8388607)
  163 compressed objects within 2 object streams
