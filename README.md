@@ -1,2 +1,8 @@
-# 2019_S1-EE101-Final_Project
-SJTU 2019 S1 EE101 Introduction to Engineering for Electronic Information (B)
+# 2019 EE101 Final  Project
+
+Introduction to Engineering for Electronic Information (C)
+
+SJTU, 2019 Spring
+
+Final Project (& Report) Files
+
